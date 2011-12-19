@@ -2,3 +2,5 @@ build/
 intermediate/
 publish/
 test/
+config/
+Capfile

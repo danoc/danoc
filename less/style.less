@@ -251,24 +251,36 @@ header {
 	line-height: 167%;
 }
 
-#projects {
-	padding: 32-16px 0 0 0;
+section {
+	position: relative;
+}
+
+
+section.content {
+	padding: 0 0 0 0;
 	article {	
 		border-bottom: 1px solid lighten(@color_border, 4%);
 		clear: both;
-		margin-bottom: 30px;
-		padding: 0 30px 40px 30px;
 	}
+}
+
+section#projects {
 	img { float: right; }
 	p { line-height: 167%; max-width: 395px; text-align: justify; }
 	#taketocollege img { 
 		border: solid 1px @color_border;
 		padding: 1px;
 	}
+	article { padding: 0 30px 40px 30px; }
+}
+
+section#photography {
+	article { padding: 0 30px 10px 30px; }
 }
 
 footer {
 	text-align: center;
+	margin-top: 30px;
 	ul {
 		margin: 0 0 22px 0;
 		li {
@@ -281,9 +293,50 @@ footer {
 	}
 }
 
+.sectionlabel {
+	@fade: 50%;
+	color: fadeout(#598d51, @fade);
+	font-family: Helvetica, Arial;
+	font-size: 85%;
+	font-weight: bold;
+	margin: 6px 0 0 0;
+	text-transform: uppercase;
+	span {
+		background: fadeout(#e6fae3, @fade);
+		padding: 6px 10px;
+		border-left: 3px solid fadeout(#e1f5de, @fade);
+		border-bottom: 3px solid fadeout(#e1f5de, @fade);
+		border-right: 3px solid fadeout(#e1f5de, @fade);
+		-webkit-border-bottom-right-radius: 3px;
+		-webkit-border-bottom-left-radius: 3px;
+		-moz-border-radius-bottomright: 3px;
+		-moz-border-radius-bottomleft: 3px;
+		border-bottom-right-radius: 3px;
+		border-bottom-left-radius: 3px;		
+	}
+}
+
+section:hover .sectionlabel {
+	color: #598d51;
+	span {
+		background: #e6fae3;
+		border-left: 3px solid #e1f5de;
+		border-bottom: 3px solid #e1f5de;
+		border-right: 3px solid #e1f5de;
+	}
+}
+
 .url {
 	background-color: #fffef2;
 	padding: 2px 4px;
+}
+
+.caption {
+	padding: 0 5px;
+}
+
+.credit {
+	color: #646464;
 }
 
 /* ============================= */

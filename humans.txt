@@ -5,5 +5,5 @@
 /* TEAM */
   Creator: Daniel O'Connor
   Site: www.danoc.me
-  Twitter: @danoc
+  Twitter: @itsdanoc
   Location: New York

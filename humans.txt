@@ -1,9 +1,0 @@
-/* the humans responsible & colophon */
-/* humanstxt.org */
-
-
-/* TEAM */
-  Creator: Daniel O'Connor
-  Site: www.danoc.me
-  Twitter: @itsdanoc
-  Location: New York

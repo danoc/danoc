@@ -1,62 +1,46 @@
-<!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Daniel O'Connor - Student, Web Developer, Photographer</title>
+		<meta name="description" content="Portfolio of a 20 year old web developer, photographer, and computer science major at Binghamton University.">
+		<meta name="viewport" content="width=device-width">
+		
+		<link rel="stylesheet" href="css/normalize.css">
+		<!-- <link rel="stylesheet" href="css/main.css"> -->
+		
+		<link rel="stylesheet/less" href="less/main.less">
+		<script src="js/vendor/less-1.3.0.min.js"></script>
+		
+		<script src="js/vendor/modernizr-2.6.1.min.js"></script>
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-5922635-10']);
+			_gaq.push(['_setDomainName', 'danoc.me']);
+			_gaq.push(['_trackPageview']);
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <title>Daniel O'Connor - Student, Web Developer, Photographer</title>
-  <meta name="description" content="Portfolio of a 20 year old web developer, photographer, and computer Science major at Binghamton University.">
-  <meta name="author" content="Daniel O'Connor">
-
-  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <!-- CSS: implied media=all -->
-  <!-- CSS concatenated and minified via ant build script-->
-  <!-- LESS converted to css and minified via build script -->
-  <link rel="stylesheet/less" href="less/style.less">
-  <script src="js/libs/less-1.1.5.min.js"></script>
-  <!-- end LESS -->
-  <!-- end CSS-->
-
-
-  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
-       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="js/libs/modernizr-2.0.6.min.js"></script>
-
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-5922635-10']);
-		_gaq.push(['_setDomainName', 'danoc.me']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-</head>
-
-<body>
-	<div id="container">
-		<header><h1><a href="http://danoc.me/" title="Daniel O'Connor">Daniel O'Connor</a></h1></header>
-		<section id="description"><p>A 20 year old computer science major at <a href="http://binghamton.edu/" title="Binghamton University">Binghamton University</a>. Former Software Engineer Intern at <a href="http://wepay.com/">WePay</a>, creator of <a href="http://taketocollege.com" title="Take to College">Take to College</a>, former Photo Editor and current Lead Web Developer at <a href="http://bupipedream.com/" title="Binghamton University Pipe Dream">Pipe Dream</a>.</p></section>
-		<section id="projects" class="content">
-			<div class="sectionlabel"><span>Projects</span></div>
+			(function() {
+			  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		
+	</head>
+	<body>
+		
+		<header>
+			<h1><a href="http://danoc.me/" title="Daniel O'Connor">Daniel O'Connor</a></h1>
+		</header>
+		
+		<section id="description">
+			<p>A 20 year old computer science major at <a href="http://binghamton.edu/" title="Binghamton University">Binghamton University</a>. Former Software Engineer Intern at <a href="http://wepay.com/">WePay</a>, creator of <a href="http://taketocollege.com" title="Take to College">Take to College</a>, former Photo Editor and current Lead Web Developer at <a href="http://bupipedream.com/" title="Binghamton University Pipe Dream">Pipe Dream</a>.</p>
+		</section>
+		
+		<section id="projects">
+			<div class="section-label"><span>Projects</span></div>
+			
 			<article id="wepay">
 				<a href="http://www.bupipedream.com/" title="Pipe Dream"><img src="img/wepay.png" width="262" alt="Pipe Dream"></a>
 				<h2>WePay Internship</h2>
@@ -75,9 +59,13 @@
 				<p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists and a new version in the works.</p>
 				<span class="url"><a href="http://taketocollege.com/" title="Take to College">taketocollege.com</a></span>
 			</article>
+			
 		</section>
+		
 		<section id="opensource" class="content">
-			<div class="sectionlabel"><span><a href="https://github.com/danoc/" title="GitHub Account">GitHub</a></span></div>
+			<div class="section-label">
+				<span><a href="https://github.com/danoc/" title="GitHub Account">GitHub</a></span>
+			</div>
 			<article id="lesscssgrid">
 				<a href="https://github.com/danoc/LESS-CSS-Grid" title="LESS CSS Grid"><img src="img/lesscssgrid.png" width="262" height="144" alt="Code from the LESS CSS Grid"></a>
 				<h2><a href="https://github.com/danoc/LESS-CSS-Grid" title="LESS CSS GRID">LESS CSS Grid</a></h2>
@@ -85,8 +73,12 @@
 				<span class="url"><a href="http://git.io/lesscssgrid" title="LESS CSS GRID">git.io/lesscssgrid</a></span>
 			</article>
 		</section>
+		
 		<section id="photography" class="content">
-			<div class="sectionlabel"><span><a href="http://www.flickr.com/photos/mynameisdan/" title="Flickr Account">Photography</a></span></div>
+			<div class="section-label">
+				<span><a href="http://www.flickr.com/photos/mynameisdan/" title="Flickr Account">Photography</a></span>
+			</div>
+			
 			<article id="stenger">
 				<h2>Harvey G. Stenger Jr. named as next president of Binghamton University</h2>
 				<a href="http://www.flickr.com/photos/mynameisdan/6131598735/" title="View on Flickr"><img src="img/photos/stenger.jpg" width="686" height="399" alt="Binghamton Flood"></a>
@@ -115,7 +107,9 @@
 					<p>Gov. Andrew Cuomo presents the 2011-12 New York State Budget to an invitation-only event at the Riverwalk Hotel on Water Street in the city of Binghamton. Cuomo began his speech saying that "New York State is out of control" and criticized Albany, stating that it "is too political." <span class="credit">(Daniel O'Connor/Pipe Dream)</span></p>
 				</div>
 			</article>
+		
 		</section>
+		
 		<footer>
 			<ul>
 				<li><a href="http://blog.danoc.me/">Blog</a></li>
@@ -126,26 +120,18 @@
 				<li><a href="http://twitter.com/itsdanoc" title="Twitter Page">Twitter</a></li>
 			</ul>
 		</footer>
-	</div>
-	<!-- JavaScript at the bottom for fast page loading -->
-
-	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-	<script src="js/libs/jquery-ui-1.8.16.custom.min.js"></script>
-
-	<!-- scripts concatenated and minified via ant build script-->
-	<script defer src="js/plugins.js"></script>
-	<script defer src="js/script.js"></script>
-	<!-- end scripts-->
-
-
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-	   chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lt IE 7 ]>
-		<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-		<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]-->
-  
-</body>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+		
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));
+		</script>
+	</body>
 </html>

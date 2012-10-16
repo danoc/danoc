@@ -1,1 +1,0 @@
-/* Author: Daniel O'Connor */

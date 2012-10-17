@@ -99,7 +99,7 @@ textarea {
    ========================================================================== */
 
 body {
-	margin: 109-17px auto 0 auto;
+	margin: 91px auto 0 auto;
 	max-width: 748px;
 }
 
@@ -111,6 +111,7 @@ a:focus { outline: thin dotted; }
 
 h1 {
 	font-family: Helvetica, Arial;
+	font-size: 1.7em;
 	text-transform: uppercase;
 	a, a:visited { color: @color_header; }
 	a:hover { color: lighten(@color_header, 10%); }
@@ -123,29 +124,23 @@ h2 {
 	a:hover { color: lighten(@color_header, 10%); }
 }
 
-header {
-	text-align: center;
-}
+header { text-align: center; }
 
 #description {
 	border-top: 1px solid #e5e5e5;
 	border-bottom: 1px solid #e5e5e5;
-	font-size: 100%;
+	font-size: 1em;
 	padding: 7px 65px;
-	p { line-height: 167%; }
+	p { line-height: 1.7em; }
 }
 
 section {
 	padding: 0;
-	article {
-		border-bottom: 1px solid lighten(@color_border, 4%);
-		clear: both;
-		p { font-size: 90%; }
-	}
 	&#projects, &#opensource {
 		img {
 			border: solid 1px @color_border;
 			float: right;
+			margin: 25px 0 0 0;
 			padding: 1px;
 		}
 		p {
@@ -157,7 +152,38 @@ section {
 			padding: 0 30px 40px 30px;
 		}
 	}
-	&article { padding: 0 30px 10px 30px; }
+	&#photography {
+		.caption { padding: 0 5px; }
+		.credit { color: #646464; }
+	}
+	article {
+		border-bottom: 1px solid lighten(@color_border, 4%);
+		clear: both;
+		h2 { margin-bottom: .2em; }
+		p { font-size: .87em; }
+	}
+	.section-label {
+		@fade: 50%;
+		color: fadeout(#598d51, @fade);
+		font-family: Helvetica, Arial;
+		font-size: .65em;
+		font-weight: bold;
+		margin: 5px 0 0 0;
+		text-transform: uppercase;
+		span {
+			background: fadeout(#e6fae3, @fade);
+			padding: 6px 10px;
+			border-left: 3px solid fadeout(#e1f5de, @fade);
+			border-bottom: 3px solid fadeout(#e1f5de, @fade);
+			border-right: 3px solid fadeout(#e1f5de, @fade);
+			-webkit-border-bottom-right-radius: 3px;
+			-webkit-border-bottom-left-radius: 3px;
+			-moz-border-radius-bottomright: 3px;
+			-moz-border-radius-bottomleft: 3px;
+			border-bottom-right-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+	}
 	&:hover .section-label {
 		color: #598d51;
 		span {
@@ -178,50 +204,18 @@ footer {
 			display: inline;
 			a {
 				color: fadeout(@color_a, 50%);
-				font-size: 90%;
+				font-size: .9em;
 				padding: 0 7px;
 			}
 		}
 	}
 }
 
-.section-label {
-	@fade: 50%;
-	color: fadeout(#598d51, @fade);
-	font-family: Helvetica, Arial;
-	font-size: 65%;
-	font-weight: bold;
-	margin: 6px 0 0 0;
-	text-transform: uppercase;
-	span {
-		background: fadeout(#e6fae3, @fade);
-		padding: 6px 10px;
-		border-left: 3px solid fadeout(#e1f5de, @fade);
-		border-bottom: 3px solid fadeout(#e1f5de, @fade);
-		border-right: 3px solid fadeout(#e1f5de, @fade);
-		-webkit-border-bottom-right-radius: 3px;
-		-webkit-border-bottom-left-radius: 3px;
-		-moz-border-radius-bottomright: 3px;
-		-moz-border-radius-bottomleft: 3px;
-		border-bottom-right-radius: 3px;
-		border-bottom-left-radius: 3px;
-	}
-}
-
 .url {
 	background-color: #fffef2;
 	padding: 2px 4px;
-	font-size: 90%;
+	font-size: .9em;
 }
-
-.caption {
-	padding: 0 5px;
-}
-
-.credit {
-	color: #646464;
-}
-
 
 /* ==========================================================================
    Helper classes

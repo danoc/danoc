@@ -157,6 +157,21 @@ section {
 		.caption { font-size: .9em; padding: 0 5px; }
 		.credit { color: #9b9b9b; }
 	}
+	&#blog {
+		border-bottom: 1px solid lighten(@color_border, 4%);
+		color: fadeout(#9B9B9B, 80%);
+		a { color: fadeout(@color_a, 50%); }
+		.posts { margin: 10px 0; }
+		article {
+			border: 0;
+			padding: 3px 30px;
+			margin: 0;
+		}
+		&:hover {
+			color: #9B9B9B;
+			a { color: @color_a; }
+		}
+	}
 	article {
 		border-bottom: 1px solid lighten(@color_border, 4%);
 		clear: both;

@@ -319,21 +319,38 @@ section {
         color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow:none !important;
         text-shadow: none !important;
+		font-size: .95em;
     }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
+	body {
+		margin: 0;
+	}
+	
+	header, section {
+		margin-bottom: 20px;
+	}
+	
+	h2 {
+		font-size: 1.1em;
+		margin-bottom: 3px;
+		padding-bottom: 3px;
+	}
+	
+	h3 {
+		font-size: .95em;
+	}
+	
+	section article {
+		margin-bottom: 13px;
+		ul {
+			margin: 5px;
+		}
+	}
+	
+	#fordham-prep {
+		display: none;
+	}
+	
     /*
      * Don't show links for images, or javascript/internal links
      */
@@ -364,7 +381,7 @@ section {
     }
 
     @page {
-        margin: 0.5cm;
+        margin: 1cm;
     }
 
     p,

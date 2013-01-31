@@ -30,6 +30,6 @@ parseRSS('http://blog.danoc.me/rss', function(e) {
 	
 	for(var i = 0; i < 3; i++) {
 		var published = new Date(entries[i].publishedDate);
-		$('#blog .posts').append('<article class="entry"><h3><a href="'+entries[i].link+'">'+entries[i].title+'</a></h3> &mdash; '+ m_names[published.getMonth()] + ' ' + published.getDate() +'</article>');
+		$('#blog .posts').append('<article class="entry"><h3 class="title"><a href="'+entries[i].link+'">'+entries[i].title+'</a></h3> &mdash; '+ m_names[published.getMonth()] + ' ' + published.getDate() +'</article>');
 	}
 });

@@ -23,14 +23,13 @@ function parseRSS(url, callback) {
 }
 
 parseRSS('http://blog.danoc.me/rss', function(e) {
-	console.log(e);
 	var entries = e.entries;
-	var m_names = new Array("January", "February", "March", 
-	"April", "May", "June", "July", "August", "September", 
+	var m_names = new Array("January", "February", "March",
+	"April", "May", "June", "July", "August", "September",
 	"October", "November", "December");
 	
 	for(var i = 0; i < 3; i++) {
 		var published = new Date(entries[i].publishedDate);
-		$('#blog .posts').append('<article class="entry"><a href="'+entries[i].link+'">'+entries[i].title+'</a> &mdash; '+ m_names[published.getMonth()] + ' ' + published.getDate() +'</article>');
+		$('#blog .posts').append('<article class="entry"><h3><a href="'+entries[i].link+'">'+entries[i].title+'</a></h3> &mdash; '+ m_names[published.getMonth()] + ' ' + published.getDate() +'</article>');
 	}
 });

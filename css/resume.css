@@ -279,22 +279,12 @@ section article dd {
 .clearfix {
   *zoom: 1;
 }
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-/* Style adjustments for high resolution devices */
-/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-}*/
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
+
 @media print {
   * {
     background: transparent !important;
@@ -325,9 +315,6 @@ section article dd {
   }
   section article ul {
     margin: 5px;
-  }
-  #fordham-prep {
-    display: none;
   }
   /*
        * Don't show links for images, or javascript/internal links

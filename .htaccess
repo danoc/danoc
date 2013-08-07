@@ -3,5 +3,5 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
-Redirect 301 /acpsf https://danoc.github.io/responsive-talk                                           
+Redirect 301 /acpsf http://danoc.github.io/responsive-talk                                           
 Redirect 301 /talks/responsive http://blog.danoc.me/post/44367862783/responsive-web-design-for-college-newspapers

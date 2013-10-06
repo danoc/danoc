@@ -1,177 +1,138 @@
 <!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Daniel O'Connor - Front-End Web Developer and Student</title>
-		<meta name="description" content="Portfolio of a 21 year old front-end web developer and student at Binghamton University.">
-		<meta name="viewport" content="width=device-width">
-		
-		<link rel="stylesheet" href="css/normalize.css">
-		<!-- <link rel="stylesheet" href="css/main.css"> -->
-		
-		<link rel="stylesheet/less" href="less/main.less">
-		<script src="js/vendor/less-1.3.0.min.js"></script>
-		
-		<script src="js/vendor/modernizr-2.6.1.min.js"></script>
-		
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-5922635-10']);
-			_gaq.push(['_setDomainName', 'danoc.me']);
-			_gaq.push(['_trackPageview']);
+		<meta name="description" content="Portfolio of a front-end web developer and student at Binghamton University.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-			(function() {
-			  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		
+		<script type="text/javascript" src="//use.typekit.net/xek7fhz.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<link rel="stylesheet" href="css/normalize.css">
+
+		<link rel="stylesheet/less" href="less/main.less">
+		<script src="js/vendor/less-1.4.1.min.js"></script>
+
 	</head>
 	<body>
-		
-		<header role="banner">
-			<h1><a href="http://danoc.me/" title="Daniel O'Connor">Daniel O'Connor</a></h1>
-		</header>
-		
-		<section id="description">
-			<p>A 21 year old computer science major at <a href="http://binghamton.edu/" title="Binghamton University">Binghamton University</a>. Former Software Engineer Intern at <a href="http://wepay.com/">WePay</a>, creator of <a href="http://taketocollege.com" title="Take to College">Take to College</a>, former Photo Editor and current Lead Web Developer at <a href="http://bupipedream.com/" title="Binghamton University Pipe Dream">Pipe Dream</a>.</p>
-		</section>
-		
-		<section id="work" class="projects">
-			<h2 class="section-label">
-				<a href="#projects">Projects</a>
-			</h2>
-			
-			<article id="wepay">
-				<figure>
-					<a href="https://www.wepay.com/" title="WePay">
-						<img src="img/wepay.png" width="262" alt="WePay">
-					</a>
-				</figure>
-				<h3 class="title">WePay Internship</h3>
-				<p>Worked at WePay as a Software Engineer Intern during the 2012 summer. Assigned to the API team, I redesigned the application dashboard for developers, simplified configuration process for WePay plugins users, overhauled the <a href="https://www.wepay.com/developer/" title="WePay Developer Documentation">developer documentation</a>, and represented the company at <a href="https://twitter.com/EcommerceHackNY" title="@eCommerceHackNY on Twitter">eCommerceHackNY</a>.</p>
-				<span class="project-link">
-					<a href="http://www.wepay.com/" title="WePay">www.wepay.com</a>
-				</span>
-			</article>
-			<article id="pipe-dream">
-				<figure>
-					<a href="http://www.bupipedream.com/" title="Pipe Dream">
-						<img src="img/pipedream.png" width="262" height="118" alt="Pipe Dream">
-					</a>
-				</figure>
-				<h3 class="title"><a href="http://www.bupipedream.com/" title="Pipe Dream">Pipe Dream</a></h3>
-				<p>Worked on a complete redesign of <a href="http://bupipedream.com/" title="Binghamton University Pipe Dream">bupipedream.com</a>, home of the student-run newspaper at Binghamton University. The new website runs on WordPress and features a responsive layout. I wrote a <a href="http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress" title="Moving Pipe Dream from College Publisher to WordPress">blog post explaining the development</a> in great detail. I also manage Pipe Dream's <a href="http://www.facebook.com/bupipedream" title="Pipe Dream on Facebook">Facebook</a> and <a href="http://twitter.com/bupipedream" title="@bupipedream on Twitter">Twitter</a> accounts.</p>
-				<span class="project-link">
-					<a href="http://www.bupipedream.com/" title="Pipe Dream">www.bupipedream.com</a>
-				</span>
-			</article>
-			<article id="take-to-college">
-				<figure>
-					<a href="http://taketocollege.com/" title="Take to College">
-						<img src="img/taketocollege.png" width="262" height="155" alt="Screenshot of Take to College">
-					</a>
-				</figure>
-				<h3 class="title"><a href="http://taketocollege.com/" title="Take to College">Take to College</a></h3>
-				<p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists.</p>
-				<span class="project-link">
-					<a href="http://taketocollege.com/" title="Take to College">taketocollege.com</a>
-				</span>
-			</article>
-			
-		</section>
-		
-		<section id="blog" class="article-list">
-			<h2 class="section-label">
-				<a href="http://blog.danoc.me/" title="Ramblings about projects">Blog</a>
-			</h2>
-			
-			<div class="posts">
-				<!-- Javascript will insert list of posts -->
-			</div>
-		</section>
-		
-		<section id="open-source" class="projects">
 
-			<h2 class="section-label">
-				<a href="https://github.com/danoc/" title="GitHub Account">GitHub</a>
-			</h2>
-			<article id="lesscssgrid">
-				<figure>
-					<a href="https://github.com/danoc/LESS-CSS-Grid" title="LESS CSS Grid">
-						<img src="img/lesscssgrid.png" width="262" height="144" alt="Code from the LESS CSS Grid">
-					</a>
-				</figure>
-				<h3 class="title"><a href="https://github.com/danoc/LESS-CSS-Grid" title="LESS CSS GRID">LESS CSS Grid</a></h3>
-				<p>The LESS CSS Grid is a flexible 24-column fluid grid that uses <a href="http://lesscss.org/" title="LESS CSS">LESS</a>, a dynamic stylesheet language. The grid's max-width, number of columns, and column width are easily adjustable and the gutter width is dynamically calculated.</p>
-				<span class="project-link">
-					<a href="http://git.io/lesscssgrid" title="LESS CSS GRID">git.io/lesscssgrid</a>
-				</span>
-			</article>
-		</section>
-		
-		<section id="photography" class="photos">
-			<h2 class="section-label">
-				<a href="http://www.flickr.com/photos/mynameisdan/" title="Flickr Account">Photography</a>
-			</h2>
-			
-			<article id="stenger">
-				<h3 class="title">Harvey G. Stenger Jr. named as next president of Binghamton University</h3>
-				<figure>
-					<a href="http://www.flickr.com/photos/mynameisdan/6131598735/" title="View on Flickr"><img src="img/photos/stenger.jpg" width="686" height="399" alt="Binghamton Flood"></a>
-					<figcaption class="caption">
-						<p>Harvey Stenger Jr., who will become president of Binghamton University in January 2012, speaks at a press conference in the Anderson Center for the Arts' Osterhout Concert Theater. The Board of Trustees selected Stenger to succeed current BU President C. Peter Magrath, who will step down on Dec. 31. <span class="credit">(Daniel O'Connor/Pipe Dream)</span></p>
-					</figcaption>
-				</figure>
-			</article>
+		<div id="container" class="container">
+			<header id="header" class="header">
+				<h1 class="site-title">
+					<a href="/">Daniel O'Connor</a>
+				</h1>
+			</header>
 
-			<article id="athleticdirector">
-				<h3 class="title">Patrick Elliot named Binghamton University’s next athletics director</h3>
-				<figure>
-					<a href="http://www.flickr.com/photos/mynameisdan/6550165531/" title="View on Flickr"><img src="img/photos/athleticdirector.jpg" width="686" height="458" alt="Binghamton Flood"></a>
-					<figcaption class="caption">
-						<p>Patrick Elliot, Binghamton University's new athletics director, speaks to reporters after a press conference in the Events Center alongside former athletics director James Norris and University President C. Peter Magrath. <span class="credit">(Daniel O'Connor/Pipe Dream)</span></p>
-					</figcaption>
-				</figure>
-			</article>
+			<section>
+				<p>I'm a senior majoring in Computer Science at Binghamton University.</p>
 
-			<article id="binghamtonflood">
-				<h3 class="title">Broome County suffers devastating floods</h3>
-				<figure>
-					<a href="http://www.flickr.com/photos/mynameisdan/6131598735/" title="View on Flickr"><img src="img/photos/flood.jpg" width="686" height="457" alt="Binghamton Flood"></a>
-					<figcaption class="caption">
-						<p>Erik Jensen, of 30 Rush Ave. in Binghamton, stands at the water’s edge on his flooded street. Jensen’s home is one of many that has been affected by the flooding in Binghamton, NY. <span class="credit">(Daniel O'Connor/Pipe Dream)</span></p>
-					</figcaption>
-				</figure>
-			</article>
+				<p>I've interned as a front-end developer at <a href="https://www.optimizely.com/">Optimizely</a> and a software engineer at <a href="https://www.wepay.com/">WePay</a>. I love the bridge between design and development.</p>
 
-			<article id="cuomo">
-				<h3 class="title">Governor visits Binghamton to discuss state’s budget woes</h3>
-				<figure>
-					<a href="http://www.flickr.com/photos/mynameisdan/5873662594/" title="View on Flickr"><img src="img/photos/cuomo.jpg" width="686" height="419" alt="Binghamton Flood"></a>
-					<figcaption class="caption">
-						<p>Gov. Andrew Cuomo presents the 2011-12 New York State Budget to an invitation-only event at the Riverwalk Hotel on Water Street in the city of Binghamton. Cuomo began his speech saying that "New York State is out of control" and criticized Albany, stating that it "is too political." <span class="credit">(Daniel O'Connor/Pipe Dream)</span></p>
-					</figcaption>
-				</figure>
-			</article>
-		
-		</section>
-		
-		<footer>
-			<ul>
-				<li><a href="http://blog.danoc.me/">Blog</a></li>
-				<li><a href="https://facebook.com/itsdanieloconnor" title="Facebook Profile">Facebook</a></li>
-				<li><a href="mailto:daniel@danoc.me">Email</a></li>
-				<li><a href="https://github.com/danoc/" title="GitHub Account">GitHub</a></li>
-				<li><a href="http://www.linkedin.com/in/itsdanoc" title="Linkedin Profile">Linkedin</a></li>
-				<li><a href="http://twitter.com/itsdanoc" title="Twitter Page">Twitter</a></li>
-			</ul>
-		</footer>
-		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+				<p>I build <a href="http://beatstrap.me/">BeatStrap</a> and designed/developed <a href="http://www.bupipedream.com/">Pipe Dream</a> and <a href="http://taketocollege.com/">Take to College</a>.</p>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">
+					<a id="posts" href="#posts">Posts</a>
+				</h2>
+
+				<ul id="posts-list" class="posts-list">
+					<!-- parseRSS function will append the posts -->
+				</ul>
+
+				<p class="view-more-posts">
+					<a href="http://blog.danoc.me/page/2" target="_blank">View More Posts</a>
+				</p>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">
+					<a id="work" href="#work">Work</a>
+				</h2>
+
+				<ul class="posts-list">
+
+					<article class="post">
+						<h3 class="post-title">
+							<a href="https://www.optimizely.com/">Optimizely</a>
+						</h3>
+						<p>I interned as a front-end developer at Optimizely this past summer where I developed a mobile version of their website.</p>
+					</article>
+
+					<article class="post">
+						<h3 class="post-title">
+							<a href="https://www.wepay.com/">WePay</a>
+						</h3>
+						<p>Worked at WePay as a Software Engineer Intern during the 2012 summer. Assigned to the API team, I redesigned the application dashboard for developers, simplified configuration process for WePay plugins users, overhauled the developer documentation, and represented the company at eCommerceHackNY.</p>
+					</article>
+
+					<article class="post">
+						<h3 class="post-title">
+							<a href="http://www.bupipedream.com/">Pipe Dream</a>
+						</h3>
+						<p>Worked on a complete redesign of <a href="http://www.bupipedream.com/">bupipedream.com</a>, home of the student-run newspaper at Binghamton University. The new website runs on WordPress and features a responsive layout. I wrote <a href="http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress" title="Moving from College Publisher to WordPress">a blog post explaining the development</a> in great detail. I also managed Pipe Dream's Facebook and Twitter accounts.</p>
+					</article>
+
+				</ul>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">
+					<a id="projects" href="#projects">Projects</a>
+				</h2>
+
+				<ul class="posts-list">
+
+					<article class="post">
+						<h3 class="post-title">
+							<a href="http://beatstrap.me/">BeatStrap</a>
+						</h3>
+						<p>BeatStrap is a tool for journalists to cover news, sports, and events through Twitter. I created BeatStrap and work with <a href="http://www.camayak.com/">Roman Heindorff of Camayak</a> to help market and promote the product.</p>
+					</article>
+
+					<article class="post">
+						<h3 class="post-title">
+							<a href="http://taketocollege.com/">Take to College</a>
+						</h3>
+						<p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists.</p>
+					</article>
+
+				</ul>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">
+					<a id="talks" href="#talks">Talks</a>
+				</h2>
+
+				<ul class="posts-list">
+
+					<article class="post">
+						<h3 class="post-title">
+							<a href="http://danoc.me/talks/responsive/">Ditch the App, Go Responsive!</a>
+						</h3>
+						<p>Spoke about responsive web development for college newspapers at the 2013 ACP Midwinter National College Journalism Convention in San Francisco.</p>
+					</article>
+
+				</ul>
+			</section>
+
+			<footer class="footer">
+				<ul class="footer-links">
+					<li><a href="mailto:daniel@danoc.me">daniel@danoc.me</a></li>
+					<li><a href="https://www.facebook.com/danoc.me" target="_blank">Facebook</a></li>
+					<li><a href="https://twitter.com/itsdanoc" target="_blank">Twitter</a></li>
+					<li><a href="http://dribbble.com/danoc" target="_blank">Dribbble</a></li>
+				</ul>
+			</footer>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
-		
+
 	</body>
 </html>

@@ -8,8 +8,6 @@
 		
 		<link rel="stylesheet" href="../css/normalize.css">
 		<link rel="stylesheet" href="../css/resume.css">
-				
-		<script src="../js/vendor/modernizr-2.6.1.min.js"></script>
 		
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -27,106 +25,97 @@
 	</head>
 	<body>
 		
-		<header class="clearfix">
-			<div id="title">
-				<h1><a href="http://danoc.me/" title="Daniel O'Connor">Daniel O'Connor</a></h1>
-				<p>Front-End Web Developer - Student</p>
+		<header class="header clearfix">
+			<div class="resume-intro">
+				<h1 class="resume-title">
+					<a href="http://danoc.me/" title="Daniel O'Connor">Daniel O'Connor</a>
+				</h1>
+				<p class="resume-description">Front-End Web Developer - Student</p>
 			</div>
-			<div id="contact">
-				<p>Binghamton, NY<br />718-873-5817<br />daniel@danoc.me</p>
+			<div class="resume-contact">
+				718-873-5817<br />daniel@danoc.me
 			</div>
 		</header>
 		
-		<section id="education">
-			<h2>Work Experience</h2>
-			<article>
-				<aside>May 2013 - Present</aside>
-				<h3>Optimizely, <span class="location">San Francisco, CA</span></h3>
-				<p>Web Developer Intern</p>
-				<ul>
-					<li>Work with marketing and designers to create microsites and pages</li>
-					<li>Implementing redesign of Optimizely's blog</li>
-					<li>Currently working on a large 3-month project</li>
+		<section id="education" class="section">
+			<h2 class="section-title">Work Experience</h2>
+			<article class="section-item">
+				<aside class="section-item-date">May 2013 - Aug. 2013</aside>
+				<h3 class="section-item-title">Optimizely, <span class="section-item-location">San Francisco, CA</span></h3>
+				<p class="section-item-position">Web Developer Intern</p>
+				<ul class="section-item-list">
+					<li>Created a mobile version of the Optimizely website</li>
+					<li>Implement redesign of <a href="http://blog.optimizely.com/">Optimizely's blog</a></li>
+					<li>Worked closely with marketing team and designers</li>
 				</ul>
 			</article>
-			<article>
-				<aside>June 2012 - August 2012</aside>
-				<h3>WePay, <span class="location">Palo Alto, CA</span></h3>
-				<p>Software Engineer Intern</p>
-				<ul>
-					<li>Redesigned application dashboard interface for developers</li>
-					<li>Simplified configuration process for WePay plugins users</li>
+			<article class="section-item">
+				<aside class="section-item-date">June 2012 - Aug. 2012</aside>
+				<h3 class="section-item-title">WePay, <span class="section-item-location">Palo Alto, CA</span></h3>
+				<p class="section-item-position">Software Engineer Intern</p>
+				<ul class="section-item-list">
+					<li>Overhauled application dashboard interface for developers</li>
+					<li class="hide-print">Simplified configuration process for WePay plugins users</li>
+					<li>Implemented redesign of developer documentation</li>
 					<li>Represented company at eCommerceHackNY</li>
-					<li>Redesigned developer documentation</li>
-					<li>Created a WePay donation Facebook application</li>
+					<li class="hide-print">Created a WePay donation Facebook application</li>
 				</ul>
 			</article>
-			<article>
-				<h3>Pipe Dream, <span class="location">Binghamton, NY</span></h3>
-				<aside>January 2011 - May 2013</aside>
-				<p>Web Editor &amp; Lead Web Developer</p>
-				<ul>
+			<article class="section-item">
+				<h3 class="section-item-title">Pipe Dream, <span class="section-item-location">Binghamton, NY</span></h3>
+				<aside class="section-item-date">Jan. 2011 - May 2013</aside>
+				<p class="section-item-position">Lead Web Developer</p>
+				<ul class="section-item-list">
 					<li>Designed and developed <a href="http://www.bupipedream.com">bupipedream.com</a></li>
-					<li>Created responsive design to improve tablet and mobile experience</li>
-					<li>Greatly improved <a href="https://facebook.com/bupipedream" title="Pipe Dream Facebook page">presence on Facebook</a></li>
+					<li>Greatly improved <a href="https://facebook.com/bupipedream" title="Pipe Dream Facebook page">presence on Facebook</a> and social media</li>
 					<li><a href="http://blog.danoc.me/post/36572312098/pipe-dream-server" title="How we configure Pipe Dream's server">Optimized Apache</a> and integrated Amazon CloudFront to handle traffic spikes</li>
-					<li>Configured Git for version control and Capistrano for deployment</li>
 				</ul>
 				
-				<aside>January 2010 - December 2011</aside>
-				<p>Photo Editor</p>
-				<ul>
+				<aside class="section-item-date hide-print">Jan. 2010 - Dec. 2011</aside>
+				<p class="section-item-position hide-print">Photo Editor</p>
+				<ul class="section-item-list hide-print">
 					<li>Led and trained team of 15 photographers, 2 assistant editors as a freshman</li>
 					<li>Responsible for 20+ photo assignments, two issues a week</li>
 				</ul>
 			</article>
 		</section>
 		
-		<section id="projects">
-			<h2>Projects</h2>
-			<article>
-				<aside>May 2013 - Present</aside>
-				<h3>BeatStrap, <a href="http://beatstrap.me/" class="location">www.beatstrap.me</a></h3>
-				<p>A live-blogging platform for journalists on Twitter</p>
+		<section id="projects" class="section">
+			<h2 class="section-title">Projects</h2>
+			<article class="section-item">
+				<aside class="section-item-date">May 2013 - Present</aside>
+				<h3 class="section-item-title">BeatStrap, <a href="http://beatstrap.me/" class="section-item-location">www.beatstrap.me</a></h3>
+				<p class="section-item-description">A live-blogging platform for journalists on Twitter</p>
 			</article>
-			<article>
-				<aside>November 2009 - June 2012</aside>
-				<h3>Take to College, <a href="http://taketocollege.com/" class="location">www.taketocollege.com</a></h3>
-				<p>An interactive college shopping list for students entering college</p>
-			</article>
-			<article>
-				<aside>December 2011</aside>
-				<h3>LESS CSS Grid, <a href="https://github.com/danoc/LESS-CSS-Grid" class="location">github.com/danoc/LESS-CSS-Grid/</a></h3>
-				<p>A flexible 24-column CSS grid that uses LESS</p>
+			<article class="section-item">
+				<aside class="section-item-date">Nov. 2009 - June 2012</aside>
+				<h3 class="section-item-title">Take to College, <a href="http://taketocollege.com/" class="section-item-location">www.taketocollege.com</a></h3>
+				<p class="section-item-description">An interactive college shopping list for students entering college</p>
 			</article>
 		</section>
 
-		<section id="presentations">
-			<h2>Presentations</h2>
-			<article>
-				<aside>March 2013</aside>
-				<h3>Ditch the App, Go Responsive!, <a href="http://danoc.me/talks/responsive" class="location">danoc.me/talks/responsive</a></h3>
-				<p>Spoke about responsive web development for college newspapers at the ACP Midwinter National College Journalism Convention in San Francisco.</p>
+		<section id="presentations" class="section">
+			<h2 class="section-title">Presentations</h2>
+			<article class="section-item">
+				<aside class="section-item-date">Mar. 2013</aside>
+				<h3 class="section-item-title">Ditch the App, Go Responsive!, <a href="http://danoc.me/talks/responsive" class="section-item-location">danoc.me/talks/responsive</a></h3>
+				<p class="section-item-description">Spoke about responsive web development for college newspapers.</p>
 			</article>
 		</section>
 		
-		<section id="education">
-			<h2>Education</h2>
-			<article id="binghamton">
-				<aside>May 2014</aside>
-				<h3>Binghamton University</h3>
-				<p>Bachelor of Science in Computer Science</p>
-			</article>
-			<article id="fordham-prep">
-				<aside>June 2010</aside>
-				<h3>Fordham Preparatory School</h3>
+		<section id="education" class="section">
+			<h2 class="section-title">Education</h2>
+			<article id="binghamton" class="section-item">
+				<aside class="section-item-date">May 2014</aside>
+				<h3 class="section-item-title">Binghamton University</h3>
+				<p class="section-item-description">Bachelor of Science in Computer Science</p>
 			</article>
 		</section>
 		
-		<section id="skills">
-			<h2>Skills</h2>
-			<article>
-				<dl>
+		<section id="skills" class="section">
+			<h2 class="section-title">Skills</h2>
+			<article class="section-item">
+				<dl class="section-item">
 					<dt>Computer</dt>
 					<dd>PHP, HTML/CSS, MySQL, jQuery, Knockout.js, C++, Java, Photoshop, Laravel, CodeIgniter, WordPress, LESS, SASS, HTML5 Boilerplate, Facebook/Twitter APIs, Git, Capistrano, Linux, LAMP, Ubuntu Server</dd>
 					<dt>Languages</dt>
@@ -135,11 +124,7 @@
 			</article>
 		</section>
 		
-		<footer></footer>
-		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-		<script src="../js/plugins.js"></script>
-		<script src="../js/main.js"></script>
 	</body>
 </html>

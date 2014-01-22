@@ -38,4 +38,4 @@ Since LESS supports parameters, each column simply calls the following:
         width: (@colWidth * @numCol) + (@gutter * (@numCol - 1));
     }
 
-Be sure to check out the [project on GitHub](https://github.com/danoc/LESS- CSS-Grid), and feel free to contribute! This should be the first of many more open-source contributions!
+Be sure to check out the [project on GitHub](https://github.com/danoc/LESS-CSS-Grid), and feel free to contribute! This should be the first of many more open-source contributions!

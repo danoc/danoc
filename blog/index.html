@@ -1,0 +1,21 @@
+---
+layout: blog
+title: Daniel O'Connor - Blog
+description: Thoughts of a front-end developer and student at Binghamton University.
+class: page-index
+---
+
+<section class="section post-index">
+	<h2 class="section-title">
+		<a id="posts" href="#posts">Posts</a>
+	</h2>
+
+	<ul class="posts-list">
+		{% for post in site.posts %}
+		<li>
+			<a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> - 
+			<span class="posts-list-date">{{ post.date | date_to_string }}</span>
+		</li>
+		{% endfor %}
+	</ul>
+</section>

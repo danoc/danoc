@@ -1,153 +1,124 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Daniel O'Connor - Front-End Web Developer and Student</title>
-		<meta name="description" content="Portfolio of a front-end developer and student at Binghamton University.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: default
+title: Daniel O'Connor - Front-End Web Developer and Student
+description: Portfolio of a front-end developer and student at Binghamton University.
+class: page-index
+---
 
-		<script type="text/javascript" src="//use.typekit.net/xek7fhz.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<div id="container" class="index-container container">
 
-		<link rel="stylesheet" href="css/normalize.css">
+	<header id="header" class="header">
+		<h1 class="site-title">
+			<a href="/">Daniel O'Connor</a>
+		</h1>
+	</header>
 
-		<link rel="stylesheet/less" href="less/main.less">
-		<script src="js/vendor/less-1.4.1.min.js"></script>
+	<section>
+		<p>I'm a senior majoring in Computer Science at Binghamton University.</p>
 
-	</head>
-	<body>
+		<p>I've interned as a front-end developer at <a href="https://www.optimizely.com/">Optimizely</a> and a software engineer at <a href="https://www.wepay.com/">WePay</a>. I love the bridge between design and development.</p>
 
-		<div id="container" class="container">
-			<header id="header" class="header">
-				<h1 class="site-title">
-					<a href="/">Daniel O'Connor</a>
-				</h1>
-			</header>
+		<p>I build <a href="http://beatstrap.me/">BeatStrap</a> and designed/developed <a href="http://www.bupipedream.com/">Pipe Dream</a> and <a href="http://taketocollege.com/">Take to College</a>.</p>
+	</section>
 
-			<section>
-				<p>I'm a senior majoring in Computer Science at Binghamton University.</p>
+	<section class="section posts">
+		<h2 class="section-title">
+			<a id="posts" href="#posts">Posts</a>
+		</h2>
 
-				<p>I've interned as a front-end developer at <a href="https://www.optimizely.com/">Optimizely</a> and a software engineer at <a href="https://www.wepay.com/">WePay</a>. I love the bridge between design and development.</p>
+		<ul class="posts-list">
+			{% for post in site.posts limit:5 %}
+			<li>
+				<a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> - 
+				<span class="posts-list-date">{{ post.date | date_to_string }}</span>
+			</li>
+			{% endfor %}
+		</ul>
 
-				<p>I build <a href="http://beatstrap.me/">BeatStrap</a> and designed/developed <a href="http://www.bupipedream.com/">Pipe Dream</a> and <a href="http://taketocollege.com/">Take to College</a>.</p>
-			</section>
+		<p class="posts-more">
+			<a href="/blog/">View More Posts</a>
+		</p>
+	</section>
 
-			<section class="section posts">
-				<h2 class="section-title">
-					<a id="posts" href="#posts">Posts</a>
-				</h2>
+	<section class="section">
+		<h2 class="section-title">
+			<a id="work" href="#work">Work</a>
+		</h2>
 
-				<ul id="posts-list" class="posts-list">
-					<!-- parseRSS function will append the posts -->
-				</ul>
+		<ul class="section-list">
 
-				<p class="view-more-posts">
-					<a href="http://blog.danoc.me/page/2" target="_blank">View More Posts</a>
-				</p>
-			</section>
+			<article class="post">
+				<h3 class="section-list-title">
+					<a href="https://www.optimizely.com/">Optimizely</a>
+				</h3>
+				<p>I interned as a front-end developer at Optimizely this past summer where I developed a mobile version of their website.</p>
+			</article>
 
-			<section class="section">
-				<h2 class="section-title">
-					<a id="work" href="#work">Work</a>
-				</h2>
+			<article class="post">
+				<h3 class="section-list-title">
+					<a href="https://www.wepay.com/">WePay</a>
+				</h3>
+				<p>Worked at WePay as a Software Engineer Intern during the 2012 summer. Assigned to the API team, I redesigned the application dashboard for developers, simplified configuration process for WePay plugins users, overhauled the developer documentation, and represented the company at eCommerceHackNY.</p>
+			</article>
 
-				<ul class="posts-list">
+			<article class="post">
+				<h3 class="section-list-title">
+					<a href="http://www.bupipedream.com/">Pipe Dream</a>
+				</h3>
+				<p>Worked on a complete redesign of <a href="http://www.bupipedream.com/">bupipedream.com</a>, home of the student-run newspaper at Binghamton University. The new website runs on WordPress and features a responsive layout. I wrote <a href="http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress" title="Moving from College Publisher to WordPress">a blog post explaining the development</a> in great detail. I also managed Pipe Dream's Facebook and Twitter accounts.</p>
+			</article>
 
-					<article class="post">
-						<h3 class="post-title">
-							<a href="https://www.optimizely.com/">Optimizely</a>
-						</h3>
-						<p>I interned as a front-end developer at Optimizely this past summer where I developed a mobile version of their website.</p>
-					</article>
+		</ul>
+	</section>
 
-					<article class="post">
-						<h3 class="post-title">
-							<a href="https://www.wepay.com/">WePay</a>
-						</h3>
-						<p>Worked at WePay as a Software Engineer Intern during the 2012 summer. Assigned to the API team, I redesigned the application dashboard for developers, simplified configuration process for WePay plugins users, overhauled the developer documentation, and represented the company at eCommerceHackNY.</p>
-					</article>
+	<section class="section">
+		<h2 class="section-title">
+			<a id="projects" href="#projects">Projects</a>
+		</h2>
 
-					<article class="post">
-						<h3 class="post-title">
-							<a href="http://www.bupipedream.com/">Pipe Dream</a>
-						</h3>
-						<p>Worked on a complete redesign of <a href="http://www.bupipedream.com/">bupipedream.com</a>, home of the student-run newspaper at Binghamton University. The new website runs on WordPress and features a responsive layout. I wrote <a href="http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress" title="Moving from College Publisher to WordPress">a blog post explaining the development</a> in great detail. I also managed Pipe Dream's Facebook and Twitter accounts.</p>
-					</article>
+		<ul class="section-list">
 
-				</ul>
-			</section>
+			<article class="post">
+				<h3 class="section-list-title">
+					<a href="http://beatstrap.me/">BeatStrap</a>
+				</h3>
+				<p>BeatStrap is a tool for journalists to cover news, sports, and events through Twitter. I created BeatStrap and work with <a href="http://www.camayak.com/">Roman Heindorff of Camayak</a> to help market and promote the product.</p>
+			</article>
 
-			<section class="section">
-				<h2 class="section-title">
-					<a id="projects" href="#projects">Projects</a>
-				</h2>
+			<article class="post">
+				<h3 class="section-list-title">
+					<a href="http://taketocollege.com/">Take to College</a>
+				</h3>
+				<p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists.</p>
+			</article>
 
-				<ul class="posts-list">
+		</ul>
+	</section>
 
-					<article class="post">
-						<h3 class="post-title">
-							<a href="http://beatstrap.me/">BeatStrap</a>
-						</h3>
-						<p>BeatStrap is a tool for journalists to cover news, sports, and events through Twitter. I created BeatStrap and work with <a href="http://www.camayak.com/">Roman Heindorff of Camayak</a> to help market and promote the product.</p>
-					</article>
+	<section class="section">
+		<h2 class="section-title">
+			<a id="talks" href="#talks">Talks</a>
+		</h2>
 
-					<article class="post">
-						<h3 class="post-title">
-							<a href="http://taketocollege.com/">Take to College</a>
-						</h3>
-						<p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists.</p>
-					</article>
+		<ul class="section-list">
 
-				</ul>
-			</section>
+			<article class="post">
+				<h3 class="section-list-title">
+					<a href="http://danoc.me/talks/responsive/">Ditch the App, Go Responsive!</a>
+				</h3>
+				<p>Spoke about responsive web development for college newspapers at the 2013 ACP Midwinter National College Journalism Convention in San Francisco.</p>
+			</article>
 
-			<section class="section">
-				<h2 class="section-title">
-					<a id="talks" href="#talks">Talks</a>
-				</h2>
+		</ul>
+	</section>
 
-				<ul class="posts-list">
+	<footer id="contact" class="footer">
+		<ul class="footer-links">
+			<li><a href="mailto:daniel@danoc.me">daniel@danoc.me</a></li>
+			<li><a href="https://www.facebook.com/danoc.me" target="_blank">Facebook</a></li>
+			<li><a href="https://twitter.com/itsdanoc" target="_blank">Twitter</a></li>
+			<li><a href="http://dribbble.com/danoc" target="_blank">Dribbble</a></li>
+		</ul>
+	</footer>
 
-					<article class="post">
-						<h3 class="post-title">
-							<a href="http://danoc.me/talks/responsive/">Ditch the App, Go Responsive!</a>
-						</h3>
-						<p>Spoke about responsive web development for college newspapers at the 2013 ACP Midwinter National College Journalism Convention in San Francisco.</p>
-					</article>
-
-				</ul>
-			</section>
-
-			<footer class="footer">
-				<ul class="footer-links">
-					<li><a href="mailto:daniel@danoc.me">daniel@danoc.me</a></li>
-					<li><a href="https://www.facebook.com/danoc.me" target="_blank">Facebook</a></li>
-					<li><a href="https://twitter.com/itsdanoc" target="_blank">Twitter</a></li>
-					<li><a href="http://dribbble.com/danoc" target="_blank">Dribbble</a></li>
-				</ul>
-			</footer>
-		</div>
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-		<script src="js/plugins.js"></script>
-		<script src="js/main.js"></script>
-
-		<script type="text/javascript">
-
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-5922635-10']);
-		  _gaq.push(['_setDomainName', 'danoc.me']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
-		</script>
-
-	</body>
-</html>
+</div>

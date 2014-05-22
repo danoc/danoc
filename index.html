@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Daniel O'Connor - Front-End Web Developer and Student
-description: Portfolio of a front-end developer and student at Binghamton University.
+title: Daniel O'Connor | Front-End Web Developer
+description: Portfolio of a UI Engineer at Optimizely and recent graduate of Binghamton University.
 class: page-index
 ---
 
@@ -14,11 +14,11 @@ class: page-index
 	</header>
 
 	<section>
-		<p>I'm a senior majoring in Computer Science at Binghamton University.</p>
+		<p>I'm a future UI Engineer at <a href="https://www.optimizely.com/">Optimizely</a> and recent Binghamton University graduate.</p>
 
 		<p>I've interned as a front-end developer at <a href="https://www.optimizely.com/">Optimizely</a> and a software engineer at <a href="https://www.wepay.com/">WePay</a>. I love the bridge between design and development.</p>
 
-		<p>I build <a href="http://beatstrap.me/">BeatStrap</a> and designed/developed <a href="http://www.bupipedream.com/">Pipe Dream</a> and <a href="http://taketocollege.com/">Take to College</a>.</p>
+		<p>I build <a href="http://beatstrap.me/">BeatStrap</a>, created <a href="http://hackbu.org/">HackBU</a>, and organized the <a href="http://hackathon.hackbu.org/">HackBU Hackathon</a>.</p>
 	</section>
 
 	<section class="section posts">
@@ -29,7 +29,7 @@ class: page-index
 		<ul class="posts-list">
 			{% for post in site.posts limit:5 %}
 			<li>
-				<a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> - 
+				<a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> -
 				<span class="posts-list-date">{{ post.date | date_to_string }}</span>
 			</li>
 			{% endfor %}
@@ -87,6 +87,13 @@ class: page-index
 
 			<article class="post">
 				<h3 class="section-list-title">
+					<a href="http://hackbu.org/">HackBU</a>
+				</h3>
+				<p>Created a club at Binghamton University to promote a "hacker culture" on campus. HackBU hosted <a href="http://hackbu.org/workshops/">weekly web development workshops</a>, organized <a href="http://hackbu.org/hackathons/">trips to hackathons</a>, and <a href="http://hackathon.hackbu.org/">held BU's first hackathon</a>.</p>
+			</article>
+
+			<article class="post">
+				<h3 class="section-list-title">
 					<a href="http://taketocollege.com/">Take to College</a>
 				</h3>
 				<p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists.</p>
@@ -110,6 +117,43 @@ class: page-index
 			</article>
 
 		</ul>
+	</section>
+
+	<section class="section posts">
+		<h2 class="section-title">
+			<a id="press" href="#press">Press</a>
+		</h2>
+
+		<ul class="posts-list">
+			<li>
+				<a href="http://www.lohud.com/story/news/education/2014/05/18/class-entrepreneurs-creating-jobs/9269049/" class="posts-list-title">Class of 2014 students create their own jobs</a> - <span class="posts-list-date">{{ "2013-05-18T23:55:00-04:00" | date_to_string }}</span>
+			</li>
+
+			<li>
+				<a href="http://www.binghamton.edu/inside/index.php/inside/story/8377/students-stay-up-late-innovate-at-hackbu-hackathon/" class="posts-list-title">Students stay up late, innovate at HackBU Hackathon</a> - <span class="posts-list-date">{{ "2014-04-30T03:00:00-04:00" | date_to_string }}</span>
+			</li>
+
+			<li>
+				<a href="http://www.bupipedream.com/news/35106/hackbu/" class="posts-list-title">Coders converge at Binghamton University’s first-ever hackathon</a> - <span class="posts-list-date">{{ "2014-04-29T03:09:00-04:00" | date_to_string }}</span>
+			</li>
+
+			<li>
+				<a href="http://www.wicz.com/news2005/viewarticle.asp?a=32244" class="posts-list-title">The Internet turns 25</a> - <span class="posts-list-date">{{ "2014-03-13T22:46:42-05:00" | date_to_string }}</span>
+			</li>
+
+			<li>
+				<a href="http://www.bupipedream.com/news/30516/hack-bu" class="posts-list-title">Initiative offers free coding lessons to Binghamton University students</a> - <span class="posts-list-date">{{ "2014-02-25T01:52:00-05:00" | date_to_string }}</span>
+			</li>
+
+			<li>
+				<a href="http://college.usatoday.com/2013/11/21/8-dos-and-donts-for-student-e-portfolios/" class="posts-list-title">8 dos and don'ts for student e-portfolios</a> - <span class="posts-list-date">{{ "2013-11-21T10:44:00-05:00" | date_to_string }}</span>
+			</li>
+
+			<li>
+				<a href="http://www.bupipedream.com/news/23268/binghamton-university-hackers-michigan/" class="posts-list-title">Binghamton University hackers take Michigan</a> - <span class="posts-list-date">{{ "2013-09-24T02:40:00-04:00" | date_to_string }}</span>
+			</li>
+		</ul>
+
 	</section>
 
 	<footer id="contact" class="footer">

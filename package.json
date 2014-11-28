@@ -1,0 +1,22 @@
+{
+  "name": "danoc.me",
+  "version": "1.0.0",
+  "description": "Daniel O'Connor's personal website and portfolio.",
+  "author": "Daniel O'Connor <daniel@danoc.me>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danoc/danoc.me"
+  },
+  "bugs": {
+    "url": "https://github.com/danoc/danoc.me/issues"
+  },
+  "keywords": [
+    "portfolio",
+    "resume",
+    "binghamton",
+    "pipe dream",
+    "optimizely"
+  ],
+  "analyze": true,
+  "license": "MIT"
+}

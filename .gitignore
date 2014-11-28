@@ -1,10 +1,8 @@
-## Capistrano
-
+### Capistrano ###
 config/
 Capfile
 
-## Jekyll
-
+### Jekyll ###
 Gemfile.lock
 test/dest
 *.gem
@@ -21,8 +19,7 @@ coverage
 .ruby-version
 .sass-cache
 
-## Node
-
+### Node ###
 # Logs
 logs
 *.log
@@ -50,3 +47,6 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
+
+### Bower ###
+bower_components

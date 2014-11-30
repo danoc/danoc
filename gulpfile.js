@@ -12,18 +12,18 @@ gulp.task('default', ['less', 'css', 'img']);
 
 // Install the bower dependencies
 gulp.task('bower', ['clean'], function() {
-  bower()
+  return bower()
     .pipe(gulp.dest('lib/'))
 });
 
 // Delete the existing gulp files
 gulp.task('clean', function(cb) {
-  del(['public'], cb);
+  return del(['public'], cb);
 });
 
 // Compile LESS and minify
 gulp.task('less', ['bower'], function () {
-  gulp.src('./assets/less/*.less')
+  return gulp.src('./assets/less/*.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
@@ -33,14 +33,14 @@ gulp.task('less', ['bower'], function () {
 
 // Minify CSS files
 gulp.task('css', ['bower'], function() {
-  gulp.src(['./assets/css/*.css', './lib/normalize.css/normalize.css'])
+  return gulp.src(['./assets/css/*.css', './lib/normalize.css/normalize.css'])
     .pipe(minifyCSS({keepBreaks:true}))
     .pipe(gulp.dest('./public/css'));
 });
 
 // Minify image files
 gulp.task('img', ['bower'], function() {
-  gulp.src('./assets/img/**')
+  return gulp.src('./assets/img/**')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],

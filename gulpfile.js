@@ -9,7 +9,6 @@ var imagemin = require('gulp-imagemin');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
 var path = require('path');
-var plumber = require('gulp-plumber');
 var shell = require('gulp-shell');
 
 var assets = {
@@ -121,7 +120,7 @@ gulp.task('browserSync', ['jekyllBuild'], function() {
 /*==============*/
 
 // Build the Jekyll website
-gulp.task('jekyllBuild', ['clean'], function(done) {
+gulp.task('jekyllBuild', ['clean', 'img', 'css', 'less'], function(done) {
   return childProcess.spawn('jekyll', ['build'], {stdio: 'inherit'})
     .on('close', done);
 });

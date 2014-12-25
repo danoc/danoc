@@ -3,3 +3,5 @@ lsi: false
 highlighter: true
 markdown: redcarpet
 permalink: /blog/:title/
+keep_files: [public]
+exclude: [src, lib, node_modules, bower.json, Gemfile, gulpfile.js, package.json, README.md]

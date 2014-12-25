@@ -62,7 +62,7 @@ Your website should now contract as you make the browser window smaller. The con
 ### Flexible images and media
 
 Now that our layout is fluid, we must ensure that images and media resize appropriately. To do this, add the following code to your CSS rules:
-    
+
     img, embed, object, video {
         max-width: 100%;
     }

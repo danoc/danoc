@@ -10,7 +10,8 @@ tags:
 tumblr_url: http://blog.danoc.me/post/61560908567/how-to-get-a-great-computer-science-internship
 ---
 
-![](http://media.tumblr.com/a74fb38ecbc972dfaad2ce8a529b17f6/tumblr_inline_mtavvbkkDh1r4ulua.jpg)
+![Photo of the Computer Science internship event](/public/img/posts/tech-internship-event.jpg)
+
 
 My friend Eitan and I were expecting 20 people to attend last night's CS Internship Q&A. We got 130.
 

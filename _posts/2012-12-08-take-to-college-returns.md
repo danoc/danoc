@@ -11,7 +11,8 @@ tags:
 tumblr_url: http://blog.danoc.me/post/37530763368/take-to-college-returns
 ---
 
-![](http://media.tumblr.com/tumblr_meqy16IV0c1r4ulua.png)
+![Screenshot of Take to College](/public/img/posts/take-to-college.png)
+
 
 I created [Take to College](http://taketocollege.com/) in Nov. 2009 as a senior in high school. What started as a static one-page website got 150,000 visits and 2,500 likes on Facebook in its first three months of summer. It was quickly profitable thanks to Google AdSense and Amazon affiliate links.
 

@@ -11,6 +11,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/20572783627/this-facebook-notice-took-way-too-long-to-design
 ---
 
-![](http://25.media.tumblr.com/tumblr_m21jkz5HeS1r8aozao1_1280.png)
+![Screenshot of the Pipe Dream social reader integration](/public/img/posts/pipe-dream-social-reader.png)
+
 
 This Facebook notice took way too long to design.

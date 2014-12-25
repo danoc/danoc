@@ -13,6 +13,6 @@ tags:
 tumblr_url: http://blog.danoc.me/post/15556391633/legible-articles
 ---
 
-![](http://24.media.tumblr.com/tumblr_lxip84K67N1r8aozao1_1280.png)
+![Screenshot of a Pipe Dream article](/public/img/posts/article-design.png)
 
 Thanks to a larger font and increased line-height, articles will be much more legible in the new design.

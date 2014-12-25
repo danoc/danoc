@@ -15,7 +15,7 @@ It's been three weeks since I launched the [new Pipe Dream website](http://bupip
 
 ### Creating the Design
 
-![](http://media.tumblr.com/tumblr_m0c3v4OXCy1r4ulua.png)
+![Pipe Dream displayed on multiple devices](/public/img/posts/pipe-dream-responsive.png)
 
 The design was inspired by [The New York Times](http://www.nytimes.com/)'s layout, the clean (and responsive design) at [The Boston Globe](http://bostonglobe.com/), and the legibility of [Niemam Lab](http://www.niemanlab.org/).
 
@@ -27,7 +27,7 @@ I wrote at length about my [plans for the new website](http://blog.danoc.me/2011
 
 ### From PSD to HTML
 
-![](http://media.tumblr.com/tumblr_m0c4hpNvMG1r4ulua.png)
+![Early Pipe Dream screenshot](/public/img/posts/pipe-dream-initial.png)
 
 With a basic mockup completed, I began coding. I used the [HTML5 Boilerplate](http://html5boilerplate.com/) as a starting point and used [LESS](http://lesscss.org) to keep my CSS as neat as possible. The HTML5 Boilerplate provides a set of best-practices and LESS extends CSS to allows neat features such as variables and mixins. I couldn't find a 24-column fluid grid to fit my needs, [so I created my own](http://blog.danoc.me/2011/12/23/less-css-grid.html).
 
@@ -37,7 +37,7 @@ I eventually added styles to the website and made the .html file it look more li
 
 ### Cleaning the Archives
 
-![](http://media.tumblr.com/tumblr_m0cma9jawk1r4ulua.png)
+![Screenshot of the College Publisher database export](/public/img/posts/college-publisher-export.png)
 
 It took some time, but College Publisher eventually emailed us a link to download our archives. The archives were split into two parts: a 100mb .zip file of images and [a 30mb .txt file](http://blog.danoc.me/2012/01/18/database-dump.html) with _(hopefully!)_ every Pipe Dream article dating back to 2005.
 
@@ -107,7 +107,7 @@ The Pipe Dream website also uses the [Regenerate Thumbnails plugin](http://wordp
 
 #### Article Layout
 
-![](http://media.tumblr.com/tumblr_m0cmb2wLxZ1r4ulua.png)
+![Pipe Dream article with two photos](/public/img/posts/pipe-dream-article-two-photos.png)
 
 Inspired by the layouts of The New York Times and The Boston Globe, I designed the Pipe Dream website to display photos in different locations depending on photo quality. [This sports article](http://www.bupipedream.com/sports/8562/binghamton-basketball-rebuilding/) is a great example of what the theme can accomplish.
 
@@ -150,7 +150,7 @@ Pushing the website online was fairly easy. I installed WordPress on the server,
 ### Developing Locally
 
 It's terrible practice to develop on the production website, so I use FileZilla to download all of latest files before developing locally. I also use phpMyAdmin to export the WordPress table from bupipedream.com and import it to my local database. I then run a quick SQL query to fix the URL change:
-    
+
     UPDATE `wordpress`.`wp_options` SET `option_value` = 'http://localhost:8888/bupipedream/' WHERE `wp_options`.`option_id` = 3;
     UPDATE `wordpress`.`wp_options` SET `option_value` = 'http://localhost:8888/bupipedream/' WHERE `wp_options`.`option_id` = 39;
 
@@ -166,8 +166,8 @@ Most importantly, however, I hope to build a staff of talented web developers th
 
 ### Many thanks to…
 
-Thanks to websites such as [The Bangor Daily News](http://bangordailynews.com/) and [The Daily Cougar](http://thedailycougar.com/) for showing that it is possible to run a successful news website on WordPress. 
+Thanks to websites such as [The Bangor Daily News](http://bangordailynews.com/) and [The Daily Cougar](http://thedailycougar.com/) for showing that it is possible to run a successful news website on WordPress.
 
-Thanks to the WordPress community and all those that contribute to the open-source projects that power Pipe Dream. 
+Thanks to the WordPress community and all those that contribute to the open-source projects that power Pipe Dream.
 
 And a **HUGE** thanks to the work done by Daniel Bachhuber, William P. Davis, and others formerly involved with [CoPress](http://www.copress.org/blog/). Hopefully this post will help other papers do the same.

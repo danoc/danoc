@@ -12,7 +12,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/34605192252/follow-pipe-dream-as-we-cover-hurricane-sandy-and
 ---
 
-![](http://24.media.tumblr.com/tumblr_mcokn7h0Ep1r8aozao1_1280.png)
+![Pipe Dream hurricane Sandy coverage teaser](/public/img/posts/pipe-dream-hurricane-sandy-coverage.png)
 
 Follow Pipe Dream as we cover hurricane Sandy and its effects on Binghamton University. Any thoughts on the [live blogging platform](http://www.bupipedream.com/live/storm/)?
 

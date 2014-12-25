@@ -15,7 +15,7 @@ tumblr_url: http://blog.danoc.me/post/36315431227/startup-deas
 
 > If you know a lot about programming and you start learning about some other
 field, you'll probably see problems that software could solve.
-> 
+>
 > &mdash; Paul Graham, _[How to Get Startup Ideas](http://paulgraham.com/startupideas.html)_
 
 I've always been a huge believer in this. The best ideas come in everyday life.

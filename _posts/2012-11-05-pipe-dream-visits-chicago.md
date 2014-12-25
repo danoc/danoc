@@ -13,7 +13,8 @@ tags:
 tumblr_url: http://blog.danoc.me/post/35106617712/pipe-dream-visits-chicago
 ---
 
-![](http://media.tumblr.com/tumblr_md170mIu4H1r4ulua.jpg)
+![Pipe Dream editors in Chicago](/public/img/posts/pipe-dream-chicago.jpg)
+
 
 Just got back from Chicago where I, seven Pipe Dream editors, and 2,300 others attended the [ACP/CMA National College Media Convention](http://www.studentpress.org/acp/conventions.html). I loved Chicago and it was a nice break from daily life in Binghamton. I've shared some of [my notes on Google Drive](https://docs.google.com/document/d/1fA66y9JP1wpTjMNRUB_YxRflzApJyBI7XREO4xk8jKo/edit), but here are a few highlights:
 
@@ -24,7 +25,7 @@ Just got back from Chicago where I, seven Pipe Dream editors, and 2,300 others a
 
 And the touristy attractions:
 
-![](http://media.tumblr.com/tumblr_md1rq6CK5A1r4ulua.jpg)
+![Chicago skyline at night](/public/img/posts/chicago-at-night.jpg)
 
   * Ate amazing deep dish pizza in the downtown area, incredible Chinese food at Lao Sze Chuan, and great popcorn at Garret's.
   * [Had fun at the bean](http://imgur.com/3UkUO) and rode the ferris wheel at the Navy Pier.

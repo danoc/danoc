@@ -10,6 +10,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/44044442923/pipe-dream-now-supports-twitter-cards-all-it
 ---
 
-![](http://31.media.tumblr.com/5c464816bb8647a8abf9faaa28e5e1a0/tumblr_mitam2ZxSz1r8aozao1_1280.png)
+![Screenshot of a Pipe Dream Twitter card](/public/img/posts/pipe-dream-twitter-cards.png)
+
 
 Pipe Dream now supports Twitter Cards. All it takes is an application and the correct markup!

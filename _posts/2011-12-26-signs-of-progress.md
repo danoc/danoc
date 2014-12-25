@@ -12,6 +12,6 @@ tags:
 tumblr_url: http://blog.danoc.me/post/14831427279/signs-of-progress
 ---
 
-![](http://31.media.tumblr.com/tumblr_lwu3y13yXB1r8aozao1_1280.png)
+![Early Pipe Dream screenshot](/public/img/posts/pipe-dream-initial.png)
 
 There’s still a lot of work to do, but it’s getting there…

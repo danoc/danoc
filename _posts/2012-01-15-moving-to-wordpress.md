@@ -10,7 +10,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/15919857214/moving-to-wordpress
 ---
 
-![](http://media.tumblr.com/tumblr_lxvb55r2Kb1r4ulua.jpg)
+![Photo of WordPress stickers and pins](/public/img/posts/wordpress-swag.jpg)
 
 I've designed the new Pipe Dream website in Photoshop and coded (most of it, at least) into a HTML/CSS layout that is [responsive](http://blog.danoc.me/2012/01/12/bupipedream-on-ipad.html), uses a [flexible grid](http://blog.danoc.me/2011/12/23/less-css-grid.html), and takes advantage of the latest frameworks and tools and such as the [HTML5 Boilerplate](http://html5boilerplate.com/) and [LESS](http://lesscss.org/).
 

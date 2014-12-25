@@ -9,7 +9,8 @@ tags:
 tumblr_url: http://blog.danoc.me/post/19819620781/spring-fling-concert-announcement-takes-down-the-pipe
 ---
 
-![](http://media.tumblr.com/tumblr_m1cma9BTqx1r4ulua.png)
+![Screenshot of Pipe Dream's Google Analytics](/public/img/posts/pipe-dream-spring-fling-google-analytics.png)
+
 
 It took 90 active visitors to bring the Pipe Dream site to a screeching halt. The site crashed yesterday afternoon because of a traffic spike to an article announcing that [Passion Pit will headline the 2012 Spring Fling concert](http://www.bupipedream.com/news/9130/passion-pit-to-headline-spring- fling/).
 

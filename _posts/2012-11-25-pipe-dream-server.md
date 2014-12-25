@@ -15,7 +15,8 @@ tags:
 tumblr_url: http://blog.danoc.me/post/36572312098/pipe-dream-server
 ---
 
-![](http://media.tumblr.com/tumblr_me2vyeoJhA1r4ulua.png)
+![Screenshot of the Linode login page](/public/img/posts/linode-manager-login.png)
+
 
 I decided to move the Pipe Dream website to a Linode VPS when we made [the switch from College Publisher to WordPress](http://blog.danoc.me/2012/03/04/from-college-publisher-to-wordpress.html). A VPS offered the flexibility to play around with tools such as Git and would force me to learn a bit about server management. It was a welcome change from the College Publisher days when they hosted the server and required a three month notice to export our data (to a terribly formatted text file).
 
@@ -23,7 +24,7 @@ The move to a VPS caused problems as I [struggled to keep the server online](htt
 
 Traffic problems aside, I knew little about user permissions and some mistakes [led to a nasty "Pharma hack"](http://blog.danoc.me/2012/10/28/wordpress-pharma-hack.html) that was only visible to search bots. Some debugging led me to the infected .php files (which I promptly deleted). The hole, however, remained open, so the attacker always returned. I even found a fancy control panel that gave the attacker easy access to the server.
 
-![](http://media.tumblr.com/tumblr_me2rvveSUe1r4ulua.png)
+![Screenshot of the Pharma Hack control panel on the Pipe Dream server](/public/img/posts/pipe-dream-pharma-hack-server.png)
 
 I couldn't take the server offline while classes were in session, so I reconfigured it during Thanksgiving break. Here's how it went:
 
@@ -47,7 +48,7 @@ Last time around I added developers to Apache's `www-data` group and _chown'd_ a
 
 ### Database
 
-![](http://media.tumblr.com/tumblr_me2vv9MtYc1r4ulua.png)
+![Screenshot of the Pipe Dream database](/public/img/posts/pipe-dream-database.png)
 
 Instead of configuring phpMyAdmin, I'm using [Sequel Pro](http://www.sequelpro.com/), an open-source MySQL database management tool for Macs. I created a user specifically for WordPress and gave it limited privileges. Each developer has an account with very limited privileges for exporting the database with our [WordPress Site Sync](https://github.com/bupipedream/WordPress-Article-Deck) script.
 

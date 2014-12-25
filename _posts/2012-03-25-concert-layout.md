@@ -10,7 +10,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/19913228146/concert-layout
 ---
 
-![](http://media.tumblr.com/tumblr_m1era6Srtw1r4ulua.png)
+![Pipe Dream concert announcement](/public/img/posts/pipe-dream-concert-layout.png)
 
 I started working on an alternate home page layout when I heard that we got permission to announce [Passion Pit was booked for Binghamton University's spring fling concert](http://www.bupipedream.com/news/9130/passion-pit-to-headline-spring-fling/).
 

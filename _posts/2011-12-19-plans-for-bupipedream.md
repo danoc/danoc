@@ -30,7 +30,7 @@ Also, I've thought of a couple of side-projects that will drive students to the 
 
   * **Campus Twitter directory** \- Inspired by [HarvardTweets](http://tweets.cs50.net/), I would like to create an aggregator of tweets from Binghamton University faculty, clubs, and students.
   * **Interactive Bus Schedule** \- Bus schedules can be confusing, so we plan to work with OCCT (Binghamton's student-run bus company) to build an interactive router finder. Students will be able to select a destination and receive a list of upcoming departures. The OCCT Twitter stream will be displayed to inform students of possible delays and detours.
-  * **Police Watch ** \- We're going to put together an interactive police blotter that uses Google Maps to display the incidents and Facebook to rank them by popularity.
+  * **Police Watch** \- We're going to put together an interactive police blotter that uses Google Maps to display the incidents and Facebook to rank them by popularity.
   * **Public university salaries database** \- Binghamton University is a public school, so faculty salaries are public information. We would like to have a searchable database similar to that of [The Collegiate Times](http://www.collegiatetimes.com/databases/salaries).
 
 If all goes well, the new [bupipedream.com](http://bupipedream.com/) will launch in the beginning of February. Until then, I'll be writing about the development process on this blog.

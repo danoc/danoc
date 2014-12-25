@@ -1,4 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'github-pages'
-gem 'jekyll-import'
+gem 'capistrano', '~> 3.3.0'

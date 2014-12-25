@@ -2,10 +2,6 @@
 lib/
 public/
 
-### Capistrano ###
-config/
-Capfile
-
 ### Jekyll ###
 Gemfile.lock
 test/dest

@@ -121,7 +121,7 @@ gulp.task('browserSync', ['jekyllBuild'], function() {
 
 // Build the Jekyll website
 gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
-  return childProcess.spawn('jekyll', ['build'], {stdio: 'inherit'})
+  return childProcess.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
     .on('close', done);
 });
 

@@ -4,13 +4,13 @@ title: 'A modern development environment and build system with NPM, Bower, Gulp,
 date: '2014-12-26T00:00:00.000Z'
 ---
 
-I recently played around with modern build automation tools and decided to implement them on [danoc.me](http://danoc.me/), my personal website.
+Inspired by the James Long's blog post, _Presenting The Most Over-Engineered Blog Ever_, I'd like to share a thing or two about the build system I've configured for this blog.
 
 What follows is a description of <s>over engineering a personal website</s> all these technologies and implementation tips.
 
 ## Overview
 
-* **Hosting** – This web page is stored on a [Digital Ocean](https://www.digitalocean.com/) server as static, pre-compiled HTML file called `index.html` in a folder called `modern-build-system`.
+* **Hosting** – This web page is stored on a [Digital Ocean](https://www.digitalocean.com/) server as static, pre-compiled HTML file called `index.html` in a folder called `modern-build-system/`.
 * **Jekyll** – Generated the `index.html` file for this to this page and all other pages on this site. Jekyll describes itself as a "static site generator." Think WordPress, but with no database and a command `jekyll build` that creates static HTML files for each post.
 
   Posts on this website are all written in [Markdown](http://daringfireball.net/projects/markdown/syntax) and converted to HTML with Jekyll.

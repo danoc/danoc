@@ -6,6 +6,7 @@ lock '3.3.5'
 set :application, 'danoc.me'
 set :repo_url, 'git@github.com:danoc/danoc.me.git'
 
+set :pty, true
 set :log_level, :info
 
 namespace :deploy do

@@ -8,8 +8,6 @@ var del = require('del');
 var imagemin = require('gulp-imagemin');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
-var path = require('path');
-var shell = require('gulp-shell');
 
 var assets = {
   src: {
@@ -24,7 +22,7 @@ var assets = {
   }
 };
 
-var jekyllPaths = ['index.html', '_layouts/*.html', '_posts/*'];
+var jekyllPaths = ['index.html', '_layouts/*.html', '_posts/*', '_drafts/*'];
 
 
 /*=========================*/
@@ -105,7 +103,7 @@ gulp.task('img', ['bower'], function(event) {
 /*=== browserSync ===*/
 /*===================*/
 
-// Start browserSync to view the website
+// Start BrowserSync to view the website
 gulp.task('browserSync', ['jekyllBuild'], function() {
   browserSync({
     server: {
@@ -121,7 +119,7 @@ gulp.task('browserSync', ['jekyllBuild'], function() {
 
 // Build the Jekyll website
 gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
-  return childProcess.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
+  return childProcess.spawn('jekyll', ['build', '--drafts'])
     .on('close', done);
 });
 

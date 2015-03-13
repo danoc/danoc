@@ -155,7 +155,7 @@ The first two `execute` lines install dependencies listed in the [`Gemfile`](htt
 
 Capistrano also requires a `production.rb` file. [Mine is one line](https://github.com/danoc/danoc.me/blob/master/config/deploy/production.rb) and looks like this:
 
-```
+```ruby
 server 'danoc.me', user: 'daniel'
 ```
 

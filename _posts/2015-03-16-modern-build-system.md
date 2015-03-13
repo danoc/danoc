@@ -118,7 +118,7 @@ You might notice that the `jekyllBuild` task depends on the `img`, `css`, and `l
 
 This website uses three package managers: Bundler, NPM, and Bower. Bundler is used to manage Ruby gems, NPM manages Node.js programs, and Bower manages front-end frameworks and libraries.
 
-I [currently use Bundler](https://github.com/danoc/danoc.me/blob/master/Gemfile) to install Capistrano and Jekyll, [NPM to install](https://github.com/danoc/danoc.me/blob/master/package.json) BrowserSync, Gulp, a bunch of Gulp dependencies, and even install Bower. Currently [I only use Bower](https://github.com/danoc/danoc.me/blob/master/bower.json) to download [Normalize.css](https://github.com/necolas/normalize.css/).
+I [currently use Bundler](https://github.com/danoc/danoc.me/blob/master/Gemfile) to install Capistrano, Jekyll and Rogue, [NPM to install](https://github.com/danoc/danoc.me/blob/master/package.json) BrowserSync, Gulp, a bunch of Gulp dependencies, and even install Bower. Currently [I only use Bower](https://github.com/danoc/danoc.me/blob/master/bower.json) to download [Normalize.css](https://github.com/necolas/normalize.css/).
 
 
 ## Deploying Jekyll with Capistrano

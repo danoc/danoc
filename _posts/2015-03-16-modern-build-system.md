@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'An over-engineered, modern development environment and build system'
-date: '2015-03-05T00:00:00.000Z'
+date: '2015-03-16T00:00:00.000Z'
 ---
 
 I'd like to share a thing or two about the build system and development environment I've configured for this blog.
@@ -11,7 +11,7 @@ What follows is a description of <s>over engineering a personal website</s> all 
 
 ## Overview
 
-This blog post was written in [Markdown](http://daringfireball.net/projects/markdown/) and compiled into HTML using [Jekyll](http://jekyllrb.com/). [gulp](http://gulpjs.com/) uses custom tasks to compile [`.less` files](http://lesscss.org/) into CSS, add vendor prefixes, and minify the files, and combine them into a single file.
+This blog post was written in [Markdown](http://daringfireball.net/projects/markdown/) and compiled into HTML using [Jekyll](http://jekyllrb.com/). [gulp](http://gulpjs.com/) uses custom tasks to compile [`.less` files](http://lesscss.org/) into CSS, add vendor prefixes, and minify the files.
 
 gulp also minifies all images, installs front-end dependencies using Bower, runs `jekyll build --drafts` when a post is saved, and uses [BrowserSync](http://www.browsersync.io/) to serve the website locally.
 

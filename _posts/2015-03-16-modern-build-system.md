@@ -1,6 +1,7 @@
 ---
 layout: post
-title: 'An over-engineered, modern development environment and build system'
+title: An over-engineered, modern development environment and build system
+description: How to integrate Jekyll with tools like gulp and deploy in a single command using Capistrano.
 date: '2015-03-16T00:00:00.000Z'
 ---
 
@@ -187,4 +188,4 @@ This system is terribly complicated and over-engineered for a blog and portfolio
 
 That said, configuring a seamless build system and development environment can be a great learning experience and incredibly rewarding.
 
-**Interested in this kind of stuff?** [Optimizely is always hiring](http://grnh.se/q6p0dk)!
+**Want to do this at a larger scale?** [Optimizely is always hiring](http://grnh.se/q6p0dk)!

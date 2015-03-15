@@ -2,7 +2,7 @@
 layout: post
 title: An over-engineered, modern development environment and build system
 description: How to integrate Jekyll with tools like gulp and deploy in a single command using Capistrano.
-date: '2015-03-16T00:00:00.000Z'
+date: '2015-03-15T20:50:40.000Z'
 ---
 
 I'd like to share a thing or two about the build system and development environment I've configured for this blog.

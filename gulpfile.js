@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 
+var args = require('yargs').argv;
 var autoprefixer = require('gulp-autoprefixer');
 var bower = require('gulp-bower');
 var browserSync = require('browser-sync');
@@ -8,6 +9,8 @@ var del = require('del');
 var imagemin = require('gulp-imagemin');
 var less = require('gulp-less');
 var minifyCSS = require('gulp-minify-css');
+
+var isProduction = args.type === 'production';
 
 var assets = {
   src: {
@@ -119,7 +122,13 @@ gulp.task('browserSync', ['jekyllBuild'], function() {
 
 // Build the Jekyll website
 gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
-  return childProcess.spawn('jekyll', ['build', '--drafts'])
+  var args = ['build'];
+
+  if (!isProduction) {
+    args.push('--drafts');
+  }
+
+  return childProcess.spawn('jekyll', args)
     .on('close', done);
 });
 

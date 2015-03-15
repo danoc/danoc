@@ -53,9 +53,10 @@ You can take a look at the entire [`gulpfile.js` on GitHub](https://github.com/d
 
 ### Required BrowserSync and Jekyll dependencies
 
-I require `brower-sync` for, well, BrowserSync and `child_process` to run `jekyll build`.
+I require `brower-sync` for, well, BrowserSync, and `yargs` plus `child_process` to run `jekyll build`.
 
 ```js
+var args = require('yargs').argv;
 var browserSync = require('browser-sync');
 var childProcess = require('child_process');
 ```
@@ -100,12 +101,18 @@ I use `.pipe(browserSync.reload({stream:true}))` in tasks that I want to trigger
 
 ### Building Jekyll with gulp
 
-You'll notice that the `browserSync` task depends on `jekyllBuild`. We use [Node.js's `child_process.spawn()` function](http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) to run `jekyll build --drafts`.
+You'll notice that the `browserSync` task depends on `jekyllBuild`. We use [Node.js's `child_process.spawn()` function](http://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) to run `jekyll build`. If the `--type production` flag is not provided, draft posts are also published. (More about this flag on the Capistrano section.)
 
 ```js
 // Build the Jekyll website
 gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
-  return childProcess.spawn('jekyll', ['build', '--drafts'], {stdio: 'inherit'})
+  var args = ['build'];
+
+  if (!isProduction) {
+    args.push('--drafts');
+  }
+
+  return childProcess.spawn('jekyll', args)
     .on('close', done);
 });
 ```
@@ -145,14 +152,14 @@ namespace :deploy do
     on roles(:all) do
       execute "cd #{release_path} && sudo bundle install"
       execute "cd #{release_path} && npm install --production --silent --no-spin"
-      execute "cd #{release_path} && ./node_modules/.bin/gulp jekyllBuild"
+      execute "cd #{release_path} && ./node_modules/.bin/gulp jekyllBuild --type production"
     end
   end
 
 end
 ```
 
-The first two `execute` lines install dependencies listed in the [`Gemfile`](https://github.com/danoc/danoc.me/blob/master/Gemfile) and [`package.json`](https://github.com/danoc/danoc.me/blob/master/package.json) files. The third line runs gulp, but only the `jekyllBuild` task in the [`gulpfile.js`](https://github.com/danoc/danoc.me/blob/master/gulpfile.js) which depends on the `css`, `less`, and `img` tasks. It does not watch files or launch BrowserSync as I do locally.
+The first two `execute` lines install dependencies listed in the [`Gemfile`](https://github.com/danoc/danoc.me/blob/master/Gemfile) and [`package.json`](https://github.com/danoc/danoc.me/blob/master/package.json) files. The third line runs gulp, but only the `jekyllBuild` task in the [`gulpfile.js`](https://github.com/danoc/danoc.me/blob/master/gulpfile.js) which depends on the `css`, `less`, and `img` tasks. It does not watch files or launch BrowserSync as I do locally. The `--type production` flag tells gulp not to compile the draft posts.
 
 Capistrano also requires a `production.rb` file. [Mine is one line](https://github.com/danoc/danoc.me/blob/master/config/deploy/production.rb) and looks like this:
 

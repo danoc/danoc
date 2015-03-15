@@ -12,7 +12,7 @@ namespace :deploy do
     on roles(:all) do
       execute "cd #{release_path} && sudo bundle install"
       execute "cd #{release_path} && npm install --production --silent --no-spin"
-      execute "cd #{release_path} && ./node_modules/.bin/gulp jekyllBuild"
+      execute "cd #{release_path} && ./node_modules/.bin/gulp jekyllBuild --type production"
     end
   end
 

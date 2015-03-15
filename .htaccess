@@ -6,6 +6,9 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 Redirect 301 /acpsf http://danoc.github.io/responsive-talk
 Redirect 301 /talks/responsive http://blog.danoc.me/post/44367862783/responsive-web-design-for-college-newspapers
 
+RewriteRule ^blog/2014-12-26-modern-build-system http://danoc.me/blog/modern-build-system/ [R=301,L]
+RewriteRule ^blog/2015-03-05-modern-build-system http://danoc.me/blog/modern-build-system/ [R=301,L]
+
 RewriteRule ^page/([0-9]+) http://danoc.me/blog [R=301,L]
 
 RewriteRule ^post/14447289066(.*) http://danoc.me/blog/plans-for-bupipedream [R=301,L]
@@ -55,4 +58,4 @@ RewriteRule ^post/61425706269(.*) http://danoc.me/blog/on-interning-at-optimizel
 RewriteRule ^post/61560908567(.*) http://danoc.me/blog/how-to-get-a-great-computer-science-internship [R=301,L]
 RewriteRule ^post/62548615920(.*) http://danoc.me/blog/binghamton-university-at-mhacks [R=301,L]
 RewriteRule ^post/67673299074(.*) http://danoc.me/blog/interning-at-optimizely-building-the-mobile-dashboard [R=301,L]
-RewriteRule ^post/71363367609(.*) http://danoc.me/blog/ill-be-back-at-optimizely-after-graduation [R=301,L] 
+RewriteRule ^post/71363367609(.*) http://danoc.me/blog/ill-be-back-at-optimizely-after-graduation [R=301,L]

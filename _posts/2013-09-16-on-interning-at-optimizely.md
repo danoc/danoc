@@ -35,3 +35,5 @@ With the right company and attitude, you'll learn more in three months of summer
 I'm headed back to school with lots of experience, ping-pong bragging rights (sorry Kasra!), and many new friends.
 
 _Thanks, Optimizely!_
+
+**Update:** I'm back at Optimizely as a full-time employee. Reach out at [daniel@optimizely.com](mailto:daniel@optimizely.com) if you'd like to learn more.

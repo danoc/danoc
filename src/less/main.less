@@ -14,6 +14,7 @@
 
 @dark-gray: #222;
 @light-gray: #dedede;
+@code-background: #f1f1f1;
 
 html,
 button,
@@ -45,7 +46,7 @@ a {
 }
 
 p code, pre {
-	background: #f1f1f1;
+	background: @code-background;
 }
 
 p code {
@@ -294,6 +295,28 @@ body.page-post {
 	border-top: 1px solid @light-gray;
 	margin-top: 3em;
 	padding-top: 2em;
+}
+
+.highlight {
+	position: relative;;
+}
+
+[data-lang]::before {
+	background: lighten(@code-background, 4);
+	content: attr(data-lang);
+	font-family: @sans;
+	font-size: 0.9em;
+	padding: 0.2em 0.5em;
+	position: absolute;
+	right: 7px;
+	text-transform: uppercase;
+	top: 10px;
+	transition: opacity 0.2s ease;
+}
+
+.highlight:hover [data-lang]::before {
+	opacity: 0;
+	transition: opacity 0.2s ease-in;
 }
 
 /*=================*/

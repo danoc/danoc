@@ -5,6 +5,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>{{ page.title }}</title>
 		<meta name="description" content="{{ page.description }}">
+
+		<meta property="og:site_name" content="{{ site.name }}">
+		<meta property="og:title" content="{{ page.title }}">
+		<meta property="og:description" content="{{ page.description }}">
+		<meta name="twitter:site" content="@_danoc">
+
+		<meta name="og:url" content="{{ site.url }}{{ page.url | remove: 'index.html' }}">
+
+		{{ page.head }}
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<script src="//cdn.optimizely.com/js/2023920021.js"></script>

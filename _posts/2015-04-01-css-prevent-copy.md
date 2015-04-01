@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent an element from being selected and copied with CSS
-description: How to use pseudo-elements and data attributes to prevent text from being able to be selected and copied.
+description: How to use pseudo-elements and data attributes to prevent text from being selected and copied.
 date: '2015-04-01T00:00:00.000Z'
 ---
 

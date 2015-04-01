@@ -27,20 +27,17 @@ Combining pseudo-elements and the CSS `content` property, we can prevent text fr
 
 We can take this example a bit further and support both `::before` and `::after`.
 
-```css
-[data-pseudo-content]::before,
-[data-pseudo-content--before]::before,
-[data-pseudo-content--after]::after {
-  content: attr(data-pseudo-content);
-}
-```
-
+    [data-pseudo-content]::before,
+    [data-pseudo-content--before]::before,
+    [data-pseudo-content--after]::after {
+      content: attr(data-pseudo-content);
+    }
 
 ## Why the pseudo-element works
 
 Content displayed on a page using the CSS `content` property is never added to the DOM. This prevents the text from being selected or copied without the use of  `(-prefix-)user-select: none`.
 
-Despite this, you can [access the `content` values in JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle#Use_with_pseudo-elements) with `getComputedStyle`. Although, since the values are also in the HTML, the best approach is to use [`element.getAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) to grab the value of the data attributes.
+Despite this, you can [access the `content` values in JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle#Use_with_pseudo-elements) with `getComputedStyle`. The best approach, however, is to use [`element.getAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) to grab the value of the data attributes directly from the HTML.
 
 
 ## Accessibility concerns
@@ -69,5 +66,7 @@ Here is a stripped down recreation of the code diff viewer I helped my coworker 
 
 <p data-height="300" data-theme-id="0" data-slug-hash="ByGKZv" data-default-tab="result" data-user="danoc" class='codepen'>See the Pen <a href='http://codepen.io/danoc/pen/ByGKZv/'>ByGKZv</a> by Daniel O'Connor (<a href='http://codepen.io/danoc'>@danoc</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+(You could use [CSS counters](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Counters) to generate the line numbers, but that is out of scope for this example.)
 
 Notice that the line numbers can't be selected or copied and the text wraps if it gets too long. Mission accomplished!

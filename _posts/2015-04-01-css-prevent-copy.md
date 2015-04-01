@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Prevent an element from being selected and copied with CSS
-date: '2015-03-05T00:00:00.000Z'
+description: How to use pseudo-elements and data attributes to prevent text from being able to be selected and copied.
+date: '2015-04-01T00:00:00.000Z'
 ---
 
 I was recently helping a coworker build a code diff viewer that supports line numbers, wraps text properly, and prevents line numbers from being copied when selecting the code.
@@ -35,7 +36,7 @@ We can take this example a bit further and support both `::before` and `::after`
 
 ## Why the pseudo-element works
 
-Content displayed on a page using the CSS `content` property is never added to the DOM. This prevents the text from being selected or copied without the use of  `(-prefix-)user-select: none`.
+Content displayed on a page using the CSS `content` property is never added to the DOM. This prevents the text from being selected or copied without the use of `(-prefix-)user-select: none`.
 
 Despite this, you can [access the `content` values in JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle#Use_with_pseudo-elements) with `getComputedStyle`. The best approach, however, is to use [`element.getAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) to grab the value of the data attributes directly from the HTML.
 

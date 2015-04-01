@@ -1,13 +1,16 @@
 ---
 layout: blog
 class: page-post
+head:
+  <meta name="twitter:card" content="summary">
+  <meta name="og:type" content="article">
 ---
 
 <article class="post post-single">
 	<time class="post-date">{{ page.date | date_to_string }}</time>
 	<header class="post-header">
 		<h2 class="post-title">
-			<a href="{{ post.url }}">{{ page.title }}</a>
+			<a href="{{ page.url }}">{{ page.title }}</a>
 		</h2>
 		{% if page.deck %}
 		<p class="post-deck">{{ page.deck }}</p>

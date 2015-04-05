@@ -71,3 +71,7 @@ Here is a stripped down recreation of the code diff viewer I helped my coworker 
 (You could use [CSS counters](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Counters) to generate the line numbers, but that is out of scope for this example.)
 
 Notice that the line numbers can't be selected or copied and the text wraps if it gets too long. Mission accomplished!
+
+---
+
+Optimizely is hiring! [Reach out on Twitter](https://twitter.com/_danoc) or [check out our jobs page](http://grnh.se/q6p0dk).

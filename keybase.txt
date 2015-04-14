@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/danoc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://danoc.me
+  * I am danoc (https://keybase.io/danoc) on keybase.
+  * I have a public key with fingerprint CFF0 9260 DAA0 440E 656C  1555 9433 DFB5 21C4 DFBE
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "cff09260daa0440e656c15559433dfb521c4dfbe",
+            "host": "keybase.io",
+            "key_id": "9433dfb521c4dfbe",
+            "kid": "0101001d3ff46a1c91dda6e56a52d6f73f378c16fc7f3e69a207dc64411b247de9f60a",
+            "uid": "cc4f1061387fd730f24ea5f871e34f19",
+            "username": "danoc"
+        },
+        "service": {
+            "hostname": "danoc.me",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1429050857,
+    "expire_in": 157680000,
+    "prev": "f9b0b491a2ace01b0cc8ec1f98b424d7b488ae24635381b5d28205126a917a35",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMITAnicbZJrSFRBFMd3rTVbKMsoIYrqZkGlMnPv3NdSQamh9ME+9ARpmzsPvan3
+brurKREREb0ISpIKisKMFMPKQOiLWGjQw8gyihBTA19RmVHRy5orBX1o5sNh/ud/
+fnPOMG3TJvmC/idNc8cfJaWP+B/cDpX5NmVUD++RLJdWSqE9UjGbCNx2Clk0ErWd
+uBSSCOfAlDVAMQYIAaapGoGqqppIUSi3VBkSJCKT0qUiN+ZVCIyFYyzTdoUmDmGb
+CvU//uKJBIBiA0gVzpGGITEhpVhjqoZVmWpcV7iiGwRqnOhcYZqJZaBToiEEoSUj
+nTKTawALXNkEjhDEIdCgYuic6grgMmJY5YYOmSIypmeMsaiDS5lwU+y4RNqbLgmp
+3CbMm98b4990ZqnXbCTqxl3ilgi1KB6PxEJeVbwy4tl2Myv8BxC2bIeKBxQV5Swa
+s11HCkHhJHHbI0Ikm0AFhqqnS6wiYkdZ2PYcqq4ZQCzvHlYukNy0gIVMiGVMGIAW
+IMRgBHLTsJCMqG4hw8BMRpqiKga0VCobMlChrGET6lhRJW+kXY4rhZBoExcKZMwu
+dHC8LMqkvXdaCyb7/EFfYiDB+wK+4NQZfz+Gsm3K98nFy8+f61a2lJ9Mmzl97NOO
+LXWlWatHzu5ayD/nrT40TMGt5GfN83/oN07kVR3Ok36W9BjVT2kqSvu+tvN+y+Ay
+d/DqzcBY1bZljxNODVSnXMgabTrWU5DTB9b4Ppzu8m3ITV6y3zj4fHF+/ouhzuw5
+9V0HejsG6jeES47StkRrqx2sae2+W+cMVndnx6/kBL80tL0fzTnSHiBZILw56bW1
+dHwd/tp3sbjAyjizonbj7P7g9e2F/lUPX3Xx9pu1L2d9653XEQj0Hx9KcZMvNXw0
+28avVYJ3l98Mg5b1zdG34zVrg7k7Dw/v7Kn4tcDf1LjyQ2LjvgRy78aiObciqaxm
+9DeqICof
+=69wJ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/danoc
+
+==================================================================

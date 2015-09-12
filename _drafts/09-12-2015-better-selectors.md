@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Write good selectors
+title: Better selectors for integration tests and JavaScript hooks
 date: '2015-09-12T00:00:00.000Z'
 ---
 
@@ -13,7 +13,7 @@ The HTML refactor surfaced two critical problems:
 
 These problems would continue to plague all future HTML refactors if we didn't make changes.
 
-I thought through the problems, spoke to our engineers, and drafted a one-page proposal. These are the best-practices that we agreed on and continue to evangelize.
+I thought through the problems, spoke to other engineers, and drafted a one-page proposal. These are the best-practices that we agreed on and continue to evangelize.
 
 
 ## Use a custom HTML attribute for integration test selectors

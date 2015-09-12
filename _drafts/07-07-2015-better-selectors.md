@@ -18,13 +18,11 @@ I thought through the problems, spoke to our engineers, and drafted a one-page p
 
 ## Use a custom HTML attribute for integration test selectors
 
-**Problem:** Our Python integration tests used CSS selectors such as `select.goal-type.full-width` and `.form-field__item:nth-child(2)` to select elements on the page. These selectors quickly break when we refactored HTML because they rely on a specific page structure.
+**Problem:** Our Python integration tests used CSS selectors such as `select.goal-type.full-width` and `.form-field__item:nth-child(2)` to select elements on the page. These selectors quickly break when refactoring HTML because they rely on a specific page structure.
 
-The broken selectors caused dozens of our integration tests to fail. These types of failures are problematic because they serve as an indication that our tests and markup are tied too closely. An integration test on our login page that begins to fail _only_ because we rename a button class is a sign of a poorly written test.
+The broken selectors caused dozens of our integration tests to fail. These types of failures are problematic because they serve as an indication that our tests and markup are too coupled. An integration test on our login page that begins to fail _only_ because we rename a button class is a sign of a poorly written test.
 
 **Solution**: We now encourage developers to add a `data-test-section` attribute to HTML elements that our integraton tests rely on. The attribute value must be unique enough to ensure that is the only one on the page being tested.
-
-This approach is preferred because it decouples tests and HTML structure. Also, the attribute name serves as in indication that deleting the element could break a test.
 
 Here's an example of a submit button in a login dialog that has a test section:
 
@@ -38,16 +36,16 @@ Our Python integration test selector could look like this:
 (By.CSS_SELECTOR, '[data-test-section="dialog-login-submit-btn"]')
 ```
 
+This approach is preferred because it decouples tests and HTML structure. Also, the attribute name serves as in indication that deleting the element could break a test.
+
 Our engineers have written helper functions such as `clickTestSection('name')` that make it easier to select elements, leading to cleaner code and an increased chance that other engineers will use the new convention.
 
 
-## Prefix classes with `.js-` when writing JavaScript hooks
+## Prefix JavaScript hooks with `.js-`
 
-**Problem:** It was unclear when removing `id` and `class` attributes from certain elements would break functionality.
+**Problem:** It was unclear when removing `id` and `class` attributes from certain elements would break functionality. Removing the `id` from `<button id="submit">Submit</button>`, for example, could prevent form submission if a jQuery selector expected to find `#submit` on the page.
 
-Removing the `id` from `<button id="submit">Submit</button>` would prevent form submission if a jQuery selector expected to find `#submit` on the page. This small mistake is easy to make when refactoring a large codebase in a complex product.
-
-Each `class` or `id` required a global search of the codebase to ensure that it wasn't needed. This slowed down the refactor tremendously since global searches are slow and generic `id`'s such as `#submit` return tons of unrelated results.
+This slowed down the refactor tremendously. Removing a `class` or `id` required a global search of the codebase to ensure that it wasn't needed. Global searches of large codebases are slow and generic `id`'s such as `#submit` return tons of unrelated results.
 
 **Solution:** We adopted a common convention of adding a `.js-` prefixed class to elements that are used as JavaScript hooks.
 

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Write good selectors
-date: '2015-07-07T00:00:00.000Z'
+date: '2015-09-12T00:00:00.000Z'
 ---
 
-I recently merged a gigantic feature branch at Optimizely that further integrated our new CSS framework into our product. Five designers and front-end developers contributed to the branch over the course of weeks, reskinning buttons, dialogs, and dozens of other components.
+I merged a gigantic feature branch at Optimizely that further integrated our new CSS framework into our product. Five designers and front-end developers contributed to the branch over the course of weeks, reskinning buttons, dialogs, and dozens of other components.
 
 The HTML refactor surfaced two critical problems:
 

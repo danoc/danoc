@@ -128,7 +128,7 @@ gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
     args.push('--drafts');
   }
 
-  return childProcess.spawn('bundle exec jekyll', args)
+  return childProcess.exec('bundle exec jekyll', args)
     .on('close', done)
     .on('error', function(e) {
       console.log(e);

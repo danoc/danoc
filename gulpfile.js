@@ -122,13 +122,13 @@ gulp.task('browserSync', ['jekyllBuild'], function() {
 
 // Build the Jekyll website
 gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
-  var args = ['build'];
+  var args = ['exec', 'jekyll', 'build'];
 
   if (!isProduction) {
     args.push('--drafts');
   }
 
-  return childProcess.exec('bundle exec jekyll', args)
+  return childProcess.spawn('bundle', args, { stdio: 'inherit' })
     .on('close', done)
     .on('error', function(e) {
       console.log(e);

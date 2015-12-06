@@ -3,7 +3,6 @@ lib/
 public/
 
 ### Jekyll ###
-Gemfile.lock
 test/dest
 *.gem
 pkg/

@@ -15,6 +15,7 @@
 @dark-gray: #222;
 @light-gray: #dedede;
 @code-background: #f1f1f1;
+@highlight: #feffe6;
 
 html,
 button,
@@ -298,7 +299,11 @@ body.page-post {
 }
 
 .highlight {
-	position: relative;;
+	position: relative;
+}
+
+.point {
+	background: @highlight;
 }
 
 [data-lang]::before {

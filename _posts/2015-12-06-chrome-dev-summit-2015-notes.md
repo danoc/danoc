@@ -5,7 +5,7 @@ description: Notes and highlights from the talks at the 2015 Chrome Dev Summit.
 date: '2015-12-06T00:00:00.000Z'
 ---
 
-Google held their second Chrome Dev Summit last month in Mountain View. In thier own words, "The Chrome Dev Summit is an exclusive event to connect with Chrome engineers and leading web developers for a two-day exploration of building beautiful and fast mobile web applications."
+Google held their second Chrome Dev Summit last month in Mountain View. In their own words, "The Chrome Dev Summit is an exclusive event to connect with Chrome engineers and leading web developers for a two-day exploration of building beautiful and fast mobile web applications."
 
 The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014-notes/), so I (once again) [watched all of the talks](https://www.youtube.com/playlist?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn) and took notes.
 
@@ -145,7 +145,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 * Presented by Laura Palmaro, Accessibility Program Manager for Chrome and Chrome OS, and Alice Boxhall, Software Engineer on Chrome
 * <span class="point">Types of disabilities that users might:</span>
-    * Fully bling, using screen reader of braille display
+    * Fully blind, using screen reader or braille display
     * Color blind
     * Hearing impaired, using captions
     * Users who can’t use a mouse and rely on typing

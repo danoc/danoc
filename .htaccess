@@ -5,6 +5,7 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 Redirect 301 /acpsf http://danoc.github.io/responsive-talk
 Redirect 301 /talks/responsive http://blog.danoc.me/post/44367862783/responsive-web-design-for-college-newspapers
+Redirect 301 /bu https://docs.google.com/presentation/d/1hJ8IrsRhDvQEcFhCYgGrrHSWjcYdEm7MdxrWG3K7uWk/edit?usp=sharing
 
 RewriteRule ^blog/2014-12-26-modern-build-system http://danoc.me/blog/modern-build-system/ [R=301,L]
 RewriteRule ^blog/2015-03-05-modern-build-system http://danoc.me/blog/modern-build-system/ [R=301,L]

@@ -12,8 +12,8 @@ tags:
 tumblr_url: http://blog.danoc.me/post/34605192252/follow-pipe-dream-as-we-cover-hurricane-sandy-and
 ---
 
-![Pipe Dream hurricane Sandy coverage teaser](/public/img/posts/pipe-dream-hurricane-sandy-coverage.png)
+![Pipe Dream hurricane Sandy coverage teaser](/img/posts/pipe-dream-hurricane-sandy-coverage.png)
 
 Follow Pipe Dream as we cover hurricane Sandy and its effects on Binghamton University. Any thoughts on the [live blogging platform](http://www.bupipedream.com/live/storm/)?
 
-**Update** (Jan. 20, 2014): Unfortunately the link no longer works but the platform I built was the inspiration for [BeatStrap](http://beatstrap.me/), my latest project.
+**Update** (Jan. 20, 2014): Unfortunately the link no longer works but the platform I built was the inspiration for [Beatstrap](http://beatstrap.me/), my latest project.

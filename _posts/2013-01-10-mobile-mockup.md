@@ -11,7 +11,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/40233716965/mobile-mockup
 ---
 
-![Screenshot of Pipe Dream redesign on mobile](/public/img/posts/pipe-dream-mobile-first.png)
+![Screenshot of Pipe Dream redesign on mobile](/img/posts/pipe-dream-mobile-first.png)
 
 Spent the past day working on an HTML mockup of the [Pipe Dream redesign](http://blog.danoc.me/post/39614524151/pipe-dream-redesign). While the [current design is responsive](http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress), I cut corners on the mobile version. The new website is being designed “mobile-first.” In other words, the website is designed for the mobile screen and only enhances as the browser size increases.
 

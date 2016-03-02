@@ -11,7 +11,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/14656793071/less-css-grid
 ---
 
-![LESS CSS Grid code](/public/img/posts/lessgrid.png)
+![LESS CSS Grid code](/img/posts/lessgrid.png)
 
 One of my main [goals for the new Pipe Dream website](http://blog.danoc.me/2011/12/19/plans-for-bupipedream.html) is to create a responsive design. In other words, the layout will automatically adjust to the size of the browser and look as good on an iPhone as it does on a desktop. One of the main components this design is a fluid grid.
 

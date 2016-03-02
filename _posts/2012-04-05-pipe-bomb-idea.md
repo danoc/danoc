@@ -10,6 +10,6 @@ tags:
 tumblr_url: http://blog.danoc.me/post/20531600981/pipe-bomb-idea
 ---
 
-![Asteroid game on the Pipe Dream website](/public/img/posts/pipe-dream-april-fools.png)
+![Asteroid game on the Pipe Dream website](/img/posts/pipe-dream-april-fools.png)
 
 An idea for Pipe Bomb, Pipe Dream’s April Fools’ Day issue. The open-source asteroids script went viral when The New York Times included it in one of their articles.

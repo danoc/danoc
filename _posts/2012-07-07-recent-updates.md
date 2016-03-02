@@ -16,7 +16,7 @@ It's been a while since I've posted here, so I'll run through everything I've ne
 
 ### Open Graph
 
-![Screenshot of the Pipe Dream Open Graph code](/public/img/posts/pipe-dream-open-graph-code.png)
+![Screenshot of the Pipe Dream Open Graph code](/img/posts/pipe-dream-open-graph-code.png)
 
 I've spent a lot of time tailoring the content that gets posted to Facebook and Twitter in an attempt to increase Pipe Dream's online presence. Each status updates, links, and photos is hand-crafted to boost engagement. On the development side, I ensured that each article has the proper [Open Graph protocol](http://ogp.me/) `<meta>` tags so every link looks great when posted to Facebook.
 
@@ -26,7 +26,7 @@ This increase in traffic can also be attributed to Open Graph `<meta>` tags and 
 
 ### Binghamton's Four Noble Truths
 
-![Traffic from the Four Noble Truths post](/public/img/posts/four-noble-truths-of-binghamton.png)
+![Traffic from the Four Noble Truths post](/img/posts/four-noble-truths-of-binghamton.png)
 
 Alyssa Mercante's column, [Binghamton's Four Noble Truths](http://www.bupipedream.com/opinion/10245/binghamtons-noble-truths-lived/), struck a nerve with the Binghamton community and brought record traffic to Pipe Dream's website. The column received 67,000 pageviews, over 900 comments, and nearly 15,000 likes on Facebook. In comparison, this semester's most popular news article only received 1,500 visits.
 

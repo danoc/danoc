@@ -9,6 +9,6 @@ tags:
 tumblr_url: http://blog.danoc.me/post/20486429658/open-graph-preview
 ---
 
-![Pipe Dream Open Graph on Facebook](/public/img/posts/pipe-dream-open-graph.png)
+![Pipe Dream Open Graph on Facebook](/img/posts/pipe-dream-open-graph.png)
 
 Starting to get a hang of the Facebook Open Graph...

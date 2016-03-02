@@ -12,6 +12,6 @@ tags:
 tumblr_url: http://blog.danoc.me/post/14730989330/early-preview
 ---
 
-![Early Pipe Dream screenshot](/public/img/posts/pipe-dream-development.png)
+![Early Pipe Dream screenshot](/img/posts/pipe-dream-development.png)
 
 Early stages of coding. Working on the layout first, but going to start designing soon.

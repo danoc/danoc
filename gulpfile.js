@@ -1,141 +1,192 @@
-var gulp = require('gulp');
+"use strict";
 
-var args = require('yargs').argv;
-var autoprefixer = require('gulp-autoprefixer');
-var bower = require('gulp-bower');
-var browserSync = require('browser-sync');
-var childProcess = require('child_process');
-var del = require('del');
-var imagemin = require('gulp-imagemin');
-var less = require('gulp-less');
-var minifyCSS = require('gulp-minify-css');
+const gulp = require('gulp');
 
-var isProduction = args.type === 'production';
+const autoprefixer = require('gulp-autoprefixer');
+const data = require('gulp-data');
+const debug = require('gulp-debug');
+const frontMatterGulp = require('gulp-front-matter');
+const imagemin = require('gulp-imagemin');
+const less = require('gulp-less');
+const marked = require('gulp-marked');
+const minifyCSS = require('gulp-minify-css');
+const nunjucksRender = require('gulp-nunjucks-render');
+const rename = require('gulp-rename');
+const wrap = require('gulp-wrap');
 
-var assets = {
-  src: {
-    'css': ['./src/css/*.css', './lib/normalize.css/normalize.css'],
-    'img':  './src/img/**',
-    'less': './src/less/*.less'
-  },
-  dist: {
-    'css':  './_site/public/css',
-    'img':  './_site/public/img',
-    'less': './_site/public/less'
-  }
+const browserSync = require('browser-sync');
+const fs = require('fs');
+const frontMatter = require('front-matter');
+const mergeStream = require('merge-stream');
+
+const site = {
+  name: 'Daniel O\'Connor',
+  twitter: '_danoc',
+  url: 'https://danoc.me/',
+  email: 'daniel@danoc.me',
 };
 
-var jekyllPaths = ['index.html', '_layouts/*.html', '_posts/*', '_drafts/*'];
+const paths = {
+  src: {
+    'css': ['./src/css/*.css', './node_modules/normalize.css/normalize.css'],
+    'html': ['./resume/index.html'],
+    'img':  './src/img/**',
+    'less': './src/less/*.less',
+    'posts': './_posts/*.md',
+    'layouts': ['./_layouts/*.html', './index.html'],
+  },
+  dist: {
+    'css':  './dist/css',
+    'img':  './dist/img',
+    'html': './dist',
+  },
+};
+
+const FILENAME_DATE_LENGTH = '1970-01-01-'.length;
+
+let generatePostURL = function(fileName) {
+  if (!fileName) {
+    throw Error('File name must be provided.');
+  }
+
+  fileName = fileName.substr(FILENAME_DATE_LENGTH).replace(/\.[^/.]+$/, '');
+
+  return '/blog/' + fileName + '/';
+};
 
 
-/*=========================*/
-/*=== Gulp Default Task ===*/
-/*=========================*/
+gulp.task('html', () => {
+  var index = gulp.src('./index.html')
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest('./dist/'));
 
-// Runs when `gulp` runs
-gulp.task('default', ['browserSync', 'less', 'css', 'img'], function() {
-  gulp.watch(assets['src']['css'], ['css']);
-  gulp.watch(assets['src']['img'], ['img']);
-  gulp.watch(assets['src']['less'], ['less']);
-  gulp.watch(jekyllPaths, ['jekyllRebuild']);
+  var resume = gulp.src('./resume/index.html')
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest('./dist/resume/'));
+
+  return mergeStream(index, resume);
 });
 
-
-/*==========================*/
-/*=== Package Management ===*/
-/*==========================*/
-
-// Install the bower dependencies
-gulp.task('bower', function() {
-  return bower()
-    .pipe(gulp.dest('lib/'))
-});
-
-
-/*==============*/
-/*=== Assets ===*/
-/*==============*/
-
-// Delete the existing gulp files
-gulp.task('clean', function(cb) {
-  return del(['_site'], cb);
-});
-
-// Compile LESS and minify
-gulp.task('less', ['bower'], function(event) {
-  return gulp.src(assets['src']['less'])
-    .pipe(less().on('error', function(state) {
-      console.error(state);
-      browserSync.notify(state.message, 3000);
-      this.end();
-    }))
+gulp.task('css', () => {
+  return gulp.src(paths['src']['css'])
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
-      cascade: false
     }))
-    .pipe(minifyCSS({keepBreaks:true}))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest(assets['dist']['css']));
+    .pipe(minifyCSS())
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest(paths['dist']['css']));
 });
 
-// Minify CSS files
-gulp.task('css', ['bower'], function(event) {
-  return gulp.src(assets['src']['css'])
+gulp.task('less', () => {
+  return gulp.src(paths['src']['less'])
+    .pipe(less())
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
-      cascade: false
     }))
-    .pipe(minifyCSS({keepBreaks:true}))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest(assets['dist']['css']));
+    .pipe(minifyCSS())
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest(paths['dist']['css']));
 });
 
-// Minify image files
-gulp.task('img', ['bower'], function(event) {
-  return gulp.src(assets['src']['img'])
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{removeViewBox: false}],
-    }))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest(assets['dist']['img']));
+gulp.task('img', () => {
+  return gulp.src(paths['src']['img'])
+    .pipe(imagemin())
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest(paths['dist']['img']));
 });
 
+gulp.task('nunjucks:blog:single', () => {
+  return gulp.src(paths['src']['posts'])
+    .pipe(frontMatterGulp())
+    .pipe(marked())
+    .pipe(data((file) => {
+      return {
+        site: site,
+        post: {
+          title: file.frontMatter.title,
+          deck: file.frontMatter.deck,
+          date: file.frontMatter.date,
+          url: generatePostURL(file.relative),
+        },
+      };
+    }))
+    .pipe(wrap((data) => {
+      return fs.readFileSync('_layouts/post.html').toString();
+    }, null, { engine: 'nunjucks' }))
+    .pipe(rename((path) => {
+      path.basename = generatePostURL(path.basename) + 'index';
+    }))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest('./dist/'));
+});
 
-/*===================*/
-/*=== browserSync ===*/
-/*===================*/
+gulp.task('nunjucks:blog:index', () => {
+  return gulp.src('_layouts/posts.html')
+    .pipe(data((file) => {
+      var postsFiles = fs.readdirSync('_posts/');
+      var postsData = [];
 
-// Start BrowserSync to view the website
-gulp.task('browserSync', ['jekyllBuild'], function() {
+      for (var i = 0; i < postsFiles.length; i++) {
+        var fileContents = fs.readFileSync('_posts/' + postsFiles[i]).toString();
+        var attributes = frontMatter(fileContents).attributes;
+        attributes['url'] = generatePostURL(postsFiles[i]);
+
+        postsData.push(attributes);
+      }
+
+      return {
+        site: site,
+        posts: postsData.reverse(),
+      };
+    }))
+    .pipe(nunjucksRender())
+    .pipe(rename((path) => {
+      path.basename = 'blog/index';
+    }))
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('nunjucks:index', () => {
+  return gulp.src('./index.html')
+    .pipe(data((file) => {
+      var postsFiles = fs.readdirSync('_posts/');
+      var postsData = [];
+
+      for (var i = 0; i < postsFiles.length; i++) {
+        var fileContents = fs.readFileSync('_posts/' + postsFiles[i]).toString();
+        var attributes = frontMatter(fileContents).attributes;
+        attributes['url'] = generatePostURL(postsFiles[i]);
+
+        postsData.push(attributes);
+      }
+
+      return {
+        site: site,
+        posts: postsData.reverse().slice(0, 5),
+      };
+    }))
+    .pipe(nunjucksRender())
+    .pipe(browserSync.reload({ stream: true }))
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('nunjucks', ['nunjucks:index', 'nunjucks:blog:single', 'nunjucks:blog:index']);
+
+gulp.task('watch', ['default'], () => {
+  gulp.watch(paths['src']['html'], ['html']);
+  gulp.watch(paths['src']['css'], ['css']);
+  gulp.watch(paths['src']['img'], ['img']);
+  gulp.watch(paths['src']['less'], ['less']);
+  gulp.watch(paths['src']['posts'], ['nunjucks']);
+  gulp.watch(paths['src']['layouts'], ['nunjucks']);
+
   browserSync({
     server: {
-      baseDir: '_site'
-    }
+      baseDir: 'dist',
+    },
   });
 });
 
-
-/*==============*/
-/*=== Jekyll ===*/
-/*==============*/
-
-// Build the Jekyll website
-gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
-  var args = ['exec', 'jekyll', 'build'];
-
-  if (!isProduction) {
-    args.push('--drafts');
-  }
-
-  return childProcess.spawn('bundle', args, { stdio: 'inherit' })
-    .on('close', done)
-    .on('error', function(e) {
-      console.log(e);
-    });
-});
-
-// Rebuild the Jekyll website
-gulp.task('jekyllRebuild', ['jekyllBuild'], function() {
-  browserSync.reload();
-});
+// gulp.task('default', ['html', 'less', 'img', 'css', 'nunjucks']);
+gulp.task('default', ['html', 'less', 'css', 'nunjucks']);

@@ -15,7 +15,7 @@ It's been three weeks since I launched the [new Pipe Dream website](http://bupip
 
 ### Creating the Design
 
-![Pipe Dream displayed on multiple devices](/public/img/posts/pipe-dream-responsive.png)
+![Pipe Dream displayed on multiple devices](/img/posts/pipe-dream-responsive.png)
 
 The design was inspired by [The New York Times](http://www.nytimes.com/)'s layout, the clean (and responsive design) at [The Boston Globe](http://bostonglobe.com/), and the legibility of [Niemam Lab](http://www.niemanlab.org/).
 
@@ -27,7 +27,7 @@ I wrote at length about my [plans for the new website](http://blog.danoc.me/2011
 
 ### From PSD to HTML
 
-![Early Pipe Dream screenshot](/public/img/posts/pipe-dream-initial.png)
+![Early Pipe Dream screenshot](/img/posts/pipe-dream-initial.png)
 
 With a basic mockup completed, I began coding. I used the [HTML5 Boilerplate](http://html5boilerplate.com/) as a starting point and used [LESS](http://lesscss.org) to keep my CSS as neat as possible. The HTML5 Boilerplate provides a set of best-practices and LESS extends CSS to allows neat features such as variables and mixins. I couldn't find a 24-column fluid grid to fit my needs, [so I created my own](http://blog.danoc.me/2011/12/23/less-css-grid.html).
 
@@ -37,7 +37,7 @@ I eventually added styles to the website and made the .html file it look more li
 
 ### Cleaning the Archives
 
-![Screenshot of the College Publisher database export](/public/img/posts/college-publisher-export.png)
+![Screenshot of the College Publisher database export](/img/posts/college-publisher-export.png)
 
 It took some time, but College Publisher eventually emailed us a link to download our archives. The archives were split into two parts: a 100mb .zip file of images and [a 30mb .txt file](http://blog.danoc.me/2012/01/18/database-dump.html) with _(hopefully!)_ every Pipe Dream article dating back to 2005.
 
@@ -107,7 +107,7 @@ The Pipe Dream website also uses the [Regenerate Thumbnails plugin](http://wordp
 
 #### Article Layout
 
-![Pipe Dream article with two photos](/public/img/posts/pipe-dream-article-two-photos.png)
+![Pipe Dream article with two photos](/img/posts/pipe-dream-article-two-photos.png)
 
 Inspired by the layouts of The New York Times and The Boston Globe, I designed the Pipe Dream website to display photos in different locations depending on photo quality. [This sports article](http://www.bupipedream.com/sports/8562/binghamton-basketball-rebuilding/) is a great example of what the theme can accomplish.
 

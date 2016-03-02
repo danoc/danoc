@@ -15,6 +15,6 @@ tags:
 tumblr_url: http://blog.danoc.me/post/39614524151/pipe-dream-redesign
 ---
 
-![Screenshot of Pipe Dream redesign](/public/img/posts/pipe-dream-redesign.png)
+![Screenshot of Pipe Dream redesign](/img/posts/pipe-dream-redesign.png)
 
 Not feeling so great (and the weather isn’t helping), so I decided to do some Pipe Dream work. This is a small preview of the redesign I’m working on. Got some exciting plans!

@@ -10,7 +10,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/20396276847/wordpress-site-sync
 ---
 
-![Pipe Dream on GitHub](/public/img/posts/pipe-dream-github.png)
+![Pipe Dream on GitHub](/img/posts/pipe-dream-github.png)
 
 
 [Pipe Dream is now on GitHub](https://github.com/bupipedream/). To celebrate, we're releasing [WordPress Site Sync](https://github.com/bupipedream /WordPress-Site-Sync), a bash script that downloads the latest posts, uploads, and plugins from a WordPress site. The script imports the downloads into a local WordPress installation, ensuring you have the newest content before you hack away at your site's theme.

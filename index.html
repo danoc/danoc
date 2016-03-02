@@ -1,172 +1,216 @@
----
-layout: default
-title: Daniel O'Connor | UI Enginner
-description: Portfolio of a UI Engineer at Optimizely and recent graduate of Binghamton University.
-class: page-index
----
+{% extends "_layouts/default.html" %}
 
+{% block title %}
+Daniel O'Connor | UI Enginner
+{% endblock %}
+
+{% block description %}
+Portfolio of a UI Engineer at Optimizely
+{% endblock %}
+
+{% block container %}
 <div id="container" class="index-container container">
 
-	<header id="header" class="header">
-		<h1 class="site-title">
-			<a href="/">{{ site.name }}</a>
-		</h1>
-	</header>
+  <header id="header" class="header">
+    <h1 class="site-title">
+      <a href="/">{{ site.name }}</a>
+    </h1>
+  </header>
 
-	<section>
-		<p>I'm a UI Engineer at <a href="https://www.optimizely.com/">Optimizely</a> and recent Binghamton University graduate.</p>
+  <section>
+    <p>
+      I'm a UI Engineer at <a href="https://www.optimizely.com/">Optimizely</a>
+      and recent Binghamton University graduate.
+    </p>
 
-		<p>I've interned as a front-end developer at <a href="https://www.optimizely.com/">Optimizely</a> and a software engineer at <a href="https://www.wepay.com/">WePay</a>. I love the bridge between design and development.</p>
+    <p>
+      I've interned as a front-end developer at <a href="https://www.optimizely.com/">Optimizely</a>
+      and a software engineer at <a href="https://www.wepay.com/">WePay</a>. I
+      love the bridge between design and development.
+    </p>
 
-		<p>I build <a href="http://beatstrap.me/">BeatStrap</a>, created <a href="http://hackbu.org/">HackBU</a>, and organized the <a href="http://hackathon.hackbu.org/">HackBU Hackathon</a>.</p>
-	</section>
+    <p>
+      I build <a href="http://beatstrap.com/">Beatstrap</a>, created
+      <a href="http://hackbu.org/">HackBU</a>, and organized the
+      <a href="http://hackathon.hackbu.org/">HackBU Hackathon</a>.
+    </p>
+  </section>
 
-	<section class="section posts">
-		<h2 class="section-title">
-			<a id="posts" href="#posts">Posts</a>
-		</h2>
+  <section class="section posts">
+    <h2 class="section-title">
+      <a id="posts" href="#posts">Posts</a>
+    </h2>
 
-		<ul class="posts-list">
-			{% for post in site.posts limit:5 %}
-			<li>
-				<a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> -
-				<span class="posts-list-date">{{ post.date | date_to_string }}</span>
-			</li>
-			{% endfor %}
-		</ul>
+    <ul class="posts-list">
+      {% for post in posts %}
+      <li>
+        <a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> -
+        <span class="posts-list-date">{{ post.date }}</span>
+      </li>
+      {% endfor %}
+    </ul>
 
-		<p class="posts-more">
-			<a href="/blog/">View More Posts</a>
-		</p>
-	</section>
+    <p class="posts-more">
+      <a href="/blog/">View More Posts</a>
+    </p>
+  </section>
 
-	<section class="section">
-		<h2 class="section-title">
-			<a id="work" href="#work">Work</a>
-		</h2>
+  <section class="section">
+    <h2 class="section-title">
+      <a id="work" href="#work">Work</a>
+    </h2>
 
-		<ul class="section-list">
+    <ul class="section-list section-list--no-bullets">
 
-			<article class="post">
-				<h3 class="section-list-title">
-					<a href="https://www.optimizely.com/">Optimizely</a>
-				</h3>
-				<p>I developed Optimizely's mobile website as a summer intern in 2013 and returned after graduation as a full-time UI Engineer on the design team.</p>
-			</article>
+      <li class="post">
+        <h3 class="section-list-title">
+          <a href="https://www.optimizely.com/">Optimizely</a>
+        </h3>
+        <p>
+          I developed Optimizely's mobile website as a summer intern in 2013 and
+          returned after graduation as a full-time UI Engineer on the design team.
+        </p>
+      </li>
 
-			<article class="post">
-				<h3 class="section-list-title">
-					<a href="https://www.wepay.com/">WePay</a>
-				</h3>
-				<p>Worked at WePay as a Software Engineer Intern during the 2012 summer. Assigned to the API team, I redesigned the application dashboard for developers, simplified configuration process for WePay plugins users, overhauled the developer documentation, and represented the company at eCommerceHackNY.</p>
-			</article>
+      <li class="post">
+        <h3 class="section-list-title">
+          <a href="https://www.wepay.com/">WePay</a>
+        </h3>
+        <p>
+          Worked at WePay as a Software Engineer Intern during the 2012 summer.
+          Assigned to the API team, I redesigned the application dashboard for
+          developers, simplified configuration process for WePay plugins users,
+          overhauled the developer documentation, and represented the company at
+          eCommerceHackNY.
+        </p>
+      </li>
 
-			<article class="post">
-				<h3 class="section-list-title">
-					<a href="http://www.bupipedream.com/">Pipe Dream</a>
-				</h3>
-				<p>Worked on a complete redesign of <a href="http://www.bupipedream.com/">bupipedream.com</a>, home of the student-run newspaper at Binghamton University. The new website runs on WordPress and features a responsive layout. I wrote <a href="http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress" title="Moving from College Publisher to WordPress">a blog post explaining the development</a> in great detail. I also managed Pipe Dream's Facebook and Twitter accounts.</p>
-			</article>
+      <li class="post">
+        <h3 class="section-list-title">
+          <a href="http://www.bupipedream.com/">Pipe Dream</a>
+        </h3>
+        <p>
+          Worked on a complete redesign of
+          <a href="http://www.bupipedream.com/">bupipedream.com</a>, home of the
+          student-run newspaper at Binghamton University. The new website runs on
+          WordPress and features a responsive layout. I wrote
+          <a href="http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress"
+             title="Moving from College Publisher to WordPress">
+            a blog post explaining the development
+          </a>
+          in great detail. I also managed Pipe Dream's Facebook and Twitter accounts.
+        </p>
+      </li>
 
-		</ul>
-	</section>
+    </ul>
+  </section>
 
-	<section class="section">
-		<h2 class="section-title">
-			<a id="projects" href="#projects">Projects</a>
-		</h2>
+  <section class="section">
+    <h2 class="section-title">
+      <a id="projects" href="#projects">Projects</a>
+    </h2>
 
-		<ul class="section-list">
+    <ul class="section-list section-list--no-bullets">
+      <li class="post">
+        <h3 class="section-list-title">
+          <a href="http://beatstrap.com/">Beatstrap</a>
+        </h3>
+        <p>Beatstrap is a tool for journalists to cover news, sports, and events through Twitter. I created Beatstrap and work with <a href="http://www.camayak.com/">Roman Heindorff of Camayak</a> to help market and promote the product.</p>
+      </li>
 
-			<article class="post">
-				<h3 class="section-list-title">
-					<a href="http://beatstrap.me/">BeatStrap</a>
-				</h3>
-				<p>BeatStrap is a tool for journalists to cover news, sports, and events through Twitter. I created BeatStrap and work with <a href="http://www.camayak.com/">Roman Heindorff of Camayak</a> to help market and promote the product.</p>
-			</article>
+      <li class="post">
+        <h3 class="section-list-title">
+          <a href="http://hackbu.org/">HackBU</a>
+        </h3>
+        <p>Created a club at Binghamton University to promote a "hacker culture" on campus. HackBU hosted <a href="http://hackbu.org/workshops/">weekly web development workshops</a>, organized <a href="http://hackbu.org/hackathons/">trips to hackathons</a>, and <a href="http://hackathon.hackbu.org/">held BU's first hackathon</a>.</p>
+      </li>
 
-			<article class="post">
-				<h3 class="section-list-title">
-					<a href="http://hackbu.org/">HackBU</a>
-				</h3>
-				<p>Created a club at Binghamton University to promote a "hacker culture" on campus. HackBU hosted <a href="http://hackbu.org/workshops/">weekly web development workshops</a>, organized <a href="http://hackbu.org/hackathons/">trips to hackathons</a>, and <a href="http://hackathon.hackbu.org/">held BU's first hackathon</a>.</p>
-			</article>
+      <li class="post">
+        <h3 class="section-list-title">
+          <a href="http://taketocollege.com/">Take to College</a>
+        </h3>
+        <p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists.</p>
+      </li>
+    </ul>
+  </section>
 
-			<article class="post">
-				<h3 class="section-list-title">
-					<a href="http://taketocollege.com/">Take to College</a>
-				</h3>
-				<p>Take to College began in November 2009 as a comprehensive college shopping list for freshmen entering college. The website became an instant hit, receiving over 150,000 visits in its first summer. It has since been redesigned to let users customize their lists.</p>
-			</article>
+  <section class="section">
+    <h2 class="section-title">
+      <a id="talks" href="#talks">Talks</a>
+    </h2>
 
-		</ul>
-	</section>
+    <ul class="section-list section-list--no-bullets">
+      <li class="post">
+        <h3 class="section-list-title">
+          <a href="http://danoc.me/talks/responsive/">Ditch the App, Go Responsive!</a>
+        </h3>
+        <p>Spoke about responsive web development for college newspapers at the 2013 ACP Midwinter National College Journalism Convention in San Francisco.</p>
+      </li>
+    </ul>
+  </section>
 
-	<section class="section">
-		<h2 class="section-title">
-			<a id="talks" href="#talks">Talks</a>
-		</h2>
+  <section class="section posts">
+    <h2 class="section-title">
+      <a id="press" href="#press">Press</a>
+    </h2>
 
-		<ul class="section-list">
+    <ul class="posts-list">
+      <li>
+        <a href="http://www.bupipedream.com/news/65416/2014-alumnus-shares-path-to-post-collegiate-employment/" class="posts-list-title">2014 alumnus shares path to post-collegiate employment</a> -
+        <span class="posts-list-date">{{ "2016-02-16T00:13:00-05:00" }}</span>
+      </li>
 
-			<article class="post">
-				<h3 class="section-list-title">
-					<a href="http://danoc.me/talks/responsive/">Ditch the App, Go Responsive!</a>
-				</h3>
-				<p>Spoke about responsive web development for college newspapers at the 2013 ACP Midwinter National College Journalism Convention in San Francisco.</p>
-			</article>
+      <li>
+        <a href="http://www.lohud.com/story/news/education/2014/05/18/class-entrepreneurs-creating-jobs/9269049/" class="posts-list-title">Class of 2014 students create their own jobs</a> -
+        <span class="posts-list-date">{{ "2014-05-18T23:55:00-04:00" }}</span>
+      </li>
 
-		</ul>
-	</section>
+      <li>
+        <a href="http://www.binghamton.edu/inside/index.php/inside/story/8377/students-stay-up-late-innovate-at-hackbu-hackathon/" class="posts-list-title">Students stay up late, innovate at HackBU Hackathon</a> -
+        <span class="posts-list-date">{{ "2014-04-30T03:00:00-04:00" }}</span>
+      </li>
 
-	<section class="section posts">
-		<h2 class="section-title">
-			<a id="press" href="#press">Press</a>
-		</h2>
+      <li>
+        <a href="http://www.bupipedream.com/news/35106/hackbu/" class="posts-list-title">
+          Coders converge at Binghamton University’s first-ever hackathon</a> -
+          <span class="posts-list-date">{{ "2014-04-29T03:09:00-04:00" }}</span>
+      </li>
 
-		<ul class="posts-list">
-			<li>
-				<a href="http://www.lohud.com/story/news/education/2014/05/18/class-entrepreneurs-creating-jobs/9269049/" class="posts-list-title">Class of 2014 students create their own jobs</a> - <span class="posts-list-date">{{ "2014-05-18T23:55:00-04:00" | date_to_string }}</span>
-			</li>
+      <li>
+        <a href="http://www.wicz.com/news2005/viewarticle.asp?a=32244" class="posts-list-title">The Internet turns 25</a> -
+        <span class="posts-list-date">{{ "2014-03-13T22:46:42-05:00" }}</span>
+      </li>
 
-			<li>
-				<a href="http://www.binghamton.edu/inside/index.php/inside/story/8377/students-stay-up-late-innovate-at-hackbu-hackathon/" class="posts-list-title">Students stay up late, innovate at HackBU Hackathon</a> - <span class="posts-list-date">{{ "2014-04-30T03:00:00-04:00" | date_to_string }}</span>
-			</li>
+      <li>
+        <a href="http://www.bupipedream.com/news/30516/hack-bu" class="posts-list-title">Initiative offers free coding lessons to Binghamton University students</a> -
+        <span class="posts-list-date">{{ "2014-02-25T01:52:00-05:00" }}</span>
+      </li>
 
-			<li>
-				<a href="http://www.bupipedream.com/news/35106/hackbu/" class="posts-list-title">Coders converge at Binghamton University’s first-ever hackathon</a> - <span class="posts-list-date">{{ "2014-04-29T03:09:00-04:00" | date_to_string }}</span>
-			</li>
+      <li>
+        <a href="http://college.usatoday.com/2013/11/21/8-dos-and-donts-for-student-e-portfolios/" class="posts-list-title">8 dos and don'ts for student e-portfolios</a> -
+        <span class="posts-list-date">{{ "2013-11-21T10:44:00-05:00" }}</span>
+      </li>
 
-			<li>
-				<a href="http://www.wicz.com/news2005/viewarticle.asp?a=32244" class="posts-list-title">The Internet turns 25</a> - <span class="posts-list-date">{{ "2014-03-13T22:46:42-05:00" | date_to_string }}</span>
-			</li>
+      <li>
+        <a href="http://www.bupipedream.com/news/23268/binghamton-university-hackers-michigan/" class="posts-list-title">Binghamton University hackers take Michigan</a> -
+        <span class="posts-list-date">{{ "2013-09-24T02:40:00-04:00" }}</span>
+      </li>
 
-			<li>
-				<a href="http://www.bupipedream.com/news/30516/hack-bu" class="posts-list-title">Initiative offers free coding lessons to Binghamton University students</a> - <span class="posts-list-date">{{ "2014-02-25T01:52:00-05:00" | date_to_string }}</span>
-			</li>
+      <li>
+        <a href="http://www.collegemediamatters.com/2012/03/08/how-to-launch-a-crazy-cool-student-newspaper-website-using-wordpress-bupipedream/" class="posts-list-title">How to Launch a Crazy Cool Student Newspaper Website Using WordPress (@BUPipeDream)</a> -
+        <span class="posts-list-date">{{ "2012-03-08T00:00:00-05:00" }}</span>
+      </li>
+    </ul>
 
-			<li>
-				<a href="http://college.usatoday.com/2013/11/21/8-dos-and-donts-for-student-e-portfolios/" class="posts-list-title">8 dos and don'ts for student e-portfolios</a> - <span class="posts-list-date">{{ "2013-11-21T10:44:00-05:00" | date_to_string }}</span>
-			</li>
+  </section>
 
-			<li>
-				<a href="http://www.bupipedream.com/news/23268/binghamton-university-hackers-michigan/" class="posts-list-title">Binghamton University hackers take Michigan</a> - <span class="posts-list-date">{{ "2013-09-24T02:40:00-04:00" | date_to_string }}</span>
-			</li>
-
-			<li>
-				<a href="http://www.collegemediamatters.com/2012/03/08/how-to-launch-a-crazy-cool-student-newspaper-website-using-wordpress-bupipedream/" class="posts-list-title">How to Launch a Crazy Cool Student Newspaper Website Using WordPress (@BUPipeDream)</a> - <span class="posts-list-date">{{ "2012-03-08T00:00:00-05:00" | date_to_string }}</span>
-			</li>
-		</ul>
-
-	</section>
-
-	<footer id="contact" class="footer">
-		<ul class="footer-links">
-			<li><a href="mailto:daniel@danoc.me">daniel@danoc.me</a></li>
-			<li><a href="https://www.facebook.com/danoc.me" target="_blank">Facebook</a></li>
-			<li><a href="https://twitter.com/_danoc" target="_blank">Twitter</a></li>
-			<li><a href="http://dribbble.com/danoc" target="_blank">Dribbble</a></li>
-		</ul>
-	</footer>
-
+  <footer id="contact" class="footer">
+    <ul class="footer-links">
+      <li><a href="mailto:daniel@danoc.me">daniel@danoc.me</a></li>
+      <li><a href="https://www.facebook.com/danoc.me" target="_blank">Facebook</a></li>
+      <li><a href="https://twitter.com/_danoc" target="_blank">Twitter</a></li>
+      <li><a href="http://dribbble.com/danoc" target="_blank">Dribbble</a></li>
+    </ul>
+  </footer>
 </div>
+{% endblock %}

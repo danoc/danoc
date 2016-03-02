@@ -12,7 +12,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/15968416150/display-current-temperature
 ---
 
-![Screenshot of the weather indicator on Pipe Dream's website](/public/img/posts/pipe-dream-weather.png)
+![Screenshot of the weather indicator on Pipe Dream's website](/img/posts/pipe-dream-weather.png)
 
 
 All it takes is a few line of code to display the current temperature in any city using PHP and [Google’s (hidden) weather API](http://blog.programmableweb.com/2010/02/08/googles-secret-weather-api/).

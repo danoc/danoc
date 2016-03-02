@@ -9,7 +9,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/16093529186/database-dump
 ---
 
-![Screenshot of the College Publisher database export](/public/img/posts/college-publisher-export.png)
+![Screenshot of the College Publisher database export](/img/posts/college-publisher-export.png)
 
 
 Just got the database export from College Publisher containing every single Pipe Dream article since 2005. Not looking forward to sorting through this mess!

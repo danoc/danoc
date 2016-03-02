@@ -5,7 +5,7 @@ description: A story of the trial and error of creating SVG animations.
 date: '2015-09-01T00:00:00.000Z'
 ---
 
-![Screenshot of a Pipe Dream Twitter card](/public/img/posts/animated-svg.gif)
+![Screenshot of a Pipe Dream Twitter card](/img/posts/animated-svg.gif)
 
 I wrote a post for the Design @ Optimizely blog about the trial and error of creating SVG animations.
 

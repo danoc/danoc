@@ -12,7 +12,7 @@ tumblr_url: http://blog.danoc.me/post/34468850592/wordpress-pharma-hack
 
 I got a Facebook message a few days ago from the Editor in Chief asking if the Pipe Dream was hacked. The attached screenshot showed ads for _cialis_ and _viagra_ instead of a popular Greek Life article. Neither of us were able to reproduce the issue, so I ignored it and went to bed.
 
-![Screenshot of a WordPress Pharma Hack Google result](/public/img/posts/pharma-hack-google-result.png)
+![Screenshot of a WordPress Pharma Hack Google result](/img/posts/pharma-hack-google-result.png)
 
 
 The hack became clear the next day as a Google search for Pipe Dream returned results titled _"#1 - kamagra gold 100 mg. FDA Approved Pharmacy. Good Quality …"_. Fetching bupipedream.com as a Googlebot through Google Webmaster tools indicated that the hack targeted spiders and bots.

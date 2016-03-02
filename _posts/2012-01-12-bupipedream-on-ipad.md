@@ -11,6 +11,6 @@ tags:
 tumblr_url: http://blog.danoc.me/post/15736692113/bupipedream-on-ipad
 ---
 
-![Pipe Dream on an iPad](/public/img/posts/pd-ipad.png)
+![Pipe Dream on an iPad](/img/posts/pd-ipad.png)
 
 The new layout looks great on the iPad.

@@ -10,7 +10,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/20751376228/wordpress-article-deck
 ---
 
-![Screenshot of the Article Deck WordPress plugin](/public/img/posts/article-deck-wordpress-plugin.png)
+![Screenshot of the Article Deck WordPress plugin](/img/posts/article-deck-wordpress-plugin.png)
 
 
 I just released [WordPress Article Deck](https://github.com/bupipedream/WordPress-Article-Deck), Pipe Dream's second GitHub repository. As the name implies, the simple plugin lets you easily add a deck to an article when creating a new post.

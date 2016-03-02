@@ -11,7 +11,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/62548615920/binghamton-university-at-mhacks
 ---
 
-![Photos of students hacking at MHacks](/public/img/posts/mhacks-hacking.jpg)
+![Photos of students hacking at MHacks](/img/posts/mhacks-hacking.jpg)
 
 
 Last spring I read a great blog post titled "[How Michigan took hackathons by storm](https://medium.com/hackers-and-hacking/e6439754078)." I randomly met the author, Dave Fontenot, a few months later in California.
@@ -22,21 +22,21 @@ A few weeks and a 13 hour bus ride later, we made it to The Big House for the Fa
 
 ## 36 hours of hacking
 
-![Binghamton University student Davix Lui at MHacks](/public/img/posts/mhacks-davix.jpg)
+![Binghamton University student Davix Lui at MHacks](/img/posts/mhacks-davix.jpg)
 
-![Binghamton University student Yuval at MHacks](/public/img/posts/mhacks-yuval.jpg)
+![Binghamton University student Yuval at MHacks](/img/posts/mhacks-yuval.jpg)
 
-![Binghamton University student Akshay at MHacks](/public/img/posts/mhacks-akshay.jpg)
+![Binghamton University student Akshay at MHacks](/img/posts/mhacks-akshay.jpg)
 
 We settled in late, formed teams, brainstormed, and hacked for the next 36 hours. Some teams went hard while others were there for the experience.
 
 Most of us took some time to enjoy Ann Arbor, wandering downtown and playing on the field of The Big House when we got the chance.
 
-![Photo of a custom football that says MHacks](/public/img/posts/mhacks-football.jpg)
+![Photo of a custom football that says MHacks](/img/posts/mhacks-football.jpg)
 
-![Photo of Davix Lui throwing a football](/public/img/posts/mhacks-football-davix.jpg)
+![Photo of Davix Lui throwing a football](/img/posts/mhacks-football-davix.jpg)
 
-![Photo of three HackBU members at MHacks](/public/img/posts/mhacks-trio.jpg)
+![Photo of three HackBU members at MHacks](/img/posts/mhacks-trio.jpg)
 
 Three of our teams made it to the Science Fair Expo, presenting their hacks to people that walked by.
 
@@ -48,7 +48,7 @@ The following teams from Binghamton presented:
 
 ## What's next for Binghamton
 
-![Photo of HackBU, Buffalo, and Cornell students leaving MHacks](/public/img/posts/mhacks-bus.jpg)
+![Photo of HackBU, Buffalo, and Cornell students leaving MHacks](/img/posts/mhacks-bus.jpg)
 
 
 This was Binghamton's first trip to a hackathon—hopefully the first of many. Most fall hackathons are full, but we're planning to attend a few in the spring and start our own.

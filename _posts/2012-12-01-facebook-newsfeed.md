@@ -10,7 +10,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/36959614701/facebook-newsfeed
 ---
 
-![Screenshot of the a Pipe Dream article on Facebook](/public/img/posts/pipe-dream-facebook-newsfeed.png)
+![Screenshot of the a Pipe Dream article on Facebook](/img/posts/pipe-dream-facebook-newsfeed.png)
 
 
 I love the emphasis on photos in the new layout for shared links on Facebook.

@@ -9,7 +9,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/46073307231/spring-fling-announcement-and-analytics
 ---
 
-![Screenshot of the Pipe Dream Google Analytics](/public/img/posts/pipe-dream-spring-fling-google-analytics-2013.png)
+![Screenshot of the Pipe Dream Google Analytics](/img/posts/pipe-dream-spring-fling-google-analytics-2013.png)
 
 
 It took active [90 visitors to crash the Pipe Dream server](http://blog.danoc.me/2012/03/24/spring-fling-concert-announcement-takes-down-the-pipe.html) a year ago when we announced that [Passion Pit would headline Spring Fling](http://www.bupipedream.com/news/9130/passion-pit-to-headline-spring-fling/). The article received 374 likes.

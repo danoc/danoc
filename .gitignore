@@ -1,6 +1,5 @@
 ### Custom ###
-lib/
-public/
+dist/
 
 ### Jekyll ###
 test/dest

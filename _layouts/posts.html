@@ -1,0 +1,25 @@
+{% extends "_layouts/blog.html" %}
+
+{% block title %}
+{{ site.name }} | Blog
+{% endblock %}
+
+{% block description %}
+Thoughts and ramblings of a UI Engineer.
+{% endblock %}
+
+{% block post %}
+<section class="section post-index">
+  <h2 class="section-title">
+    <a id="posts" href="#posts">Posts</a>
+  </h2>
+
+  <ul class="posts-list">
+    {% for post in posts %}
+    <li>
+      <a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> -
+      <span class="posts-list-date">{{ post.date }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

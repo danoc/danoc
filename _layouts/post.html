@@ -1,8 +1,8 @@
 {% extends "_layouts/blog.html" %}
 
-{% block title %}
-{{ post.title }} | {{ site.name }}
-{% endblock %}
+{% block title %}{{ post.title }} | {{ site.name | safe }}{% endblock %}
+
+{% block description %}{{ post.description }}{% endblock %}
 
 {% block head %}
 <meta name="twitter:card" content="summary">

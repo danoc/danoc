@@ -10,6 +10,7 @@ const imagemin = require('gulp-imagemin');
 const less = require('gulp-less');
 const marked = require('gulp-marked');
 const minifyCSS = require('gulp-minify-css');
+const moment = require('moment');
 const nunjucksRender = require('gulp-nunjucks-render');
 const rename = require('gulp-rename');
 const wrap = require('gulp-wrap');
@@ -43,6 +44,7 @@ const paths = {
 };
 
 const FILENAME_DATE_LENGTH = '1970-01-01-'.length;
+const DATE_FORMAT = 'DD MMM YYYY';
 
 let generatePostURL = function(fileName) {
   if (!fileName) {
@@ -52,6 +54,28 @@ let generatePostURL = function(fileName) {
   fileName = fileName.substr(FILENAME_DATE_LENGTH).replace(/\.[^/.]+$/, '');
 
   return '/blog/' + fileName + '/';
+};
+
+
+let getPosts = function(file, limit) {
+  var postsFiles = fs.readdirSync('_posts/');
+  var postsData = [];
+
+  limit = limit || null;
+
+  for (var i = 0; i < postsFiles.length; i++) {
+    var fileContents = fs.readFileSync('_posts/' + postsFiles[i]).toString();
+    var attributes = frontMatter(fileContents).attributes;
+    attributes['url'] = generatePostURL(postsFiles[i]);
+    attributes['formattedDate'] = moment(attributes['date']).format(DATE_FORMAT);
+
+    postsData.push(attributes);
+  }
+
+  return {
+    site: site,
+    posts: limit ? postsData.reverse().slice(0, limit) : postsData.reverse(),
+  };
 };
 
 
@@ -106,6 +130,7 @@ gulp.task('nunjucks:blog:single', () => {
           title: file.frontMatter.title,
           deck: file.frontMatter.deck,
           date: file.frontMatter.date,
+          dateFormatted: moment(file.frontMatter.date).format(DATE_FORMAT),
           url: generatePostURL(file.relative),
         },
       };
@@ -123,21 +148,7 @@ gulp.task('nunjucks:blog:single', () => {
 gulp.task('nunjucks:blog:index', () => {
   return gulp.src('_layouts/posts.html')
     .pipe(data((file) => {
-      var postsFiles = fs.readdirSync('_posts/');
-      var postsData = [];
-
-      for (var i = 0; i < postsFiles.length; i++) {
-        var fileContents = fs.readFileSync('_posts/' + postsFiles[i]).toString();
-        var attributes = frontMatter(fileContents).attributes;
-        attributes['url'] = generatePostURL(postsFiles[i]);
-
-        postsData.push(attributes);
-      }
-
-      return {
-        site: site,
-        posts: postsData.reverse(),
-      };
+      return getPosts(file);
     }))
     .pipe(nunjucksRender())
     .pipe(rename((path) => {
@@ -150,21 +161,7 @@ gulp.task('nunjucks:blog:index', () => {
 gulp.task('nunjucks:index', () => {
   return gulp.src('./index.html')
     .pipe(data((file) => {
-      var postsFiles = fs.readdirSync('_posts/');
-      var postsData = [];
-
-      for (var i = 0; i < postsFiles.length; i++) {
-        var fileContents = fs.readFileSync('_posts/' + postsFiles[i]).toString();
-        var attributes = frontMatter(fileContents).attributes;
-        attributes['url'] = generatePostURL(postsFiles[i]);
-
-        postsData.push(attributes);
-      }
-
-      return {
-        site: site,
-        posts: postsData.reverse().slice(0, 5),
-      };
+      return getPosts(file, 5);
     }))
     .pipe(nunjucksRender())
     .pipe(browserSync.reload({ stream: true }))

@@ -185,5 +185,4 @@ gulp.task('watch', ['default'], () => {
   });
 });
 
-// gulp.task('default', ['html', 'less', 'img', 'css', 'nunjucks']);
-gulp.task('default', ['html', 'less', 'css', 'nunjucks']);
+gulp.task('default', ['html', 'less', 'img', 'css', 'nunjucks']);

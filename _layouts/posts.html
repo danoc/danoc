@@ -18,7 +18,7 @@ Thoughts and ramblings of a UI Engineer.
     {% for post in posts %}
     <li>
       <a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> -
-      <span class="posts-list-date">{{ post.date }}</span>
+      <span class="posts-list-date">{{ post.formattedDate }}</span>
     </li>
     {% endfor %}
   </ul>

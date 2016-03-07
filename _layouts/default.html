@@ -7,7 +7,7 @@
     <title>{% block title %}{% endblock %}</title>
     <meta property="og:title" content="{% block title %}{% endblock %}">
 
-    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:site_name" content="{{ site.name | safe }}">
 
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta property="og:description" content="{% block description %}{% endblock %}">

@@ -1,12 +1,8 @@
 {% extends "_layouts/blog.html" %}
 
-{% block title %}
-{{ site.name }} | Blog
-{% endblock %}
+{% block title %}Posts | {{ site.name | safe }}{% endblock %}
 
-{% block description %}
-Thoughts and ramblings of a UI Engineer.
-{% endblock %}
+{% block description %}Thoughts and ramblings of a UI Engineer.{% endblock %}
 
 {% block post %}
 <section class="section post-index">
@@ -18,7 +14,9 @@ Thoughts and ramblings of a UI Engineer.
     {% for post in posts %}
     <li>
       <a href="{{ post.url }}" class="posts-list-title">{{ post.title }}</a> -
-      <span class="posts-list-date">{{ post.formattedDate }}</span>
+      <time class="posts-list-date" datetime="{{ post.date }}">
+        {{ post.formattedDate }}
+      </time>
     </li>
     {% endfor %}
   </ul>

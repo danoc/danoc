@@ -79,6 +79,11 @@ let getPosts = function(file, limit) {
 };
 
 
+gulp.task('keybase', () => {
+  return gulp.src('./keybase.txt')
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('html', () => {
   var index = gulp.src('./index.html')
     .pipe(browserSync.reload({ stream: true }))
@@ -185,4 +190,4 @@ gulp.task('watch', ['default'], () => {
   });
 });
 
-gulp.task('default', ['html', 'less', 'img', 'css', 'nunjucks']);
+gulp.task('default', ['html', 'less', 'img', 'css', 'nunjucks', 'keybase']);

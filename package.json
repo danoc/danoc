@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "gulp",
-    "deploy": "npm install && gulp && rsync -r --progress --delete dist/ daniel@danoc.me:/var/www/danoc.me/public",
+    "deploy": "npm install && gulp && cp .htaccess dist/.htaccess && rsync -r --progress --delete dist/ daniel@danoc.me:/var/www/danoc.me/public",
     "watch": "gulp watch"
   },
   "bugs": {

@@ -133,8 +133,10 @@ gulp.task('nunjucks:blog:single', () => {
         site: site,
         post: {
           title: file.frontMatter.title,
+          description: file.frontMatter.description,
           deck: file.frontMatter.deck,
           date: file.frontMatter.date,
+          image: file.frontMatter.image,
           dateFormatted: moment(file.frontMatter.date).format(DATE_FORMAT),
           url: generatePostURL(file.relative),
         },

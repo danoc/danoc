@@ -5,16 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% block title %}{% endblock %}</title>
-    <meta property="og:title" content="{% block title %}{% endblock %}">
 
     <meta property="og:site_name" content="{{ site.name | safe }}">
 
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta property="og:description" content="{% block description %}{% endblock %}">
+    <meta name="twitter:description" content="{% block description %}{% endblock %}">
 
     <meta name="twitter:site" content="@{{ site.twitter }}">
-
-    <meta name="og:url" content="{{ site.url }}{{ page.url }}">
 
     {% block head %}
     {% endblock %}

@@ -5,8 +5,12 @@
 {% block description %}{{ post.description }}{% endblock %}
 
 {% block head %}
-<meta name="twitter:card" content="summary">
-<meta name="og:type" content="article">
+<meta property="og:title" content="{{ post.title }}">
+<meta name="twitter:title" content="{{ post.title }}">
+<meta name="twitter:card" content="summary" />
+<meta property="og:type" content="article">
+<meta property="og:image" content="{{ post.image }}">
+<meta name="twitter:image" content="{{ post.image }}">
 {% endblock %}
 
 {% block post %}

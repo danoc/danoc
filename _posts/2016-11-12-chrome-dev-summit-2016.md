@@ -3,6 +3,7 @@ layout: post
 title: Themes from the 2016 Chrome Dev Summit
 description: Key themes, random thoughts, and tidbits from the 2016 Chrome Dev Summit.
 date: '2016-11-12T00:00:00.000Z'
+image: https://danoc.me/img/posts/chrome-dev-summit-2016.jpg
 ---
 
 ![Photo from the Chrome Dev Summit](/img/posts/chrome-dev-summit-2016.jpg)

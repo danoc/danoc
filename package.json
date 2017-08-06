@@ -4,7 +4,7 @@
     "start": "gatsby build && gatsby develop",
     "precommit": "lint-staged",
     "test": "eslint .",
-    "deploy": "npm install && gulp && cp .htaccess dist/.htaccess && rsync -r --progress --delete dist/ daniel@danoc.me:/var/www/danoc.me/public"
+    "deploy": "rm -rf public/*.html && gatsby build && now public/ --public --name danoc --no-clipboard"
   },
   "dependencies": {
     "gatsby": "^1.6.6",
@@ -17,15 +17,12 @@
   "devDependencies": {
     "eslint": "^4.4.0",
     "eslint-config-prettier": "^2.3.0",
-    "eslint-config-standard": "^10.2.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
+    "now": "^7.3.0",
     "prettier": "^1.5.3"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["prettier --write", "git add"]
   }
 }

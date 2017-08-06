@@ -2385,10 +2385,6 @@ eslint-config-prettier@^2.3.0:
   dependencies:
     get-stdin "^5.0.1"
 
-eslint-config-standard@^10.2.1:
-  version "10.2.1"
-  resolved "https://production-npm.thumbtack.com/eslint-config-standard/-/eslint-config-standard-10.2.1/c061e4d066f379dc17cd562c64e819b4dd454591.tgz#c061e4d066f379dc17cd562c64e819b4dd454591"
-
 eslint-scope@^3.7.1:
   version "3.7.1"
   resolved "https://production-npm.thumbtack.com/eslint-scope/-/eslint-scope-3.7.1/3d63c3edfda02e06e01a452ad88caacc7cdcb6e8.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
@@ -4861,6 +4857,10 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+now@^7.3.0:
+  version "7.3.0"
+  resolved "https://production-npm.thumbtack.com/now/-/now-7.3.0/c20b75fe8e40a3e84b3820aaaabe4ebea5b9f14a.tgz#c20b75fe8e40a3e84b3820aaaabe4ebea5b9f14a"
 
 npm-path@^2.0.2:
   version "2.0.3"

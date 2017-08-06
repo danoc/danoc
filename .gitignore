@@ -1,5 +1,7 @@
 ### Custom ###
 dist/
+.cache
+public
 
 ### Jekyll ###
 test/dest

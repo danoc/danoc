@@ -1,4 +1,8 @@
 module.exports = {
+  siteMetadata: {
+    siteURL: "https://danoc.me",
+    siteName: "Daniel O'Connorrr"
+  },
   plugins: [
     {
       resolve: "gatsby-source-filesystem",

@@ -9,20 +9,35 @@ const Container = styled.div`
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
-const TemplateWrapper = ({ children }) =>
-  <Container>
-    <Helmet
-      title="Daniel O'Connor"
-      meta={[
-        { name: "description", content: "Sample" },
-        { name: "keywords", content: "sample, something" }
-      ]}
-    />
-    {children()}
-  </Container>;
+const IndexLayout = ({ children }) => {
+  return (
+    <Container>
+      <Helmet
+        title={""}
+        meta={[
+          { name: "og:title", content: "" },
+          { name: "og:type", content: "website" },
+          { name: "og:image", content: "" },
+          { name: "description", content: "" }
+        ]}
+      />
+      {children()}
+    </Container>
+  );
+};
 
-TemplateWrapper.propTypes = {
+IndexLayout.propTypes = {
   children: PropTypes.func
 };
 
-export default TemplateWrapper;
+export default IndexLayout;
+
+// export const pageQuery = graphql`
+//   query LayoutIndexQuery {
+//     site {
+//       siteMetadata {
+//         siteURL
+//       }
+//     }
+//   }
+// `;

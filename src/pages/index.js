@@ -43,7 +43,7 @@ const Experience = props =>
   </article>;
 
 const IndexPage = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark;
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <Container>
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
       <Section title="Posts" href="/blog">
         <ul>
           {posts.map(({ node: post }) =>
-            <li>
+            <li key={post.frontmatter.path}>
               <Link to={post.frontmatter.path}>
                 {post.frontmatter.title}
               </Link>
@@ -114,7 +114,7 @@ const IndexPage = ({ data }) => {
         <Experience title="HackBU" href="http://club.hackbu.org/">
           Created a club at Binghamton University to promote a hacker culture on
           campus. HackBU hosted weekly{" "}
-          <a href="http://club.hackbu.org/">web development workshops</a>{" "}
+          <a href="http://club.hackbu.org/">web development workshops</a>,{" "}
           <a href="https://danoc.me/blog/binghamton-university-at-mhacks/">
             organized trips to hackathons
           </a>, and held{" "}

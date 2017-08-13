@@ -8,10 +8,15 @@ const Container = styled.div`
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
+
+  img {
+    width: 100%;
+  }
 `;
 
 const Post = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const post = data.markdownRemark;
+  const site = data.site.siteMetadata;
 
   return (
     <Container>
@@ -29,10 +34,17 @@ const Post = ({ data }) => {
         </p>
       </header>
       <Helmet
-        title="Daniel O'Connor"
+        title={post.frontmatter.title}
         meta={[
-          { name: "description", content: "Sample" },
-          { name: "keywords", content: "sample, something" }
+          { name: "og:title", content: post.frontmatter.title },
+          { name: "og:type", content: "article" },
+          { name: "article:published_time", content: post.frontmatter.date },
+          { name: "article:author", content: post.frontmatter.date },
+          { name: "article:tag", content: post.frontmatter.tags },
+          { name: "og:image", content: post.frontmatter.image },
+          { name: "og:url", content: site.siteURL + post.frontmatter.path },
+          { name: "description", content: post.frontmatter.description },
+          { name: "keywords", content: post.frontmatter.tags }
         ]}
       />
       <h1>
@@ -53,6 +65,14 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        image
+        tags
+        description
+      }
+    }
+    site {
+      siteMetadata {
+        siteURL
       }
     }
   }

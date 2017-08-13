@@ -11,7 +11,7 @@ const Container = styled.div`
 const SectionHeading = styled.h2``;
 
 const BlogIndex = ({ data }) => {
-  const { edges: posts } = data.allMarkdownRemark;
+  const posts = data.allMarkdownRemark.edges;
 
   return (
     <Container>
@@ -34,7 +34,7 @@ const BlogIndex = ({ data }) => {
         <ul>
           {posts.map(({ node: post }) => {
             return (
-              <li>
+              <li key={post.frontmatter.path}>
                 <Link to={post.frontmatter.path}>
                   {post.frontmatter.title}
                 </Link>

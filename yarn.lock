@@ -2392,9 +2392,9 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.4.0:
-  version "4.4.0"
-  resolved "https://production-npm.thumbtack.com/eslint/-/eslint-4.4.0/a3e153e704b64f78290ef03592494eaba228d3bc.tgz#a3e153e704b64f78290ef03592494eaba228d3bc"
+eslint@^4.4.1:
+  version "4.4.1"
+  resolved "https://production-npm.thumbtack.com/eslint/-/eslint-4.4.1/99cd7eafcffca2ff99a5c8f5f2a474d6364b4bd3.tgz#99cd7eafcffca2ff99a5c8f5f2a474d6364b4bd3"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
@@ -2516,9 +2516,9 @@ exec-sh@^0.2.0:
   dependencies:
     merge "^1.1.3"
 
-execa@^0.7.0:
-  version "0.7.0"
-  resolved "https://production-npm.thumbtack.com/execa/-/execa-0.7.0/944becd34cc41ee32a63a9faf27ad5a65fc59777.tgz#944becd34cc41ee32a63a9faf27ad5a65fc59777"
+execa@^0.8.0:
+  version "0.8.0"
+  resolved "https://production-npm.thumbtack.com/execa/-/execa-0.8.0/d8d76bbc1b55217ed190fd6dd49d3c774ecfc8da.tgz#d8d76bbc1b55217ed190fd6dd49d3c774ecfc8da"
   dependencies:
     cross-spawn "^5.0.1"
     get-stream "^3.0.0"
@@ -2907,26 +2907,26 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://production-npm.thumbtack.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1/1b0ab3bd553b2a0d6399d29c0e3ea0b252078327.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
-gatsby-link@^1.6.5:
+gatsby-link@1.6.5:
   version "1.6.5"
   resolved "https://production-npm.thumbtack.com/gatsby-link/-/gatsby-link-1.6.5/a33273bc2d8bc9cc4df194afddbd6bec91f92812.tgz#a33273bc2d8bc9cc4df194afddbd6bec91f92812"
   dependencies:
     prop-types "^15.5.8"
     ric "^1.3.0"
 
-gatsby-plugin-react-helmet@^1.0.1:
+gatsby-plugin-react-helmet@1.0.1:
   version "1.0.1"
   resolved "https://production-npm.thumbtack.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-1.0.1/98d60ed796f9115dc08daba89ac6a622c94e1897.tgz#98d60ed796f9115dc08daba89ac6a622c94e1897"
   dependencies:
     react-helmet "^5.1.3"
 
-gatsby-plugin-styled-components@^1.0.1:
+gatsby-plugin-styled-components@1.0.1:
   version "1.0.1"
   resolved "https://production-npm.thumbtack.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-1.0.1/aea2358b6b2ca99cb2a85b4908b882bd87c9e029.tgz#aea2358b6b2ca99cb2a85b4908b882bd87c9e029"
   dependencies:
     styled-components "^2.0.0"
 
-gatsby-source-filesystem@^1.4.1:
+gatsby-source-filesystem@1.4.1:
   version "1.4.1"
   resolved "https://production-npm.thumbtack.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.4.1/fe5cd2b6f73883883867ff24e17cda5cb7d1e29a.tgz#fe5cd2b6f73883883867ff24e17cda5cb7d1e29a"
   dependencies:
@@ -2938,7 +2938,7 @@ gatsby-source-filesystem@^1.4.1:
     pretty-bytes "^4.0.2"
     slash "^1.0.0"
 
-gatsby-transformer-remark@^1.6.3:
+gatsby-transformer-remark@1.6.3:
   version "1.6.3"
   resolved "https://production-npm.thumbtack.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.6.3/0a00488e427aab625df8b0472fb1ed807a30e2cf.tgz#0a00488e427aab625df8b0472fb1ed807a30e2cf"
   dependencies:
@@ -2954,7 +2954,7 @@ gatsby-transformer-remark@^1.6.3:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby@^1.6.6:
+gatsby@1.6.6:
   version "1.6.6"
   resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.6.6/de1a982d4513499c5f94443b1c4e953fb849ab12.tgz#de1a982d4513499c5f94443b1c4e953fb849ab12"
   dependencies:
@@ -4150,13 +4150,13 @@ linked-list@0.1.0:
   version "0.1.0"
   resolved "https://production-npm.thumbtack.com/linked-list/-/linked-list-0.1.0/798b0ff97d1b92a4fd08480f55aea4e9d49d37bf.tgz#798b0ff97d1b92a4fd08480f55aea4e9d49d37bf"
 
-lint-staged@^4.0.2:
-  version "4.0.2"
-  resolved "https://production-npm.thumbtack.com/lint-staged/-/lint-staged-4.0.2/8e83e11e9e1656c09b6117f6db0d55fd4960a1c0.tgz#8e83e11e9e1656c09b6117f6db0d55fd4960a1c0"
+lint-staged@^4.0.3:
+  version "4.0.3"
+  resolved "https://production-npm.thumbtack.com/lint-staged/-/lint-staged-4.0.3/1ce55591bc2c83a781a90b69a0a0c8aa0fc6370b.tgz#1ce55591bc2c83a781a90b69a0a0c8aa0fc6370b"
   dependencies:
     app-root-path "^2.0.0"
     cosmiconfig "^1.1.0"
-    execa "^0.7.0"
+    execa "^0.8.0"
     listr "^0.12.0"
     lodash.chunk "^4.2.0"
     minimatch "^3.0.0"

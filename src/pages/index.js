@@ -1,73 +1,78 @@
 import React from "react";
 import Link from "gatsby-link";
 import styled from "styled-components";
+import * as s from "../styles/";
+import SectionComponent from "../components/section";
 
 const Container = styled.div`
-  max-width: 40rem;
+  max-width: ${s.measureWide};
   margin-left: auto;
   margin-right: auto;
+  padding: ${s.spacing6} ${s.spacing5};
 `;
 
-const SectionHeading = styled.h2``;
+const Title = styled.h1`
+  padding-bottom: ${s.titleMarginBottom};
+  border-bottom: 1px solid ${s.lightGray};
+  font-size: ${s.fontSize2};
+`;
 
-const ExperienceTitle = styled.h3``;
+const Footer = styled.footer`
+  padding-top: ${s.spacing4};
+  border-top: 1px solid ${s.lightGray};
+  display: flex;
+`;
 
-const Section = props =>
-  <section>
-    <SectionHeading>
-      {props.href
-        ? <Link to={props.href}>
-            {props.title}
-          </Link>
-        : <span>
-            {props.title}
-          </span>}
-    </SectionHeading>
-    {props.children}
-  </section>;
+const FooterLink = styled.a`
+  &:not(:last-child) {
+    margin-right: ${s.spacing4};
+  }
+`;
 
-const Experience = props =>
-  <article>
+const Section = styled(SectionComponent)`margin-bottom: ${s.spacing6};`;
+
+const Header = Section.withComponent("header");
+
+const ExperienceTitle = styled.h3`font-size: ${s.fontSize5};`;
+const ExperienceArticle = styled.article`margin-bottom: ${s.spacing5};`;
+
+const Experience = props => (
+  <ExperienceArticle>
     <ExperienceTitle>
-      {props.href
-        ? <a href={props.href}>
-            {props.title}
-          </a>
-        : <span>
-            {props.title}
-          </span>}
+      {props.href ? (
+        <a href={props.href}>{props.title}</a>
+      ) : (
+        <span>{props.title}</span>
+      )}
     </ExperienceTitle>
-    <p>
-      {props.children}
-    </p>
-  </article>;
+    <p>{props.children}</p>
+  </ExperienceArticle>
+);
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Container>
-      <header>
-        <h1>Daniel O'Connor</h1>
+      <Header>
+        <Title>Daniel O'Connor</Title>
         <p>
           Hello! I'm a UI Developer at Thumbtack and I live in San Francisco.
         </p>
         <p>
           I build design systems to efficiently deliver high quality products.
-          I'm a stickler for consistency and help bridge the gap between design
+          I’m a stickler for consistency and help bridge the gap between design
           and development.
         </p>
-      </header>
+      </Header>
 
       <Section title="Posts" href="/blog">
         <ul>
-          {posts.map(({ node: post }) =>
+          {posts.map(({ node: post }) => (
             <li key={post.frontmatter.path}>
-              <Link to={post.frontmatter.path}>
-                {post.frontmatter.title}
-              </Link>
+              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
             </li>
-          )}
+          ))}
         </ul>
 
         <Link to="/blog">View More Posts</Link>
@@ -98,7 +103,7 @@ const IndexPage = ({ data }) => {
           <Link to="/blog/from-college-publisher-to-wordpress/">
             a blog post explaining the development
           </Link>
-          in great detail. I also managed Pipe Dream's Facebook and Twitter
+          in great detail. I also managed Pipe Dream’s Facebook and Twitter
           accounts.
         </Experience>
       </Section>
@@ -118,7 +123,7 @@ const IndexPage = ({ data }) => {
           <a href="https://danoc.me/blog/binghamton-university-at-mhacks/">
             organized trips to hackathons
           </a>, and held{" "}
-          <a href="http://2014s.hackbu.org/">BU's first hackathon</a>.
+          <a href="http://2014s.hackbu.org/">BU’s first hackathon</a>.
         </Experience>
 
         <Experience title="Take to College" href="http://taketocollege.com/">
@@ -139,6 +144,11 @@ const IndexPage = ({ data }) => {
           Francisco.
         </Experience>
       </Section>
+
+      <Footer>
+        <FooterLink href="mailto:daniel@danoc.me">daniel@danoc.me</FooterLink>
+        <FooterLink href="https://twitter.com/_danoc">Twitter</FooterLink>
+      </Footer>
     </Container>
   );
 };

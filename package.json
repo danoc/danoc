@@ -4,7 +4,7 @@
     "start": "gatsby build && gatsby develop",
     "precommit": "lint-staged",
     "test": "eslint .",
-    "deploy": "rm -rf public/ && gatsby build && netlify deploy"
+    "build": "rm -rf public/ && gatsby build"
   },
   "dependencies": {
     "gatsby": "^1.9.14",

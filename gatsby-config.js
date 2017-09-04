@@ -19,6 +19,12 @@ module.exports = {
     },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-offline"
+    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-5922635-10"
+      }
+    }
   ]
 };

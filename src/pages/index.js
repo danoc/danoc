@@ -136,6 +136,15 @@ const IndexPage = ({ data }) => {
 
       <Section title="Talks">
         <Experience
+          title="Balancing Developer Productivity and UX Consistency in a Design System"
+          href="https://www.youtube.com/watch?v=8xHxoSFw3Jc"
+        >
+          Gave a webinar on UXPin about how design consistency and developer
+          productivity clash as a design system evolves. The audience was made
+          of 800+ designers a$
+        </Experience>
+
+        <Experience
           title="Ditch the App, Go Responsive!"
           href="/talks/responsive/"
         >

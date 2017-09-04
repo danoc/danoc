@@ -141,7 +141,7 @@ const IndexPage = ({ data }) => {
         >
           Gave a webinar on UXPin about how design consistency and developer
           productivity clash as a design system evolves. The audience was made
-          of 800+ designers a$
+          up of 800+ designers and developers.
         </Experience>
 
         <Experience

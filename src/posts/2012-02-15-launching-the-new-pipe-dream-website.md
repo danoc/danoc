@@ -9,7 +9,7 @@ tags:
 - college publisher
 - cms
 tumblr_url: http://blog.danoc.me/post/17670281132/launching-the-new-pipe-dream-website
-path: /blog/launching-the-new-pipe-dream-website
+path: /blog/launching-the-new-pipe-dream-website/
 ---
 
 ![Pipe Dream displayed on multiple devices](/img/posts/pipe-dream-responsive.png)

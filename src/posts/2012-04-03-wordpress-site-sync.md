@@ -8,7 +8,7 @@ tags:
 - bupipedream
 - deploy
 tumblr_url: http://blog.danoc.me/post/20396276847/wordpress-site-sync
-path: /blog/wordpress-site-sync
+path: /blog/wordpress-site-sync/
 ---
 
 ![Pipe Dream on GitHub](/img/posts/pipe-dream-github.png)

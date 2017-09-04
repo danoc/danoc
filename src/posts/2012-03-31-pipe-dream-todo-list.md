@@ -6,7 +6,7 @@ tags:
 - pipe-dream
 - bupipedream
 tumblr_url: http://blog.danoc.me/post/20247289897/pipe-dream-todo-list
-path: /blog/pipe-dream-todo-list
+path: /blog/pipe-dream-todo-list/
 ---
 
 I'm hoping to do most of these during spring break:

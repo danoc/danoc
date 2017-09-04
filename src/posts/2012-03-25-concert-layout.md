@@ -8,7 +8,7 @@ tags:
 - sapb
 - facebook
 tumblr_url: http://blog.danoc.me/post/19913228146/concert-layout
-path: /blog/concert-layout
+path: /blog/concert-layout/
 ---
 
 ![Pipe Dream concert announcement](/img/posts/pipe-dream-concert-layout.png)

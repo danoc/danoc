@@ -9,7 +9,7 @@ tags:
 - responsive-design
 - bupipedream
 tumblr_url: http://blog.danoc.me/post/44367862783/responsive-web-design-for-college-newspapers
-path: /blog/responsive-web-design-for-college-newspapers
+path: /blog/responsive-web-design-for-college-newspapers/
 ---
 
 Saturday morning I spoke about responsive web development for college newspapers at the ACP Midwinter National College Journalism Convention in San Francisco. As promised, here are the slides and notes.

@@ -10,7 +10,7 @@ tags:
 - coding
 - html
 tumblr_url: http://blog.danoc.me/post/14831427279/signs-of-progress
-path: /blog/signs-of-progress
+path: /blog/signs-of-progress/
 ---
 
 ![Early Pipe Dream screenshot](/img/posts/pipe-dream-initial.png)

@@ -10,7 +10,7 @@ tags:
 - internship
 - wepay
 tumblr_url: http://blog.danoc.me/post/26738967370/recent-updates
-path: /blog/recent-updates
+path: /blog/recent-updates/
 ---
 
 It's been a while since I've posted here, so I'll run through everything I've neglected to write about for the past three months.

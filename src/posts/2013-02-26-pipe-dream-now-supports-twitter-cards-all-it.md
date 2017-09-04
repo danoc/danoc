@@ -8,7 +8,7 @@ tags:
 - bupipedream
 - social
 tumblr_url: http://blog.danoc.me/post/44044442923/pipe-dream-now-supports-twitter-cards-all-it
-path: /blog/pipe-dream-now-supports-twitter-cards-all-it
+path: /blog/pipe-dream-now-supports-twitter-cards-all-it/
 ---
 
 ![Screenshot of a Pipe Dream Twitter card](/img/posts/pipe-dream-twitter-cards.png)

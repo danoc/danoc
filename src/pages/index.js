@@ -75,7 +75,7 @@ const IndexPage = ({ data }) => {
           ))}
         </ul>
 
-        <Link to="/blog">View More Posts</Link>
+        <Link to="/blog/">View More Posts</Link>
       </Section>
 
       <Section title="Work">

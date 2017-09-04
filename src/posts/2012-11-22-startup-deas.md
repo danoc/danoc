@@ -11,7 +11,7 @@ tags:
 - development
 - journalism
 tumblr_url: http://blog.danoc.me/post/36315431227/startup-deas
-path: /blog/startup-deas
+path: /blog/startup-deas/
 ---
 
 > If you know a lot about programming and you start learning about some other

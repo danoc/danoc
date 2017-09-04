@@ -9,7 +9,7 @@ tags:
 - michigan
 - hackathon
 tumblr_url: http://blog.danoc.me/post/62548615920/binghamton-university-at-mhacks
-path: /blog/binghamton-university-at-mhacks
+path: /blog/binghamton-university-at-mhacks/
 ---
 
 ![Photos of students hacking at MHacks](/img/posts/mhacks-hacking.jpg)

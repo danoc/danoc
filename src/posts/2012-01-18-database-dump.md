@@ -7,7 +7,7 @@ tags:
 - bupipedream
 - wordpress
 tumblr_url: http://blog.danoc.me/post/16093529186/database-dump
-path: /blog/database-dump
+path: /blog/database-dump/
 ---
 
 ![Screenshot of the College Publisher database export](/img/posts/college-publisher-export.png)

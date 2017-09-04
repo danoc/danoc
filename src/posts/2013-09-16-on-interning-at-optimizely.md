@@ -9,7 +9,7 @@ tags:
 - san-francisco
 - startup
 tumblr_url: http://blog.danoc.me/post/61425706269/on-interning-at-optimizely
-path: /blog/on-interning-at-optimizely
+path: /blog/on-interning-at-optimizely/
 ---
 
 I was fortunate to be one of two interns at [Optimizely](https://www.optimizely.com/) this summer, working as a front-end developer in their San Francisco office.

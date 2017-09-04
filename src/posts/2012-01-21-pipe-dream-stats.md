@@ -7,7 +7,7 @@ tags:
 - pipe-dream
 - binghamton
 tumblr_url: http://blog.danoc.me/post/16258657840/pipe-dream-stats
-path: /blog/pipe-dream-stats
+path: /blog/pipe-dream-stats/
 ---
 
 It took a while, but I finally cleaned up the archive that College Publisher sent me (more on the process in a future post), so I thought I would point out some interesting stats. There are **7,763 articles** in the database that date back to 2005. The articles collectively contain **4,136,270 words** and were written by ~**380 authors**.

@@ -11,7 +11,7 @@ tags:
 - journalism
 - photos
 tumblr_url: http://blog.danoc.me/post/16051985458/image-placement
-path: /blog/image-placement
+path: /blog/image-placement/
 ---
 
 I just spent most of my day figuring out how to get WordPress to display multiple images in an article. Basically, I learned that images should be attached, not inserted, to an article. I then wrote a function in `functions.php` called `get_photos()` that finds all of the photos associated to a post and returns it to `single-page.php`. The returned photos contain a priority that helps determine where they are placed.

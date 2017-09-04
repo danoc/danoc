@@ -2,7 +2,7 @@
 layout: post
 title: '"Make Your Own Future"'
 date: '2014-05-06T02:01:00-05:00'
-path: /blog/senior-column
+path: /blog/senior-column/
 ---
 
 It's a tradition at Pipe Dream, the student newspaper I worked at, that graduating staff write a senior column.

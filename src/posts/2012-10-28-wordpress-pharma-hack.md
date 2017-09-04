@@ -8,7 +8,7 @@ tags:
 - pharma
 - pipe-dream
 tumblr_url: http://blog.danoc.me/post/34468850592/wordpress-pharma-hack
-path: /blog/wordpress-pharma-hack
+path: /blog/wordpress-pharma-hack/
 ---
 
 I got a Facebook message a few days ago from the Editor in Chief asking if the Pipe Dream was hacked. The attached screenshot showed ads for _cialis_ and _viagra_ instead of a popular Greek Life article. Neither of us were able to reproduce the issue, so I ignored it and went to bed.

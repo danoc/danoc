@@ -14,7 +14,7 @@ module.exports = {
     {
       resolve: "gatsby-transformer-remark",
       options: {
-        plugins: []
+        plugins: ["gatsby-remark-smartypants"]
       }
     },
     "gatsby-plugin-react-helmet",

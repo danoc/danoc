@@ -31,6 +31,9 @@ const IndexLayout = ({ children }) => (
         { name: "og:title", content: "Daniel O'Connor" },
         { name: "og:type", content: "website" }
       ]}
+      htmlAttributes={{
+        lang: "en"
+      }}
     />
     {children()}
   </div>

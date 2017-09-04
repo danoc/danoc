@@ -9,7 +9,7 @@ tags:
 - redesign
 - responsive-design
 tumblr_url: http://blog.danoc.me/post/15736692113/bupipedream-on-ipad
-path: /blog/bupipedream-on-ipad
+path: /blog/bupipedream-on-ipad/
 ---
 
 ![Pipe Dream on an iPad](/img/posts/pd-ipad.png)

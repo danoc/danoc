@@ -8,7 +8,7 @@ tags:
 - bupipedream
 - binghamton
 tumblr_url: http://blog.danoc.me/post/15919857214/moving-to-wordpress
-path: /blog/moving-to-wordpress
+path: /blog/moving-to-wordpress/
 ---
 
 ![Photo of WordPress stickers and pins](/img/posts/wordpress-swag.jpg)

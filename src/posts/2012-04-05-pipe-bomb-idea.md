@@ -8,7 +8,7 @@ tags:
 - Pipe Dream
 - NYTimes
 tumblr_url: http://blog.danoc.me/post/20531600981/pipe-bomb-idea
-path: /blog/pipe-bomb-idea
+path: /blog/pipe-bomb-idea/
 ---
 
 ![Asteroid game on the Pipe Dream website](/img/posts/pipe-dream-april-fools.png)

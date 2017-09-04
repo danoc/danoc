@@ -10,7 +10,7 @@ tags:
 - bupipedream
 - SimpleXML
 tumblr_url: http://blog.danoc.me/post/15968416150/display-current-temperature
-path: /blog/display-current-temperature
+path: /blog/display-current-temperature/
 ---
 
 ![Screenshot of the weather indicator on Pipe Dream's website](/img/posts/pipe-dream-weather.png)

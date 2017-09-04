@@ -11,7 +11,7 @@ tags:
 - HTML
 - CSS
 tumblr_url: http://blog.danoc.me/post/15556391633/legible-articles
-path: /blog/legible-articles
+path: /blog/legible-articles/
 ---
 
 ![Screenshot of a Pipe Dream article](/img/posts/article-design.png)

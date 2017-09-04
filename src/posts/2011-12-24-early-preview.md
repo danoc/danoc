@@ -10,7 +10,7 @@ tags:
 - web
 - html
 tumblr_url: http://blog.danoc.me/post/14730989330/early-preview
-path: /blog/early-preview
+path: /blog/early-preview/
 ---
 
 ![Early Pipe Dream screenshot](/img/posts/pipe-dream-development.png)

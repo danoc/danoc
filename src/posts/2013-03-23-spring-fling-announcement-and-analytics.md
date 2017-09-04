@@ -7,7 +7,7 @@ tags:
 - stats
 - analytics
 tumblr_url: http://blog.danoc.me/post/46073307231/spring-fling-announcement-and-analytics
-path: /blog/spring-fling-announcement-and-analytics
+path: /blog/spring-fling-announcement-and-analytics/
 ---
 
 ![Screenshot of the Pipe Dream Google Analytics](/img/posts/pipe-dream-spring-fling-google-analytics-2013.png)

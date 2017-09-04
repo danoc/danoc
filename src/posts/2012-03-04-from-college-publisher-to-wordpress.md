@@ -9,7 +9,7 @@ tags:
 - binghamton
 - bupipedream
 tumblr_url: http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress
-path: /blog/from-college-publisher-to-wordpress
+path: /blog/from-college-publisher-to-wordpress/
 ---
 
 It's been three weeks since I launched the [new Pipe Dream website](http://bupipedream.com/). The former website, powered by College Publisher, has given way to a new website built on WordPress. This is how I did it.

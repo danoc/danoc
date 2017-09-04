@@ -13,7 +13,7 @@ tags:
 - responsive-design
 - layout
 tumblr_url: http://blog.danoc.me/post/15762559659/fit-for-a-smartphone
-path: /blog/fit-for-a-smartphone
+path: /blog/fit-for-a-smartphone/
 ---
 
 ![Pipe Dream on an Android device](/img/posts/pd-android.png)

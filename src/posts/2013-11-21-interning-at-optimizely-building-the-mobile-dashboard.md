@@ -9,7 +9,7 @@ tags:
 - development
 - mobile
 tumblr_url: http://blog.danoc.me/post/67673299074/interning-at-optimizely-building-the-mobile-dashboard
-path: /blog/interning-at-optimizely-building-the-mobile-dashboard
+path: /blog/interning-at-optimizely-building-the-mobile-dashboard/
 ---
 
 I just published an [overview of my internship at Optimizely](http://blog.optimizely.com/2013/11/15/interns-at-optimizely-building-the-mobile-dashboard/) on their blog. Take a look!

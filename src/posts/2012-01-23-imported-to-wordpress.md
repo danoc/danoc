@@ -9,7 +9,7 @@ tags:
 - mysql
 - bupipedream
 tumblr_url: http://blog.danoc.me/post/16358726729/imported-to-wordpress
-path: /blog/imported-to-wordpress
+path: /blog/imported-to-wordpress/
 ---
 
 ![Screenshot of the Pipe Dream posts in WordPress](/img/posts/pipe-dream-posts-imported.png)

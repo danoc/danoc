@@ -11,7 +11,7 @@ tags:
 - news
 - travel
 tumblr_url: http://blog.danoc.me/post/35106617712/pipe-dream-visits-chicago
-path: /blog/pipe-dream-visits-chicago
+path: /blog/pipe-dream-visits-chicago/
 ---
 
 ![Pipe Dream editors in Chicago](/img/posts/pipe-dream-chicago.jpg)

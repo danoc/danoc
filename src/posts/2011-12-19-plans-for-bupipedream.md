@@ -11,7 +11,7 @@ tags:
 - open-source
 - college publisher
 tumblr_url: http://blog.danoc.me/post/14447289066/plans-for-bupipedream
-path: /blog/plans-for-bupipedream
+path: /blog/plans-for-bupipedream/
 ---
 I recently stepped down as Photo Editor and became Lead Web Developer at Pipe Dream to work on a much-needed redesign of [bupipedream.com](http://bupipedream.com/). The current website is powered by [College Publisher](http://collegepublisher.com/), an outdated CMS geared towards college newspapers. College Publisher doesn't offer much flexibility and controls our data, so it's time to abandon ship.
 

@@ -13,7 +13,7 @@ tags:
 - news
 - newspaper
 tumblr_url: http://blog.danoc.me/post/39614524151/pipe-dream-redesign
-path: /blog/pipe-dream-redesign
+path: /blog/pipe-dream-redesign/
 ---
 
 ![Screenshot of Pipe Dream redesign](/img/posts/pipe-dream-redesign.png)

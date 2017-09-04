@@ -3,7 +3,7 @@ layout: post
 title: Chrome Dev Summit 2015 Notes
 description: Notes and highlights from the talks at the 2015 Chrome Dev Summit.
 date: '2015-12-06T00:00:00.000Z'
-path: /blog/chrome-dev-summit-2015-notes
+path: /blog/chrome-dev-summit-2015-notes/
 ---
 
 Google held their second Chrome Dev Summit last month in Mountain View. In their own words, "The Chrome Dev Summit is an exclusive event to connect with Chrome engineers and leading web developers for a two-day exploration of building beautiful and fast mobile web applications."

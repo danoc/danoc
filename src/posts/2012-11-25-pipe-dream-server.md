@@ -13,7 +13,7 @@ tags:
 - mysql
 - php
 tumblr_url: http://blog.danoc.me/post/36572312098/pipe-dream-server
-path: /blog/pipe-dream-server
+path: /blog/pipe-dream-server/
 ---
 
 ![Screenshot of the Linode login page](/img/posts/linode-manager-login.png)

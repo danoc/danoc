@@ -9,7 +9,7 @@ tags:
 - open-source
 - web-development
 tumblr_url: http://blog.danoc.me/post/14656793071/less-css-grid
-path: /blog/less-css-grid
+path: /blog/less-css-grid/
 ---
 
 ![LESS CSS Grid code](/img/posts/lessgrid.png)

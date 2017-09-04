@@ -5,7 +5,7 @@ date: '2013-02-15T16:50:00-05:00'
 tags:
 - projects
 tumblr_url: http://blog.danoc.me/post/43173313539/what-ive-been-up-to
-path: /blog/what-ive-been-up-to
+path: /blog/what-ive-been-up-to/
 ---
 
 It's been a while since I last posted here. Here's what I've been working on.

@@ -3,7 +3,7 @@ layout: post
 title: Easier HTML refactors through better selectors
 description: Best practices for integration test selectors and JavaScript hooks that we've adopted at Optimizely.
 date: '2015-09-23T00:00:00.000Z'
-path: /blog/better-selectors
+path: /blog/better-selectors/
 ---
 
 I recently merged a gigantic feature branch at Optimizely that further integrated our new CSS framework into our product. Five designers and front-end developers contributed to the branch over the course of weeks, reskinning buttons, dialogs, and dozens of other components.

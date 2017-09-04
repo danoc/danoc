@@ -9,7 +9,7 @@ tags:
 - design
 - web
 tumblr_url: http://blog.danoc.me/post/20572783627/this-facebook-notice-took-way-too-long-to-design
-path: /blog/this-facebook-notice-took-way-too-long-to-design
+path: /blog/this-facebook-notice-took-way-too-long-to-design/
 ---
 
 ![Screenshot of the Pipe Dream social reader integration](/img/posts/pipe-dream-social-reader.png)

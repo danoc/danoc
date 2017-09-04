@@ -8,7 +8,7 @@ tags:
 - opensource
 - code
 tumblr_url: http://blog.danoc.me/post/20751376228/wordpress-article-deck
-path: /blog/wordpress-article-deck
+path: /blog/wordpress-article-deck/
 ---
 
 ![Screenshot of the Article Deck WordPress plugin](/img/posts/article-deck-wordpress-plugin.png)

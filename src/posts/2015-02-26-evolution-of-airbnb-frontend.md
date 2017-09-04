@@ -2,7 +2,7 @@
 layout: post
 title: Notes from "CSS Frameworks and The Evolution of Airbnb's Frontend"
 date: '2015-02-26T16:27:00.000Z'
-path: /blog/evolution-of-airbnb-frontend
+path: /blog/evolution-of-airbnb-frontend/
 ---
 
 I went to a [great event at Airbnb last week](https://www.airbnb.com/meetups/x4ede5jr2-css-frameworks-and-the-evolution-of-airbnb-s-frontend) about O2 (their CSS framework) and the evolution of their front-end.

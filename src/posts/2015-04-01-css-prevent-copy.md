@@ -3,7 +3,7 @@ layout: post
 title: Prevent an element from being selected and copied with CSS
 description: How to use pseudo-elements, data attributes, and CSS's content property to prevent text from being selected and copied.
 date: '2015-04-01T00:00:00.000Z'
-path: /blog/css-prevent-copy
+path: /blog/css-prevent-copy/
 ---
 
 I was recently helping a coworker build a code diff viewer that supports line numbers, wraps text properly, and prevents line numbers from being copied when selecting the code.

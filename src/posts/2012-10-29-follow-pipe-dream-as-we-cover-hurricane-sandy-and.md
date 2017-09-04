@@ -10,7 +10,7 @@ tags:
 - live
 - news
 tumblr_url: http://blog.danoc.me/post/34605192252/follow-pipe-dream-as-we-cover-hurricane-sandy-and
-path: /blog/follow-pipe-dream-as-we-cover-hurricane-sandy-and
+path: /blog/follow-pipe-dream-as-we-cover-hurricane-sandy-and/
 ---
 
 ![Pipe Dream hurricane Sandy coverage teaser](/img/posts/pipe-dream-hurricane-sandy-coverage.png)

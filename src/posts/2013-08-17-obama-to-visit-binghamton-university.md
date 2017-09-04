@@ -9,7 +9,7 @@ tags:
 - president
 - pipe-dream
 tumblr_url: http://blog.danoc.me/post/58523267332/obama-to-visit-binghamton-university
-path: /blog/obama-to-visit-binghamton-university
+path: /blog/obama-to-visit-binghamton-university/
 ---
 
 ![Spike in Google Analytics during the announcement](/img/posts/pipe-dream-obama-announcement.png)

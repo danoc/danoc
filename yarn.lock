@@ -113,7 +113,7 @@ ansi-regex@^0.2.0, ansi-regex@^0.2.1:
   version "0.2.1"
   resolved "https://production-npm.thumbtack.com/ansi-regex/-/ansi-regex-0.2.1/0d8e946967a3d8143f93e24e298525fc1b2235f9.tgz#0d8e946967a3d8143f93e24e298525fc1b2235f9"
 
-ansi-regex@^2.0.0:
+ansi-regex@^2.0.0, ansi-regex@^2.1.1:
   version "2.1.1"
   resolved "https://production-npm.thumbtack.com/ansi-regex/-/ansi-regex-2.1.1/c3b33ab5ee360d86e0e628f0468ae7ef27d654df.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
 
@@ -129,7 +129,7 @@ ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://production-npm.thumbtack.com/ansi-styles/-/ansi-styles-2.2.1/b432dd3358b634cf75e1e4664368240533c1ddbe.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-ansi-styles@^3.1.0:
+ansi-styles@^3.0.0, ansi-styles@^3.1.0:
   version "3.2.0"
   resolved "https://production-npm.thumbtack.com/ansi-styles/-/ansi-styles-3.2.0/c159b8d5be0f9e5a6f346dab94f16ce022161b88.tgz#c159b8d5be0f9e5a6f346dab94f16ce022161b88"
   dependencies:
@@ -3271,8 +3271,8 @@ gatsby-source-filesystem@^1.4.12:
     slash "^1.0.0"
 
 gatsby-transformer-remark@^1.7.6:
-  version "1.7.6"
-  resolved "https://production-npm.thumbtack.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.6/2ebe0a21f29da5ced7777c70bb9aca3ad7e1c216.tgz#2ebe0a21f29da5ced7777c70bb9aca3ad7e1c216"
+  version "1.7.7"
+  resolved "https://production-npm.thumbtack.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.7/b911ed25c4fbb7ba7bc1f39cd03f94e7dc800c91.tgz#b911ed25c4fbb7ba7bc1f39cd03f94e7dc800c91"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
@@ -3288,8 +3288,8 @@ gatsby-transformer-remark@^1.7.6:
     unist-util-visit "^1.1.1"
 
 gatsby@^1.9.23:
-  version "1.9.23"
-  resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.9.23/430399da87cc4ecda70e43b8fdb40adb4e427938.tgz#430399da87cc4ecda70e43b8fdb40adb4e427938"
+  version "1.9.26"
+  resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.9.26/2c936b76a0367529ec05b426220eeaa3f4e6903a.tgz#2c936b76a0367529ec05b426220eeaa3f4e6903a"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3430,6 +3430,10 @@ gauge@~2.7.3:
 get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://production-npm.thumbtack.com/get-caller-file/-/get-caller-file-1.0.2/f702e63127e7e231c160a80c1554acb70d5047e5.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
+
+get-own-enumerable-property-symbols@^1.0.1:
+  version "1.0.1"
+  resolved "https://production-npm.thumbtack.com/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-1.0.1/f1d4e3ad1402e039898e56d1e9b9aa924c26e484.tgz#f1d4e3ad1402e039898e56d1e9b9aa924c26e484"
 
 get-params@^0.1.2:
   version "0.1.2"
@@ -4142,7 +4146,7 @@ is-extglob@^1.0.0:
   version "1.0.0"
   resolved "https://production-npm.thumbtack.com/is-extglob/-/is-extglob-1.0.0/ac468177c4943405a092fc8f29760c6ffc6206c0.tgz#ac468177c4943405a092fc8f29760c6ffc6206c0"
 
-is-extglob@^2.1.0:
+is-extglob@^2.1.0, is-extglob@^2.1.1:
   version "2.1.1"
   resolved "https://production-npm.thumbtack.com/is-extglob/-/is-extglob-2.1.1/a88c02535791f02ed37c76a1b9ea9773c833f8c2.tgz#a88c02535791f02ed37c76a1b9ea9773c833f8c2"
 
@@ -4178,6 +4182,12 @@ is-glob@^3.1.0:
   dependencies:
     is-extglob "^2.1.0"
 
+is-glob@^4.0.0:
+  version "4.0.0"
+  resolved "https://production-npm.thumbtack.com/is-glob/-/is-glob-4.0.0/9521c76845cc2610a85203ddf080a958c2ffabc0.tgz#9521c76845cc2610a85203ddf080a958c2ffabc0"
+  dependencies:
+    is-extglob "^2.1.1"
+
 is-hexadecimal@^1.0.0:
   version "1.0.1"
   resolved "https://production-npm.thumbtack.com/is-hexadecimal/-/is-hexadecimal-1.0.1/6e084bbc92061fbb0971ec58b6ce6d404e24da69.tgz#6e084bbc92061fbb0971ec58b6ce6d404e24da69"
@@ -4198,7 +4208,7 @@ is-number@^3.0.0:
   dependencies:
     kind-of "^3.0.2"
 
-is-obj@^1.0.0:
+is-obj@^1.0.0, is-obj@^1.0.1:
   version "1.0.1"
   resolved "https://production-npm.thumbtack.com/is-obj/-/is-obj-1.0.1/3e4729ac1f5fde025cd7d83a896dab9f4f67db0f.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
 
@@ -4247,6 +4257,10 @@ is-promise@^2.1.0:
 is-redirect@^1.0.0:
   version "1.0.0"
   resolved "https://production-npm.thumbtack.com/is-redirect/-/is-redirect-1.0.0/1d03dded53bd8db0f30c26e4f95d36fc7c87dc24.tgz#1d03dded53bd8db0f30c26e4f95d36fc7c87dc24"
+
+is-regexp@^1.0.0:
+  version "1.0.0"
+  resolved "https://production-npm.thumbtack.com/is-regexp/-/is-regexp-1.0.0/fd2d883545c46bac5a633e7b9a09e87fa2cb5069.tgz#fd2d883545c46bac5a633e7b9a09e87fa2cb5069"
 
 is-relative-url@^2.0.0:
   version "2.0.0"
@@ -4381,6 +4395,22 @@ items@2.x.x:
 iterall@^1.1.0:
   version "1.1.1"
   resolved "https://production-npm.thumbtack.com/iterall/-/iterall-1.1.1/f7f0af11e9a04ec6426260f5019d9fcca4d50214.tgz#f7f0af11e9a04ec6426260f5019d9fcca4d50214"
+
+jest-matcher-utils@^20.0.3:
+  version "20.0.3"
+  resolved "https://production-npm.thumbtack.com/jest-matcher-utils/-/jest-matcher-utils-20.0.3/b3a6b8e37ca577803b0832a98b164f44b7815612.tgz#b3a6b8e37ca577803b0832a98b164f44b7815612"
+  dependencies:
+    chalk "^1.1.3"
+    pretty-format "^20.0.3"
+
+jest-validate@^20.0.3:
+  version "20.0.3"
+  resolved "https://production-npm.thumbtack.com/jest-validate/-/jest-validate-20.0.3/d0cfd1de4f579f298484925c280f8f1d94ec3cab.tgz#d0cfd1de4f579f298484925c280f8f1d94ec3cab"
+  dependencies:
+    chalk "^1.1.3"
+    jest-matcher-utils "^20.0.3"
+    leven "^2.1.0"
+    pretty-format "^20.0.3"
 
 joi@6.x.x:
   version "6.10.1"
@@ -4615,7 +4645,7 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-leven@^2.0.0:
+leven@^2.0.0, leven@^2.1.0:
   version "2.1.0"
   resolved "https://production-npm.thumbtack.com/leven/-/leven-2.1.0/c2e7a9f772094dee9d34202ae8acce4687875580.tgz#c2e7a9f772094dee9d34202ae8acce4687875580"
 
@@ -4645,18 +4675,23 @@ linked-list@0.1.0:
   resolved "https://production-npm.thumbtack.com/linked-list/-/linked-list-0.1.0/798b0ff97d1b92a4fd08480f55aea4e9d49d37bf.tgz#798b0ff97d1b92a4fd08480f55aea4e9d49d37bf"
 
 lint-staged@^4.0.4:
-  version "4.0.4"
-  resolved "https://production-npm.thumbtack.com/lint-staged/-/lint-staged-4.0.4/9ca6968b30dfbfe81365b7a763cd4f4992896553.tgz#9ca6968b30dfbfe81365b7a763cd4f4992896553"
+  version "4.1.3"
+  resolved "https://production-npm.thumbtack.com/lint-staged/-/lint-staged-4.1.3/07c592e4b8dee914450a183c761187dc53d079e2.tgz#07c592e4b8dee914450a183c761187dc53d079e2"
   dependencies:
     app-root-path "^2.0.0"
+    chalk "^2.1.0"
     cosmiconfig "^1.1.0"
     execa "^0.8.0"
+    is-glob "^4.0.0"
+    jest-validate "^20.0.3"
     listr "^0.12.0"
-    lodash.chunk "^4.2.0"
+    lodash "^4.17.4"
+    log-symbols "^2.0.0"
     minimatch "^3.0.0"
     npm-which "^3.0.1"
     p-map "^1.1.1"
     staged-git-files "0.0.4"
+    stringify-object "^3.2.0"
 
 list-item@^1.1.1:
   version "1.1.1"
@@ -4769,10 +4804,6 @@ lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://production-npm.thumbtack.com/lodash.camelcase/-/lodash.camelcase-4.3.0/b28aa6288a2b9fc651035c7711f65ab6190331a6.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
 
-lodash.chunk@^4.2.0:
-  version "4.2.0"
-  resolved "https://production-npm.thumbtack.com/lodash.chunk/-/lodash.chunk-4.2.0/66e5ce1f76ed27b4303d8c6512e8d1216e8106bc.tgz#66e5ce1f76ed27b4303d8c6512e8d1216e8106bc"
-
 lodash.defaults@^4.0.1, lodash.defaults@^4.2.0:
   version "4.2.0"
   resolved "https://production-npm.thumbtack.com/lodash.defaults/-/lodash.defaults-4.2.0/d09178716ffea4dde9e5fb7b37f6f0802274580c.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
@@ -4879,6 +4910,12 @@ log-symbols@^1.0.2:
   resolved "https://production-npm.thumbtack.com/log-symbols/-/log-symbols-1.0.2/376ff7b58ea3086a0f09facc74617eca501e1a18.tgz#376ff7b58ea3086a0f09facc74617eca501e1a18"
   dependencies:
     chalk "^1.0.0"
+
+log-symbols@^2.0.0:
+  version "2.0.0"
+  resolved "https://production-npm.thumbtack.com/log-symbols/-/log-symbols-2.0.0/595e63be4d5c8cbf294a9e09e0d5629f5913fc0c.tgz#595e63be4d5c8cbf294a9e09e0d5629f5913fc0c"
+  dependencies:
+    chalk "^2.0.1"
 
 log-update@^1.0.2:
   version "1.0.2"
@@ -6419,6 +6456,13 @@ pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
+pretty-format@^20.0.3:
+  version "20.0.3"
+  resolved "https://production-npm.thumbtack.com/pretty-format/-/pretty-format-20.0.3/020e350a560a1fe1a98dc3beb6ccffb386de8b14.tgz#020e350a560a1fe1a98dc3beb6ccffb386de8b14"
+  dependencies:
+    ansi-regex "^2.1.1"
+    ansi-styles "^3.0.0"
+
 private@^0.1.6, private@^0.1.7:
   version "0.1.7"
   resolved "https://production-npm.thumbtack.com/private/-/private-0.1.7/68ce5e8a1ef0a23bb570cc28537b5332aba63ef1.tgz#68ce5e8a1ef0a23bb570cc28537b5332aba63ef1"
@@ -6643,7 +6687,7 @@ react-router-dom@^4.1.1:
     prop-types "^15.5.4"
     react-router "^4.1.1"
 
-react-router-scroll@ytase/react-router-scroll#build:
+"react-router-scroll@github:ytase/react-router-scroll#build":
   version "0.4.1"
   resolved "https://codeload.github.com/ytase/react-router-scroll/tar.gz/991ecddb08885e1fb80ec1e9dbf3a35844b7d4cd"
   dependencies:
@@ -7751,6 +7795,14 @@ stringify-entities@^1.0.1:
     character-entities-legacy "^1.0.0"
     is-alphanumerical "^1.0.0"
     is-hexadecimal "^1.0.0"
+
+stringify-object@^3.2.0:
+  version "3.2.0"
+  resolved "https://production-npm.thumbtack.com/stringify-object/-/stringify-object-3.2.0/94370a135e41bc048358813bf99481f1315c6aa6.tgz#94370a135e41bc048358813bf99481f1315c6aa6"
+  dependencies:
+    get-own-enumerable-property-symbols "^1.0.1"
+    is-obj "^1.0.1"
+    is-regexp "^1.0.0"
 
 stringstream@~0.0.4:
   version "0.0.5"

@@ -9,7 +9,7 @@ const BlogIndex = ({ data }) => {
 
   return (
     <BlogContainer>
-      <Section title="Posts" href="/blog">
+      <Section title="Posts" to="/blog/">
         <ul>
           {posts.map(({ node: post }) => (
             <li key={post.frontmatter.path}>

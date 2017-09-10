@@ -21,6 +21,8 @@ injectGlobal`
   img {
     max-width: 100%;
   }
+
+  ::selection { background: ${s.lightRed}; color: white; }
 `;
 
 const IndexLayout = ({ children }) => (

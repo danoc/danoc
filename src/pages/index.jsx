@@ -46,6 +46,7 @@ const IndexPage = ({ data }) => {
               title={post.frontmatter.title}
               to={post.frontmatter.path}
               key={post.frontmatter.path}
+              meta={post.frontmatter.date}
             />
           ))}
         </ul>

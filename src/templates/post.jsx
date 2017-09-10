@@ -1,7 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import styled from "styled-components";
 import BlogContainer from "../layouts/blog";
+import * as s from "../styles/";
+
+const Text = styled.div`
+  * {
+    max-width: ${s.measureWide};
+  }
+`;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
@@ -25,7 +33,7 @@ const Post = ({ data }) => {
         ]}
       />
       <h1>{post.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Text dangerouslySetInnerHTML={{ __html: post.html }} />
     </BlogContainer>
   );
   /* eslint-enable react/no-danger */

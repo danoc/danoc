@@ -4,13 +4,6 @@ import styled, { css } from "styled-components";
 import Link from "gatsby-link";
 import * as s from "../styles/";
 
-const Container = styled.section`
-  ul,
-  ol {
-    padding-left: 0;
-  }
-`;
-
 const sectionHeading = css`
   display: block;
   font-size: ${s.fontSize5};
@@ -42,7 +35,7 @@ const ViewMoreLink = styled(Link)`
 const SectionHeadingText = styled.span`${sectionHeading};`;
 
 const Section = props => (
-  <Container className={props.className}>
+  <section className={props.className}>
     <h2>
       {props.to ? (
         <SectionHeadingAnchor to={props.to} title={props.callToAction}>
@@ -58,7 +51,7 @@ const Section = props => (
     props.callToAction && (
       <ViewMoreLink to={props.to}>{props.callToAction}</ViewMoreLink>
     )}
-  </Container>
+  </section>
 );
 
 Section.propTypes = {

@@ -4,9 +4,7 @@ import styled from "styled-components";
 import Link from "../components/link";
 import * as s from "../styles/";
 
-const Article = styled.li`
-  margin-bottom: ${props => (props.hasDescription ? s.spacing5 : s.spacing1)};
-`;
+const Article = styled.li`list-style: none;`;
 
 const Meta = styled.div`
   color: ${s.gray};
@@ -25,7 +23,7 @@ const Title = styled.h3`
 `;
 
 const Experience = props => (
-  <Article hasDescription={!!props.children}>
+  <Article className={props.className}>
     <Meta>{props.meta}</Meta>
     <Title hasDescription={!!props.children}>
       {props.to ? (
@@ -42,13 +40,15 @@ Experience.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string.isRequired,
   meta: PropTypes.string,
-  to: PropTypes.string
+  to: PropTypes.string,
+  className: PropTypes.string
 };
 
 Experience.defaultProps = {
   children: undefined,
   meta: undefined,
-  to: undefined
+  to: undefined,
+  className: undefined
 };
 
 export default Experience;

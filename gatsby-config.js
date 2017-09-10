@@ -18,8 +18,9 @@ module.exports = {
           "gatsby-remark-smartypants",
           "gatsby-remark-prismjs",
           "gatsby-remark-responsive-iframe",
+          "gatsby-remark-copy-linked-files",
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the

@@ -7,8 +7,24 @@ import * as s from "../styles/";
 import "../styles/prism-ghcolors.css";
 
 const Text = styled.div`
-  * {
+  max-width: ${s.maxWidth7};
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     max-width: ${s.measureWide};
+  }
+
+  hr {
+    border-top: 5px solid ${s.lightGray};
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: ${s.spacing5} 0;
   }
 `;
 

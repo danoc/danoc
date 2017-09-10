@@ -10,6 +10,7 @@ export const blue = "#357edd";
 export const red = "#ff4136";
 export const lightRed = "#ff725c";
 
+export const maxWidth7 = "48rem";
 export const maxWidth8 = "64rem";
 
 export const spacing1 = "0rem";

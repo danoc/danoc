@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import Helmet from "react-helmet";
 import { injectGlobal } from "styled-components";
 import * as s from "../styles/";
@@ -25,8 +26,16 @@ injectGlobal`
   ::selection { background: ${s.lightRed}; color: white; }
 `;
 
+const Container = styled.div`
+  padding: ${s.spacing6} ${s.spacing7};
+
+  @media (max-width: 700px) {
+    padding: ${s.spacing5};
+  }
+`;
+
 const IndexLayout = ({ children }) => (
-  <div>
+  <Container>
     <Helmet
       title="Daniel O'Connor"
       meta={[
@@ -38,7 +47,7 @@ const IndexLayout = ({ children }) => (
       }}
     />
     {children()}
-  </div>
+  </Container>
 );
 
 IndexLayout.propTypes = {

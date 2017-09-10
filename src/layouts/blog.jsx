@@ -2,50 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import styled from "styled-components";
+import Header from "../components/header";
+import Paragraph from "../components/paragraph";
 import * as s from "../styles/";
 
-const Header = styled.header`
-  border-bottom: 1px solid ${s.moonGray};
-
-  a {
-    text-decoration: none;
+const Post = styled.div`
+  * {
+    max-width: ${s.measureWide};
   }
 `;
 
-const HeaderContainer = styled.div`
-  max-width: ${s.maxWidth8};
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-const ContentContainer = styled.div`
-  background-color: ${s.nearWhite};
-  padding: 3em 1.5em;
-`;
-
-const Content = styled.div`
-  max-width: ${s.measureWide};
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-const Title = styled.h1`
-  font-size: ${s.fontSize3};
-  color: ${s.darkGray};
-`;
+const HeaderSection = styled(Header)`margin-bottom: ${s.spacing6};`;
 
 const BlogContainer = ({ children }) => (
   <div>
-    <Header>
-      <HeaderContainer>
-        <Link to="/">
-          <Title>Daniel O&#8217;Connor</Title>
-        </Link>
-      </HeaderContainer>
-    </Header>
-    <ContentContainer>
-      <Content>{children}</Content>
-    </ContentContainer>
+    <HeaderSection title="Daniel O&#8217;Connor" />
+    <Post>{children}</Post>
   </div>
 );
 

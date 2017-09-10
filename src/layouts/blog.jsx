@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
 import styled from "styled-components";
 import Header from "../components/header";
-import Paragraph from "../components/paragraph";
 import * as s from "../styles/";
 
 const Post = styled.div`

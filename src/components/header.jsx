@@ -24,4 +24,16 @@ const Header = props => (
   </header>
 );
 
+Header.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string
+};
+
+Header.defaultProps = {
+  title: "Daniel O&#8217;Connor",
+  children: undefined,
+  className: undefined
+};
+
 export default Header;

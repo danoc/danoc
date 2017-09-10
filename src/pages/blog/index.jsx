@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
 import BlogContainer from "../../layouts/blog";
 import Section from "../../components/section";
 import Experience from "../../components/experience";

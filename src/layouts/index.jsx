@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { injectGlobal } from "styled-components";
 import Helmet from "react-helmet";
-import { injectGlobal } from "styled-components";
 import * as s from "../styles/";
 
 // eslint-disable-next-line no-unused-expressions

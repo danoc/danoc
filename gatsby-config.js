@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteURL: "https://danoc.me",
-    siteName: "Daniel O'Connorrr"
+    siteName: "Daniel O'Connor"
   },
   plugins: [
     {
@@ -11,6 +11,7 @@ module.exports = {
         name: "posts"
       }
     },
+
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -34,6 +35,7 @@ module.exports = {
         ]
       }
     },
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-offline",

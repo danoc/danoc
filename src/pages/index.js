@@ -1,53 +1,44 @@
 import React from "react";
-import Link from "gatsby-link";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import * as s from "../styles/";
 import SectionComponent from "../components/section";
+import Experience from "../components/experience";
+import Link from "../components/link";
 
 const Container = styled.div`
-  max-width: ${s.measureWide};
-  margin-left: auto;
-  margin-right: auto;
-  padding: ${s.spacing6} ${s.spacing5};
+  padding: ${s.spacing6};
+  @media (max-width: 700px) {
+    padding: ${s.spacing5};
+  }
 `;
 
-const Title = styled.h1`
-  padding-bottom: ${s.titleMarginBottom};
-  border-bottom: 1px solid ${s.lightGray};
-  font-size: ${s.fontSize2};
-`;
+const Title = styled.h1`font-size: ${s.fontSize3};`;
 
 const Footer = styled.footer`
+  display: flex;
   padding-top: ${s.spacing4};
   border-top: 1px solid ${s.lightGray};
-  display: flex;
+  max-width: ${s.measure};
 `;
 
-const FooterLink = styled.a`
+const FooterLink = styled(Link)`
   &:not(:last-child) {
     margin-right: ${s.spacing4};
+  }
+`;
+
+const Paragraph = styled.p`
+  color: ${s.midGray};
+  max-width: ${s.measure};
+
+  :first-of-type {
+    margin-top: ${s.spacing1};
   }
 `;
 
 const Section = styled(SectionComponent)`margin-bottom: ${s.spacing6};`;
 
 const Header = Section.withComponent("header");
-
-const ExperienceTitle = styled.h3`font-size: ${s.fontSize5};`;
-const ExperienceArticle = styled.article`margin-bottom: ${s.spacing5};`;
-
-const Experience = props => (
-  <ExperienceArticle>
-    <ExperienceTitle>
-      {props.href ? (
-        <a href={props.href}>{props.title}</a>
-      ) : (
-        <span>{props.title}</span>
-      )}
-    </ExperienceTitle>
-    <p>{props.children}</p>
-  </ExperienceArticle>
-);
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -56,107 +47,60 @@ const IndexPage = ({ data }) => {
     <Container>
       <Header>
         <Title>Daniel O'Connor</Title>
-        <p>
-          Hello! I'm a UI Developer at Thumbtack and I live in San Francisco.
-        </p>
-        <p>
+        <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
+        <Paragraph>
           I build design systems to efficiently deliver high quality products.
           I’m a stickler for consistency and help bridge the gap between design
           and development.
-        </p>
+        </Paragraph>
       </Header>
 
-      <Section title="Posts" href="/blog">
+      <Section title="Posts" to="/blog/" callToAction="View More Posts">
         <ul>
           {posts.map(({ node: post }) => (
-            <li key={post.frontmatter.path}>
-              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-            </li>
+            <Experience
+              title={post.frontmatter.title}
+              to={post.frontmatter.path}
+              key={post.frontmatter.path}
+            />
           ))}
         </ul>
-
-        <Link to="/blog/">View More Posts</Link>
       </Section>
 
       <Section title="Work">
-        <Experience title="Thumbtack" href="https://www.thumbtack.com/" />
-
-        <Experience title="Optimizely" href="https://www.optimizely.com/">
-          I interned at Optimizely in 2013 and worked as a full-time UI Engineer
-          on the design team. I maintained OUI, our UI library, and built design
-          systems that improved UI consistency and developer productivity.
-        </Experience>
-
-        <Experience title="WePay" href="https://wepay.com/">
-          Worked at WePay as a Software Engineer Intern during the 2012 summer.
-          Assigned to the API team, I redesigned the application dashboard for
-          developers, simplified configuration process for WePay plugins users,
-          overhauled the developer documentation, and represented the company at
-          eCommerceHackNY.
-        </Experience>
-
-        <Experience title="Pipe Dream" href="https://www.bupipedream.com/">
-          Worked on a complete redesign of{" "}
-          <a href="https://www.bupipedream.com/">bupipedream.com</a>, home of
-          the student-run newspaper at Binghamton University. The new website
-          runs on WordPress and features a responsive layout. I wrote{" "}
-          <Link to="/blog/from-college-publisher-to-wordpress/">
-            a blog post explaining the development
-          </Link>
-          in great detail. I also managed Pipe Dream’s Facebook and Twitter
-          accounts.
-        </Experience>
-      </Section>
-
-      <Section title="Projects">
-        <Experience title="BeatStrap" href="http://beatstrap.com/">
-          Beatstrap is a tool for journalists to cover news, sports, and events
-          through Twitter. I created Beatstrap and worked with
-          <a href="http://www.camayak.com/">Roman Heindorff of Camayak</a> to
-          help market and promote the product.
-        </Experience>
-
-        <Experience title="HackBU" href="http://club.hackbu.org/">
-          Created a club at Binghamton University to promote a hacker culture on
-          campus. HackBU hosted weekly{" "}
-          <a href="http://club.hackbu.org/">web development workshops</a>,{" "}
-          <a href="https://danoc.me/blog/binghamton-university-at-mhacks/">
-            organized trips to hackathons
-          </a>, and held{" "}
-          <a href="http://2014s.hackbu.org/">BU’s first hackathon</a>.
-        </Experience>
-
-        <Experience title="Take to College" href="http://taketocollege.com/">
-          Take to College began in November 2009 as a comprehensive college
-          shopping list for freshmen entering college. The website became an
-          instant hit, receiving over 150,000 visits in its first summer. It has
-          since been redesigned to let users customize their lists.
-        </Experience>
-      </Section>
-
-      <Section title="Talks">
-        <Experience
-          title="Balancing Developer Productivity and UX Consistency in a Design System"
-          href="https://www.youtube.com/watch?v=8xHxoSFw3Jc"
-        >
-          Gave a webinar on UXPin about how design consistency and developer
-          productivity clash as a design system evolves. The audience was made
-          up of 800+ designers and developers.
-        </Experience>
-
-        <Experience
-          title="Ditch the App, Go Responsive!"
-          href="/talks/responsive/"
-        >
-          Spoke about responsive web development for college newspapers at the
-          2013 ACP Midwinter National College Journalism Convention in San
-          Francisco.
-        </Experience>
+        <ul>
+          <Experience
+            title="Thumbtack"
+            to="https://www.thumbtack.com/"
+            meta="2017-Present"
+          >
+            <Paragraph>
+              I build out our design system, Thumbprint UI, and assist our
+              engineering team with the move to React.
+            </Paragraph>
+          </Experience>
+          <Experience
+            title="Optimizely"
+            to="https://www.optimizely.com/"
+            meta="2014-2017"
+          >
+            <Paragraph>
+              As a UI Engineer on the design team, I maintained{" "}
+              <Link
+                to="https://github.com/optimizely/oui"
+                title="Optimizely User Interface"
+              >
+                OUI
+              </Link>, our UI library, and built design systems that improved UI
+              consistency and developer productivity.
+            </Paragraph>
+          </Experience>
+        </ul>
       </Section>
 
       <Footer>
-        <FooterLink href="mailto:daniel@danoc.me">daniel@danoc.me</FooterLink>
-        <FooterLink href="https://twitter.com/_danoc">Twitter</FooterLink>
+        <FooterLink to="mailto:daniel@danoc.me">daniel@danoc.me</FooterLink>
+        <FooterLink to="https://twitter.com/_danoc">Twitter</FooterLink>
       </Footer>
     </Container>
   );

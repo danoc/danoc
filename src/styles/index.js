@@ -5,6 +5,10 @@ export const gray = "#777";
 export const moonGray = "#ccc";
 export const lightGray = "#eee";
 export const nearWhite = "#f4f4f4";
+export const darkBlue = "#00449e";
+export const blue = "#357edd";
+export const red = "#ff4136";
+export const lightRed = "#ff725c";
 
 export const maxWidth8 = "64rem";
 
@@ -19,6 +23,8 @@ export const spacing8 = "16rem";
 
 export const measure = "30em";
 export const measureWide = "34em";
+
+export const tracked = "0.1em";
 
 export const fontSizeBody = "1.063rem";
 

@@ -15,7 +15,8 @@
     "gatsby-plugin-styled-components": "^1.0.5",
     "gatsby-remark-smartypants": "^1.4.7",
     "gatsby-source-filesystem": "^1.4.12",
-    "gatsby-transformer-remark": "^1.7.6"
+    "gatsby-transformer-remark": "^1.7.6",
+    "is-relative-url": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^4.6.1",

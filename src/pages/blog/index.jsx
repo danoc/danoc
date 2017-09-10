@@ -1,7 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import BlogContainer from "../../layouts/blog";
-import styled from "styled-components";
 import Section from "../../components/section";
 
 const BlogIndex = ({ data }) => {
@@ -25,6 +25,28 @@ const BlogIndex = ({ data }) => {
 };
 
 export default BlogIndex;
+
+BlogIndex.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string,
+              date: PropTypes.string,
+              path: PropTypes.string
+            })
+          })
+        })
+      )
+    })
+  })
+};
+
+BlogIndex.defaultProps = {
+  data: {}
+};
 
 export const pageQuery = graphql`
   query BlogIndex {

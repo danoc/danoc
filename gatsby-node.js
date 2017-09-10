@@ -25,11 +25,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    return result.data.allMarkdownRemark.edges.forEach(({ node }) =>
       createPage({
         path: node.frontmatter.path,
-        component: path.resolve(`src/templates/post.js`)
-      });
-    });
+        component: path.resolve(`src/templates/post.jsx`)
+      })
+    );
   });
 };

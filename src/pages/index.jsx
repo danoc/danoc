@@ -1,5 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 import * as s from "../styles/";
 import SectionComponent from "../components/section";
 import Experience from "../components/experience";
@@ -7,6 +8,7 @@ import Link from "../components/link";
 
 const Container = styled.div`
   padding: ${s.spacing6};
+
   @media (max-width: 700px) {
     padding: ${s.spacing5};
   }
@@ -46,7 +48,7 @@ const IndexPage = ({ data }) => {
   return (
     <Container>
       <Header>
-        <Title>Daniel O'Connor</Title>
+        <Title>Daniel O&#8217;Connor</Title>
         <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
         <Paragraph>
           I build design systems to efficiently deliver high quality products.
@@ -107,6 +109,28 @@ const IndexPage = ({ data }) => {
 };
 
 export default IndexPage;
+
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string,
+              date: PropTypes.string,
+              path: PropTypes.string
+            })
+          })
+        })
+      )
+    })
+  })
+};
+
+IndexPage.defaultProps = {
+  data: {}
+};
 
 export const pageQuery = graphql`
   query Index {

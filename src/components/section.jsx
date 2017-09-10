@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import * as s from "../styles/";
 import Link from "gatsby-link";
+import * as s from "../styles/";
 
 const Container = styled.section`
   ul,
@@ -59,5 +60,20 @@ const Section = props => (
     )}
   </Container>
 );
+
+Section.propTypes = {
+  className: PropTypes.string,
+  to: PropTypes.string,
+  callToAction: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node
+};
+
+Section.defaultProps = {
+  className: undefined,
+  to: undefined,
+  callToAction: undefined,
+  children: undefined
+};
 
 export default Section;

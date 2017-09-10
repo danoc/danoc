@@ -3435,8 +3435,8 @@ gatsby-transformer-remark@^1.7.6:
     unist-util-visit "^1.1.1"
 
 gatsby@^1.9.23:
-  version "1.9.26"
-  resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.9.26/2c936b76a0367529ec05b426220eeaa3f4e6903a.tgz#2c936b76a0367529ec05b426220eeaa3f4e6903a"
+  version "1.9.27"
+  resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.9.27/e38e7602ecc11cba2c60dee6d242012953620119.tgz#e38e7602ecc11cba2c60dee6d242012953620119"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -6911,7 +6911,7 @@ react-router-dom@^4.1.1:
     prop-types "^15.5.4"
     react-router "^4.1.1"
 
-react-router-scroll@ytase/react-router-scroll#build:
+"react-router-scroll@github:ytase/react-router-scroll#build":
   version "0.4.1"
   resolved "https://codeload.github.com/ytase/react-router-scroll/tar.gz/991ecddb08885e1fb80ec1e9dbf3a35844b7d4cd"
   dependencies:

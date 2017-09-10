@@ -12,7 +12,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Keynote by Darin Fisher, VP of Chrome
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/m2a9hlUFRhg" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/m2a9hlUFRhg" frameborder="0" allowfullscreen></iframe>
 
 * Web is low friction. <span class="point">Average user interacts with 25 apps a month but visits 100+ websites a month. 80% of the time in apps is spent within 3 apps.</span>
 * <span class="point">Products and themes of the summit</span>
@@ -25,7 +25,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Developing for Billions
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/9jmqsq2OQjc" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/9jmqsq2OQjc" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Tal Oppenheimer, a product manager on Chrome.
 * <span class="point">62% of global mobile connections are 2G. In India it is 87%.</span>
@@ -36,7 +36,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Deploying HTTPS: The Green Lock and Beyond
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/9WuP4KcDBpI" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/9WuP4KcDBpI" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Emily Stark, a software engineer on the Google Chrome security team
 * <span class="point">HTTPS 102: A set of Chrome tools coming to a new security tab in the Chrome developer tools that will help developers understand and move to HTTPS.</span>
@@ -47,7 +47,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Instant Loading with Service Workers
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/jCKZDTtUA2A" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/jCKZDTtUA2A" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Jeff Posnick, Developer Programs Engineer.
 * Service worker with the right caching strategy prevents the network from getting in the way.
@@ -67,7 +67,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Increase Engagement with Web Push Notifications
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/uh0IASBexdM" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/uh0IASBexdM" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Owen Campbell-Moore, Project Manager on Chrome
 * Engineer at Facebook presented and stressed the importance of the mobile web, not only the native app. The mobile web push notifications were great for engagement.
@@ -87,7 +87,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Engaging with the Real World: Web Bluetooth and Physical Web
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/_BUwOBdLjzQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/_BUwOBdLjzQ" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Vincent Scheib and Scott Jenson, software engineer on Chrome and product lead on physical web.
 * <span class="point">Web Bluetooth will enable the browser to connect to devices without additional software and in a very responsive interface.</span>
@@ -107,7 +107,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Asking for Permission: Respectful, Opinionated UI
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/4QQyjqtHwlY" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/4QQyjqtHwlY" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Elisabeth Morant, product manager on Chrome security team
 * The opt-in rate for geolocation on mobile web is 6%. This is mostly because sites are asking for permission on initial page load. <span class="point">The new permissions API allows developers to ask for permission at the right time.</span>
@@ -121,7 +121,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Polymer: State of the Union
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/lck68wyVUo4" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/lck68wyVUo4" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Taylor Savage, Product Manager on the Polymer team
 * <span class="point">Web components are happening: all of the browsers have some sort of support in the nightly versions.</span>
@@ -132,7 +132,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Progressive Web Apps
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/MyQ8mtR9WxI" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/MyQ8mtR9WxI" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Alex Russell, Software Engineer on Web Platform team and an engineer from Opera
 * <span class="point">There have been plenty of tools that allow web apps to work offline. Service workers are finally a low-friction solution.</span>
@@ -149,7 +149,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Building Progressive Web Apps with Polymer
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/g7f1Az5fxgU" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/g7f1Az5fxgU" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Rob Dodson, Senior Developer Advocate
 * <span class="point">Check to see if web components are supported before loading the polyfill.</span>
@@ -164,7 +164,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Accessibility
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/RkKl1O56w-c" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/RkKl1O56w-c" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Laura Palmaro, Accessibility Program Manager for Chrome and Chrome OS, and Alice Boxhall, Software Engineer on Chrome
 * <span class="point">Types of disabilities that users might:</span>
@@ -202,7 +202,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Introduction to RAIL
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/wO9GGY17NXY" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/wO9GGY17NXY" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Paul Lewis, developer advocate, and Paul Irish, front-end developer on Chrome
 * The performance/success graph is not linear.
@@ -216,7 +216,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## DevTools in 2015: Authoring to the max
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/dJR-n8szgBc" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/dJR-n8szgBc" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Paul Bakaus, Developer Advocate
 * Chrome now has a full time designer working on DevTools.
@@ -231,7 +231,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## RAIL in the real world
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/iIV1xPFXmBs" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/iIV1xPFXmBs" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Paul Lewis, developer advocate
 * Not each RAIL action is equally important. Depends on the type of website and context.
@@ -267,7 +267,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## V8 Performance from the Driver's Seat
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/oDFWIb0pi4U" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/oDFWIb0pi4U" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Seth Thompson, Product Manager for V8
 * The V8 engine and developer must work together to write fast JavaScript.
@@ -288,7 +288,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Quantify and improve real-world RAIL
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/NrEjkflqPxQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/NrEjkflqPxQ" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Ilya Grigorik, Chrome Developer Advocate
 * Performance in not static in real world since environments are always fluctuating and evolving.
@@ -313,7 +313,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Owning your performance: RAIL
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/w0O2znkSBXA" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/w0O2znkSBXA" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Paul Irish, software engineer on Chrome
 * DevTools "Network" tab
@@ -338,7 +338,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## HTTP/2 101
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/r5oT_2ndjms" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/r5oT_2ndjms" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Surma, engineer on the Chrome team
 * <span class="point">There is no way that HTTP/2 will be slower. It is performance for free.</span>
@@ -356,7 +356,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Building and deploying a Progressive Web App at scale with Flipkart
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/StdKz32M1RM" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/StdKz32M1RM" frameborder="0" allowfullscreen></iframe>
 
 * Flipkart Lite is a great example of a highly performant web application that also works well offline. Google it and open in Chrome on mobile to test it.
 * Took 5 engineers and 42 days to build.
@@ -367,7 +367,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 
 ## Leadership Panel
 
-<iframe width="100%" height="281" src="https://www.youtube.com/embed/RYAU4i2rqm0" frameborder="0" allowfullscreen></iframe>
+<iframe width="816" height="459" src="https://www.youtube.com/embed/RYAU4i2rqm0" frameborder="0" allowfullscreen></iframe>
 
 * <span class="point">Chrome team is working hard to make "Add to Homescreen" behave like a native app, but there are challenges in showing battery and data usage for the web app.</span>
 * Chrome is removing SMIL because they don’t see it working in every browser. They will only deprecate it or remove it once there are solid alternatives in place.

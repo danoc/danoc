@@ -19,6 +19,12 @@ const Text = styled.div`
     max-width: ${s.measureWide};
   }
 
+  ul,
+  ol {
+    max-width: calc(${s.measureWide} - ${s.spacing5});
+    padding-left: ${s.spacing5};
+  }
+
   hr {
     border-top: 5px solid ${s.lightGray};
     border-left: none;

@@ -11,7 +11,7 @@ const Meta = styled.div`
   font-size: ${s.fontSize6};
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: ${s.spacing1};
+  margin-bottom: ${s.spacing2};
   letter-spacing: ${s.tracked};
 `;
 

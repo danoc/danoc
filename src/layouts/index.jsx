@@ -22,7 +22,7 @@ injectGlobal`
     max-width: 100%;
   }
 
-  ::selection { background: ${s.lightRed}; color: white; }
+  ::selection { background: ${s.lightRed}; color: ${s.nearWhite}; }
 `;
 
 const Container = styled.div`

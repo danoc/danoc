@@ -26,7 +26,7 @@ const SectionHeadingAnchor = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: ${s.nearBlack};
+    color: ${s.midGray};
   }
 `;
 

@@ -1,20 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import * as s from "../styles/";
 import SectionComponent from "../components/section";
 import Experience from "../components/experience";
 import Link from "../components/link";
-
-const Container = styled.div`
-  padding: ${s.spacing6};
-
-  @media (max-width: 700px) {
-    padding: ${s.spacing5};
-  }
-`;
-
-const Title = styled.h1`font-size: ${s.fontSize3};`;
+import Header from "../components/header";
+import Paragraph from "../components/paragraph";
 
 const Footer = styled.footer`
   display: flex;
@@ -29,33 +21,23 @@ const FooterLink = styled(Link)`
   }
 `;
 
-const Paragraph = styled.p`
-  color: ${s.midGray};
-  max-width: ${s.measure};
-
-  :first-of-type {
-    margin-top: ${s.spacing1};
-  }
-`;
-
-const Section = styled(SectionComponent)`margin-bottom: ${s.spacing6};`;
-
-const Header = Section.withComponent("header");
+const sectionMargin = css`margin-bottom: ${s.spacing6};`;
+const Section = styled(SectionComponent)`${sectionMargin};`;
+const HeaderSection = styled(Header)`${sectionMargin};`;
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <Container>
-      <Header>
-        <Title>Daniel O&#8217;Connor</Title>
+    <div>
+      <HeaderSection title="Daniel O&#8217;Connor">
         <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
         <Paragraph>
           I build design systems to efficiently deliver high quality products.
           I’m a stickler for consistency and help bridge the gap between design
           and development.
         </Paragraph>
-      </Header>
+      </HeaderSection>
 
       <Section title="Posts" to="/blog/" callToAction="View More Posts">
         <ul>
@@ -104,7 +86,7 @@ const IndexPage = ({ data }) => {
         <FooterLink to="mailto:daniel@danoc.me">daniel@danoc.me</FooterLink>
         <FooterLink to="https://twitter.com/_danoc">Twitter</FooterLink>
       </Footer>
-    </Container>
+    </div>
   );
 };
 

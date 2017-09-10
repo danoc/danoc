@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import BlogContainer from "../../layouts/blog";
 import Section from "../../components/section";
+import Experience from "../../components/experience";
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -12,13 +13,13 @@ const BlogIndex = ({ data }) => {
       <Section title="Posts" to="/blog/">
         <ul>
           {posts.map(({ node: post }) => (
-            <li key={post.frontmatter.path}>
-              <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-            </li>
+            <Experience
+              title={post.frontmatter.title}
+              to={post.frontmatter.path}
+              key={post.frontmatter.path}
+            />
           ))}
         </ul>
-
-        <Link to="/blog/">View More Posts</Link>
       </Section>
     </BlogContainer>
   );

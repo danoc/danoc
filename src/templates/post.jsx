@@ -49,7 +49,6 @@ const Post = ({ data }) => {
           { name: "article:published_time", content: post.frontmatter.date },
           { name: "article:author", content: post.frontmatter.date },
           { name: "article:tag", content: post.frontmatter.tags },
-          { name: "og:image", content: post.frontmatter.image },
           { name: "og:url", content: site.siteURL + post.frontmatter.path },
           { name: "description", content: post.frontmatter.description },
           { name: "keywords", content: post.frontmatter.tags }
@@ -73,7 +72,6 @@ Post.propTypes = {
             date: PropTypes.string,
             path: PropTypes.string,
             title: PropTypes.string,
-            image: PropTypes.string,
             tags: PropTypes.string,
             description: PropTypes.string
           })
@@ -100,7 +98,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        image
         tags
         description
       }

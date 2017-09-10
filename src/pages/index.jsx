@@ -7,6 +7,7 @@ import Experience from "../components/experience";
 import Link from "../components/link";
 import Header from "../components/header";
 import Paragraph from "../components/paragraph";
+import ArticleList from "../components/article-list";
 
 const Footer = styled.footer`
   display: flex;
@@ -19,6 +20,10 @@ const FooterLink = styled(Link)`
   &:not(:last-child) {
     margin-right: ${s.spacing4};
   }
+`;
+
+const Item = styled(Experience)`
+  margin-bottom: ${props => (props.children ? s.spacing5 : s.spacing4)};
 `;
 
 const sectionMargin = css`margin-bottom: ${s.spacing6};`;
@@ -39,22 +44,22 @@ const IndexPage = ({ data }) => {
         </Paragraph>
       </HeaderSection>
 
-      <Section title="Posts" to="/blog/" callToAction="View More Posts">
-        <ul>
+      <Section title="Posts" to="/blog/" callToAction="View All Posts">
+        <ArticleList>
           {posts.map(({ node: post }) => (
-            <Experience
+            <Item
               title={post.frontmatter.title}
               to={post.frontmatter.path}
               key={post.frontmatter.path}
               meta={post.frontmatter.date}
             />
           ))}
-        </ul>
+        </ArticleList>
       </Section>
 
       <Section title="Work">
-        <ul>
-          <Experience
+        <ArticleList>
+          <Item
             title="Thumbtack"
             to="https://www.thumbtack.com/"
             meta="2017-Present"
@@ -63,8 +68,8 @@ const IndexPage = ({ data }) => {
               I build out our design system, Thumbprint UI, and assist our
               engineering team with the move to React.
             </Paragraph>
-          </Experience>
-          <Experience
+          </Item>
+          <Item
             title="Optimizely"
             to="https://www.optimizely.com/"
             meta="2014-2017"
@@ -79,8 +84,8 @@ const IndexPage = ({ data }) => {
               </Link>, our UI library, and built design systems that improved UI
               consistency and developer productivity.
             </Paragraph>
-          </Experience>
-        </ul>
+          </Item>
+        </ArticleList>
       </Section>
 
       <Footer>

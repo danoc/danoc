@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import BlogContainer from "../../layouts/blog";
 import Section from "../../components/section";
 import Experience from "../../components/experience";
+import ArticleList from "../../components/article-list";
+import * as s from "../../styles/";
+
+const Item = styled(Experience)`margin-bottom: ${s.spacing4};`;
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -10,16 +15,16 @@ const BlogIndex = ({ data }) => {
   return (
     <BlogContainer>
       <Section title="Posts" to="/blog/">
-        <ul>
+        <ArticleList>
           {posts.map(({ node: post }) => (
-            <Experience
+            <Item
               title={post.frontmatter.title}
               to={post.frontmatter.path}
               key={post.frontmatter.path}
               meta={post.frontmatter.date}
             />
           ))}
-        </ul>
+        </ArticleList>
       </Section>
     </BlogContainer>
   );

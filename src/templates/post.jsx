@@ -4,6 +4,7 @@ import Helmet from "react-helmet";
 import styled from "styled-components";
 import BlogContainer from "../layouts/blog";
 import * as s from "../styles/";
+import "../styles/prism-ghcolors.css";
 
 const Text = styled.div`
   * {

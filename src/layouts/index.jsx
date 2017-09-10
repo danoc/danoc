@@ -39,7 +39,8 @@ const IndexLayout = ({ children }) => (
       title="Daniel O'Connor"
       meta={[
         { name: "og:title", content: "Daniel O'Connor" },
-        { name: "og:type", content: "website" }
+        { name: "og:type", content: "website" },
+        { name: "theme-color", content: s.darkGray }
       ]}
       htmlAttributes={{
         lang: "en"

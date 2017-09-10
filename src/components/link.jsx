@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import GatsbyLink from "gatsby-link";
 import isRelativeUrl from "is-relative-url";
@@ -40,6 +41,18 @@ const Link = props => {
       {props.children}
     </LinkAbsolute>
   );
+};
+
+Link.propTypes = {
+  children: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  className: PropTypes.string,
+  to: PropTypes.string.isRequired
+};
+
+Link.defaultProps = {
+  title: undefined,
+  className: undefined
 };
 
 export default Link;

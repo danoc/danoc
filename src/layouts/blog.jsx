@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
-import Helmet from "react-helmet";
 import styled from "styled-components";
 import * as s from "../styles/";
 
@@ -40,7 +39,7 @@ const BlogContainer = ({ children }) => (
     <Header>
       <HeaderContainer>
         <Link to="/">
-          <Title>Daniel O'Connor</Title>
+          <Title>Daniel O&#8217;Connor</Title>
         </Link>
       </HeaderContainer>
     </Header>
@@ -52,6 +51,10 @@ const BlogContainer = ({ children }) => (
 
 BlogContainer.propTypes = {
   children: PropTypes.node
+};
+
+BlogContainer.defaultProps = {
+  children: undefined
 };
 
 export default BlogContainer;

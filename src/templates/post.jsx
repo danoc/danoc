@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
 import Helmet from "react-helmet";
-import styled from "styled-components";
 import BlogContainer from "../layouts/blog";
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
   const site = data.site.siteMetadata;
 
+  /* eslint-disable react/no-danger */
   return (
     <BlogContainer>
       <Helmet
@@ -29,9 +28,38 @@ const Post = ({ data }) => {
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </BlogContainer>
   );
+  /* eslint-enable react/no-danger */
 };
 
 export default Post;
+
+Post.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.shape({
+        node: PropTypes.shape({
+          frontmatter: PropTypes.shape({
+            date: PropTypes.string,
+            path: PropTypes.string,
+            title: PropTypes.string,
+            image: PropTypes.string,
+            tags: PropTypes.string,
+            description: PropTypes.string
+          })
+        })
+      })
+    }),
+    site: PropTypes.shape({
+      siteMetadata: PropTypes.shape({
+        siteURL: PropTypes.string
+      })
+    })
+  })
+};
+
+Post.defaultProps = {
+  data: {}
+};
 
 export const pageQuery = graphql`
   query PostByPath($path: String!) {

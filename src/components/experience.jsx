@@ -1,5 +1,6 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 import Link from "../components/link";
 import * as s from "../styles/";
 
@@ -36,5 +37,18 @@ const Experience = props => (
     {props.children}
   </Article>
 );
+
+Experience.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string.isRequired,
+  meta: PropTypes.string,
+  to: PropTypes.string
+};
+
+Experience.defaultProps = {
+  children: undefined,
+  meta: undefined,
+  to: undefined
+};
 
 export default Experience;

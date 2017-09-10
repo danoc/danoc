@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
 import Helmet from "react-helmet";
-import styled, { injectGlobal } from "styled-components";
+import { injectGlobal } from "styled-components";
 import * as s from "../styles/";
 
+// eslint-disable-next-line no-unused-expressions
 injectGlobal`
   html {
     font-size: 1.063em;
@@ -43,6 +43,10 @@ const IndexLayout = ({ children }) => (
 
 IndexLayout.propTypes = {
   children: PropTypes.func
+};
+
+IndexLayout.defaultProps = {
+  children: undefined
 };
 
 export default IndexLayout;

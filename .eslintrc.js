@@ -6,5 +6,8 @@ module.exports = {
       jsx: true
     }
   },
-  extends: "prettier"
+  extends: ["airbnb", "prettier"],
+  globals: {
+    graphql: false
+  }
 };

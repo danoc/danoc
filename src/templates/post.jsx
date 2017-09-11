@@ -49,7 +49,7 @@ const Post = ({ data }) => {
           { name: "article:published_time", content: post.frontmatter.date },
           { name: "article:author", content: post.frontmatter.date },
           { name: "article:tag", content: post.frontmatter.tags },
-          { name: "og:url", content: site.siteURL + post.frontmatter.path },
+          { name: "og:url", content: site.siteUrl + post.frontmatter.path },
           { name: "description", content: post.frontmatter.description },
           { name: "keywords", content: post.frontmatter.tags }
         ]}
@@ -80,7 +80,7 @@ Post.propTypes = {
     }),
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        siteURL: PropTypes.string
+        siteUrl: PropTypes.string
       })
     })
   })
@@ -104,7 +104,7 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
-        siteURL
+        siteUrl
       }
     }
   }

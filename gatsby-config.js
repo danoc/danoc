@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteURL: "https://danoc.me",
+    siteUrl: "https://danoc.me",
     siteName: "Daniel O'Connor"
   },
   plugins: [

@@ -20,6 +20,7 @@ const Title = styled.h3`
   margin-top: ${s.spacing1};
   margin-bottom: ${s.spacing2};
   font-weight: ${props => (props.hasDescription ? 500 : 400)};
+  max-width: ${s.measure};
 `;
 
 const Experience = props => (

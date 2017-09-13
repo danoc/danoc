@@ -11,6 +11,17 @@ const PostTitle = styled.h1`max-width: ${s.measureWide};`;
 const Text = styled.div`
   max-width: ${s.maxWidth7};
 
+  h1 {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 1.414em 0 0.5em;
+  }
+
   h1,
   h2,
   h3,
@@ -19,6 +30,10 @@ const Text = styled.div`
   h6,
   p {
     max-width: ${s.measureWide};
+  }
+
+  p {
+    margin-bottom: 1.3em;
   }
 
   ul,

@@ -21,16 +21,23 @@ const Text = styled.div`
 
   ul,
   ol {
-    max-width: calc(${s.measureWide} - ${s.spacing5});
+    max-width: ${s.measureWide};
     padding-left: ${s.spacing5};
   }
 
   hr {
-    border-top: 5px solid ${s.lightGray};
+    border-top: ${s.spacing3} solid ${s.lightGray};
     border-left: none;
     border-right: none;
     border-bottom: none;
     margin: ${s.spacing5} 0;
+  }
+
+  blockquote {
+    max-width: ${s.measureWide};
+    padding-left: ${s.spacing5};
+    margin-left: 0;
+    border-left: ${s.spacing3} solid ${s.lightGray};
   }
 `;
 

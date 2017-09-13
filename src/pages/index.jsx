@@ -9,19 +9,6 @@ import Header from "../components/header";
 import Paragraph from "../components/paragraph";
 import ArticleList from "../components/article-list";
 
-const Footer = styled.footer`
-  display: flex;
-  padding-top: ${s.spacing4};
-  border-top: 1px solid ${s.lightGray};
-  max-width: ${s.measure};
-`;
-
-const FooterLink = styled(Link)`
-  &:not(:last-child) {
-    margin-right: ${s.spacing4};
-  }
-`;
-
 const Item = styled(Experience)`
   margin-bottom: ${props => (props.children ? s.spacing5 : s.spacing4)};
 `;
@@ -87,11 +74,6 @@ const IndexPage = ({ data }) => {
           </Item>
         </ArticleList>
       </Section>
-
-      <Footer>
-        <FooterLink to="mailto:daniel@danoc.me">daniel@danoc.me</FooterLink>
-        <FooterLink to="https://twitter.com/_danoc">Twitter</FooterLink>
-      </Footer>
     </div>
   );
 };

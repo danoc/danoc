@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import styled from "styled-components";
-import BlogContainer from "../layouts/blog";
+import Header from "../components/header";
 import * as s from "../styles/";
 import "../styles/prism-ghcolors.css";
 
 const PostTitle = styled.h1`max-width: ${s.measureWide};`;
+const HeaderSection = styled(Header)`margin-bottom: ${s.spacing6};`;
 
 const Text = styled.div`
   max-width: ${s.maxWidth7};
@@ -73,7 +74,7 @@ const Post = ({ data }) => {
 
   /* eslint-disable react/no-danger */
   return (
-    <BlogContainer>
+    <div>
       <Helmet
         title={post.frontmatter.title}
         meta={[
@@ -87,9 +88,10 @@ const Post = ({ data }) => {
           { name: "keywords", content: post.frontmatter.tags }
         ]}
       />
+      <HeaderSection title="Daniel O&#8217;Connor" />
       <PostTitle>{post.frontmatter.title}</PostTitle>
       <Text dangerouslySetInnerHTML={{ __html: post.html }} />
-    </BlogContainer>
+    </div>
   );
   /* eslint-enable react/no-danger */
 };

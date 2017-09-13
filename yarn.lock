@@ -3844,9 +3844,9 @@ gatsby-transformer-remark@^1.7.6:
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
 
-gatsby@^1.9.23:
-  version "1.9.27"
-  resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.9.27/e38e7602ecc11cba2c60dee6d242012953620119.tgz#e38e7602ecc11cba2c60dee6d242012953620119"
+gatsby@^1.9.29:
+  version "1.9.29"
+  resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.9.29/eedca90870fd40ddf815d04d9d61fcebfe06fea9.tgz#eedca90870fd40ddf815d04d9d61fcebfe06fea9"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"

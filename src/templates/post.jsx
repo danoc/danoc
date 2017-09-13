@@ -35,9 +35,18 @@ const Text = styled.div`
 
   blockquote {
     max-width: ${s.measureWide};
-    padding-left: ${s.spacing5};
+    padding-left: calc(${s.spacing5} - ${s.spacing3});
     margin-left: 0;
     border-left: ${s.spacing3} solid ${s.lightGray};
+  }
+
+  img {
+    outline: 1px solid ${s.lightGray};
+    padding: 1px;
+  }
+
+  .gatsby-resp-image-link:hover img {
+    outline-color: ${s.moonGray};
   }
 `;
 

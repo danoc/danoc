@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import BlogContainer from "../../layouts/blog";
+import Header from "../../components/header";
 import Section from "../../components/section";
 import Experience from "../../components/experience";
 import ArticleList from "../../components/article-list";
@@ -9,11 +9,14 @@ import * as s from "../../styles/";
 
 const Item = styled(Experience)`margin-bottom: ${s.spacing4};`;
 
+const HeaderSection = styled(Header)`margin-bottom: ${s.spacing6};`;
+
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    <BlogContainer>
+    <div>
+      <HeaderSection title="Daniel O&#8217;Connor" />
       <Section title="Posts" to="/blog/">
         <ArticleList>
           {posts.map(({ node: post }) => (
@@ -26,7 +29,7 @@ const BlogIndex = ({ data }) => {
           ))}
         </ArticleList>
       </Section>
-    </BlogContainer>
+    </div>
   );
 };
 

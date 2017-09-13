@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled, { injectGlobal } from "styled-components";
 import Helmet from "react-helmet";
+import Link from "../components/link";
 import * as s from "../styles/";
 
 // eslint-disable-next-line no-unused-expressions
@@ -33,6 +34,20 @@ const Container = styled.div`
   }
 `;
 
+const Footer = styled.footer`
+  display: flex;
+  padding-top: ${s.spacing4};
+  border-top: 1px solid ${s.lightGray};
+  max-width: ${s.measure};
+  margin-top: ${s.spacing6};
+`;
+
+const FooterLink = styled(Link)`
+  &:not(:last-child) {
+    margin-right: ${s.spacing4};
+  }
+`;
+
 const IndexLayout = ({ children }) => (
   <Container>
     <Helmet
@@ -47,6 +62,10 @@ const IndexLayout = ({ children }) => (
       }}
     />
     {children()}
+    <Footer>
+      <FooterLink to="mailto:daniel@danoc.me">daniel@danoc.me</FooterLink>
+      <FooterLink to="https://twitter.com/_danoc">Twitter</FooterLink>
+    </Footer>
   </Container>
 );
 

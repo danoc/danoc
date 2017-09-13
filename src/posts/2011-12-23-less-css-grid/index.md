@@ -14,7 +14,7 @@ path: /blog/less-css-grid/
 
 ![LESS CSS Grid code](./lessgrid.png)
 
-One of my main [goals for the new Pipe Dream website](http://blog.danoc.me/2011/12/19/plans-for-bupipedream.html) is to create a responsive design. In other words, the layout will automatically adjust to the size of the browser and look as good on an iPhone as it does on a desktop. One of the main components this design is a fluid grid.
+One of my main [goals for the new Pipe Dream website](https://danoc.me/blog/plans-for-bupipedream/) is to create a responsive design. In other words, the layout will automatically adjust to the size of the browser and look as good on an iPhone as it does on a desktop. One of the main components this design is a fluid grid.
 
 I searched around for an existing responsive grid and found the [1140 CSS Grid](http://cssgrid.net/), a 12-column grid that, as the name implies, has a `max-width` of `1140px`. However, I soon realized that 12 columns wasn't flexible enough for our needs. I needed a 24-column fluid grid, but I couldn't find any online, so I ended up creating my own.
 

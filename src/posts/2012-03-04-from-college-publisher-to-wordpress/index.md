@@ -24,13 +24,13 @@ I began working on a mockup during the 2012 ACP Conference in Orlando, Florida a
 
 ### Ideas
 
-I wrote at length about my [plans for the new website](http://blog.danoc.me/2011/12/19/plans-for-bupipedream.html). While many of the ideas are still in progress, I've implemented my favorite idea: a responsive design. Responsive designs "respond" to the browser width so that the website looks as great on an iPhone as it does on an iMac.
+I wrote at length about my [plans for the new website](https://danoc.me/blog/plans-for-bupipedream/). While many of the ideas are still in progress, I've implemented my favorite idea: a responsive design. Responsive designs "respond" to the browser width so that the website looks as great on an iPhone as it does on an iMac.
 
 ### From PSD to HTML
 
 ![Early Pipe Dream screenshot](./pipe-dream-initial.png)
 
-With a basic mockup completed, I began coding. I used the [HTML5 Boilerplate](http://html5boilerplate.com/) as a starting point and used [LESS](http://lesscss.org) to keep my CSS as neat as possible. The HTML5 Boilerplate provides a set of best-practices and LESS extends CSS to allows neat features such as variables and mixins. I couldn't find a 24-column fluid grid to fit my needs, [so I created my own](http://blog.danoc.me/2011/12/23/less-css-grid.html).
+With a basic mockup completed, I began coding. I used the [HTML5 Boilerplate](http://html5boilerplate.com/) as a starting point and used [LESS](http://lesscss.org) to keep my CSS as neat as possible. The HTML5 Boilerplate provides a set of best-practices and LESS extends CSS to allows neat features such as variables and mixins. I couldn't find a 24-column fluid grid to fit my needs, [so I created my own](https://danoc.me/blog/less-css-grid/).
 
 I developed locally using [MAMP](http://www.mamp.info/) and initially focused on the structure and layout to create the responsive design. [A List Apart](http://www.alistapart.com/articles/responsive-web-design/) and [Smashing Magazine](http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/) have great guides explaining responsive designs. Personally, I recommend installing the popular Web Developer extension ([Firefox](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Chrome](https://chrome.google.com/webstore/detail/bfbameneiokkgbdmiekhjnmfkcnldhhm)) to measure the your browser width. Doing so allows you to make changes to your CSS as the layout begins to break. In total, the Pipe Dream layout adjusts 15 times when scaled from desktop to mobile.
 
@@ -40,7 +40,7 @@ I eventually added styles to the website and made the .html file it look more li
 
 ![Screenshot of the College Publisher database export](./college-publisher-export.png)
 
-It took some time, but College Publisher eventually emailed us a link to download our archives. The archives were split into two parts: a 100mb .zip file of images and [a 30mb .txt file](http://blog.danoc.me/2012/01/18/database-dump.html) with _(hopefully!)_ every Pipe Dream article dating back to 2005.
+It took some time, but College Publisher eventually emailed us a link to download our archives. The archives were split into two parts: a 100mb .zip file of images and [a 30mb .txt file](https://danoc.me/blog/database-dump/) with _(hopefully!)_ every Pipe Dream article dating back to 2005.
 
 As with all things College Publisher, cleaning the archives was a pain. In fact, it was the worst part of the whole experience. I renamed the .txt file to a .csv and opened it in Excel, Open Office, and just about any program that could handle a file that large. The file was poorly formatted, starting with a line break and ending mid-way through an article. College Publisher also decided to use `≤|||≤` as a delimiter, requiring me to initially use Open Office. Even then, it took days to remove the empty columns and clean up years of poorly formatted code.
 

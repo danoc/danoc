@@ -6,6 +6,8 @@ import BlogContainer from "../layouts/blog";
 import * as s from "../styles/";
 import "../styles/prism-ghcolors.css";
 
+const PostTitle = styled.h1`max-width: ${s.measureWide};`;
+
 const Text = styled.div`
   max-width: ${s.maxWidth7};
 
@@ -70,7 +72,7 @@ const Post = ({ data }) => {
           { name: "keywords", content: post.frontmatter.tags }
         ]}
       />
-      <h1>{post.frontmatter.title}</h1>
+      <PostTitle>{post.frontmatter.title}</PostTitle>
       <Text dangerouslySetInnerHTML={{ __html: post.html }} />
     </BlogContainer>
   );

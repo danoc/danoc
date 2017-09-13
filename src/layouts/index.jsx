@@ -29,7 +29,7 @@ injectGlobal`
 const Container = styled.div`
   padding: ${s.spacing6} ${s.spacing7};
 
-  @media (max-width: 700px) {
+  @media (max-width: 770px) {
     padding: ${s.spacing5};
   }
 `;

@@ -46,7 +46,7 @@ As with all things College Publisher, cleaning the archives was a pain. In fact,
 
 Almost all of this was manually done in Open Office. I learned a bit about regular expressions and used OO's powerful find and replace function to remove empty paragraphs, random line breaks, and even a Javascript redirect hidden within an article.
 
-[As Brian Schlansky, former Web Editor at The Miami Hurricane, suggested](http://www.greglinch.com/2008/09/how-we-did-it-moving-the-miami- hurricane-from-college-publisher-to-wordpress.html), I reorganized the spreadsheet to mimic the WordPress database structure. This involved creating new columns, renaming others, and moving some columns (such as image info and College Publisher IDs) to a separate sheet.
+[As Brian Schlansky, former Web Editor at The Miami Hurricane, suggested](http://www.greglinch.com/2008/09/how-we-did-it-moving-the-miami-hurricane-from-college-publisher-to-wordpress.html), I reorganized the spreadsheet to mimic the WordPress database structure. This involved creating new columns, renaming others, and moving some columns (such as image info and College Publisher IDs) to a separate sheet.
 
 I tried importing the .ods (Open Document Spreadsheet) file to a local MySQL table using phpMyAdmin, but it failed every time. Eventually I realized that the file was too large. I split the 30mb file into 36 parts, importing no more than 250 rows at once. _It did the trick._
 

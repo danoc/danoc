@@ -11,7 +11,6 @@ module.exports = {
         name: "posts"
       }
     },
-
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -35,6 +34,8 @@ module.exports = {
         ]
       }
     },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",

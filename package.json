@@ -12,6 +12,7 @@
     "gatsby-plugin-google-analytics": "^1.0.7",
     "gatsby-plugin-offline": "^1.0.9",
     "gatsby-plugin-react-helmet": "^1.0.6",
+    "gatsby-plugin-sharp": "^1.6.7",
     "gatsby-plugin-sitemap": "^1.2.5",
     "gatsby-plugin-styled-components": "^1.0.5",
     "gatsby-remark-copy-linked-files": "^1.5.7",
@@ -21,6 +22,7 @@
     "gatsby-remark-smartypants": "^1.4.7",
     "gatsby-source-filesystem": "^1.4.12",
     "gatsby-transformer-remark": "^1.7.6",
+    "gatsby-transformer-sharp": "^1.6.5",
     "is-relative-url": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
@@ -40,6 +42,9 @@
     "prettier": "^1.6.1"
   },
   "lint-staged": {
-    "*.js": ["prettier --write", "git add"]
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

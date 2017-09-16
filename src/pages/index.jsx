@@ -6,6 +6,7 @@ import SectionComponent from "../components/section";
 import Experience from "../components/experience";
 import Link from "../components/link";
 import Header from "../components/header";
+import PostCard from "../components/post-card";
 import Paragraph from "../components/paragraph";
 import ArticleList from "../components/article-list";
 
@@ -16,6 +17,12 @@ const Item = styled(Experience)`
 const sectionMargin = css`margin-bottom: ${s.spacing6};`;
 const Section = styled(SectionComponent)`${sectionMargin};`;
 const HeaderSection = styled(Header)`${sectionMargin};`;
+
+const CardList = styled(ArticleList)`
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(${s.maxWidth5}, 1fr));
+`;
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -31,17 +38,32 @@ const IndexPage = ({ data }) => {
         </Paragraph>
       </HeaderSection>
 
-      <Section title="Posts" to="/blog/" callToAction="View All Posts">
-        <ArticleList>
-          {posts.map(({ node: post }) => (
-            <Item
-              title={post.frontmatter.title}
-              to={post.frontmatter.path}
-              key={post.frontmatter.path}
-              meta={post.frontmatter.date}
-            />
-          ))}
-        </ArticleList>
+      <Section title="Featured Posts" to="/blog/" callToAction="View All Posts">
+        <CardList>
+          {posts.map(({ node: post }) => {
+            const frontmatter = post.frontmatter;
+            const image = {
+              alt: frontmatter.imageAlt,
+              data: frontmatter.imageSrc.childImageSharp.responsiveSizes
+            };
+
+            return (
+              <PostCard
+                to={frontmatter.path}
+                key={frontmatter.path}
+                image={{
+                  alt: image.alt,
+                  src: image.data.src,
+                  srcSet: image.data.srcSet,
+                  sizes: image.data.sizes
+                }}
+                date={frontmatter.date}
+              >
+                {frontmatter.title}
+              </PostCard>
+            );
+          })}
+        </CardList>
       </Section>
 
       <Section title="Work">
@@ -106,7 +128,8 @@ export const pageQuery = graphql`
   query Index {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 5
+      limit: 4
+      filter: { frontmatter: { is_featured: { eq: true } } }
     ) {
       edges {
         node {
@@ -114,6 +137,16 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            imageAlt
+            imageSrc {
+              childImageSharp {
+                responsiveSizes {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
           }
         }
       }

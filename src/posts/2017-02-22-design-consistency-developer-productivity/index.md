@@ -7,6 +7,7 @@ path: /blog/design-consistency-developer-productivity/
 imageSrc: ./react-component-metrics.png
 imageAlt: Screenshot of React component adoption metrics at Optimizely
 is_featured: true
+canonical: https://medium.com/design-optimizely/design-consistency-developer-productivity-e6850d378fd6
 ---
 
 

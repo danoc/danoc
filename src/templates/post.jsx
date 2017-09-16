@@ -75,21 +75,40 @@ const Post = ({ data }) => {
   /* eslint-disable react/no-danger */
   return (
     <div>
-      <Helmet
-        title={post.frontmatter.title}
-        meta={[
-          { name: "og:title", content: post.frontmatter.title },
-          { name: "og:type", content: "article" },
-          { name: "article:published_time", content: post.frontmatter.date },
-          { name: "article:author", content: post.frontmatter.date },
-          { name: "article:tag", content: post.frontmatter.tags },
-          { name: "og:url", content: site.siteUrl + post.frontmatter.path },
-          { name: "description", content: post.frontmatter.description },
-          { name: "keywords", content: post.frontmatter.tags }
-        ]}
-      />
+      <Helmet>
+        <meta name="og:type" content="article" />
+        {post.frontmatter.title && <title>{post.frontmatter.title}</title>}
+        {post.frontmatter.title && (
+          <meta name="og:title" content={post.frontmatter.title} />
+        )}
+        {post.frontmatter.date && (
+          <meta name="article:published_time" content={post.frontmatter.date} />
+        )}
+        {post.frontmatter.siteUrl &&
+          post.frontmatter.path && (
+            <meta
+              name="og:url"
+              content={site.siteUrl + post.frontmatter.path}
+            />
+          )}
+        {post.frontmatter.description && (
+          <meta name="description" content={post.frontmatter.description} />
+        )}
+        {post.frontmatter.tags && (
+          <meta name="keywords" content={post.frontmatter.tags} />
+        )}
+        {post.frontmatter.tags && (
+          <meta name="article:tag" content={post.frontmatter.tags} />
+        )}
+        {post.frontmatter.canonical && (
+          <link rel="canonical" href={post.frontmatter.canonical} />
+        )}
+      </Helmet>
+
       <HeaderSection title="Daniel O&#8217;Connor" />
+
       <PostTitle>{post.frontmatter.title}</PostTitle>
+
       <Text dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   );
@@ -104,18 +123,19 @@ Post.propTypes = {
       edges: PropTypes.shape({
         node: PropTypes.shape({
           frontmatter: PropTypes.shape({
-            date: PropTypes.string,
-            path: PropTypes.string,
-            title: PropTypes.string,
+            date: PropTypes.string.isRequired,
+            path: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
             tags: PropTypes.string,
-            description: PropTypes.string
+            description: PropTypes.string,
+            canonical: PropTypes.string
           })
         })
       })
     }),
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        siteUrl: PropTypes.string
+        siteUrl: PropTypes.string.isRequired
       })
     })
   })
@@ -135,6 +155,7 @@ export const pageQuery = graphql`
         title
         tags
         description
+        canonical
       }
     }
     site {

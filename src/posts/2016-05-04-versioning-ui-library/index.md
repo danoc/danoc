@@ -2,7 +2,7 @@
 layout: post
 title: How to version your UI library
 description: A deep dive into how Optimizely uses Semantic Versioning to release updates to their UI library.
-date: '2016-05-04T00:00:00.000Z'
+date: '2016-05-04T00:00:00Z'
 path: /blog/versioning-ui-library/
 image_src: ./oui-changelog.png
 image_alt: Screenshot of Optimizely's UI library changelog

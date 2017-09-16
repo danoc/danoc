@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Notes from "CSS Frameworks and The Evolution of Airbnb's Frontend"
-date: '2015-02-26T16:27:00.000Z'
+date: '2015-02-26T16:27:00Z'
 path: /blog/evolution-of-airbnb-frontend/
 ---
 

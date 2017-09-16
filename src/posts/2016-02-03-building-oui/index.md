@@ -2,7 +2,7 @@
 layout: post
 title: Building & Maintaining OUI (Optimizely's UI Library)
 description: A look at the Sass architecture decisions made and processes we added that have allowed us to scale Optimizely’s UI library across products.
-date: '2016-02-03T00:00:00.000Z'
+date: '2016-02-03T00:00:00Z'
 path: /blog/building-oui/
 ---
 

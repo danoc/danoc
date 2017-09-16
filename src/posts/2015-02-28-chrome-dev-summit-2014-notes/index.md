@@ -2,7 +2,7 @@
 layout: post
 title: Chrome Dev Summit 2014 Notes
 description: Notes and highlights from the talks at the 2014 Chrome Dev Summit.
-date: '2015-02-28T00:00:00.000Z'
+date: '2015-02-28T00:00:00Z'
 path: /blog/chrome-dev-summit-2014-notes/
 ---
 

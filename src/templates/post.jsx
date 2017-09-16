@@ -76,10 +76,10 @@ const Post = ({ data }) => {
   return (
     <div>
       <Helmet>
-        <meta name="og:type" content="article" />
+        <meta property="og:type" content="article" />
         {post.frontmatter.title && <title>{post.frontmatter.title}</title>}
         {post.frontmatter.title && (
-          <meta name="og:title" content={post.frontmatter.title} />
+          <meta property="og:title" content={post.frontmatter.title} />
         )}
         {site.siteUrl &&
           post.frontmatter.imageSrc &&
@@ -119,12 +119,15 @@ const Post = ({ data }) => {
           <meta property="og:image:alt" content={post.frontmatter.imageAlt} />
         )}
         {post.frontmatter.date && (
-          <meta name="article:published_time" content={post.frontmatter.date} />
+          <meta
+            property="article:published_time"
+            content={post.frontmatter.date}
+          />
         )}
         {site.siteUrl &&
           post.frontmatter.path && (
             <meta
-              name="og:url"
+              property="og:url"
               content={site.siteUrl + post.frontmatter.path}
             />
           )}
@@ -135,7 +138,7 @@ const Post = ({ data }) => {
           <meta name="keywords" content={post.frontmatter.tags} />
         )}
         {post.frontmatter.tags && (
-          <meta name="article:tag" content={post.frontmatter.tags} />
+          <meta property="article:tag" content={post.frontmatter.tags} />
         )}
         {post.frontmatter.canonical && (
           <link rel="canonical" href={post.frontmatter.canonical} />

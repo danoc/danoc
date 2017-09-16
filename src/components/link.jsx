@@ -20,7 +20,7 @@ const LinkRelative = styled(GatsbyLink)`
 const LinkAbsolute = LinkRelative.withComponent("a");
 
 const Link = props => {
-  if (isRelativeUrl(props.to)) {
+  if (props.to && isRelativeUrl(props.to)) {
     return (
       <LinkRelative
         to={props.to}
@@ -44,7 +44,7 @@ const Link = props => {
 };
 
 Link.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   title: PropTypes.string,
   className: PropTypes.string,
   to: PropTypes.string.isRequired

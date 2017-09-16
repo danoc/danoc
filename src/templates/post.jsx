@@ -63,8 +63,18 @@ const Text = styled.div`
     padding: 1px;
   }
 
-  .gatsby-resp-image-link:hover img {
-    outline-color: ${s.moonGray};
+  .gatsby-resp-image-link {
+    + em {
+      color: ${s.gray};
+      display: block;
+      margin: ${s.spacing4} ${s.spacing2};
+      font-size: ${s.fontSize6};
+      font-style: normal;
+    }
+
+    &:hover img {
+      outline-color: ${s.moonGray};
+    }
   }
 `;
 

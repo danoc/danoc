@@ -81,10 +81,47 @@ const Post = ({ data }) => {
         {post.frontmatter.title && (
           <meta name="og:title" content={post.frontmatter.title} />
         )}
+        {site.siteUrl &&
+          post.frontmatter.imageSrc &&
+          post.frontmatter.imageSrc.childImageSharp.original.src && (
+            <meta
+              property="og:image"
+              content={
+                site.siteUrl +
+                post.frontmatter.imageSrc.childImageSharp.original.src
+              }
+            />
+          )}
+        {post.frontmatter.imageSrc &&
+          post.frontmatter.imageSrc.childImageSharp.original.width && (
+            <meta
+              property="og:image:width"
+              content={post.frontmatter.imageSrc.childImageSharp.original.width}
+            />
+          )}
+        {post.frontmatter.imageSrc &&
+          post.frontmatter.imageSrc.childImageSharp.original.height && (
+            <meta
+              property="og:image:height"
+              content={
+                post.frontmatter.imageSrc.childImageSharp.original.height
+              }
+            />
+          )}
+        {post.frontmatter.imageSrc &&
+          post.frontmatter.imageSrc.internal.mediaType && (
+            <meta
+              property="og:image:type"
+              content={post.frontmatter.imageSrc.internal.mediaType}
+            />
+          )}
+        {post.frontmatter.imageAlt && (
+          <meta property="og:image:alt" content={post.frontmatter.imageAlt} />
+        )}
         {post.frontmatter.date && (
           <meta name="article:published_time" content={post.frontmatter.date} />
         )}
-        {post.frontmatter.siteUrl &&
+        {site.siteUrl &&
           post.frontmatter.path && (
             <meta
               name="og:url"
@@ -121,16 +158,7 @@ Post.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.shape({
-        node: PropTypes.shape({
-          frontmatter: PropTypes.shape({
-            date: PropTypes.string.isRequired,
-            path: PropTypes.string.isRequired,
-            title: PropTypes.string.isRequired,
-            tags: PropTypes.string,
-            description: PropTypes.string,
-            canonical: PropTypes.string
-          })
-        })
+        node: PropTypes.shape({})
       })
     }),
     site: PropTypes.shape({
@@ -156,6 +184,19 @@ export const pageQuery = graphql`
         tags
         description
         canonical
+        imageAlt
+        imageSrc {
+          internal {
+            mediaType
+          }
+          childImageSharp {
+            original {
+              width
+              height
+              src
+            }
+          }
+        }
       }
     }
     site {

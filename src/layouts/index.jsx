@@ -53,8 +53,8 @@ const IndexLayout = ({ children }) => (
     <Helmet
       title="Daniel O'Connor"
       meta={[
-        { name: "og:title", content: "Daniel O'Connor" },
-        { name: "og:type", content: "website" },
+        { property: "og:title", content: "Daniel O'Connor" },
+        { property: "og:type", content: "website" },
         { name: "theme-color", content: s.darkGray }
       ]}
       htmlAttributes={{

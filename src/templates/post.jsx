@@ -134,6 +134,12 @@ const Post = ({ data }) => {
         {post.frontmatter.description && (
           <meta name="description" content={post.frontmatter.description} />
         )}
+        {post.frontmatter.description && (
+          <meta
+            property="og:description"
+            content={post.frontmatter.description}
+          />
+        )}
         {post.frontmatter.tags && (
           <meta name="keywords" content={post.frontmatter.tags} />
         )}

@@ -55,6 +55,7 @@ const IndexLayout = ({ children }) => (
       meta={[
         { property: "og:title", content: "Daniel O'Connor" },
         { property: "og:type", content: "website" },
+        { property: "fb:app_id", content: 1271463799642798 },
         { name: "theme-color", content: s.darkGray }
       ]}
       htmlAttributes={{

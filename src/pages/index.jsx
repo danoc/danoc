@@ -43,8 +43,8 @@ const IndexPage = ({ data }) => {
           {posts.map(({ node: post }) => {
             const frontmatter = post.frontmatter;
             const image = {
-              alt: frontmatter.imageAlt,
-              data: frontmatter.imageSrc.childImageSharp.responsiveSizes
+              alt: frontmatter.image_alt,
+              data: frontmatter.image_src.childImageSharp.responsiveSizes
             };
 
             return (
@@ -137,8 +137,8 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
-            imageAlt
-            imageSrc {
+            image_alt
+            image_src {
               childImageSharp {
                 responsiveSizes {
                   src

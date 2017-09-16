@@ -82,41 +82,48 @@ const Post = ({ data }) => {
           <meta property="og:title" content={post.frontmatter.title} />
         )}
         {site.siteUrl &&
-          post.frontmatter.imageSrc &&
-          post.frontmatter.imageSrc.childImageSharp.original.src && (
+          post.frontmatter.image_src &&
+          post.frontmatter.image_src.childImageSharp.original.src && (
             <meta
               property="og:image"
               content={
                 site.siteUrl +
-                post.frontmatter.imageSrc.childImageSharp.original.src
+                post.frontmatter.image_src.childImageSharp.original.src
               }
             />
           )}
-        {post.frontmatter.imageSrc &&
-          post.frontmatter.imageSrc.childImageSharp.original.width && (
+        {post.frontmatter.is_featured && post.frontmatter.image_src ? (
+          <meta name="twitter:card" content="summary_large_image" />
+        ) : (
+          <meta name="twitter:card" content="summary" />
+        )}
+        {post.frontmatter.image_src &&
+          post.frontmatter.image_src.childImageSharp.original.width && (
             <meta
               property="og:image:width"
-              content={post.frontmatter.imageSrc.childImageSharp.original.width}
+              content={
+                post.frontmatter.image_src.childImageSharp.original.width
+              }
             />
           )}
-        {post.frontmatter.imageSrc &&
-          post.frontmatter.imageSrc.childImageSharp.original.height && (
+        {post.frontmatter.image_src &&
+          post.frontmatter.image_src.childImageSharp.original.height && (
             <meta
               property="og:image:height"
               content={
-                post.frontmatter.imageSrc.childImageSharp.original.height
+                post.frontmatter.image_src.childImageSharp.original.height
               }
             />
           )}
-        {post.frontmatter.imageSrc &&
-          post.frontmatter.imageSrc.internal.mediaType && (
+        {post.frontmatter.image_src &&
+          post.frontmatter.image_src.internal.mediaType && (
             <meta
               property="og:image:type"
-              content={post.frontmatter.imageSrc.internal.mediaType}
+              content={post.frontmatter.image_src.internal.mediaType}
             />
           )}
-        {post.frontmatter.imageAlt && (
-          <meta property="og:image:alt" content={post.frontmatter.imageAlt} />
+        {post.frontmatter.image_alt && (
+          <meta property="og:image:alt" content={post.frontmatter.image_alt} />
         )}
         {post.frontmatter.date && (
           <meta
@@ -193,8 +200,9 @@ export const pageQuery = graphql`
         tags
         description
         canonical
-        imageAlt
-        imageSrc {
+        is_featured
+        image_alt
+        image_src {
           internal {
             mediaType
           }

@@ -4,8 +4,8 @@ title: Balancing design consistency and developer productivity in a design syste
 description: Create a design system that promotes collaboration, discourages one-off solutions, and optimizes for long-term productivity.
 date: '2017-02-22T18:55:58.639Z'
 path: /blog/design-consistency-developer-productivity/
-imageSrc: ./react-component-metrics.png
-imageAlt: Screenshot of React component adoption metrics at Optimizely
+image_src: ./react-component-metrics.png
+image_alt: Screenshot of React component adoption metrics at Optimizely
 is_featured: true
 canonical: https://medium.com/design-optimizely/design-consistency-developer-productivity-e6850d378fd6
 ---

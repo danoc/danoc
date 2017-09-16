@@ -8,6 +8,9 @@ https://blog.danoc.me/* https://danoc.me/:splat 301!
 /blog/2014-12-26-modern-build-system http://danoc.me/blog/modern-build-system/ 301
 /blog/2015-03-05-modern-build-system http://danoc.me/blog/modern-build-system/ 301
 
+/2012/07/07/recent-updates.html https://danoc.me/blog/recent-updates/ 301
+/2012/10/28/wordpress-pharma-hack.html https://danoc.me/blog/wordpress-pharma-hack/ 301
+
 /page/* https://danoc.me/blog 301
 
 /post/14447289066/* http://danoc.me/blog/plans-for-bupipedream 301

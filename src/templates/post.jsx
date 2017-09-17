@@ -78,6 +78,8 @@ const Text = styled.div`
   }
 `;
 
+const Time = styled.time`color: ${s.moonGray};`;
+
 const Post = ({ data }) => {
   const post = data.markdownRemark;
   const site = data.site.siteMetadata;
@@ -171,6 +173,22 @@ const Post = ({ data }) => {
       <HeaderSection title="Daniel O&#8217;Connor" />
 
       <PostTitle itemProp="headline">{post.frontmatter.title}</PostTitle>
+
+      <Time dateTime={post.frontmatter.date} itemProp="datePublished">
+        {post.frontmatter.date}
+      </Time>
+
+      {site.siteUrl &&
+        post.frontmatter.image_src &&
+        post.frontmatter.image_src.childImageSharp.original.src && (
+          <meta
+            itemProp="image"
+            content={
+              site.siteUrl +
+              post.frontmatter.image_src.childImageSharp.original.src
+            }
+          />
+        )}
 
       <Text
         itemProp="articleBody"

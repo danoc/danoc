@@ -18,7 +18,9 @@ const HeaderLink = styled(Link)`
 const Header = props => (
   <header className={props.className}>
     <Title>
-      <HeaderLink to="/">{props.title}</HeaderLink>
+      <HeaderLink to="/" rel="author" itemProp="publisher">
+        {props.title}
+      </HeaderLink>
     </Title>
     {props.children}
   </header>

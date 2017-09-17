@@ -170,7 +170,7 @@ const Post = ({ data }) => {
 
       <HeaderSection title="Daniel O&#8217;Connor" />
 
-      <PostTitle itemProp="name">{post.frontmatter.title}</PostTitle>
+      <PostTitle itemProp="headline">{post.frontmatter.title}</PostTitle>
 
       <Text
         itemProp="articleBody"

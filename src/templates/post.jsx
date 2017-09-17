@@ -84,7 +84,7 @@ const Post = ({ data }) => {
 
   /* eslint-disable react/no-danger */
   return (
-    <div>
+    <div itemScope itemType="http://schema.org/Article">
       <Helmet>
         <meta property="og:type" content="article" />
         {post.frontmatter.title && <title>{post.frontmatter.title}</title>}
@@ -170,9 +170,12 @@ const Post = ({ data }) => {
 
       <HeaderSection title="Daniel O&#8217;Connor" />
 
-      <PostTitle>{post.frontmatter.title}</PostTitle>
+      <PostTitle itemProp="name">{post.frontmatter.title}</PostTitle>
 
-      <Text dangerouslySetInnerHTML={{ __html: post.html }} />
+      <Text
+        itemProp="articleBody"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </div>
   );
   /* eslint-enable react/no-danger */

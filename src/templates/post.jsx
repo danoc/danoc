@@ -9,6 +9,7 @@ import "../styles/prism-ghcolors.css";
 const PostTitle = styled.h1`
   max-width: ${s.measureWide};
 `;
+
 const HeaderSection = styled(Header)`
   margin-bottom: ${s.spacing6};
 `;
@@ -108,6 +109,9 @@ const formatDate = date => {
 const Time = styled.time`
   color: ${s.gray};
   font-weight: 400;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  letter-spacing: ${s.tracked};
 `;
 
 const Post = ({ data }) => {

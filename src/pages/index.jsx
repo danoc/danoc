@@ -17,11 +17,17 @@ const Item = styled(Experience)`
 const sectionMargin = css`
   margin-bottom: ${s.spacing6};
 `;
+
 const Section = styled(SectionComponent)`
   ${sectionMargin};
 `;
+
 const HeaderSection = styled(Header)`
   ${sectionMargin};
+`;
+
+const UnstyledListItem = styled.li`
+  list-style: none;
 `;
 
 const CardList = styled(ArticleList)`
@@ -53,19 +59,21 @@ const IndexPage = ({ data }) => {
             };
 
             return (
-              <PostCard
-                to={frontmatter.path}
-                key={frontmatter.path}
-                image={{
-                  alt: image.alt,
-                  src: image.data.src,
-                  srcSet: image.data.srcSet,
-                  sizes: image.data.sizes
-                }}
-                date={frontmatter.date}
-              >
-                {frontmatter.title}
-              </PostCard>
+              <UnstyledListItem>
+                <PostCard
+                  to={frontmatter.path}
+                  key={frontmatter.path}
+                  image={{
+                    alt: image.alt,
+                    src: image.data.src,
+                    srcSet: image.data.srcSet,
+                    sizes: image.data.sizes
+                  }}
+                  date={frontmatter.date}
+                >
+                  {frontmatter.title}
+                </PostCard>
+              </UnstyledListItem>
             );
           })}
         </CardList>

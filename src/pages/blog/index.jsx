@@ -5,11 +5,16 @@ import Header from "../../components/header";
 import Section from "../../components/section";
 import Experience from "../../components/experience";
 import ArticleList from "../../components/article-list";
+import Paragraph from "../../components/paragraph";
 import * as s from "../../styles/";
 
-const Item = styled(Experience)`margin-bottom: ${s.spacing4};`;
+const Item = styled(Experience)`
+  margin-bottom: ${props => (props.showDescription ? s.spacing5 : s.spacing4)};
+`;
 
-const HeaderSection = styled(Header)`margin-bottom: ${s.spacing6};`;
+const HeaderSection = styled(Header)`
+  margin-bottom: ${s.spacing6};
+`;
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -25,7 +30,14 @@ const BlogIndex = ({ data }) => {
               to={post.frontmatter.path}
               key={post.frontmatter.path}
               meta={post.frontmatter.date}
-            />
+              showDescription={
+                post.frontmatter.is_featured && post.frontmatter.description
+              }
+            >
+              <Paragraph>
+                {post.frontmatter.is_featured && post.frontmatter.description}
+              </Paragraph>
+            </Item>
           ))}
         </ArticleList>
       </Section>
@@ -66,6 +78,8 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
+            is_featured
+            description
           }
         }
       }

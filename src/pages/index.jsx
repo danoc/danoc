@@ -39,8 +39,7 @@ const IndexPage = ({ data }) => {
         <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
         <Paragraph>
           I build design systems to efficiently deliver high quality products.
-          I’m a stickler for consistency and help bridge the gap between design
-          and development.
+          I’m a stickler for consistency, accessibility, and performance.
         </Paragraph>
       </HeaderSection>
 

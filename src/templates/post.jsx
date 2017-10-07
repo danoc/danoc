@@ -6,8 +6,12 @@ import Header from "../components/header";
 import * as s from "../styles/";
 import "../styles/prism-ghcolors.css";
 
-const PostTitle = styled.h1`max-width: ${s.measureWide};`;
-const HeaderSection = styled(Header)`margin-bottom: ${s.spacing6};`;
+const PostTitle = styled.h1`
+  max-width: ${s.measureWide};
+`;
+const HeaderSection = styled(Header)`
+  margin-bottom: ${s.spacing6};
+`;
 
 const Text = styled.div`
   max-width: ${s.maxWidth7};
@@ -78,7 +82,33 @@ const Text = styled.div`
   }
 `;
 
-const Time = styled.time`color: ${s.moonGray};`;
+const formatDate = date => {
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+
+  const day = date.getDate();
+  const monthIndex = date.getMonth();
+  const year = date.getFullYear();
+
+  return `${monthNames[monthIndex]} ${day}, ${year}`;
+};
+
+const Time = styled.time`
+  color: ${s.gray};
+  font-weight: 400;
+`;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
@@ -172,11 +202,15 @@ const Post = ({ data }) => {
 
       <HeaderSection title="Daniel O&#8217;Connor" />
 
-      <PostTitle itemProp="headline">{post.frontmatter.title}</PostTitle>
-
-      <Time dateTime={post.frontmatter.date} itemProp="datePublished">
-        {post.frontmatter.date}
+      <Time
+        dateTime={post.frontmatter.date}
+        itemProp="datePublished"
+        title={new Date(post.frontmatter.date).toString()}
+      >
+        {formatDate(new Date(post.frontmatter.date))}
       </Time>
+
+      <PostTitle itemProp="headline">{post.frontmatter.title}</PostTitle>
 
       {site.siteUrl &&
         post.frontmatter.image_src &&

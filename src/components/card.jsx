@@ -5,7 +5,6 @@ import * as s from "../styles/";
 import Link from "../components/link";
 
 const StyledCard = styled.article`
-  border: 1px solid ${s.lightGray};
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -23,7 +22,9 @@ const StyledCard = styled.article`
     `};
 `;
 
-const StyledLink = styled(Link)`text-decoration: none;`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 const Card = props => {
   if (props.to) {

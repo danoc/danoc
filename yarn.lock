@@ -102,7 +102,7 @@ ansi-align@^1.1.0:
   dependencies:
     string-width "^1.0.1"
 
-ansi-escapes@^1.0.0, ansi-escapes@^1.1.0:
+ansi-escapes@^1.0.0:
   version "1.4.0"
   resolved "https://production-npm.thumbtack.com/ansi-escapes/-/ansi-escapes-1.4.0/d3a8a83b319aa67793662b13e761c7911422306e.tgz#d3a8a83b319aa67793662b13e761c7911422306e"
 
@@ -120,10 +120,6 @@ ansi-red@^0.1.1:
   dependencies:
     ansi-wrap "0.1.0"
 
-ansi-regex@^0.2.0, ansi-regex@^0.2.1:
-  version "0.2.1"
-  resolved "https://production-npm.thumbtack.com/ansi-regex/-/ansi-regex-0.2.1/0d8e946967a3d8143f93e24e298525fc1b2235f9.tgz#0d8e946967a3d8143f93e24e298525fc1b2235f9"
-
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://production-npm.thumbtack.com/ansi-regex/-/ansi-regex-2.1.1/c3b33ab5ee360d86e0e628f0468ae7ef27d654df.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -131,10 +127,6 @@ ansi-regex@^2.0.0:
 ansi-regex@^3.0.0:
   version "3.0.0"
   resolved "https://production-npm.thumbtack.com/ansi-regex/-/ansi-regex-3.0.0/ed0317c322064f79466c02966bddb605ab37d998.tgz#ed0317c322064f79466c02966bddb605ab37d998"
-
-ansi-styles@^1.1.0:
-  version "1.1.0"
-  resolved "https://production-npm.thumbtack.com/ansi-styles/-/ansi-styles-1.1.0/eaecbf66cd706882760b2f4691582b8f55d7a7de.tgz#eaecbf66cd706882760b2f4691582b8f55d7a7de"
 
 ansi-styles@^2.2.1:
   version "2.2.1"
@@ -322,10 +314,6 @@ async-each@^1.0.0, async-each@^1.0.1:
   version "1.0.1"
   resolved "https://production-npm.thumbtack.com/async-each/-/async-each-1.0.1/19d386a1d9edc6e7c1c85d388aedbcc56d33602d.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
-async@0.2.x, async@~0.2.6, async@~0.2.9:
-  version "0.2.10"
-  resolved "https://production-npm.thumbtack.com/async/-/async-0.2.10/b6bbe0b0674b9d719708ca38de8c237cb526c3d1.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
-
 async@^0.9.0:
   version "0.9.2"
   resolved "https://production-npm.thumbtack.com/async/-/async-0.9.2/aea74d5e61c1f899613bf64bda66d4c78f2fd17d.tgz#aea74d5e61c1f899613bf64bda66d4c78f2fd17d"
@@ -339,6 +327,10 @@ async@^2.1.2:
   resolved "https://production-npm.thumbtack.com/async/-/async-2.5.0/843190fd6b7357a0b9e1c956edddd5ec8462b54d.tgz#843190fd6b7357a0b9e1c956edddd5ec8462b54d"
   dependencies:
     lodash "^4.14.0"
+
+async@~0.2.6:
+  version "0.2.10"
+  resolved "https://production-npm.thumbtack.com/async/-/async-0.2.10/b6bbe0b0674b9d719708ca38de8c237cb526c3d1.tgz#b6bbe0b0674b9d719708ca38de8c237cb526c3d1"
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -1272,7 +1264,7 @@ base64-arraybuffer@0.1.5:
   version "0.1.5"
   resolved "https://production-npm.thumbtack.com/base64-arraybuffer/-/base64-arraybuffer-0.1.5/73926771923b5a19747ad666aa5cd4bf9c6e9ce8.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
 
-base64-js@>=0.0.4, base64-js@^1.0.2:
+base64-js@^1.0.2:
   version "1.2.1"
   resolved "https://production-npm.thumbtack.com/base64-js/-/base64-js-1.2.1/a91947da1f4a516ea38e5b4ec0ec3773675e0886.tgz#a91947da1f4a516ea38e5b4ec0ec3773675e0886"
 
@@ -1412,17 +1404,6 @@ boom@2.x.x, boom@^2.5.x, boom@^2.7.2:
   resolved "https://production-npm.thumbtack.com/boom/-/boom-2.10.1/39c8918ceff5799f83f9492a848f625add0c766f.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
-
-boxen@^0.3.1:
-  version "0.3.1"
-  resolved "https://production-npm.thumbtack.com/boxen/-/boxen-0.3.1/a7d898243ae622f7abb6bb604d740a76c6a5461b.tgz#a7d898243ae622f7abb6bb604d740a76c6a5461b"
-  dependencies:
-    chalk "^1.1.1"
-    filled-array "^1.0.0"
-    object-assign "^4.0.1"
-    repeating "^2.0.0"
-    string-width "^1.0.1"
-    widest-line "^1.0.0"
 
 boxen@^0.6.0:
   version "0.6.0"
@@ -1760,16 +1741,6 @@ chalk@1.1.3, chalk@^1.0.0, chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-chalk@^0.5.1:
-  version "0.5.1"
-  resolved "https://production-npm.thumbtack.com/chalk/-/chalk-0.5.1/663b3a648b68b55d04690d49167aa837858f2174.tgz#663b3a648b68b55d04690d49167aa837858f2174"
-  dependencies:
-    ansi-styles "^1.1.0"
-    escape-string-regexp "^1.0.0"
-    has-ansi "^0.1.0"
-    strip-ansi "^0.3.0"
-    supports-color "^0.2.0"
-
 chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0:
   version "2.1.0"
   resolved "https://production-npm.thumbtack.com/chalk/-/chalk-2.1.0/ac5becf14fa21b99c6c92ca7a7d7cfd5b17e743e.tgz#ac5becf14fa21b99c6c92ca7a7d7cfd5b17e743e"
@@ -1890,7 +1861,7 @@ cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://production-npm.thumbtack.com/cli-boxes/-/cli-boxes-1.0.0/4fa917c3e59c94a004cd61f8ee509da651687143.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
 
-cli-cursor@^1.0.1, cli-cursor@^1.0.2:
+cli-cursor@^1.0.2:
   version "1.0.2"
   resolved "https://production-npm.thumbtack.com/cli-cursor/-/cli-cursor-1.0.2/64da3f7d56a54412e59794bd62dc35295e8f2987.tgz#64da3f7d56a54412e59794bd62dc35295e8f2987"
   dependencies:
@@ -1912,10 +1883,6 @@ cli-truncate@^0.2.1:
   dependencies:
     slice-ansi "0.0.4"
     string-width "^1.0.1"
-
-cli-width@^1.0.1:
-  version "1.1.1"
-  resolved "https://production-npm.thumbtack.com/cli-width/-/cli-width-1.1.1/a4d293ef67ebb7b88d4a4d42c0ccf00c4d1e366d.tgz#a4d293ef67ebb7b88d4a4d42c0ccf00c4d1e366d"
 
 cli-width@^2.0.0:
   version "2.2.0"
@@ -2050,10 +2017,6 @@ colormin@^1.0.5:
     color "^0.11.0"
     css-color-names "0.0.4"
     has "^1.0.1"
-
-colors@0.6.x:
-  version "0.6.2"
-  resolved "https://production-npm.thumbtack.com/colors/-/colors-0.6.2/2423fe6678ac0c5dae8852e5d0e5be08c997abcc.tgz#2423fe6678ac0c5dae8852e5d0e5be08c997abcc"
 
 colors@1.1.2, colors@~1.1.2:
   version "1.1.2"
@@ -2478,10 +2441,6 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-cycle@1.0.x:
-  version "1.0.3"
-  resolved "https://production-npm.thumbtack.com/cycle/-/cycle-1.0.3/21e80b2be8580f98b468f379430662b046c34ad2.tgz#21e80b2be8580f98b468f379430662b046c34ad2"
-
 d@1:
   version "1.0.0"
   resolved "https://production-npm.thumbtack.com/d/-/d-1.0.0/754bb5bfe55451da69a58b94d45f4c5b0462d58f.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"
@@ -2604,7 +2563,7 @@ decompress@^3.0.0:
     vinyl-assign "^1.0.1"
     vinyl-fs "^2.2.0"
 
-deep-equal@*, deep-equal@^1.0.1, deep-equal@~1.0.1:
+deep-equal@^1.0.1, deep-equal@~1.0.1:
   version "1.0.1"
   resolved "https://production-npm.thumbtack.com/deep-equal/-/deep-equal-1.0.1/f5d260292b660e084eff4cdbc9f08ad3247448b5.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
 
@@ -3074,7 +3033,7 @@ escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://production-npm.thumbtack.com/escape-html/-/escape-html-1.0.3/0258eae4d3d0c0974de1c169188ef0051d1d1988.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
 
-escape-string-regexp@^1.0.0, escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
+escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://production-npm.thumbtack.com/escape-string-regexp/-/escape-string-regexp-1.0.5/1b61c0562190a8dff6ae3bb2cf0200ca130b86d4.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
@@ -3464,10 +3423,6 @@ extract-text-webpack-plugin@^1.0.1:
 extsprintf@1.3.0, extsprintf@^1.2.0:
   version "1.3.0"
   resolved "https://production-npm.thumbtack.com/extsprintf/-/extsprintf-1.3.0/96918440e3041a7a414f8c52e3c574eb3c3e1e05.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
-
-eyes@0.1.x:
-  version "0.1.8"
-  resolved "https://production-npm.thumbtack.com/eyes/-/eyes-0.1.8/62cf120234c683785d902348a800ef3e0cc20bc0.tgz#62cf120234c683785d902348a800ef3e0cc20bc0"
 
 fancy-log@^1.1.0:
   version "1.3.0"
@@ -4201,12 +4156,6 @@ github-slugger@^1.1.1:
   dependencies:
     emoji-regex ">=6.0.0 <=6.1.1"
 
-github@^0.2.4:
-  version "0.2.4"
-  resolved "https://production-npm.thumbtack.com/github/-/github-0.2.4/24fa7f0e13fa11b946af91134c51982a91ce538b.tgz#24fa7f0e13fa11b946af91134c51982a91ce538b"
-  dependencies:
-    mime "^1.2.11"
-
 glob-base@^0.3.0:
   version "0.3.0"
   resolved "https://production-npm.thumbtack.com/glob-base/-/glob-base-0.3.0/dbb164f6221b1c0b1ccf82aea328b497df0ea3c4.tgz#dbb164f6221b1c0b1ccf82aea328b497df0ea3c4"
@@ -4254,17 +4203,6 @@ glob@5.0.x, glob@^5.0.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@>=3.2.6, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@~7.1.2:
-  version "7.1.2"
-  resolved "https://production-npm.thumbtack.com/glob/-/glob-7.1.2/c19c9df9a028702d678612384a6552404c636d15.tgz#c19c9df9a028702d678612384a6552404c636d15"
-  dependencies:
-    fs.realpath "^1.0.0"
-    inflight "^1.0.4"
-    inherits "2"
-    minimatch "^3.0.4"
-    once "^1.3.0"
-    path-is-absolute "^1.0.0"
-
 glob@^6.0.1:
   version "6.0.4"
   resolved "https://production-npm.thumbtack.com/glob/-/glob-6.0.4/0f08860f6a155127b2fadd4f9ce24b1aab6e4d22.tgz#0f08860f6a155127b2fadd4f9ce24b1aab6e4d22"
@@ -4272,6 +4210,17 @@ glob@^6.0.1:
     inflight "^1.0.4"
     inherits "2"
     minimatch "2 || 3"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
+
+glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2, glob@~7.1.2:
+  version "7.1.2"
+  resolved "https://production-npm.thumbtack.com/glob/-/glob-7.1.2/c19c9df9a028702d678612384a6552404c636d15.tgz#c19c9df9a028702d678612384a6552404c636d15"
+  dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
+    inherits "2"
+    minimatch "^3.0.4"
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
@@ -4389,12 +4338,6 @@ got@^7.1.0:
     timed-out "^4.0.0"
     url-parse-lax "^1.0.0"
     url-to-options "^1.0.1"
-
-graceful-fs@^3.0.4:
-  version "3.0.11"
-  resolved "https://production-npm.thumbtack.com/graceful-fs/-/graceful-fs-3.0.11/7613c778a1afea62f25c630a086d7f3acbbdd818.tgz#7613c778a1afea62f25c630a086d7f3acbbdd818"
-  dependencies:
-    natives "^1.1.0"
 
 graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.4, graceful-fs@^4.1.6:
   version "4.1.11"
@@ -4529,12 +4472,6 @@ har-validator@~4.2.1:
   dependencies:
     ajv "^4.9.1"
     har-schema "^1.0.5"
-
-has-ansi@^0.1.0:
-  version "0.1.0"
-  resolved "https://production-npm.thumbtack.com/has-ansi/-/has-ansi-0.1.0/84f265aae8c0e6a88a12d7022894b7568894c62e.tgz#84f265aae8c0e6a88a12d7022894b7568894c62e"
-  dependencies:
-    ansi-regex "^0.2.0"
 
 has-ansi@^2.0.0:
   version "2.0.0"
@@ -4708,10 +4645,6 @@ hoist-non-react-statics@^2.3.0:
   version "2.3.1"
   resolved "https://production-npm.thumbtack.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1/343db84c6018c650778898240135a1420ee22ce0.tgz#343db84c6018c650778898240135a1420ee22ce0"
 
-home-dir@^0.2.0:
-  version "0.2.0"
-  resolved "https://production-npm.thumbtack.com/home-dir/-/home-dir-0.2.0/765cac335384b51f31fd0448e4cdd8066e1e2c8f.tgz#765cac335384b51f31fd0448e4cdd8066e1e2c8f"
-
 home-or-tmp@^2.0.0:
   version "2.0.0"
   resolved "https://production-npm.thumbtack.com/home-or-tmp/-/home-or-tmp-2.0.0/e36c3f2d2cae7d746a857e38d18d5f32a7882db8.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"
@@ -4809,10 +4742,6 @@ husky@^0.14.3:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
-
-i@0.3.x:
-  version "0.3.5"
-  resolved "https://production-npm.thumbtack.com/i/-/i-0.3.5/1d2b854158ec8169113c6cb7f6b6801e99e211d5.tgz#1d2b854158ec8169113c6cb7f6b6801e99e211d5"
 
 iconv-lite@0.4.19, iconv-lite@^0.4.17, iconv-lite@~0.4.13:
   version "0.4.19"
@@ -4912,24 +4841,6 @@ inherits@2.0.1:
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.4"
   resolved "https://production-npm.thumbtack.com/ini/-/ini-1.3.4/0537cb79daf59b59a1a517dff706c86ec039162e.tgz#0537cb79daf59b59a1a517dff706c86ec039162e"
-
-inquirer@^0.11.0:
-  version "0.11.4"
-  resolved "https://production-npm.thumbtack.com/inquirer/-/inquirer-0.11.4/81e3374e8361beaff2d97016206d359d0b32fa4d.tgz#81e3374e8361beaff2d97016206d359d0b32fa4d"
-  dependencies:
-    ansi-escapes "^1.1.0"
-    ansi-regex "^2.0.0"
-    chalk "^1.0.0"
-    cli-cursor "^1.0.1"
-    cli-width "^1.0.1"
-    figures "^1.3.5"
-    lodash "^3.3.1"
-    readline2 "^1.0.1"
-    run-async "^0.1.0"
-    rx-lite "^3.1.2"
-    string-width "^1.0.1"
-    strip-ansi "^3.0.0"
-    through "^2.3.6"
 
 inquirer@^3.0.1, inquirer@^3.0.6:
   version "3.2.3"
@@ -5383,7 +5294,7 @@ isomorphic-fetch@^2.1.1:
     node-fetch "^1.0.1"
     whatwg-fetch ">=0.10.0"
 
-isstream@0.1.x, isstream@~0.1.2:
+isstream@~0.1.2:
   version "0.1.2"
   resolved "https://production-npm.thumbtack.com/isstream/-/isstream-0.1.2/47e63f7af55afa6f92e1500e690eb8b8529c099a.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
@@ -6023,7 +5934,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://production-npm.thumbtack.com/lodash.uniq/-/lodash.uniq-4.5.0/d0225373aeb652adc1bc82e4945339a842754773.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-lodash@3.10.1, lodash@^3.3.1:
+lodash@3.10.1:
   version "3.10.1"
   resolved "https://production-npm.thumbtack.com/lodash/-/lodash-3.10.1/5bf45e8e49ba4189e17d482789dfd15bd140b7b6.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
@@ -6360,7 +6271,7 @@ mime@1.3.x:
   version "1.3.6"
   resolved "https://production-npm.thumbtack.com/mime/-/mime-1.3.6/591d84d3653a6b0b4a3b9df8de5aa8108e72e5e0.tgz#591d84d3653a6b0b4a3b9df8de5aa8108e72e5e0"
 
-mime@^1.2.11, mime@^1.3.4, mime@^1.3.6:
+mime@^1.3.4, mime@^1.3.6:
   version "1.4.0"
   resolved "https://production-npm.thumbtack.com/mime/-/mime-1.4.0/69e9e0db51d44f2a3b56e48b7817d7d137f1a343.tgz#69e9e0db51d44f2a3b56e48b7817d7d137f1a343"
 
@@ -6422,7 +6333,7 @@ mixin-deep@^1.1.3, mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^0.1.1"
 
-mkdirp@0.x.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
+"mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://production-npm.thumbtack.com/mkdirp/-/mkdirp-0.5.1/30057438eac6cf7f8c4767f38648d6697d75c903.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -6441,10 +6352,6 @@ multipipe@^0.1.2:
   resolved "https://production-npm.thumbtack.com/multipipe/-/multipipe-0.1.2/2a8f2ddf70eed564dff2d57f1e1a137d9f05078b.tgz#2a8f2ddf70eed564dff2d57f1e1a137d9f05078b"
   dependencies:
     duplexer2 "0.0.2"
-
-mute-stream@0.0.5:
-  version "0.0.5"
-  resolved "https://production-npm.thumbtack.com/mute-stream/-/mute-stream-0.0.5/8fbfabb0a98a253d3184331f9e8deb7372fac6c0.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
 mute-stream@0.0.7, mute-stream@~0.0.4:
   version "0.0.7"
@@ -6470,17 +6377,9 @@ nanomatch@^1.2.1:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-natives@^1.1.0:
-  version "1.1.0"
-  resolved "https://production-npm.thumbtack.com/natives/-/natives-1.1.0/e9ff841418a6b2ec7a495e939984f78f163e6e31.tgz#e9ff841418a6b2ec7a495e939984f78f163e6e31"
-
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "https://production-npm.thumbtack.com/natural-compare/-/natural-compare-1.4.0/4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
-
-ncp@0.4.x:
-  version "0.4.2"
-  resolved "https://production-npm.thumbtack.com/ncp/-/ncp-0.4.2/abcc6cbd3ec2ed2a729ff6e7c1fa8f01784a8574.tgz#abcc6cbd3ec2ed2a729ff6e7c1fa8f01784a8574"
 
 ncp@^2.0.0:
   version "2.0.0"
@@ -6489,31 +6388,6 @@ ncp@^2.0.0:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://production-npm.thumbtack.com/negotiator/-/negotiator-0.6.1/2b327184e8992101177b28563fb5e7102acd0ca9.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
-
-netlify-cli@^1.2.2:
-  version "1.2.2"
-  resolved "https://production-npm.thumbtack.com/netlify-cli/-/netlify-cli-1.2.2/e2719952bcd4a698fa75616ab003e111541207e0.tgz#e2719952bcd4a698fa75616ab003e111541207e0"
-  dependencies:
-    chalk "^0.5.1"
-    commander "^2.9.0"
-    github "^0.2.4"
-    home-dir "^0.2.0"
-    inquirer "^0.11.0"
-    netlify "^1.2.0"
-    open "0.0.5"
-    prompt "^0.2.14"
-    update-notifier "^0.6.0"
-    when "^3.7.5"
-
-netlify@^1.2.0:
-  version "1.2.0"
-  resolved "https://production-npm.thumbtack.com/netlify/-/netlify-1.2.0/ebf89b94b01b478d539630174decb496c2bbe315.tgz#ebf89b94b01b478d539630174decb496c2bbe315"
-  dependencies:
-    base64-js ">=0.0.4"
-    glob ">=3.2.6"
-    graceful-fs "^3.0.4"
-    semaphore "^1.0.5"
-    when "^3.7.5"
 
 netrc@^0.1.3:
   version "0.1.4"
@@ -7212,14 +7086,6 @@ pkg-resolve@^0.1.7:
     jspm "^0.17.0-beta.13"
     resolve "^1.1.7"
 
-pkginfo@0.3.x:
-  version "0.3.1"
-  resolved "https://production-npm.thumbtack.com/pkginfo/-/pkginfo-0.3.1/5b29f6a81f70717142e09e765bbeab97b4f81e21.tgz#5b29f6a81f70717142e09e765bbeab97b4f81e21"
-
-pkginfo@0.x.x:
-  version "0.4.1"
-  resolved "https://production-npm.thumbtack.com/pkginfo/-/pkginfo-0.4.1/b5418ef0439de5425fc4995042dced14fb2a84ff.tgz#b5418ef0439de5425fc4995042dced14fb2a84ff"
-
 pleeease-filters@^3.0.0:
   version "3.0.1"
   resolved "https://production-npm.thumbtack.com/pleeease-filters/-/pleeease-filters-3.0.1/4dfe0e8f1046613517c64b728bc80608a7ebf22f.tgz#4dfe0e8f1046613517c64b728bc80608a7ebf22f"
@@ -7821,16 +7687,6 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prompt@^0.2.14:
-  version "0.2.14"
-  resolved "https://production-npm.thumbtack.com/prompt/-/prompt-0.2.14/57754f64f543fd7b0845707c818ece618f05ffdc.tgz#57754f64f543fd7b0845707c818ece618f05ffdc"
-  dependencies:
-    pkginfo "0.x.x"
-    read "1.0.x"
-    revalidator "0.1.x"
-    utile "0.2.x"
-    winston "0.8.x"
-
 prop-types@^15.5.10, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://production-npm.thumbtack.com/prop-types/-/prop-types-15.6.0/ceaf083022fc46b4a35f69e13ef75aed0d639856.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
@@ -8112,7 +7968,7 @@ read-pkg@^2.0.0:
     normalize-package-data "^2.3.2"
     path-type "^2.0.0"
 
-read@1.0.x, read@^1.0.7:
+read@^1.0.7:
   version "1.0.7"
   resolved "https://production-npm.thumbtack.com/read/-/read-1.0.7/b3da19bd052431a97671d44a42634adf710b40c4.tgz#b3da19bd052431a97671d44a42634adf710b40c4"
   dependencies:
@@ -8164,14 +8020,6 @@ readdirp@^2.0.0:
     minimatch "^3.0.2"
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
-
-readline2@^1.0.1:
-  version "1.0.1"
-  resolved "https://production-npm.thumbtack.com/readline2/-/readline2-1.0.1/41059608ffc154757b715d9989d199ffbf372e35.tgz#41059608ffc154757b715d9989d199ffbf372e35"
-  dependencies:
-    code-point-at "^1.0.0"
-    is-fullwidth-code-point "^1.0.0"
-    mute-stream "0.0.5"
 
 rechoir@^0.6.2:
   version "0.6.2"
@@ -8592,10 +8440,6 @@ retry@^0.10.0:
   version "0.10.1"
   resolved "https://production-npm.thumbtack.com/retry/-/retry-0.10.1/e76388d217992c252750241d3d3956fed98d8ff4.tgz#e76388d217992c252750241d3d3956fed98d8ff4"
 
-revalidator@0.1.x:
-  version "0.1.8"
-  resolved "https://production-npm.thumbtack.com/revalidator/-/revalidator-0.1.8/fece61bfa0c1b52a206bd6b18198184bdd523a3b.tgz#fece61bfa0c1b52a206bd6b18198184bdd523a3b"
-
 rgb-hex@^1.0.0:
   version "1.0.0"
   resolved "https://production-npm.thumbtack.com/rgb-hex/-/rgb-hex-1.0.0/bfaf8cd9cd9164b5a26d71eb4f15a0965324b3c1.tgz#bfaf8cd9cd9164b5a26d71eb4f15a0965324b3c1"
@@ -8614,7 +8458,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@2.x.x, rimraf@^2.2.6, rimraf@^2.2.8, rimraf@^2.3.2, rimraf@^2.4.4, rimraf@^2.5.0, rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.2.6, rimraf@^2.2.8, rimraf@^2.3.2, rimraf@^2.4.4, rimraf@^2.5.0, rimraf@^2.5.1, rimraf@^2.5.4, rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://production-npm.thumbtack.com/rimraf/-/rimraf-2.6.2/2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
@@ -8645,12 +8489,6 @@ rsvp@^3.0.13, rsvp@^3.0.18:
   version "3.6.2"
   resolved "https://production-npm.thumbtack.com/rsvp/-/rsvp-3.6.2/2e96491599a96cde1b515d5674a8f7a91452926a.tgz#2e96491599a96cde1b515d5674a8f7a91452926a"
 
-run-async@^0.1.0:
-  version "0.1.0"
-  resolved "https://production-npm.thumbtack.com/run-async/-/run-async-0.1.0/c8ad4a5e110661e402a7d21b530e009f25f8e389.tgz#c8ad4a5e110661e402a7d21b530e009f25f8e389"
-  dependencies:
-    once "^1.3.0"
-
 run-async@^2.2.0:
   version "2.3.0"
   resolved "https://production-npm.thumbtack.com/run-async/-/run-async-2.3.0/0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0.tgz#0371ab4ae0bdd720d4166d7dfda64ff7a445a6c0"
@@ -8666,10 +8504,6 @@ rx-lite-aggregates@^4.0.8:
 rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "https://production-npm.thumbtack.com/rx-lite/-/rx-lite-4.0.8/0b1e11af8bc44836f04a6407e92da42467b79444.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
-
-rx-lite@^3.1.2:
-  version "3.1.2"
-  resolved "https://production-npm.thumbtack.com/rx-lite/-/rx-lite-3.1.2/19ce502ca572665f3b647b10939f97fd1615f102.tgz#19ce502ca572665f3b647b10939f97fd1615f102"
 
 rxjs@^5.0.0-beta.11:
   version "5.4.3"
@@ -8745,10 +8579,6 @@ seek-bzip@^1.0.3:
 select@^1.1.2:
   version "1.1.2"
   resolved "https://production-npm.thumbtack.com/select/-/select-1.1.2/0e7350acdec80b1108528786ec1d4418d11b396d.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
-
-semaphore@^1.0.5:
-  version "1.1.0"
-  resolved "https://production-npm.thumbtack.com/semaphore/-/semaphore-1.1.0/aaad8b86b20fe8e9b32b16dc2ee682a8cd26a8aa.tgz#aaad8b86b20fe8e9b32b16dc2ee682a8cd26a8aa"
 
 semver-diff@^2.0.0:
   version "2.1.0"
@@ -9195,7 +9025,7 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
-stack-trace@0.0.x, stack-trace@^0.0.10:
+stack-trace@^0.0.10:
   version "0.0.10"
   resolved "https://production-npm.thumbtack.com/stack-trace/-/stack-trace-0.0.10/547c70b347e8d32b4e108ea1a2a159e5fdde19c0.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
 
@@ -9363,12 +9193,6 @@ stringstream@~0.0.4:
   version "0.0.5"
   resolved "https://production-npm.thumbtack.com/stringstream/-/stringstream-0.0.5/4e484cd4de5a0bbbee18e46307710a8a81621878.tgz#4e484cd4de5a0bbbee18e46307710a8a81621878"
 
-strip-ansi@^0.3.0:
-  version "0.3.0"
-  resolved "https://production-npm.thumbtack.com/strip-ansi/-/strip-ansi-0.3.0/25f48ea22ca79187f3174a4db8759347bb126220.tgz#25f48ea22ca79187f3174a4db8759347bb126220"
-  dependencies:
-    ansi-regex "^0.2.1"
-
 strip-ansi@^3.0.0, strip-ansi@^3.0.1:
   version "3.0.1"
   resolved "https://production-npm.thumbtack.com/strip-ansi/-/strip-ansi-3.0.1/6a385fb8853d952d5ff05d0e8aaf94278dc63dcf.tgz#6a385fb8853d952d5ff05d0e8aaf94278dc63dcf"
@@ -9491,10 +9315,6 @@ sum-up@^1.0.1:
   resolved "https://production-npm.thumbtack.com/sum-up/-/sum-up-1.0.3/1c661f667057f63bcb7875aa1438bc162525156e.tgz#1c661f667057f63bcb7875aa1438bc162525156e"
   dependencies:
     chalk "^1.0.0"
-
-supports-color@^0.2.0:
-  version "0.2.0"
-  resolved "https://production-npm.thumbtack.com/supports-color/-/supports-color-0.2.0/d92de2694eb3f67323973d7ae3d8b55b4c22190a.tgz#d92de2694eb3f67323973d7ae3d8b55b4c22190a"
 
 supports-color@^2.0.0:
   version "2.0.0"
@@ -10096,17 +9916,6 @@ unzip-response@^2.0.1:
   version "2.0.1"
   resolved "https://production-npm.thumbtack.com/unzip-response/-/unzip-response-2.0.1/d2f0f737d16b0615e72a6935ed04214572d56f97.tgz#d2f0f737d16b0615e72a6935ed04214572d56f97"
 
-update-notifier@^0.6.0:
-  version "0.6.3"
-  resolved "https://production-npm.thumbtack.com/update-notifier/-/update-notifier-0.6.3/776dec8daa13e962a341e8a1d98354306b67ae08.tgz#776dec8daa13e962a341e8a1d98354306b67ae08"
-  dependencies:
-    boxen "^0.3.1"
-    chalk "^1.0.0"
-    configstore "^2.0.0"
-    is-npm "^1.0.0"
-    latest-version "^2.0.0"
-    semver-diff "^2.0.0"
-
 update-notifier@^1.0.3:
   version "1.0.3"
   resolved "https://production-npm.thumbtack.com/update-notifier/-/update-notifier-1.0.3/8f92c515482bd6831b7c93013e70f87552c7cf5a.tgz#8f92c515482bd6831b7c93013e70f87552c7cf5a"
@@ -10205,17 +10014,6 @@ utila@~0.3:
 utila@~0.4:
   version "0.4.0"
   resolved "https://production-npm.thumbtack.com/utila/-/utila-0.4.0/8a16a05d445657a3aea5eecc5b12a4fa5379772c.tgz#8a16a05d445657a3aea5eecc5b12a4fa5379772c"
-
-utile@0.2.x:
-  version "0.2.1"
-  resolved "https://production-npm.thumbtack.com/utile/-/utile-0.2.1/930c88e99098d6220834c356cbd9a770522d90d7.tgz#930c88e99098d6220834c356cbd9a770522d90d7"
-  dependencies:
-    async "~0.2.9"
-    deep-equal "*"
-    i "0.3.x"
-    mkdirp "0.x.x"
-    ncp "0.4.x"
-    rimraf "2.x.x"
 
 utils-merge@1.0.0:
   version "1.0.0"
@@ -10557,18 +10355,6 @@ window-size@0.1.0:
 window-size@^0.2.0:
   version "0.2.0"
   resolved "https://production-npm.thumbtack.com/window-size/-/window-size-0.2.0/b4315bb4214a3d7058ebeee892e13fa24d98b075.tgz#b4315bb4214a3d7058ebeee892e13fa24d98b075"
-
-winston@0.8.x:
-  version "0.8.3"
-  resolved "https://production-npm.thumbtack.com/winston/-/winston-0.8.3/64b6abf4cd01adcaefd5009393b1d8e8bec19db0.tgz#64b6abf4cd01adcaefd5009393b1d8e8bec19db0"
-  dependencies:
-    async "0.2.x"
-    colors "0.6.x"
-    cycle "1.0.x"
-    eyes "0.1.x"
-    isstream "0.1.x"
-    pkginfo "0.3.x"
-    stack-trace "0.0.x"
 
 wordwrap@0.0.2:
   version "0.0.2"

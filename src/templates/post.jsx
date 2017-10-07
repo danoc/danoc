@@ -7,7 +7,9 @@ import * as s from "../styles/";
 import "../styles/prism-ghcolors.css";
 
 const PostTitle = styled.h1`
-  max-width: ${s.measureWide};
+  max-width: ${s.measure};
+  margin-top: ${s.spacing3};
+  margin-bottom: ${s.spacing5};
 `;
 
 const HeaderSection = styled(Header)`

@@ -45,6 +45,7 @@ module.exports = {
       options: {
         trackingId: "UA-5922635-10"
       }
-    }
+    },
+    "gatsby-plugin-netlify" // Must be last in the config.
   ]
 };

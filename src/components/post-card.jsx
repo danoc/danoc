@@ -15,16 +15,19 @@ const Date = styled.div`
 const Title = styled.h3`
   font-size: ${s.fontSize5};
   margin-top: ${s.spacing1};
-  margin-bottom: ${s.spacing2};
+  margin-bottom: ${s.spacing3};
   font-weight: 400;
   max-width: ${s.measure};
   flex: 1;
-  text-decoration: underline;
 `;
 
-const Text = styled.div`padding: ${s.spacing3};`;
+const Text = styled.div`
+  padding: ${s.spacing3} ${s.spacing1};
+`;
 
-const Image = styled.img`border-bottom: 1px solid ${s.lightGray};`;
+const Image = styled.img`
+  border: 1px solid ${s.lightGray};
+`;
 
 const PostCard = props => (
   <Card to={props.to} className={props.className}>

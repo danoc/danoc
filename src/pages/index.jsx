@@ -140,7 +140,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM YYYY")
             path
             image_alt
             image_src {

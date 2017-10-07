@@ -24,15 +24,19 @@ const SectionHeadingAnchor = styled(Link)`
 `;
 
 const ViewMoreLink = styled(Link)`
+  display: inline-block;
+  padding: ${s.spacing4} ${s.spacing2};
   color: ${s.gray};
-  font-weight: 500;
   font-size: ${s.fontSize6};
+  font-weight: 200;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: ${s.tracked};
 `;
 
-const SectionHeadingText = styled.span`${sectionHeading};`;
+const SectionHeadingText = styled.span`
+  ${sectionHeading};
+`;
 
 const Section = props => (
   <section className={props.className}>
@@ -48,9 +52,9 @@ const Section = props => (
     {props.children}
 
     {props.to &&
-    props.callToAction && (
-      <ViewMoreLink to={props.to}>{props.callToAction}</ViewMoreLink>
-    )}
+      props.callToAction && (
+        <ViewMoreLink to={props.to}>{props.callToAction} →</ViewMoreLink>
+      )}
   </section>
 );
 

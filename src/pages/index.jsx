@@ -14,9 +14,15 @@ const Item = styled(Experience)`
   margin-bottom: ${props => (props.children ? s.spacing5 : s.spacing4)};
 `;
 
-const sectionMargin = css`margin-bottom: ${s.spacing6};`;
-const Section = styled(SectionComponent)`${sectionMargin};`;
-const HeaderSection = styled(Header)`${sectionMargin};`;
+const sectionMargin = css`
+  margin-bottom: ${s.spacing6};
+`;
+const Section = styled(SectionComponent)`
+  ${sectionMargin};
+`;
+const HeaderSection = styled(Header)`
+  ${sectionMargin};
+`;
 
 const CardList = styled(ArticleList)`
   display: grid;
@@ -41,7 +47,7 @@ const IndexPage = ({ data }) => {
       <Section title="Featured Posts" to="/blog/" callToAction="View All Posts">
         <CardList>
           {posts.map(({ node: post }) => {
-            const frontmatter = post.frontmatter;
+            const { frontmatter } = post;
             const image = {
               alt: frontmatter.image_alt,
               data: frontmatter.image_src.childImageSharp.responsiveSizes

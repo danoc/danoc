@@ -109,6 +109,7 @@ const formatDate = date => {
 const Time = styled.time`
   color: ${s.gray};
   font-weight: 400;
+  font-size: ${s.fontSize6};
   text-transform: uppercase;
   text-transform: uppercase;
   letter-spacing: ${s.tracked};

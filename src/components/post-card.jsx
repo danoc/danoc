@@ -22,7 +22,7 @@ const Title = styled.h3`
 `;
 
 const Text = styled.div`
-  padding: ${s.spacing3} ${s.spacing1};
+  padding: ${s.spacing3} ${s.spacing2};
 `;
 
 const Image = styled.img`

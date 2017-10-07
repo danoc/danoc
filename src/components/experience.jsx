@@ -4,7 +4,9 @@ import styled from "styled-components";
 import Link from "../components/link";
 import * as s from "../styles/";
 
-const Article = styled.li`list-style: none;`;
+const Article = styled.li`
+  list-style: none;
+`;
 
 const Meta = styled.div`
   color: ${s.gray};
@@ -23,6 +25,10 @@ const Title = styled.h3`
   max-width: ${s.measure};
 `;
 
+const Description = styled.div`
+  max-width: ${s.measure};
+`;
+
 const Experience = props => (
   <Article className={props.className}>
     <Meta>{props.meta}</Meta>
@@ -33,7 +39,7 @@ const Experience = props => (
         <span>{props.title}</span>
       )}
     </Title>
-    {props.children}
+    <Description>{props.children}</Description>
   </Article>
 );
 

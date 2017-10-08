@@ -2320,6 +2320,10 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
 
+crypto@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/crypto/-/crypto-1.0.1.tgz#2af1b7cad8175d24c8a1b0778255794a21803037"
+
 css-color-function@^1.2.0:
   version "1.3.0"
   resolved "https://production-npm.thumbtack.com/css-color-function/-/css-color-function-1.3.0/72c767baf978f01b8a8a94f42f17ba5d22a776fc.tgz#72c767baf978f01b8a8a94f42f17ba5d22a776fc"
@@ -3893,8 +3897,8 @@ gatsby-remark-copy-linked-files@^1.5.7:
     unist-util-visit "^1.1.1"
 
 gatsby-remark-images@^1.5.11:
-  version "1.5.14"
-  resolved "https://production-npm.thumbtack.com/gatsby-remark-images/-/gatsby-remark-images-1.5.14/b19a287496ba3f8676ce173e9e12e34b54184613.tgz#b19a287496ba3f8676ce173e9e12e34b54184613"
+  version "1.5.15"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.15.tgz#7a589529c240738ab5bfd4e3253c315ef877e59f"
   dependencies:
     babel-runtime "^6.26.0"
     cheerio "^1.0.0-rc.2"
@@ -3947,6 +3951,13 @@ gatsby-source-filesystem@^1.4.12:
     pretty-bytes "^4.0.2"
     slash "^1.0.0"
 
+gatsby-source-pinboard@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-source-pinboard/-/gatsby-source-pinboard-0.1.2.tgz#c9b1f11482c6c2f4d743f58cee60c167ee483e51"
+  dependencies:
+    crypto "^1.0.1"
+    node-fetch "^1.7.3"
+
 gatsby-transformer-remark@^1.7.6:
   version "1.7.15"
   resolved "https://production-npm.thumbtack.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.15/f7f3756caf4378fef42283b7699dd2277748559b.tgz#f7f3756caf4378fef42283b7699dd2277748559b"
@@ -3974,8 +3985,8 @@ gatsby-transformer-sharp@^1.6.5:
     image-size "^0.6.0"
 
 gatsby@^1.9.34:
-  version "1.9.54"
-  resolved "https://production-npm.thumbtack.com/gatsby/-/gatsby-1.9.54/e4a5cd9514526f5f784bf6ec45a3ef5a64eb628f.tgz#e4a5cd9514526f5f784bf6ec45a3ef5a64eb628f"
+  version "1.9.55"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.55.tgz#1814c919bb659fd3e7b5c3a527f903445c508936"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -6431,7 +6442,7 @@ node-emoji@^1.0.4:
   dependencies:
     lodash.toarray "^4.4.0"
 
-node-fetch@^1.0.1:
+node-fetch@^1.0.1, node-fetch@^1.7.3:
   version "1.7.3"
   resolved "https://production-npm.thumbtack.com/node-fetch/-/node-fetch-1.7.3/980f6f72d85211a5347c6b2bc18c5b84c3eb47ef.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   dependencies:

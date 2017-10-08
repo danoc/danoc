@@ -22,6 +22,7 @@
     "gatsby-remark-responsive-iframe": "^1.4.7",
     "gatsby-remark-smartypants": "^1.4.7",
     "gatsby-source-filesystem": "^1.4.12",
+    "gatsby-source-pinboard": "^0.1.0",
     "gatsby-transformer-remark": "^1.7.6",
     "gatsby-transformer-sharp": "^1.6.5",
     "is-relative-url": "^2.0.0",
@@ -41,6 +42,9 @@
     "prettier": "^1.6.1"
   },
   "lint-staged": {
-    "*.js": ["prettier --write", "git add"]
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

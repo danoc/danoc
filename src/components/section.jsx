@@ -1,8 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import Link from "gatsby-link";
+import Link from "../components/link";
 import * as s from "../styles/";
+
+const Container = styled.section`
+  margin-bottom: ${s.spacing6};
+`;
 
 const sectionHeading = css`
   display: block;
@@ -25,7 +29,8 @@ const SectionHeadingAnchor = styled(Link)`
 
 const ViewMoreLink = styled(Link)`
   display: inline-block;
-  padding: ${s.spacing4} ${s.spacing2};
+  padding-top: ${s.spacing3};
+  padding-bottom: ${s.spacing3};
   color: ${s.gray};
   font-size: ${s.fontSize6};
   font-weight: 200;
@@ -39,7 +44,7 @@ const SectionHeadingText = styled.span`
 `;
 
 const Section = props => (
-  <section className={props.className}>
+  <Container>
     <h2>
       {props.to ? (
         <SectionHeadingAnchor to={props.to} title={props.callToAction}>
@@ -55,11 +60,10 @@ const Section = props => (
       props.callToAction && (
         <ViewMoreLink to={props.to}>{props.callToAction} →</ViewMoreLink>
       )}
-  </section>
+  </Container>
 );
 
 Section.propTypes = {
-  className: PropTypes.string,
   to: PropTypes.string,
   callToAction: PropTypes.string,
   title: PropTypes.string.isRequired,
@@ -67,7 +71,6 @@ Section.propTypes = {
 };
 
 Section.defaultProps = {
-  className: undefined,
   to: undefined,
   callToAction: undefined,
   children: undefined

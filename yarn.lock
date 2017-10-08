@@ -3851,7 +3851,7 @@ gatsby-plugin-react-helmet@^1.0.6:
 
 gatsby-plugin-sharp@^1.6.7, gatsby-plugin-sharp@^1.6.9:
   version "1.6.9"
-  resolved "https://production-npm.thumbtack.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.6.9/4b1f39fa68f952112d95cf5f5dfbdfc320458a0a.tgz#4b1f39fa68f952112d95cf5f5dfbdfc320458a0a"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.6.9.tgz#4b1f39fa68f952112d95cf5f5dfbdfc320458a0a"
   dependencies:
     async "^2.1.2"
     babel-runtime "^6.26.0"
@@ -3977,7 +3977,7 @@ gatsby-transformer-remark@^1.7.6:
 
 gatsby-transformer-sharp@^1.6.5:
   version "1.6.10"
-  resolved "https://production-npm.thumbtack.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.10/24c25fbf91b45dc40af9c6aee9eec2053102b516.tgz#24c25fbf91b45dc40af9c6aee9eec2053102b516"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.10.tgz#24c25fbf91b45dc40af9c6aee9eec2053102b516"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
@@ -4785,7 +4785,7 @@ image-size@^0.5.1:
 
 image-size@^0.6.0:
   version "0.6.1"
-  resolved "https://production-npm.thumbtack.com/image-size/-/image-size-0.6.1/98122a562d59dcc097ef1b2c8191866eb8f5d663.tgz#98122a562d59dcc097ef1b2c8191866eb8f5d663"
+  resolved "https://registry.yarnpkg.com/image-size/-/image-size-0.6.1.tgz#98122a562d59dcc097ef1b2c8191866eb8f5d663"
 
 imagemin-pngquant@^5.0.0:
   version "5.0.1"

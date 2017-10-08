@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Balancing design consistency and developer productivity in a design system
+title: Balancing design consistency and developer productivity
 description: Create a design system that promotes collaboration, discourages one-off solutions, and optimizes for long-term productivity.
 date: '2017-02-22T18:55:58.639Z'
 path: /blog/design-consistency-developer-productivity/

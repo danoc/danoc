@@ -3,14 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Header from "../../components/header";
 import Section from "../../components/section";
-import Experience from "../../components/experience";
-import ArticleList from "../../components/article-list";
-import Paragraph from "../../components/paragraph";
+import ArticleListItem from "../../components/article-list-item";
+import BulletList from "../../components/bullet-list";
 import * as s from "../../styles/";
-
-const Item = styled(Experience)`
-  margin-bottom: ${props => (props.showDescription ? s.spacing5 : s.spacing4)};
-`;
 
 const HeaderSection = styled(Header)`
   margin-bottom: ${s.spacing6};
@@ -23,23 +18,17 @@ const BlogIndex = ({ data }) => {
     <div>
       <HeaderSection title="Daniel O&#8217;Connor" />
       <Section title="Posts" to="/blog/">
-        <ArticleList>
-          {posts.map(({ node: post }) => (
-            <Item
-              title={post.frontmatter.title}
-              to={post.frontmatter.path}
-              key={post.frontmatter.path}
-              meta={post.frontmatter.date}
-              showDescription={
-                post.frontmatter.is_featured && post.frontmatter.description
-              }
+        <BulletList>
+          {posts.map(post => (
+            <ArticleListItem
+              to={post.node.frontmatter.path}
+              key={post.node.frontmatter.path}
+              date={post.node.frontmatter.date}
             >
-              <Paragraph>
-                {post.frontmatter.is_featured && post.frontmatter.description}
-              </Paragraph>
-            </Item>
+              {post.node.frontmatter.title}
+            </ArticleListItem>
           ))}
-        </ArticleList>
+        </BulletList>
       </Section>
     </div>
   );
@@ -48,21 +37,7 @@ const BlogIndex = ({ data }) => {
 export default BlogIndex;
 
 BlogIndex.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string,
-              date: PropTypes.string,
-              path: PropTypes.string
-            })
-          })
-        })
-      )
-    })
-  })
+  data: PropTypes.shape({})
 };
 
 BlogIndex.defaultProps = {
@@ -78,8 +53,6 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
             path
-            is_featured
-            description
           }
         }
       }

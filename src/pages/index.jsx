@@ -1,57 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import * as s from "../styles/";
-import SectionComponent from "../components/section";
-import Experience from "../components/experience";
+import Section from "../components/section";
 import Link from "../components/link";
 import Header from "../components/header";
-import PostCard from "../components/post-card";
 import Paragraph from "../components/paragraph";
-import ArticleList from "../components/article-list";
+import BulletList from "../components/bullet-list";
+import ArticleListItem from "../components/article-list-item";
+import Experience from "../components/experience";
 
-const Item = styled(Experience)`
-  margin-bottom: ${props => (props.children ? s.spacing5 : s.spacing4)};
-`;
-
-const sectionMargin = css`
+const HeaderHome = styled(Header)`
   margin-bottom: ${s.spacing6};
 `;
 
-const Section = styled(SectionComponent)`
-  ${sectionMargin};
-`;
-
-const HeaderSection = styled(Header)`
-  ${sectionMargin};
-`;
-
-const UnstyledListItem = styled.li`
+const UnstyledList = styled.ul`
   list-style: none;
+  padding-left: ${s.spacing1};
 `;
-
-const CardList = styled(ArticleList)`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(${s.maxWidth5}, 1fr));
-`;
-
-const extractHostname = url => {
-  let hostname;
-
-  if (url.indexOf("://") > -1) {
-    [, , hostname] = url.split("/");
-  } else {
-    [hostname] = url.split("/");
-  }
-
-  // find & remove port number
-  [hostname] = hostname.split(":");
-  // find & remove "?"
-  [hostname] = hostname.split("?");
-
-  return hostname;
-};
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -59,57 +25,40 @@ const IndexPage = ({ data }) => {
 
   return (
     <div>
-      <HeaderSection title="Daniel O&#8217;Connor">
+      <HeaderHome title="Daniel O&#8217;Connor">
         <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
         <Paragraph>
           I build design systems to efficiently deliver high quality products.
           I’m a stickler for consistency, accessibility, and performance.
         </Paragraph>
-      </HeaderSection>
+      </HeaderHome>
 
-      <Section title="Featured Posts" to="/blog/" callToAction="View All Posts">
-        <CardList>
-          {posts.map(({ node: post }) => {
-            const { frontmatter } = post;
-            const image = {
-              alt: frontmatter.image_alt,
-              data: frontmatter.image_src.childImageSharp.responsiveSizes
-            };
-
-            return (
-              <UnstyledListItem>
-                <PostCard
-                  to={frontmatter.path}
-                  key={frontmatter.path}
-                  image={{
-                    alt: image.alt,
-                    src: image.data.src,
-                    srcSet: image.data.srcSet,
-                    sizes: image.data.sizes
-                  }}
-                  date={frontmatter.date}
-                >
-                  {frontmatter.title}
-                </PostCard>
-              </UnstyledListItem>
-            );
-          })}
-        </CardList>
+      <Section title="Writing" to="/blog/" callToAction="View all posts">
+        <BulletList>
+          {posts.map(post => (
+            <ArticleListItem
+              to={post.node.frontmatter.path}
+              date={post.node.frontmatter.date}
+            >
+              {post.node.frontmatter.title}
+            </ArticleListItem>
+          ))}
+        </BulletList>
       </Section>
 
       <Section title="Work">
-        <ArticleList>
-          <Item
+        <UnstyledList>
+          <Experience
             title="Thumbtack"
             to="https://www.thumbtack.com/"
             meta="2017-Present"
           >
             <Paragraph>
               I help build Thumbprint, Thumbtack’s design system, and assist our
-              engineering team with the move to React.
+              engineering team’s move to React.
             </Paragraph>
-          </Item>
-          <Item
+          </Experience>
+          <Experience
             title="Optimizely"
             to="https://www.optimizely.com/"
             meta="2014-2017"
@@ -124,26 +73,25 @@ const IndexPage = ({ data }) => {
               </Link>, UI library, and built design systems that improved UI
               consistency and developer productivity.
             </Paragraph>
-          </Item>
-        </ArticleList>
+          </Experience>
+        </UnstyledList>
       </Section>
 
-      <Section title="Reading List">
-        <ArticleList>
-          {bookmarks.map(edge => {
-            const bookmark = edge.node;
-
-            return (
-              <Item
-                title={bookmark.description}
-                to={bookmark.href}
-                meta={extractHostname(bookmark.href)}
-              >
-                <Paragraph>{bookmark.extended}</Paragraph>
-              </Item>
-            );
-          })}
-        </ArticleList>
+      <Section
+        title="Bookmarks"
+        to="https://pinboard.in/u:danoc"
+        callToAction="View all bookmarks"
+      >
+        <Paragraph>
+          A collection of articles and talks that have influenced my work.
+        </Paragraph>
+        <BulletList>
+          {bookmarks.map(bookmark => (
+            <ArticleListItem to={bookmark.node.href}>
+              {bookmark.node.description}
+            </ArticleListItem>
+          ))}
+        </BulletList>
       </Section>
     </div>
   );
@@ -177,7 +125,7 @@ export const pageQuery = graphql`
   query Index {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 4
+      limit: 3
       filter: { frontmatter: { is_featured: { eq: true } } }
     ) {
       edges {
@@ -186,16 +134,6 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM YYYY")
             path
-            image_alt
-            image_src {
-              childImageSharp {
-                responsiveSizes {
-                  src
-                  srcSet
-                  sizes
-                }
-              }
-            }
           }
         }
       }
@@ -205,7 +143,6 @@ export const pageQuery = graphql`
         node {
           href
           description
-          extended
         }
       }
     }

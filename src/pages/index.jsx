@@ -36,6 +36,23 @@ const CardList = styled(ArticleList)`
   grid-template-columns: repeat(auto-fill, minmax(${s.maxWidth5}, 1fr));
 `;
 
+const extractHostname = url => {
+  let hostname;
+
+  if (url.indexOf("://") > -1) {
+    [, , hostname] = url.split("/");
+  } else {
+    [hostname] = url.split("/");
+  }
+
+  // find & remove port number
+  [hostname] = hostname.split(":");
+  // find & remove "?"
+  [hostname] = hostname.split("?");
+
+  return hostname;
+};
+
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const bookmarks = data.allPinboardBookmark.edges;
@@ -120,7 +137,7 @@ const IndexPage = ({ data }) => {
               <Item
                 title={bookmark.description}
                 to={bookmark.href}
-                meta={new URL(bookmark.href).hostname}
+                meta={extractHostname(bookmark.href)}
               >
                 <Paragraph>{bookmark.extended}</Paragraph>
               </Item>

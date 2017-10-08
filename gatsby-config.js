@@ -12,6 +12,13 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-pinboard",
+      options: {
+        authToken: process.env.PINBOARD,
+        tags: "danoc.me"
+      }
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [

@@ -38,6 +38,7 @@ const CardList = styled(ArticleList)`
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
+  const bookmarks = data.allPinboardBookmark.edges;
 
   return (
     <div>
@@ -87,7 +88,7 @@ const IndexPage = ({ data }) => {
             meta="2017-Present"
           >
             <Paragraph>
-              I build out our design system, Thumbprint UI, and assist our
+              I help build Thumbprint, Thumbtack’s design system, and assist our
               engineering team with the move to React.
             </Paragraph>
           </Item>
@@ -103,10 +104,28 @@ const IndexPage = ({ data }) => {
                 title="Optimizely User Interface"
               >
                 OUI
-              </Link>, our UI library, and built design systems that improved UI
+              </Link>, UI library, and built design systems that improved UI
               consistency and developer productivity.
             </Paragraph>
           </Item>
+        </ArticleList>
+      </Section>
+
+      <Section title="Reading List">
+        <ArticleList>
+          {bookmarks.map(edge => {
+            const bookmark = edge.node;
+
+            return (
+              <Item
+                title={bookmark.description}
+                to={bookmark.href}
+                meta={new URL(bookmark.href).hostname}
+              >
+                <Paragraph>{bookmark.extended}</Paragraph>
+              </Item>
+            );
+          })}
         </ArticleList>
       </Section>
     </div>
@@ -161,6 +180,15 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+      }
+    }
+    allPinboardBookmark(limit: 3, filter: { shared: { eq: "yes" } }) {
+      edges {
+        node {
+          href
+          description
+          extended
         }
       }
     }

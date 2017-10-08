@@ -9302,20 +9302,6 @@ styled-components@^2.0.0:
     stylis "^3.2.1"
     supports-color "^3.2.3"
 
-styled-components@^2.1.2:
-  version "2.2.1"
-  resolved "https://production-npm.thumbtack.com/styled-components/-/styled-components-2.2.1/f4835f1001c37bcc301ac3865b5d93466de4dd5b.tgz#f4835f1001c37bcc301ac3865b5d93466de4dd5b"
-  dependencies:
-    buffer "^5.0.3"
-    css-to-react-native "^2.0.3"
-    fbjs "^0.8.9"
-    hoist-non-react-statics "^1.2.0"
-    is-function "^1.0.1"
-    is-plain-object "^2.0.1"
-    prop-types "^15.5.4"
-    stylis "^3.2.1"
-    supports-color "^3.2.3"
-
 stylis@^3.2.1:
   version "3.2.16"
   resolved "https://production-npm.thumbtack.com/stylis/-/stylis-3.2.16/f336893e55f9f13299b39c01af3b10546cd7507a.tgz#f336893e55f9f13299b39c01af3b10546cd7507a"

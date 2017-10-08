@@ -8,8 +8,10 @@ module.exports = {
   },
   extends: ["airbnb", "prettier"],
   globals: {
-    graphql: false
+    graphql: false,
+    URL: false
   },
+  settings: { "import/core-modules": ["styled-components"] },
   rules: {
     "jsx-a11y/anchor-is-valid": [
       "error",

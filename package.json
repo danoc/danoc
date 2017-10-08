@@ -27,8 +27,7 @@
     "is-relative-url": "^2.0.0",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
-    "react-helmet": "^5.2.0",
-    "styled-components": "^2.1.2"
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^4.6.1",
@@ -42,9 +41,6 @@
     "prettier": "^1.6.1"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["prettier --write", "git add"]
   }
 }

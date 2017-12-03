@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import * as s from "../styles/";
 import Section from "../components/section";
 import Link from "../components/link";
 import Header from "../components/header";
@@ -10,28 +8,19 @@ import BulletList from "../components/bullet-list";
 import ArticleListItem from "../components/article-list-item";
 import Experience from "../components/experience";
 
-const HeaderHome = styled(Header)`
-  margin-bottom: ${s.spacing6};
-`;
-
-const UnstyledList = styled.ul`
-  list-style: none;
-  padding-left: ${s.spacing1};
-`;
-
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const bookmarks = data.allPinboardBookmark.edges;
 
   return (
     <div>
-      <HeaderHome title="Daniel O&#8217;Connor">
+      <Header title="Daniel O&#8217;Connor">
         <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
         <Paragraph>
           I build design systems to efficiently deliver high quality products.
           I’m a stickler for consistency, accessibility, and performance.
         </Paragraph>
-      </HeaderHome>
+      </Header>
 
       <Section title="Writing" to="/blog/" callToAction="View all posts">
         <BulletList>
@@ -47,7 +36,7 @@ const IndexPage = ({ data }) => {
       </Section>
 
       <Section title="Work">
-        <UnstyledList>
+        <ul className="pl0 list">
           <Experience
             title="Thumbtack"
             to="https://www.thumbtack.com/"
@@ -74,7 +63,7 @@ const IndexPage = ({ data }) => {
               consistency and developer productivity.
             </Paragraph>
           </Experience>
-        </UnstyledList>
+        </ul>
       </Section>
 
       <Section
@@ -108,17 +97,17 @@ IndexPage.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string,
               date: PropTypes.string,
-              path: PropTypes.string
-            })
-          })
-        })
-      )
-    })
-  })
+              path: PropTypes.string,
+            }),
+          }),
+        }),
+      ),
+    }),
+  }),
 };
 
 IndexPage.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export const pageQuery = graphql`

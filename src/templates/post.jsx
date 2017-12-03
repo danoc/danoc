@@ -1,89 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import styled from "styled-components";
 import Header from "../components/header";
-import * as s from "../styles/";
 import "../styles/prism-ghcolors.css";
-
-const PostTitle = styled.h1`
-  max-width: ${s.measure};
-  margin-top: ${s.spacing3};
-  margin-bottom: ${s.spacing5};
-`;
-
-const HeaderSection = styled(Header)`
-  margin-bottom: ${s.spacing6};
-`;
-
-const Text = styled.div`
-  max-width: ${s.maxWidth7};
-
-  h1 {
-    margin-top: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: 1.414em 0 0.5em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    max-width: ${s.measureWide};
-  }
-
-  p {
-    margin-bottom: 1.3em;
-  }
-
-  ul,
-  ol {
-    max-width: ${s.measureWide};
-    padding-left: ${s.spacing5};
-  }
-
-  hr {
-    border-top: ${s.spacing3} solid ${s.lightGray};
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    margin: ${s.spacing5} 0;
-  }
-
-  blockquote {
-    max-width: ${s.measureWide};
-    padding-left: calc(${s.spacing5} - ${s.spacing3});
-    margin-left: 0;
-    border-left: ${s.spacing3} solid ${s.lightGray};
-  }
-
-  img {
-    outline: 1px solid ${s.lightGray};
-    padding: 1px;
-  }
-
-  .gatsby-resp-image-link {
-    + em {
-      color: ${s.gray};
-      display: block;
-      margin: ${s.spacing4} ${s.spacing2};
-      font-size: ${s.fontSize6};
-      font-style: normal;
-    }
-
-    &:hover img {
-      outline-color: ${s.moonGray};
-    }
-  }
-`;
 
 const formatDate = date => {
   const monthNames = [
@@ -98,7 +17,7 @@ const formatDate = date => {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
 
   const day = date.getDate();
@@ -107,15 +26,6 @@ const formatDate = date => {
 
   return `${monthNames[monthIndex]} ${day}, ${year}`;
 };
-
-const Time = styled.time`
-  color: ${s.gray};
-  font-weight: 400;
-  font-size: ${s.fontSize6};
-  text-transform: uppercase;
-  text-transform: uppercase;
-  letter-spacing: ${s.tracked};
-`;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
@@ -207,17 +117,20 @@ const Post = ({ data }) => {
         )}
       </Helmet>
 
-      <HeaderSection title="Daniel O&#8217;Connor" />
+      <Header title="Daniel O&#8217;Connor" isSinglePost />
 
-      <Time
+      <time
         dateTime={post.frontmatter.date}
         itemProp="datePublished"
         title={new Date(post.frontmatter.date).toString()}
+        className="gray fw4 f6 ttu tracked"
       >
         {formatDate(new Date(post.frontmatter.date))}
-      </Time>
+      </time>
 
-      <PostTitle itemProp="headline">{post.frontmatter.title}</PostTitle>
+      <h1 itemProp="headline" className="f2 measure mt3 mb4 dark-gray lh-title">
+        {post.frontmatter.title}
+      </h1>
 
       {site.siteUrl &&
         post.frontmatter.image_src &&
@@ -231,8 +144,9 @@ const Post = ({ data }) => {
           />
         )}
 
-      <Text
+      <div
         itemProp="articleBody"
+        className="markdown"
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
     </div>
@@ -246,19 +160,19 @@ Post.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.shape({
-        node: PropTypes.shape({})
-      })
+        node: PropTypes.shape({}),
+      }),
     }),
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        siteUrl: PropTypes.string.isRequired
-      })
-    })
-  })
+        siteUrl: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
 };
 
 Post.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export const pageQuery = graphql`

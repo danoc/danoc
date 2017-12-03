@@ -1,23 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import Header from "../../components/header";
 import Section from "../../components/section";
 import ArticleListItem from "../../components/article-list-item";
 import BulletList from "../../components/bullet-list";
-import * as s from "../../styles/";
-
-const HeaderSection = styled(Header)`
-  margin-bottom: ${s.spacing6};
-`;
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <div>
-      <HeaderSection title="Daniel O&#8217;Connor" />
-      <Section title="Posts" to="/blog/">
+      <Header title="Daniel O&#8217;Connor" isSinglePost />
+      <Section title="Writing" to="/blog/">
         <BulletList>
           {posts.map(post => (
             <ArticleListItem
@@ -37,11 +31,11 @@ const BlogIndex = ({ data }) => {
 export default BlogIndex;
 
 BlogIndex.propTypes = {
-  data: PropTypes.shape({})
+  data: PropTypes.shape({}),
 };
 
 BlogIndex.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export const pageQuery = graphql`

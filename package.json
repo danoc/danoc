@@ -13,9 +13,9 @@
     "gatsby-plugin-netlify": "^1.0.6",
     "gatsby-plugin-offline": "^1.0.9",
     "gatsby-plugin-react-helmet": "^2.0.2",
+    "gatsby-plugin-sass": "^1.0.14",
     "gatsby-plugin-sharp": "^1.6.7",
     "gatsby-plugin-sitemap": "^1.2.5",
-    "gatsby-plugin-styled-components": "^2.0.3",
     "gatsby-remark-copy-linked-files": "^1.5.7",
     "gatsby-remark-images": "^1.5.11",
     "gatsby-remark-prismjs": "^1.2.8",
@@ -29,7 +29,7 @@
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
     "react-helmet": "^5.2.0",
-    "styled-components": "^2.2.4"
+    "tachyons-sass": "^4.8.1"
   },
   "devDependencies": {
     "eslint": "^4.6.1",
@@ -43,9 +43,6 @@
     "prettier": "^1.6.1"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["prettier --write", "git add"]
   }
 }

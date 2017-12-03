@@ -1,79 +1,50 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
 import Link from "../components/link";
-import * as s from "../styles/";
 
-const Container = styled.section`
-  margin-bottom: ${s.spacing6};
-`;
-
-const sectionHeading = css`
-  display: block;
-  font-size: ${s.fontSize5};
-  padding-bottom: ${s.titleMarginBottom};
-  border-bottom: 1px solid ${s.lightGray};
-  max-width: ${s.measure};
-  font-weight: 600;
-`;
-
-const SectionHeadingAnchor = styled(Link)`
-  ${sectionHeading};
-  color: ${s.darkGray};
-  text-decoration: none;
-
-  &:hover {
-    color: ${s.midGray};
-  }
-`;
-
-const ViewMoreLink = styled(Link)`
-  display: inline-block;
-  padding-top: ${s.spacing3};
-  padding-bottom: ${s.spacing3};
-  color: ${s.gray};
-  font-size: ${s.fontSize6};
-  font-weight: 200;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: ${s.tracked};
-`;
-
-const SectionHeadingText = styled.span`
-  ${sectionHeading};
-`;
+const sectionHeadingClasses = "db f4 pb2 bb b--light-gray measure fw6";
 
 const Section = props => (
-  <Container>
+  <section className="mb5">
     <h2>
       {props.to ? (
-        <SectionHeadingAnchor to={props.to} title={props.callToAction}>
+        <Link
+          className={`${sectionHeadingClasses} dark-gray hover-gray link`}
+          to={props.to}
+          title={props.callToAction}
+        >
           {props.title}
-        </SectionHeadingAnchor>
+        </Link>
       ) : (
-        <SectionHeadingText>{props.title}</SectionHeadingText>
+        <span className={sectionHeadingClasses}>{props.title}</span>
       )}
     </h2>
+
     {props.children}
 
     {props.to &&
       props.callToAction && (
-        <ViewMoreLink to={props.to}>{props.callToAction} →</ViewMoreLink>
+        <Link
+          className="dib pv2 gray hover-dark-gray link f6 fw4 ttu tracked"
+          to={props.to}
+        >
+          {props.callToAction} →
+        </Link>
       )}
-  </Container>
+  </section>
 );
 
 Section.propTypes = {
   to: PropTypes.string,
   callToAction: PropTypes.string,
   title: PropTypes.string.isRequired,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Section.defaultProps = {
   to: undefined,
   callToAction: undefined,
-  children: undefined
+  children: undefined,
 };
 
 export default Section;

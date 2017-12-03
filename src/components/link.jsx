@@ -1,45 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import GatsbyLink from "gatsby-link";
 import isRelativeUrl from "is-relative-url";
-import * as s from "../styles/";
-
-const LinkRelative = styled(GatsbyLink)`
-  color: ${s.blue};
-  transition: color 0.05s ease-in;
-
-  &:hover {
-    color: ${s.darkBlue};
-  }
-
-  &:active {
-    color: ${s.red};
-  }
-`;
-const LinkAbsolute = LinkRelative.withComponent("a");
 
 const Link = props => {
   if (props.to && isRelativeUrl(props.to)) {
     return (
-      <LinkRelative
+      <GatsbyLink
         to={props.to}
         title={props.title}
-        className={props.className}
+        className={`link ${props.className}`}
       >
         {props.children}
-      </LinkRelative>
+      </GatsbyLink>
     );
   }
 
   return (
-    <LinkAbsolute
+    <a
       href={props.to}
       title={props.title}
-      className={props.className}
+      className={`link ${props.className}`}
     >
       {props.children}
-    </LinkAbsolute>
+    </a>
   );
 };
 
@@ -47,12 +31,12 @@ Link.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
   className: PropTypes.string,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 };
 
 Link.defaultProps = {
   title: undefined,
-  className: undefined
+  className: "blue hover-dark-blue underline",
 };
 
 export default Link;

@@ -1,6 +1,6 @@
 module.exports = {
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 8,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true
@@ -11,7 +11,7 @@ module.exports = {
     graphql: false,
     URL: false
   },
-  settings: { "import/core-modules": ["styled-components"] },
+  settings: { "import/core-modules": ["tachyons-sass"] },
   rules: {
     "jsx-a11y/anchor-is-valid": [
       "error",

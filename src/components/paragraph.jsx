@@ -1,13 +1,12 @@
-import styled from "styled-components";
-import * as s from "../styles/";
+import React from "react";
+import PropTypes from "prop-types";
 
-const Paragraph = styled.p`
-  color: ${s.midGray};
-  max-width: ${s.measure};
-
-  :first-of-type {
-    margin-top: ${s.spacing1};
-  }
-`;
+const Paragraph = props => (
+  <p className="mid-gray f5 lh-copy measure mt0">{props.children}</p>
+);
 
 export default Paragraph;
+
+Paragraph.propTypes = {
+  children: PropTypes.string.isRequired,
+};

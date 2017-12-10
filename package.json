@@ -1,4 +1,5 @@
 {
+  "name": "danoc.me",
   "private": true,
   "scripts": {
     "start": "gatsby develop",

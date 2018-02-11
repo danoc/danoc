@@ -17,7 +17,7 @@ const formatDate = date => {
     "September",
     "October",
     "November",
-    "December",
+    "December"
   ];
 
   const day = date.getDate();
@@ -97,8 +97,10 @@ const Post = ({ data }) => {
               content={site.siteUrl + post.frontmatter.path}
             />
           )}
-        {post.frontmatter.description && (
+        {post.frontmatter.description ? (
           <meta name="description" content={post.frontmatter.description} />
+        ) : (
+          <meta name="description" content={site.description} />
         )}
         {post.frontmatter.description && (
           <meta
@@ -117,7 +119,7 @@ const Post = ({ data }) => {
         )}
       </Helmet>
 
-      <Header title="Daniel O&#8217;Connor" isSinglePost />
+      <Header title={site.title} isSinglePost />
 
       <time
         dateTime={post.frontmatter.date}
@@ -160,19 +162,19 @@ Post.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.shape({
-        node: PropTypes.shape({}),
-      }),
+        node: PropTypes.shape({})
+      })
     }),
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        siteUrl: PropTypes.string.isRequired,
-      }),
-    }),
-  }),
+        siteUrl: PropTypes.string.isRequired
+      })
+    })
+  })
 };
 
 Post.defaultProps = {
-  data: {},
+  data: {}
 };
 
 export const pageQuery = graphql`
@@ -205,6 +207,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteUrl
+        title
+        description
       }
     }
   }

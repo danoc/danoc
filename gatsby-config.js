@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Daniel O’Connor',
-    description: "Daniel O’Connor is a UI Engineer living in San Francisco. He builds Thumbtack’s design system.",
+    title: "Daniel O’Connor",
+    description:
+      "Daniel O’Connor is a UI Engineer living in San Francisco. He builds Thumbtack’s design system.",
     siteUrl: "https://danoc.me"
   },
   plugins: [
@@ -62,16 +63,16 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description || edge.node.excerpt,
+            serialize: ({ query: { site, allMarkdownRemark } }) =>
+              allMarkdownRemark.edges.map(edge =>
+                Object.assign({}, edge.node.frontmatter, {
+                  description:
+                    edge.node.frontmatter.description || edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                });
-              });
-            },
+                  custom_elements: [{ "content:encoded": edge.node.html }]
+                })
+              ),
             query: `
               {
                 allMarkdownRemark(
@@ -93,12 +94,30 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-          },
-        ],
-      },
+            output: "/rss.xml"
+          }
+        ]
+      }
     },
-      "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: false,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: true,
+          yandex: false,
+          windows: true
+        }
+      }
+    },
+    "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-offline",
     {

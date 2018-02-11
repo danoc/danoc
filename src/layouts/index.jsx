@@ -13,10 +13,10 @@ const IndexLayout = ({ children }) => (
         { property: "og:type", content: "website" },
         { property: "fb:app_id", content: 1271463799642798 },
         { property: "twitter:creator", content: "_danoc" },
-        { name: "theme-color", content: "#333333" },
+        { name: "theme-color", content: "#333333" }
       ]}
       htmlAttributes={{
-        lang: "en",
+        lang: "en"
       }}
     />
     {children()}
@@ -34,11 +34,11 @@ const IndexLayout = ({ children }) => (
 );
 
 IndexLayout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.func
 };
 
 IndexLayout.defaultProps = {
-  children: undefined,
+  children: undefined
 };
 
 export default IndexLayout;

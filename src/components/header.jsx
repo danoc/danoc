@@ -1,28 +1,42 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
+import styled from "styled-components";
+import * as s from "../styles";
+
+const StyledLink = styled(Link)`
+  color: ${s.darkGray};
+  text-decoration: none;
+`;
+
+const Title = styled.h1`
+  font-size: ${props => (props.isSinglePost ? s.f4 : s.f2)};
+  line-height: ${s.lhTitle};
+`;
+
+const Container = styled.header`
+  margin-bottom: ${s.s5};
+`;
 
 const Header = props => (
-  <header className="mb5">
-    <h1 className={props.isSinglePost ? "f3" : "f2"}>
-      <Link className="dark-gray hover-mid-gray link" to="/" rel="author">
-        {props.title}
-      </Link>
-    </h1>
+  <Container>
+    <Title isSinglePost={props.isSinglePost}>
+      <StyledLink className="dark-gray hover-mid-gray link" to="/" rel="author">
+        Daniel O&#8217;Connor
+      </StyledLink>
+    </Title>
     {props.children}
-  </header>
+  </Container>
 );
 
 Header.propTypes = {
-  title: PropTypes.string,
   children: PropTypes.node,
-  isSinglePost: PropTypes.bool,
+  isSinglePost: PropTypes.bool
 };
 
 Header.defaultProps = {
-  title: "Daniel O&#8217;Connor",
   children: undefined,
-  isSinglePost: false,
+  isSinglePost: false
 };
 
 export default Header;

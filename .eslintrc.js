@@ -11,12 +11,17 @@ module.exports = {
     graphql: false,
     URL: false
   },
-  settings: { "import/core-modules": ["tachyons-sass"] },
   rules: {
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
         specialLink: ["to"]
+      }
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        allowTaggedTemplates: true
       }
     ]
   }

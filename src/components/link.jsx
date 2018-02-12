@@ -5,23 +5,11 @@ import isRelativeUrl from "is-relative-url";
 
 const Link = props => {
   if (props.to && isRelativeUrl(props.to)) {
-    return (
-      <GatsbyLink
-        to={props.to}
-        title={props.title}
-        className={`link ${props.className}`}
-      >
-        {props.children}
-      </GatsbyLink>
-    );
+    return <GatsbyLink {...props}>{props.children}</GatsbyLink>;
   }
 
   return (
-    <a
-      href={props.to}
-      title={props.title}
-      className={`link ${props.className}`}
-    >
+    <a href={props.to} title={props.title} {...props}>
       {props.children}
     </a>
   );
@@ -30,13 +18,11 @@ const Link = props => {
 Link.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
-  className: PropTypes.string,
-  to: PropTypes.string.isRequired,
+  to: PropTypes.string.isRequired
 };
 
 Link.defaultProps = {
-  title: undefined,
-  className: "blue hover-dark-blue underline",
+  title: undefined
 };
 
 export default Link;

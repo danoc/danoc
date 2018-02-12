@@ -30,6 +30,7 @@ Below are some notes from each of the three talks.
 * Joel Spolsky said the [worst mistake a company can make is to rewrite from scratch](http://www.joelonsoftware.com/articles/fog0000000069.html).
 
 ## "Inside the Airbnb Brand Evolution" by [Fiona Tay](https://twitter.com/msfionatay) of Airbnb
+
 * Rebranding was not as easy as changing the logo and a few hex codes.
 * Dealing with lots of legacy code.
 * **Quick growth makes it hard to write good code.**
@@ -40,6 +41,7 @@ Below are some notes from each of the three talks.
 * They store O2 in a separate repository and import it with NPM. Custom SCSS that O2 doesn't provide is written in the Airbnb repository, not the O2 repository.
 
 ## "Implementing a Visual CSS Testing Framework" of [@jessicard](https://twitter.com/msfionatay) of Bugsnag
+
 * They wanted to visually test CSS by creating diffs and couldn't find a good tool, so they created one.
 * Added save screenshot function calls in their rspec tests.
 * Use BuildKite for their CI.

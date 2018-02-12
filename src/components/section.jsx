@@ -1,50 +1,70 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import Link from "../components/link";
+import * as s from "../styles";
 
-const sectionHeadingClasses = "db f4 pb2 bb b--light-gray measure fw6";
+const SectionTitle = styled.span`
+  color: ${s.darkGray};
+  font-size: ${s.f4};
+  text-decoration: none;
+  padding-bottom: ${s.s2};
+  border-bottom: 1px solid ${s.lightGray};
+  display: block;
+`;
+
+const SectionTitleLink = SectionTitle.withComponent(Link);
+
+const ViewMoreLink = styled(Link)`
+  font-size: ${s.f6};
+  color: ${s.gray};
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: ${s.s3};
+`;
+
+const Container = styled.section`
+  margin-bottom: ${s.s5};
+`;
+
+const H2 = styled.h2`
+  margin-top: ${s.s0};
+  margin-bottom: ${s.s3};
+`;
 
 const Section = props => (
-  <section className="mb5">
-    <h2>
+  <Container>
+    <H2>
       {props.to ? (
-        <Link
-          className={`${sectionHeadingClasses} dark-gray hover-gray link`}
-          to={props.to}
-          title={props.callToAction}
-        >
+        <SectionTitleLink to={props.to} title={props.callToAction}>
           {props.title}
-        </Link>
+        </SectionTitleLink>
       ) : (
-        <span className={sectionHeadingClasses}>{props.title}</span>
+        <SectionTitle>{props.title}</SectionTitle>
       )}
-    </h2>
+    </H2>
 
     {props.children}
 
     {props.to &&
       props.callToAction && (
-        <Link
-          className="dib pv2 gray hover-dark-gray link f6 fw4 ttu tracked"
-          to={props.to}
-        >
-          {props.callToAction} →
-        </Link>
+        <ViewMoreLink to={props.to}>{props.callToAction} →</ViewMoreLink>
       )}
-  </section>
+  </Container>
 );
 
 Section.propTypes = {
   to: PropTypes.string,
   callToAction: PropTypes.string,
   title: PropTypes.string.isRequired,
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 Section.defaultProps = {
   to: undefined,
   callToAction: undefined,
-  children: undefined,
+  children: undefined
 };
 
 export default Section;

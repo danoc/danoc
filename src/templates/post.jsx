@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import styled from "styled-components";
+import * as s from "../styles";
 import Header from "../components/header";
 import "../styles/prism-ghcolors.css";
 
@@ -26,6 +28,81 @@ const formatDate = date => {
 
   return `${monthNames[monthIndex]} ${day}, ${year}`;
 };
+
+const Time = styled.time`
+  color: ${s.gray};
+  text-transform: uppercase;
+  font-size: ${s.f6};
+  letter-spacing: ${s.tracked};
+`;
+
+const Markdown = styled.div`
+  line-height: ${s.lhCopy};
+
+  h1 {
+    margin-top: ${s.s0};
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: ${s.titleMarginTop} 0 ${s.titleMarginBottom};
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    max-width: ${s.measureWide};
+  }
+
+  p {
+    margin-bottom: ${s.paragraphBottomMargin};
+  }
+
+  ul,
+  ol {
+    max-width: ${s.measureWide};
+    padding-left: ${s.s4};
+  }
+
+  hr {
+    border-top: 1px solid ${s.lightGray};
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    margin: ${s.s5} ${s.s0};
+  }
+
+  blockquote {
+    max-width: ${s.measureWide};
+    padding-left: ${s.s3};
+    margin-left: ${s.s0};
+    border-left: 1px solid ${s.lightGray};
+  }
+
+  img {
+    border: 1px solid ${s.lightGray};
+    padding: 1px;
+  }
+
+  .gatsby-resp-image-link {
+    + em {
+      color: ${s.gray};
+      display: block;
+      margin: ${s.s3} ${s.s2};
+      font-size: ${s.f6};
+    }
+
+    &:hover img {
+      border-color: ${s.moonGray};
+    }
+  }
+`;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
@@ -97,10 +174,8 @@ const Post = ({ data }) => {
               content={site.siteUrl + post.frontmatter.path}
             />
           )}
-        {post.frontmatter.description ? (
+        {post.frontmatter.description && (
           <meta name="description" content={post.frontmatter.description} />
-        ) : (
-          <meta name="description" content={site.description} />
         )}
         {post.frontmatter.description && (
           <meta
@@ -119,16 +194,16 @@ const Post = ({ data }) => {
         )}
       </Helmet>
 
-      <Header title={site.title} isSinglePost />
+      <Header isSinglePost />
 
-      <time
+      <Time
         dateTime={post.frontmatter.date}
         itemProp="datePublished"
         title={new Date(post.frontmatter.date).toString()}
         className="gray fw4 f6 ttu tracked"
       >
         {formatDate(new Date(post.frontmatter.date))}
-      </time>
+      </Time>
 
       <h1 itemProp="headline" className="f2 measure mt3 mb4 dark-gray lh-title">
         {post.frontmatter.title}
@@ -146,9 +221,8 @@ const Post = ({ data }) => {
           />
         )}
 
-      <div
+      <Markdown
         itemProp="articleBody"
-        className="markdown"
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
     </div>
@@ -207,8 +281,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteUrl
-        title
-        description
       }
     }
   }

@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Header from "../../components/header";
 import Section from "../../components/section";
-import ArticleListItem from "../../components/article-list-item";
 import BulletList from "../../components/bullet-list";
 
 const BlogIndex = ({ data }) => {
@@ -10,19 +9,15 @@ const BlogIndex = ({ data }) => {
 
   return (
     <div>
-      <Header title="Daniel O&#8217;Connor" isSinglePost />
+      <Header isSinglePost />
       <Section title="Writing" to="/blog/">
-        <BulletList>
-          {posts.map(post => (
-            <ArticleListItem
-              to={post.node.frontmatter.path}
-              key={post.node.frontmatter.path}
-              date={post.node.frontmatter.date}
-            >
-              {post.node.frontmatter.title}
-            </ArticleListItem>
-          ))}
-        </BulletList>
+        <BulletList
+          items={posts.map(p => ({
+            to: p.node.frontmatter.path,
+            title: p.node.frontmatter.title,
+            meta: p.node.frontmatter.date
+          }))}
+        />
       </Section>
     </div>
   );
@@ -31,11 +26,11 @@ const BlogIndex = ({ data }) => {
 export default BlogIndex;
 
 BlogIndex.propTypes = {
-  data: PropTypes.shape({}),
+  data: PropTypes.shape({})
 };
 
 BlogIndex.defaultProps = {
-  data: {},
+  data: {}
 };
 
 export const pageQuery = graphql`

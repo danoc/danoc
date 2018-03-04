@@ -14,7 +14,6 @@ path: /blog/take-to-college-returns/
 
 ![Screenshot of Take to College](./take-to-college.png)
 
-
 I created [Take to College](http://taketocollege.com/) in Nov. 2009 as a senior in high school. What started as a static one-page website got 150,000 visits and 2,500 likes on Facebook in its first three months of summer. It was quickly profitable thanks to Google AdSense and Amazon affiliate links.
 
 The success inspired me to learn PHP and the next year I created a dynamic version that featured user accounts, customizable lists, and integrated the Facebook API.

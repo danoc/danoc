@@ -38,6 +38,6 @@ I worked on it over winter break with seven other developers to teach them about
 
 I've been working on the early stages of a journalism startup I plan to launch next Fall. More details to come!
 
-***
+---
 
 It's going to be a busy semester, but lots of exciting projects in the pipeline!

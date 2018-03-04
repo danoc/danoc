@@ -15,7 +15,6 @@ I got a Facebook message a few days ago from the Editor in Chief asking if the P
 
 ![Screenshot of a WordPress Pharma Hack Google result](./pharma-hack-google-result.png)
 
-
 The hack became clear the next day as a Google search for Pipe Dream returned results titled _"#1 - kamagra gold 100 mg. FDA Approved Pharmacy. Good Quality …"_. Fetching bupipedream.com as a Googlebot through Google Webmaster tools indicated that the hack targeted spiders and bots.
 
 Some more searching led me to a great article explaining the [infamous WordPress "Pharma" hack](http://blog.sucuri.net/2010/07/understanding-and-cleaning-the-pharma-hack-on-wordpress.html).

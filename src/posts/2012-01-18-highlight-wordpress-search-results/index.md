@@ -12,6 +12,7 @@ tags:
 tumblr_url: http://blog.danoc.me/post/16096405227/highlight-wordpress-search-results
 path: /blog/highlight-wordpress-search-results/
 ---
+
 I was looking ways to highlight search results in `search.php` and [found this easy solution](http://www.wpbeginner.com/wp-tutorials/how-to-highlight-the-search-terms-in-results-in-wordpress/). I've modified it a bit to highlight the post's excerpt as well.
 
 ```php

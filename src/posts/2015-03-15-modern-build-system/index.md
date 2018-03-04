@@ -10,7 +10,6 @@ I'd like to share a thing or two about the build system and development environm
 
 What follows is a description of <s>over engineering a personal website</s> all these technologies and implementation tips.
 
-
 ## Overview
 
 This blog post was written in [Markdown](http://daringfireball.net/projects/markdown/) and compiled into HTML using [Jekyll](http://jekyllrb.com/). [gulp](http://gulpjs.com/) uses custom tasks to compile [`.less` files](http://lesscss.org/) into CSS, add vendor prefixes, and minify the files.
@@ -24,7 +23,6 @@ This website uses [Git](http://git-scm.com/) for version control, is hosted on [
 Third party packages are installed locally using [NPM](https://www.npmjs.com/), [Bundler](http://bundler.io/), and [Bower](http://bower.io/).
 
 You can see the [view the source of this blog post](https://github.com/danoc/danoc.me/blob/master/_posts/2015-03-16-modern-build-system.md) on GitHub.
-
 
 ## Installing the website locally
 
@@ -43,7 +41,6 @@ At this point, gulp will perform a various build tasks and open the website in a
 
 I've installed gulp globally on my machine using `npm install --global gulp` so I can run `gulp` without typing the long path in the example above.
 
-
 ## Using gulp, Jekyll, and BrowserSync
 
 Compiling LESS, concatenating files, and minifying images is easy with gulp. Searching for "gulp minify css" on Google turns up [gulp-minify-css](https://www.npmjs.com/package/gulp-minify-css), an NPM package that comes with code samples.
@@ -57,9 +54,9 @@ You can take a look at the entire [`gulpfile.js` on GitHub](https://github.com/d
 I require `brower-sync` for, well, BrowserSync, and `yargs` plus `child_process` to run `jekyll build`.
 
 ```js
-var args = require('yargs').argv;
-var browserSync = require('browser-sync');
-var childProcess = require('child_process');
+var args = require("yargs").argv;
+var browserSync = require("browser-sync");
+var childProcess = require("child_process");
 ```
 
 ### Watching Jekyll files in the `default` task
@@ -67,17 +64,17 @@ var childProcess = require('child_process');
 Jekyll files that should trigger a rebuild when modified are stored in a variable called `jekyllPaths`.
 
 ```js
-var jekyllPaths = ['index.html', '_layouts/*.html', '_posts/*', '_drafts/*'];
+var jekyllPaths = ["index.html", "_layouts/*.html", "_posts/*", "_drafts/*"];
 ```
 
 They are watched using `gulp.watch()` in the `default` task. `default` is normally the first task that runs when you execute `gulp` in the command line, but gulp runs the `browserSync`, `less`, `css`, and `img` tasks first since they are defined as dependencies.
 
 ```js
-gulp.task('default', ['browserSync', 'less', 'css', 'img'], function() {
-  gulp.watch(assets['src']['css'], ['css']);
-  gulp.watch(assets['src']['img'], ['img']);
-  gulp.watch(assets['src']['less'], ['less']);
-  gulp.watch(jekyllPaths, ['jekyllRebuild']);
+gulp.task("default", ["browserSync", "less", "css", "img"], function() {
+  gulp.watch(assets["src"]["css"], ["css"]);
+  gulp.watch(assets["src"]["img"], ["img"]);
+  gulp.watch(assets["src"]["less"], ["less"]);
+  gulp.watch(jekyllPaths, ["jekyllRebuild"]);
 });
 ```
 
@@ -87,10 +84,10 @@ The `default` task depends on `browserSync`, which looks like this:
 
 ```js
 // Start BrowserSync to view the website
-gulp.task('browserSync', ['jekyllBuild'], function() {
+gulp.task("browserSync", ["jekyllBuild"], function() {
   browserSync({
     server: {
-      baseDir: '_site'
+      baseDir: "_site"
     }
   });
 });
@@ -106,15 +103,14 @@ You'll notice that the `browserSync` task depends on `jekyllBuild`. We use [Node
 
 ```js
 // Build the Jekyll website
-gulp.task('jekyllBuild', ['img', 'css', 'less'], function(done) {
-  var args = ['build'];
+gulp.task("jekyllBuild", ["img", "css", "less"], function(done) {
+  var args = ["build"];
 
   if (!isProduction) {
-    args.push('--drafts');
+    args.push("--drafts");
   }
 
-  return childProcess.spawn('jekyll', args)
-    .on('close', done);
+  return childProcess.spawn("jekyll", args).on("close", done);
 });
 ```
 
@@ -122,13 +118,11 @@ There is a similar task called `jekyllRebuild` that runs when a file in `jekyllP
 
 You might notice that the `jekyllBuild` task depends on the `img`, `css`, and `less` tasks. I'm not going to touch on those because there are tons of existing resources online. Feel free to poke around the entire [`gulpfile.js` on GitHub](https://github.com/danoc/danoc.me/blob/master/gulpfile.js) to learn more.
 
-
 ## Using Bundler and NPM and Bower
 
 This website uses three package managers: Bundler, NPM, and Bower. Bundler is used to manage Ruby gems, NPM manages Node.js programs, and Bower manages front-end frameworks and libraries.
 
 I [currently use Bundler](https://github.com/danoc/danoc.me/blob/master/Gemfile) to install Capistrano, Jekyll and Rogue, [NPM to install](https://github.com/danoc/danoc.me/blob/master/package.json) BrowserSync, Gulp, a bunch of Gulp dependencies, and even install Bower. Currently [I only use Bower](https://github.com/danoc/danoc.me/blob/master/bower.json) to download [Normalize.css](https://github.com/necolas/normalize.css/).
-
 
 ## Deploying Jekyll with Capistrano
 
@@ -176,7 +170,6 @@ I use Apache on my Digital Ocean VPS and point the danoc.me `DocumentRoot` to `/
 
 Two things to note: Capistrano is able to run `sudo bundle install` without password prompts because of [passwordless sudo](http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/#authorisation). Also, the `bundle` and `npm` tasks each have their own depencies and must be installed on the server.
 
-
 ## Files to `.gitignore`
 
 This complex build system creates many files and directories that should be ignored in Git.
@@ -188,7 +181,6 @@ These are some of the types of files and directories I ignore:
 * System and editor files such as the infamous `.DS_Store`.
 
 [Most of my `.gitignore`](https://github.com/danoc/danoc.me/blob/master/.gitignore) comes from [gitignore.io](https://www.gitignore.io/), a website that creates customized `.gitignore` files.
-
 
 ## Conclusion
 

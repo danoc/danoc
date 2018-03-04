@@ -14,5 +14,4 @@ path: /blog/this-facebook-notice-took-way-too-long-to-design/
 
 ![Screenshot of the Pipe Dream social reader integration](./pipe-dream-social-reader.png)
 
-
 This Facebook notice took way too long to design.

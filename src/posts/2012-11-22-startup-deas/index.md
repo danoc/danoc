@@ -15,7 +15,7 @@ path: /blog/startup-deas/
 ---
 
 > If you know a lot about programming and you start learning about some other
-field, you'll probably see problems that software could solve.
+> field, you'll probably see problems that software could solve.
 >
 > &mdash; Paul Graham, _[How to Get Startup Ideas](http://paulgraham.com/startupideas.html)_
 

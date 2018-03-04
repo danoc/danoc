@@ -13,5 +13,4 @@ path: /blog/facebook-newsfeed/
 
 ![Screenshot of the a Pipe Dream article on Facebook](./pipe-dream-facebook-newsfeed.png)
 
-
 I love the emphasis on photos in the new layout for shared links on Facebook.

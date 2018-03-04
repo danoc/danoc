@@ -10,7 +10,6 @@ is_featured: true
 canonical: https://medium.com/design-optimizely/design-consistency-developer-productivity-e6850d378fd6
 ---
 
-
 The goal of a UI Engineer at Optimizely is to make it easy to implement high-quality UIs that look and behave consistently. That’s why we’re [on the design team](https://medium.com/design-optimizely/why-we-hire-ui-engineers-on-optimizely-s-design-team-b2a789553b79) and why we spend 20% of our time [paying down design debt](https://medium.com/design-optimizely/pay-down-design-debt-with-polish-day-867eb59dd83d).
 
 The other 80% of our time is spent building out a design system to programmatically encourage design consistency and improve developer productivity.
@@ -45,9 +44,9 @@ The first implementations of our Token looked like the screenshot above, but, as
 
 This addition to our Token was not envisioned when the pattern was created, so we had to write some code to style the text. There are two ways to do this:
 
-1. **Scalable-ish Solution:** Update the SCSS file to include a new class such as `token__label` that sets the text color to a dark gray. (It’s “scalable-ish” because the HTML is still duplicated.)
+1.  **Scalable-ish Solution:** Update the SCSS file to include a new class such as `token__label` that sets the text color to a dark gray. (It’s “scalable-ish” because the HTML is still duplicated.)
 
-2. **One-off Solution:** Add the additional text to the duplicated markup and wrap it in a `muted` class to change the text color.
+2.  **One-off Solution:** Add the additional text to the duplicated markup and wrap it in a `muted` class to change the text color.
 
 The Token, in this particular case, was updated by adding the `muted` class to the text in the duplicated markup. This quick patch makes it incredibly hard to refactor or redesign our Token in the future.
 
@@ -61,14 +60,12 @@ We quickly realized that we need to build a system that encourages creating reus
 
 We started moving Optimizely’s frontend over to React in mid-2016. While the Frontend Engineers were excited about performance improvements, I was excited about adopting a framework that encourages reusability.
 
-Unlike our previous Bootstrap-esque components, engineers using our React components don’t have to think about CSS *or* HTML. A Token with a close button, for example, looks like this:
+Unlike our previous Bootstrap-esque components, engineers using our React components don’t have to think about CSS _or_ HTML. A Token with a close button, for example, looks like this:
 
 ```js
-import { Token } from 'optimizely-oui';
+import { Token } from "optimizely-oui";
 
-<Token isDismissible={ true }>
-    Visit Page: Homepage
-</Token>
+<Token isDismissible={true}>Visit Page: Homepage</Token>;
 ```
 
 Under the hood, React — with the help of a few other tools — will render the HTML to display a Token. It’s able to do so because [we’ve written the HTML once in OUI](https://github.com/optimizely/oui/blob/77e7394a2d7fc2915eff3dfaacc63e4c8dc9e24f/src/components/Token/index.js), Optimizely’s UI library, and “taught it” how to show a close button.
@@ -82,26 +79,26 @@ We’ve seen both consistency, productivity, and quality improvements from adopt
 **Consistency Improvements:** React allows us to prevent one-off overrides of our reusable UI components because we’ve decided not to expose the [React `className` prop](https://facebook.github.io/react/docs/dom-elements.html). This means that components that use a Token component can’t pass it a string of helper classes or directly modify its inner HTML.
 
 ![Screenshot of Optimizely's BlockList React component](./blocklist.png)
-*Developing our components in an isolated environment encourages us to “stress test” them.*
+_Developing our components in an isolated environment encourages us to “stress test” them._
 
 **Quality Improvements:** UI components like Token, Button, and Input live in OUI, a separate repository that is maintained by myself and the other UI Engineers. This has two big advantages:
 
 * We are encouraged to consider edge cases since we don’t see where or how a component will be used. (When we miss an edge case, we can fix the bug once, release a new version of OUI, and all instances of the component will benefit.)
 * Changes to components must go through UI Engineers. This short-term productivity hit encourages Frontend Engineers, Product Designers, and UI Engineers to communicate and helps ensure that we are building thoughtful and reusable components.
 
-***
+---
 
 ## In Practice
 
 As UI Engineers, our “customers” are the designers and developers at Optimizely. To make sure we’re serving them well, we’ve invested in tooling to track key metrics over time and track qualitative feedback through a bi-annual survey.
 
 ![Screenshot of chart showing React component metrics](./react-component-metrics.png)
-*Approximately 60% of our React components used come from our UI library.*
+_Approximately 60% of our React components used come from our UI library._
 
 Our first React components landed in the Optimizely codebase on July 2016. Since then, our engineers have used React components 820 times and 30% of our components have been converted from (an old version of) Vue.js to React.
 
 We’ve also seen promising signs in our bi-annual survey. All engineers in our most recent survey either “Agree” or “Strongly Agree” that they are building UIs faster now than three months ago. Many of the comments attributed this to the React UI components and increased ease-of-use.
 
-***
+---
 
 Here at Optimizely, we’ve invested heavily in building out a design system that encourages design consistency and improves developer productivity. This goal is aspirational, non-prescriptive, and is designed to evolve as Optimizely continues to grow. While React and other frameworks like Angular or Vue.js are helpful, they are only a small piece of the puzzle. A successful design system also needs thorough documentation and internal champions to drive the adoption that will ultimately impact the company’s bottom line. When these pieces start falling into place, everyone’s jobs get easier and we’re able deliver great customer experiences.

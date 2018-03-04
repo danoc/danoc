@@ -13,7 +13,6 @@ path: /blog/wordpress-article-deck/
 
 ![Screenshot of the Article Deck WordPress plugin](./article-deck-wordpress-plugin.png)
 
-
 I just released [WordPress Article Deck](https://github.com/bupipedream/WordPress-Article-Deck), Pipe Dream's second GitHub repository. As the name implies, the simple plugin lets you easily add a deck to an article when creating a new post.
 
 Thanks to a [WP Tuts+ tutorial by Christopher Davis](http://wp.tutsplus.com/tutorials/plugins/how-to-create-custom-wordpress-writemeta-boxes/) for the great explanation.

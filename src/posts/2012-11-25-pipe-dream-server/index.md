@@ -18,7 +18,6 @@ path: /blog/pipe-dream-server/
 
 ![Screenshot of the Linode login page](./linode-manager-login.png)
 
-
 I decided to move the Pipe Dream website to a Linode VPS when we made [the switch from College Publisher to WordPress](http://blog.danoc.me/2012/03/04/from-college-publisher-to-wordpress.html). A VPS offered the flexibility to play around with tools such as Git and would force me to learn a bit about server management. It was a welcome change from the College Publisher days when they hosted the server and required a three month notice to export our data (to a terribly formatted text file).
 
 The move to a VPS caused problems as I [struggled to keep the server online](http://blog.danoc.me/2012/03/24/spring-fling-concert-announcement-takes-down-the-pipe.html). Poor Apache, MySQL, and PHP configurations were the main culprits. I made some changes and, to my surprise, the server barely broke a sweat when [a controversial column went viral](http://blog.danoc.me/2012/07/07/recent-updates.html) and brought record traffic (maxed at 360+ active visitors).
@@ -55,16 +54,16 @@ Instead of configuring phpMyAdmin, I'm using [Sequel Pro](http://www.sequelpro.c
 
 ### Other Notes
 
-  * **Log Files** \- Apache and system log files are now monitored and properly rotated using `logrotate`.
-  * **Passwords** \- Every password is a randomly generated 18 character combination of numbers, letters, and special characters. All WordPress passwords had to be reset as well.
-  * **Optimizations** \- Linode has some [suggested Apache, MySQL, and PHP configurations](http://library.linode.com/hosting-website) that work well as a starting point.
-  * **Tools** \- We use `node-less`, a command line compiler for LESS, to compile our LESS files before deployment.
+* **Log Files** \- Apache and system log files are now monitored and properly rotated using `logrotate`.
+* **Passwords** \- Every password is a randomly generated 18 character combination of numbers, letters, and special characters. All WordPress passwords had to be reset as well.
+* **Optimizations** \- Linode has some [suggested Apache, MySQL, and PHP configurations](http://library.linode.com/hosting-website) that work well as a starting point.
+* **Tools** \- We use `node-less`, a command line compiler for LESS, to compile our LESS files before deployment.
 
 ### To-Do
 
 Of course, there's a lot of work to be done. A few things come to mind:
 
-  * **Emails** \- We use Google Apps for our primary emails, but the server needs to send outgoing mail. I'm going to try to get [nullmailer](http://untroubled.org/nullmailer/) to work with [Amazon SES](http://aws.amazon.com/ses/).
-  * **Monitoring** \- I'm going to use monit to monitor the server and send alerts. It can be used to warn of memory issues and ensure that core WordPress files are not touched.
+* **Emails** \- We use Google Apps for our primary emails, but the server needs to send outgoing mail. I'm going to try to get [nullmailer](http://untroubled.org/nullmailer/) to work with [Amazon SES](http://aws.amazon.com/ses/).
+* **Monitoring** \- I'm going to use monit to monitor the server and send alerts. It can be used to warn of memory issues and ensure that core WordPress files are not touched.
 
 I'd love to hear from other college newspaper's hosting their own websites. Leave a comment or reach out at [daniel@danoc.me](mailto:daniel@danoc.me).

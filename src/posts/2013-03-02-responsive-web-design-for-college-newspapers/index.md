@@ -14,7 +14,7 @@ path: /blog/responsive-web-design-for-college-newspapers/
 
 Saturday morning I spoke about responsive web development for college newspapers at the ACP Midwinter National College Journalism Convention in San Francisco. As promised, here are the slides and notes.
 
-***
+---
 
 ## State of the Web
 
@@ -22,11 +22,11 @@ Mobile traffic is quickly increasing as we become more connected than ever. At [
 
 ## Examples
 
-  * **[Boston Globe](http://bostonglobe.com/)** (Sept. 2011) - Set the bar and started a trend
-  * **[TIME](http://time.com)** (Oct. 2012) - Over 12% of traffic to TIME comes from social meida. They are doing so on mobile.
-  * **[Pipe Dream](http://bupd.me/)** (Feb. 2012) - Redesign I led back in 2012.
-  * **[Daily Orange](http://dailyorange.com/)** (Aug. 2012) - Created by the makers of the Boston Globe website.
-  * **[Daily Kansan](http://kansan.com/)** (Aug. 2012)
+* **[Boston Globe](http://bostonglobe.com/)** (Sept. 2011) - Set the bar and started a trend
+* **[TIME](http://time.com)** (Oct. 2012) - Over 12% of traffic to TIME comes from social meida. They are doing so on mobile.
+* **[Pipe Dream](http://bupd.me/)** (Feb. 2012) - Redesign I led back in 2012.
+* **[Daily Orange](http://dailyorange.com/)** (Aug. 2012) - Created by the makers of the Boston Globe website.
+* **[Daily Kansan](http://kansan.com/)** (Aug. 2012)
 
 ## Ditch the App
 
@@ -65,8 +65,11 @@ Your website should now contract as you make the browser window smaller. The con
 Now that our layout is fluid, we must ensure that images and media resize appropriately. To do this, add the following code to your CSS rules:
 
 ```css
-img, embed, object, video {
-    max-width: 100%;
+img,
+embed,
+object,
+video {
+  max-width: 100%;
 }
 ```
 
@@ -95,7 +98,7 @@ Mobile browsers assume that web pages are designed for desktops and zoom out the
 
 This tells the browser that the width of the page is equal to the device's width and the browser should not be zoomed in when loading the page.
 
-***
+---
 
 A responsive website has a fluid layout, flexible images and media, and many media queries.
 
@@ -117,15 +120,15 @@ There are many different ways to [target specific viewports with JavaScript](htt
 
 ## Tools
 
-  * [Responsive Design Bookmarklet](http://responsive.victorcoulon.fr/) \- Simulate your website on multiple devices.
-  * [Chrome Developer Toolbar](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm) \- Used to find the "breakpoints" in your design. In other words, the toolbar can be used to determine the viewport width when resizing the browser.
+* [Responsive Design Bookmarklet](http://responsive.victorcoulon.fr/) \- Simulate your website on multiple devices.
+* [Chrome Developer Toolbar](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm) \- Used to find the "breakpoints" in your design. In other words, the toolbar can be used to determine the viewport width when resizing the browser.
 
 ## Further Reading
 
-  * [Responsive Web Development](http://www.abookapart.com/products/responsive-web-design) by Ethan Marcotte - Great book by the man that coined the term.
-  * [HTML and CSS Guide](http://htmldog.com/) on HTML Dog - A bit outdated, but a good website for learning HTML and CSS.
+* [Responsive Web Development](http://www.abookapart.com/products/responsive-web-design) by Ethan Marcotte - Great book by the man that coined the term.
+* [HTML and CSS Guide](http://htmldog.com/) on HTML Dog - A bit outdated, but a good website for learning HTML and CSS.
 
-***
+---
 
 I hope the talk taught everyone a bit about responsive web development. It's not magic — there _is_ a learning curve. That said, this is something that can be learned in a summer.
 

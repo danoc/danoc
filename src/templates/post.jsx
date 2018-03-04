@@ -85,6 +85,10 @@ const Markdown = styled.div`
     border-left: 1px solid ${s.lightGray};
   }
 
+  code {
+    font-size: ${s.f6};
+  }
+
   img {
     border: 1px solid ${s.lightGray};
     padding: 1px;

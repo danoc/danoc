@@ -18,6 +18,10 @@ injectGlobal`
       outline: 1px dotted currentColor;
     }
   }
+
+  code, pre {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
 `;
 
 const Container = styled.div`

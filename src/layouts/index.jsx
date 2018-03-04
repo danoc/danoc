@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import hexToRgba from "hex-rgba";
 import styled, { injectGlobal } from "styled-components";
 import "normalize.css";
 import Link from "../components/link";
@@ -17,10 +18,26 @@ injectGlobal`
     :focus {
       outline: 1px dotted currentColor;
     }
+
+    :hover {
+      color: ${s.darkBlue};
+      border-radius: 1px;
+      background: ${hexToRgba(s.blue, 5)};
+      box-shadow: 0 0 0 4px ${hexToRgba(s.blue, 5)};
+    }
+
+    :active {
+      color: ${s.darkGray};
+    }
   }
 
   code, pre {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 `;
 

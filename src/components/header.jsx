@@ -7,6 +7,12 @@ import * as s from "../styles";
 const StyledLink = styled(Link)`
   color: ${s.darkGray};
   text-decoration: none;
+
+  &:hover {
+    background: none;
+    box-shadow: none;
+    color: inherit;
+  }
 `;
 
 const Title = styled.h1`

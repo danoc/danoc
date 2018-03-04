@@ -29,6 +29,7 @@
     "gatsby-source-pinboard": "^0.1.2",
     "gatsby-transformer-remark": "^1.7.31",
     "gatsby-transformer-sharp": "^1.6.18",
+    "hex-rgba": "^1.0.2",
     "is-relative-url": "^2.0.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.0",

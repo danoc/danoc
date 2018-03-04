@@ -19,7 +19,6 @@ const UL = styled.ul`
 const H3 = styled.h3`
   font-size: ${s.f5};
   font-weight: ${props => (props.hasDescriptions ? 500 : 400)};
-  display: inline;
   margin-top: ${s.s0};
   margin-bottom: ${s.s0};
   flex: 1;
@@ -30,11 +29,13 @@ const Meta = styled.span`
   color: ${s.gray};
   display: block;
   text-align: right;
+  font-size: ${s.f6};
   margin-left: ${s.s3};
 `;
 
 const Row = styled.div`
   display: inline-flex;
+  align-items: center;
   width: 100%;
   margin-bottom: ${s.s2};
 `;

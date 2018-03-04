@@ -2,7 +2,8 @@ export const darkGray = "#333";
 export const gray = "#777";
 export const moonGray = "#ccc";
 export const lightGray = "#eee";
-export const blue = "#357edd";
+export const blue = "#086cb7";
+export const darkBlue = "#025696";
 
 export const s0 = "0rem";
 export const s1 = "0.25rem";

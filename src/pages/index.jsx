@@ -6,6 +6,26 @@ import Header from "../components/header";
 import Paragraph from "../components/paragraph";
 import BulletList from "../components/bullet-list";
 
+const formatDate = dateString => {
+  const months = [
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
+    "May",
+    "Jun.",
+    "Jul.",
+    "Aug.",
+    "Sep.",
+    "Oct.",
+    "Nov.",
+    "Dec."
+  ];
+
+  const date = new Date(dateString);
+  return `${months[date.getMonth()]} ${date.getFullYear()}`;
+};
+
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const bookmarks = data.allPinboardBookmark.edges;
@@ -25,7 +45,7 @@ const IndexPage = ({ data }) => {
           items={posts.map(p => ({
             to: p.node.frontmatter.path,
             title: p.node.frontmatter.title,
-            meta: p.node.frontmatter.date
+            meta: formatDate(p.node.frontmatter.date)
           }))}
         />
       </Section>
@@ -113,14 +133,14 @@ export const pageQuery = graphql`
   query Index {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 3
+      limit: 5
       filter: { frontmatter: { is_featured: { eq: true } } }
     ) {
       edges {
         node {
           frontmatter {
             title
-            date(formatString: "MMMM YYYY")
+            date
             path
           }
         }

@@ -8,9 +8,15 @@ const SectionTitle = styled.span`
   color: ${s.darkGray};
   font-size: ${s.f4};
   text-decoration: none;
-  padding-bottom: ${s.s2};
+  padding-bottom: ${s.s3};
   border-bottom: 1px solid ${s.lightGray};
   display: block;
+
+  &:hover {
+    background: none;
+    box-shadow: none;
+    color: inherit;
+  }
 `;
 
 const SectionTitleLink = SectionTitle.withComponent(Link);

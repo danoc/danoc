@@ -4,6 +4,26 @@ import Header from "../../components/header";
 import Section from "../../components/section";
 import BulletList from "../../components/bullet-list";
 
+const formatDate = dateString => {
+  const months = [
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
+    "May",
+    "Jun.",
+    "Jul.",
+    "Aug.",
+    "Sep.",
+    "Oct.",
+    "Nov.",
+    "Dec."
+  ];
+
+  const date = new Date(dateString);
+  return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+};
+
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
 
@@ -15,7 +35,7 @@ const BlogIndex = ({ data }) => {
           items={posts.map(p => ({
             to: p.node.frontmatter.path,
             title: p.node.frontmatter.title,
-            meta: p.node.frontmatter.date
+            meta: formatDate(p.node.frontmatter.date)
           }))}
         />
       </Section>
@@ -40,7 +60,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date
             path
           }
         }

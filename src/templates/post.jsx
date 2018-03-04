@@ -92,6 +92,7 @@ const Markdown = styled.div`
   img {
     border: 1px solid ${s.lightGray};
     padding: 1px;
+    max-width: 100%;
   }
 
   .gatsby-resp-image-link {

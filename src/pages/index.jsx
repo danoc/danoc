@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
         callToAction="View all bookmarks"
       >
         <Paragraph>
-          A collection of articles and talks that have influenced my work.
+          Collection of articles, videos, and talks that I’d like to share.
         </Paragraph>
         <BulletList
           items={bookmarks.map(p => ({

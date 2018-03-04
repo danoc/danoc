@@ -119,6 +119,7 @@ module.exports = {
     },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sass",
+    "gatsby-plugin-lodash",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-offline",
     {

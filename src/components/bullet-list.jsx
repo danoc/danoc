@@ -40,6 +40,10 @@ const Row = styled.div`
   margin-bottom: ${s.s2};
 `;
 
+const Description = styled.div`
+  margin-bottom: ${s.s4};
+`;
+
 const BulletList = props => (
   <UL hasDescriptions={props.hasDescriptions}>
     {props.items.map(item => (
@@ -50,7 +54,7 @@ const BulletList = props => (
           </H3>
           {item.meta && <Meta>{item.meta}</Meta>}
         </Row>
-        {item.children}
+        {item.children && <Description>{item.children}</Description>}
       </li>
     ))}
   </UL>

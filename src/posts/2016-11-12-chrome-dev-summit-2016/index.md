@@ -105,7 +105,7 @@ Another team at Google is also working to eliminate the friction of app installs
 
 It’s unclear which of these efforts will stick, but it’s increasingly clear that the lines between mobile web and native will continue to blur as new web standards gain wider adoption and companies seek to reduce the cost to acquire a user.
 
-***
+---
 
 Those are the key themes that I noticed at the Chrome Dev Summit. Here a few more random thoughts and tidbits:
 
@@ -116,10 +116,10 @@ Those are the key themes that I noticed at the Chrome Dev Summit. Here a few mor
 * [MotionMark](http://browserbench.org/MotionMark/) is a neat tool for benchmarking your device.
 * Mobile device CPUs are often throttled because they are limited by how much heat the device can dissipate. Alex Russell proved this point by running [MotionMark](http://browserbench.org/MotionMark/) twice on the same phone and getting different scores. The difference? He [strapped an ice pack to the phone](https://youtu.be/4bZvq3nodf4?t=746) the second time around to help the it stay cool.
 * There was a lot of talk about not shipping more JavaScript than needed. [Addy Osmani highlighted](https://www.youtube.com/watch?v=e8XejNt5SZo) a few tools to that help keep bundle sizes small:
-    * [Preact](https://github.com/developit/preact) is a fast 3kb React alternative.
-    * He’s working with webpack to [add performance metrics and budgets](https://github.com/webpack/webpack/issues/3216).
-    * [source-map-explorer](https://github.com/danvk/source-map-explorer) is a neat tool to visualize JS in a bundle.
-    * [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin) makes it easy to generate service workers with webpack.
+  * [Preact](https://github.com/developit/preact) is a fast 3kb React alternative.
+  * He’s working with webpack to [add performance metrics and budgets](https://github.com/webpack/webpack/issues/3216).
+  * [source-map-explorer](https://github.com/danvk/source-map-explorer) is a neat tool to visualize JS in a bundle.
+  * [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin) makes it easy to generate service workers with webpack.
 * Google and the W3C are aggressively pushing HTTPS by [limiting the new APIs available to insecure websites](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only), introducing [design changes to Google Chrome](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html), and investing in [Let’s Encrypt](https://letsencrypt.org/).
 * Polymer initially included complex polyfills to support the [features that make up web components](http://webcomponents.org/). The project becomes less important as custom elements, shadow DOM, and templates receive native browser support. (This is a good thing for the web!)
 * The HTML imports API hasn’t gone anywhere since their implementation is blocked by lack of ES6 modules support within browsers. Chrome developers think it’s unlikely that HTML imports will survive in their current form.
@@ -127,6 +127,6 @@ Those are the key themes that I noticed at the Chrome Dev Summit. Here a few mor
 
 Think I missed something? Leave a comment or [reach out on Twitter](https://twitter.com/_danoc)!
 
-***
+---
 
 Want to implement these concepts at Optimizely? [We’re looking for engineers and engineering managers](http://grnh.se/q6p0dk)!

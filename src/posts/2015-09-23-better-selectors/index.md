@@ -10,13 +10,12 @@ I recently merged a gigantic feature branch at Optimizely that further integrate
 
 The HTML refactor surfaced two critical problems:
 
-1. Our existing integration tests use _very_ specific CSS style selectors to select HTML elements.
-2. There was no quick way to know if removing a `class` or `id` from an HTML element would break functionality in JavaScript.
+1.  Our existing integration tests use _very_ specific CSS style selectors to select HTML elements.
+2.  There was no quick way to know if removing a `class` or `id` from an HTML element would break functionality in JavaScript.
 
 These problems would continue to plague all future HTML refactors if we didn't make changes.
 
 I thought through the problems, spoke to other engineers, and drafted a one-page proposal. These are the best-practices that we agreed on and continue to evangelize.
-
 
 ## Use a custom HTML attribute for integration test selectors
 
@@ -42,7 +41,6 @@ This approach is preferred because it decouples tests and HTML structure. Also, 
 
 Our engineers have written helper functions such as `clickTestSection('name')` that make it easier to select elements, leading to cleaner code and an increased chance that other engineers will use the new convention.
 
-
 ## Prefix JavaScript hooks with `.js-`
 
 **Problem:** It was unclear when removing `id` and `class` attributes from certain elements would break functionality. Removing the `id` from `<button id="submit">Submit</button>`, for example, could prevent form submission if a jQuery selector expected to find `#submit` on the page.
@@ -55,7 +53,7 @@ These classes should only be used as JavaScript hooks and never styled with CSS.
 
 I recommend using a `class` instead of an `id` (despite slightly slower performance) since elements can only have one `id` and the attribute is used as [a fragment identifier in HTML](https://en.wikipedia.org/wiki/Fragment_identifier).
 
-***
+---
 
 The proposal was well received. We have adopted and evangelized these new practices at Optimizely thanks to word of mouth, an email to all engineers, and diligent code reviewers.
 

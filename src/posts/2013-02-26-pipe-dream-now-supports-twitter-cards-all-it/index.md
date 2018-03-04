@@ -13,5 +13,4 @@ path: /blog/pipe-dream-now-supports-twitter-cards-all-it/
 
 ![Screenshot of a Pipe Dream Twitter card](./pipe-dream-twitter-cards.png)
 
-
 Pipe Dream now supports Twitter Cards. All it takes is an application and the correct markup!

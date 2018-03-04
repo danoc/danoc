@@ -12,5 +12,4 @@ path: /blog/database-dump/
 
 ![Screenshot of the College Publisher database export](./college-publisher-export.png)
 
-
 Just got the database export from College Publisher containing every single Pipe Dream article since 2005. Not looking forward to sorting through this mess!

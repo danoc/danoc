@@ -22,7 +22,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * <span class="point">Progressive web apps: web apps that work "better" as they enable push notifications, add to the homescreen, work offline, but don’t rely on these technologies.</span>
 * flipkart.com is a great example of a "progressive web app" on Chrome for Android.
 
-
 ## Developing for Billions
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/9jmqsq2OQjc" frameborder="0" allowfullscreen></iframe>
@@ -33,7 +32,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * There is a very real concern over data usage in some places.
 * Chrome developer tools has a great feature to let users developers a slow connection.
 
-
 ## Deploying HTTPS: The Green Lock and Beyond
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/9WuP4KcDBpI" frameborder="0" allowfullscreen></iframe>
@@ -43,7 +41,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * Instead of showing a neutral looking page icon for non-HTTP sites, Chrome will begin to transition to a negative icon.
 * <span class="point">Chrome will start requiring HTTPS for access to powerful APIs such as the system camera.</span>
 * Included a bunch of security tips that went way over my head.
-
 
 ## Instant Loading with Service Workers
 
@@ -59,11 +56,10 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * <span class="point">Two libraries make this easier:</span> [sw-precache](https://github.com/GoogleChrome/sw-precache) to load the app shell and [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) to help cache the content.
 * [sw-precache](https://github.com/GoogleChrome/sw-precache) integrates with build process and will update the service worker when needed as local files change.
 * [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) provides different loading strategies for various routes.
-    * You can tell it to request data from the cache and network at the same time and then update the cache once the network has new data.
-    * It will help you limit the number of items that can be cached at once. This prevents the cache from getting too large.
+  * You can tell it to request data from the cache and network at the same time and then update the cache once the network has new data.
+  * It will help you limit the number of items that can be cached at once. This prevents the cache from getting too large.
 * <span class="point">This does not mean that we shouldn’t still use cache-busting techniques in file names and long expiring HTTP headers.</span>
 * <span class="point">App shell plus server worker model is the best way to structure web apps for instant load times.</span>
-
 
 ## Increase Engagement with Web Push Notifications
 
@@ -72,7 +68,7 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * Presented by Owen Campbell-Moore, Project Manager on Chrome
 * Engineer at Facebook presented and stressed the importance of the mobile web, not only the native app. The mobile web push notifications were great for engagement.
 * <span class="point">The mobile web push notifications work through service workers. A web server communicates with a push server which communicates with a service worker on the phone. The service worker doesn't have any context or data so it must fetch information from the server.</span>
-* Notifications should be sent for data that is important *and* urgent.
+* Notifications should be sent for data that is important _and_ urgent.
 * Chrome makes it easy to unsubscribe from the notifications.
 * <span class="point">You shouldn't ask for notification permissions on initial page load. Show it after an action so the user understands what the notifications are for.</span>
 * Make it easy for the user to change the types of notifications they receive.
@@ -83,7 +79,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * <span class="point">Custom actions are coming soon.</span> Facebook Messenger, for example, could let users like a post without returning to the app.
 * The push notifications will soon be able to include payload data. This removes the need to make a final request to the server for data.
 * <span class="point">Mobile push notifications are an open standard developed by Google, Mozilla, and others.</span>
-
 
 ## Engaging with the Real World: Web Bluetooth and Physical Web
 
@@ -104,7 +99,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
   * There is no SDK. It's just a URL.
   * Chrome Dev and Opera both have support for this behind a flag.
 
-
 ## Asking for Permission: Respectful, Opinionated UI
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/4QQyjqtHwlY" frameborder="0" allowfullscreen></iframe>
@@ -118,7 +112,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * <span class="point">If the user doesn't grant permission, the UI should update accordingly and handle the failure gracefully.</span>
 * Chrome is working on ways to prevent the abuse of permission requests. Facebook does a great job of this with their application ecosystem.
 
-
 ## Polymer: State of the Union
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/lck68wyVUo4" frameborder="0" allowfullscreen></iframe>
@@ -128,7 +121,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * Polymer 1.2 has made improvements to performance, accessibility, and added new features.
 * We are finally at a time where feature like Web Components and Service Workers make the web a first class platform. We can now build features on that platform on ways it intended and the platform improvements will improve our application.
 * The Polymer team will be adding error checking code (Polylint) and Chrome developer tools (Polydev). Routing, i18n, and lazy-loading.
-
 
 ## Progressive Web Apps
 
@@ -146,7 +138,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * If you hide the browser navigation bar, the app should provide navigation.
 * Developers can listen for the "Add to home screen" event and ask Chrome to wait until a better time.
 
-
 ## Building Progressive Web Apps with Polymer
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/g7f1Az5fxgU" frameborder="0" allowfullscreen></iframe>
@@ -161,20 +152,19 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * Polymer Starter Kit is a project that provides a sample manifest, meta tags, and device icons.
 * Lots of content in this talk was mentioned in previous talks.
 
-
 ## Accessibility
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/RkKl1O56w-c" frameborder="0" allowfullscreen></iframe>
 
 * Presented by Laura Palmaro, Accessibility Program Manager for Chrome and Chrome OS, and Alice Boxhall, Software Engineer on Chrome
 * <span class="point">Types of disabilities that users might:</span>
-    * Fully blind, using screen reader or braille display
-    * Color blind
-    * Hearing impaired, using captions
-    * Users who can’t use a mouse and rely on typing
-    * Users who can’t type and use voice control, an eye tracker, or switch control
-    * Dyslexic users
-    * Aging population
+  * Fully blind, using screen reader or braille display
+  * Color blind
+  * Hearing impaired, using captions
+  * Users who can’t use a mouse and rely on typing
+  * Users who can’t type and use voice control, an eye tracker, or switch control
+  * Dyslexic users
+  * Aging population
 * You don’t have to test your UI on every type of disabled person, but there are some design decisions that can make the website more accessible.
 * <span class="point">Accessibility manual testing checklist</span>
   * Focus/keyboard
@@ -199,7 +189,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * Polymer team writes regression tests for elements.
 * <span class="point">Chrome has an accessibility developer tools plugin: [bit.ly/a11y-devtools](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)</span>
 
-
 ## Introduction to RAIL
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/wO9GGY17NXY" frameborder="0" allowfullscreen></iframe>
@@ -208,11 +197,10 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * The performance/success graph is not linear.
 * <span class="point">The user context matters when speaking of performance. 50ms when scrolling feels like an eternity compared to 50ms on page load.</span>
 * <span class="point">RAIL: Response, Animation, Idle, and Load</span>
-    * <span class="point">Response (100ms):</span> The user feels an instantaneous response because the paint occurred quickly after click.
-    * <span class="point">Animation (16ms):</span> Visual changes feel smooth and consistent.
-    * <span class="point">Idle (50ms):</span> User isn’t interacting with the page yet, but they will be soon. This time should be used to proactively schedule work that will be completed in 50ms chunks.
-    * <span class="point">Load (1s):</span> Getting the first meaningful paint
-
+  * <span class="point">Response (100ms):</span> The user feels an instantaneous response because the paint occurred quickly after click.
+  * <span class="point">Animation (16ms):</span> Visual changes feel smooth and consistent.
+  * <span class="point">Idle (50ms):</span> User isn’t interacting with the page yet, but they will be soon. This time should be used to proactively schedule work that will be completed in 50ms chunks.
+  * <span class="point">Load (1s):</span> Getting the first meaningful paint
 
 ## DevTools in 2015: Authoring to the max
 
@@ -227,7 +215,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * <span class="point">Many animations are a complex combination of small animations. [DevTools can now group these together](https://youtu.be/dJR-n8szgBc?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn&t=1142), allowing developers to slow them down and see a timeline of each animation.</span>
 * Way better service worker tools are on the way in "Resources" tab.
 * <span class="point">[Preview of a new DevTools feature under development](https://youtu.be/dJR-n8szgBc?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn&t=1597) that allows layout manipulation.</span>
-
 
 ## RAIL in the real world
 
@@ -264,7 +251,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
   * <span class="point">Developers can’t control the user’s connection, but they can implement service workers to ensure that subsequent page loads are quick.</span>
 * <span class="point">[webpagetest.org](http://www.webpagetest.org/) is a great resource for measuring performance.</span>
 
-
 ## V8 Performance from the Driver's Seat
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/oDFWIb0pi4U" frameborder="0" allowfullscreen></iframe>
@@ -285,7 +271,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
   * Communicate with engine implementers, StackOverflow, and [v8-users@googlegroups.com](mailto:v8-users@googlegroups.com)
 * <span class="point">Don’t use micro-benchmarks to make design decisions. Developers should look at their app benchmarks, not an isolated environment.</span>
 
-
 ## Quantify and improve real-world RAIL
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/NrEjkflqPxQ" frameborder="0" allowfullscreen></iframe>
@@ -302,14 +287,13 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
   * Animation
     * <span class="point">New API called `IntersectionObserver` will allow developers to determine when a selector is in the viewport without needing to constantly poll on the main thread and block execution of other, higher priority code.</span>
     * How much work can we do in 16ms? It’s way too hard to know upfront.
-    * <span class="point">Frame Timing API:  `PerformanceObservers` will allow developers to listen for slow frames.</span>
+    * <span class="point">Frame Timing API: `PerformanceObservers` will allow developers to listen for slow frames.</span>
   * Idle
     * <span class="point">A new API `window.requestIdleCallback` (mentioned in a previous talk) allows developers to move work into the browser’s idle blocks.</span>
     * Don’t exceed the idle deadlines.
   * Load
     * <span class="point">Make the critical path local with ServiceWorker using the application shell.</span>
     * It’s now possible to measure how long it took to start the service worker.
-
 
 ## Owning your performance: RAIL
 
@@ -335,7 +319,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
   * The functions at the bottom of the "Bottom-Up" pane can also be grouped together by URL.
 * <span class="point">Paul has done many performance audits that are available online.</span>
 
-
 ## HTTP/2 101
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/r5oT_2ndjms" frameborder="0" allowfullscreen></iframe>
@@ -353,7 +336,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * You can see the protocol that an asset was loaded over by showing the "Protocol" column in the table within the DevTools “Network” tab.
 * You can put static assets on an HTTP/2 CDN and serve the rest of the site over HTTP/1.1.
 
-
 ## Building and deploying a Progressive Web App at scale with Flipkart
 
 <iframe width="816" height="459" src="https://www.youtube.com/embed/StdKz32M1RM" frameborder="0" allowfullscreen></iframe>
@@ -363,7 +345,6 @@ The [first edition of the conference was excellent](/blog/chrome-dev-summit-2014
 * The first page load contacts the Node web server and receives the HTML page shell. Subsequent requests go through the service worker.
 * There could be many page shells depending on the complexity of an application. This is not a good thing. It may be better to break the application into many small single-page apps.
 * <span class="point">They were able to achieve 30 ms paint times on 2G after first-load thanks to service workers.</span>
-
 
 ## Leadership Panel
 

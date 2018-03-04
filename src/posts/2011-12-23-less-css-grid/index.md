@@ -29,7 +29,7 @@ width: (@colWidth * @numCol) + (@gutter * (@numCol - 1));
 The variable `@colWidth` is the width of one column (user defined), `@numCol` is the number of the column (so `@numCol` of `.span5` is 5), and `@gutter` is the width, in percent, of the column's right-margin (this is automatically calculated). The formula for calculating the gutter looks like this:
 
 ```less
-@gutter: (100-(@colWidth*@numCols))/(@numCols - 1);
+@gutter: (100- (@colWidth* @numCols))/ (@numCols - 1);
 ```
 
 In this case, `@colWidth` is the width of a single column (user defined) and `@numCols` is the total number of columns.
@@ -38,9 +38,9 @@ Since LESS supports parameters, each column simply calls the following:
 
 ```less
 .column(@numCol) {
-    float: left;
-    margin-right: @gutter;
-    width: (@colWidth * @numCol) + (@gutter * (@numCol - 1));
+  float: left;
+  margin-right: @gutter;
+  width: (@colWidth * @numCol) + (@gutter * (@numCol - 1));
 }
 ```
 

@@ -12,7 +12,6 @@ Adding line numbers and wrapping text is easy: just use a table and make a `tr` 
 
 Preventing the line numbers from being selected and accidentally copied to the clipboard is much trickier.
 
-
 ## An elegant solution using pseudo-elements
 
 Combining pseudo-elements and the CSS `content` property, we can prevent text from being selected _and_ copied to the clipboard.
@@ -41,11 +40,9 @@ Content displayed on a page using the CSS `content` property is never added to t
 
 Despite this, you can [access the `content` values in JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle#Use_with_pseudo-elements) with `getComputedStyle`. The best approach, however, is to use [`element.getAttribute()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) to grab the value of the data attributes directly from the HTML.
 
-
 ## Accessibility concerns
 
 There are a [handful](http://www.karlgroves.com/2013/08/26/css-generated-content-is-not-content/) [of](http://cssgallery.info/testing-the-accessibility-of-the-css-generated-content/) [articles](http://lists.w3.org/Archives/Public/www-style/2010Nov/0437.html) [online](http://www.456bereastreet.com/archive/201205/css_generated_content_and_screen_readers/) stating that screen-reader support for the `content` property is not consistent. Keep that in mind when using this technique.
-
 
 ## What about `(-prefix-)user-select: none`?
 
@@ -60,7 +57,6 @@ All major browsers (including IE 10+) support `(-prefix-)user-select: none`. Thi
 ```
 
 This _does not_, however, prevent the text from being copied to the clipboard in all browsers. Also, it [is not part of the CSS standard](https://developer.mozilla.org/en-US/docs/Web/CSS/user-select) and there are no plans to add it.
-
 
 ## A live example
 

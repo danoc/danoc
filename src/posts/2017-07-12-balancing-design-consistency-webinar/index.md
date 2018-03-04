@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UXPin webinar on developer productivity and design consistency"
-description: A webinar, geared towards designers, that describes how to use code as a tool to encourage design consistency.
+description: A deep dive into how Optimizely uses Semantic Versioning to release updates to their UI library.
 date: '2017-07-12T00:00:00Z'
 path: /blog/balancing-design-consistency/
 is_featured: true

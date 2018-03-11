@@ -14,6 +14,12 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-source-strava-activities",
+      options: {
+        authToken: process.env.STRAVA
+      }
+    },
+    {
       resolve: "gatsby-source-pinboard",
       options: {
         authToken: process.env.PINBOARD,
@@ -47,7 +53,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-sitemap",
     {
-      resolve: `gatsby-plugin-feed`,
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
@@ -100,7 +106,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: "gatsby-plugin-favicon",
       options: {
         logo: "./src/favicon.png",
         injectHTML: true,

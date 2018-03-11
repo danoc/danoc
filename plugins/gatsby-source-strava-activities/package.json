@@ -1,0 +1,12 @@
+{
+  "name": "gatsby-source-strava-activities",
+  "version": "0.0.0",
+  "description": "Pull in list of Strava athlete’s activities.",
+  "main": "index.js",
+  "author": "Daniel O'Connor <daniel@danoc.me>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "node-fetch": "^2.1.1"
+  }
+}

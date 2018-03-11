@@ -2,12 +2,17 @@
   "name": "danoc.me",
   "private": true,
   "scripts": {
-    "start": "gatsby develop",
+    "start": "cd plugins/gatsby-source-strava-activities && yarn && cd ../../ && gatsby develop",
     "precommit": "lint-staged && yarn test",
     "test": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --fix",
-    "build": "rm -rf public/ && gatsby build"
+    "build": "rm -rf public/ && cd plugins/gatsby-source-strava-activities && yarn && cd ../../ && gatsby build"
   },
   "dependencies": {
+    "@vx/axis": "^0.0.158",
+    "@vx/group": "^0.0.153",
+    "@vx/heatmap": "^0.0.153",
+    "@vx/scale": "^0.0.153",
+    "d3-array": "^1.2.1",
     "gatsby": "^1.9.192",
     "gatsby-link": "^1.6.36",
     "gatsby-plugin-favicon": "^2.1.1",

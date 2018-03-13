@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "node-fetch": "^2.1.1"
+    "node-fetch": "^2.1.1",
+    "query-string": "^5.1.0"
   }
 }

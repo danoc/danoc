@@ -1,7 +1,11 @@
 const fetch = require("node-fetch");
 const crypto = require("crypto");
+const queryString = require("query-string");
 
-exports.sourceNodes = async ({ boundActionCreators }, { authToken }) => {
+exports.sourceNodes = async (
+  { boundActionCreators },
+  { authToken, before, after }
+) => {
   if (!authToken) {
     throw new Error(
       "You must provide an `authToken` to `gatsby-source-strava-activities`."
@@ -10,18 +14,21 @@ exports.sourceNodes = async ({ boundActionCreators }, { authToken }) => {
 
   const { createNode } = boundActionCreators;
 
-  const currentTime = Math.round(new Date().getTime() / 1000);
-  const secondsInOneYear = 31536000;
-  const startDate = currentTime - secondsInOneYear;
-
   const activities = [];
   let numResults = null;
   let page = 1;
 
   do {
+    const params = queryString.stringify({
+      after,
+      before,
+      page,
+      per_page: 30
+    });
+
     // eslint-disable-next-line no-await-in-loop
     const res = await fetch(
-      `https://www.strava.com/api/v3/athlete/activities?after=${startDate}&per_page=30&page=${page}`,
+      `https://www.strava.com/api/v3/athlete/activities?${params}`,
       {
         headers: {
           Authorization: `Bearer ${authToken}`

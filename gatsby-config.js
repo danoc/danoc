@@ -16,7 +16,9 @@ module.exports = {
     {
       resolve: "gatsby-source-strava-activities",
       options: {
-        authToken: process.env.STRAVA
+        authToken: process.env.STRAVA,
+        // One year ago
+        after: Math.round(new Date().getTime() / 1000) - 31536000
       }
     },
     {

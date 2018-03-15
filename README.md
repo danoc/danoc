@@ -8,8 +8,8 @@ Daniel O'Connor's personal website and portfolio.
 
 Clone this repository, `cd` into the directory, and run the following commands to run the website locally:
 
-1.  `npm install`
-2.  `npm start`
+1.  `yarn`
+2.  `yarn start`
 
 ## Deploys
 

@@ -22,7 +22,7 @@ This website uses [Git](http://git-scm.com/) for version control, is hosted on [
 
 Third party packages are installed locally using [NPM](https://www.npmjs.com/), [Bundler](http://bundler.io/), and [Bower](http://bower.io/).
 
-You can see the [view the source of this blog post](https://github.com/danoc/danoc.me/blob/master/_posts/2015-03-15-modern-build-system.md) on GitHub.
+You can [view the source of this blog post](https://github.com/danoc/danoc.me/blob/da96415d0b776abe95376dfb3e47385e59da25c0/_posts/2015-03-15-modern-build-system.md) on GitHub.
 
 
 ## Installing the website locally

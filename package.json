@@ -2,10 +2,10 @@
   "name": "danoc.me",
   "private": true,
   "scripts": {
-    "start": "cd plugins/gatsby-source-strava-activities && yarn && cd ../../ && gatsby develop",
+    "start": "gatsby develop",
     "precommit": "lint-staged && yarn test",
     "test": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --fix",
-    "build": "rm -rf public/ && cd plugins/gatsby-source-strava-activities && yarn && cd ../../ && gatsby build"
+    "build": "rm -rf public/ && gatsby build"
   },
   "dependencies": {
     "@vx/axis": "^0.0.158",
@@ -33,6 +33,7 @@
     "gatsby-remark-smartypants": "^1.4.10",
     "gatsby-source-filesystem": "^1.5.18",
     "gatsby-source-pinboard": "^0.1.2",
+    "gatsby-source-strava-activities": "^0.1.0",
     "gatsby-transformer-remark": "^1.7.31",
     "gatsby-transformer-sharp": "^1.6.18",
     "hex-rgba": "^1.0.2",
@@ -56,9 +57,6 @@
     "prettier": "^1.6.1"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["prettier --write", "git add"]
   }
 }

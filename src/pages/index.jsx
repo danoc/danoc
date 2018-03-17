@@ -40,9 +40,13 @@ const formatRuns = data => {
   const runs = data.map(processRun);
   const runsByDate = keyBy(runs, "date");
 
+  // Ensures that Sunday is always in the correct spot.
+  const dayOfWeek = new Date().getDay();
+  const dateOffset = dayOfWeek === 6 ? 0 : 6 - dayOfWeek;
+
   return times(52, weekIndex => {
     const week = new Date();
-    week.setDate(week.getDate() - (51 - weekIndex) * 7);
+    week.setDate(week.getDate() + dateOffset - (51 - weekIndex) * 7);
 
     return {
       bin: weekIndex,

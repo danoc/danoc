@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { times, keyBy, get } from "lodash";
+import { times, groupBy, reduce } from "lodash";
 import Section from "../components/section";
 import Link from "../components/link";
 import Header from "../components/header";
@@ -38,7 +38,7 @@ const formatRuns = data => {
   });
 
   const runs = data.map(processRun);
-  const runsByDate = keyBy(runs, "date");
+  const runsByDate = groupBy(runs, "date");
 
   // Ensures that Sunday is always in the correct spot.
   const dayOfWeek = new Date().getDay();
@@ -55,7 +55,12 @@ const formatRuns = data => {
         const day = normalizeDate(week);
 
         return {
-          miles: get(runsByDate[day], "miles", 0),
+          // Use `reduce` to add up the miles from an array of runs in one day.
+          miles: reduce(
+            runsByDate[day],
+            (sum, activity) => sum + activity.miles,
+            0
+          ),
           bin: dayIndex
         };
       })
@@ -199,8 +204,8 @@ export const pageQuery = graphql`
     allStravaActivity(filter: { activity: { type: { eq: "Run" } } }) {
       edges {
         node {
-          id
           activity {
+            id
             start_date
             distance
           }

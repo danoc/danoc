@@ -5,7 +5,7 @@
     "start": "gatsby develop",
     "precommit": "lint-staged && yarn test",
     "test": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --fix",
-    "build": "rm -rf public/ && gatsby build"
+    "build": "TZ=America/Los_Angeles && gatsby build"
   },
   "dependencies": {
     "@vx/axis": "^0.0.158",
@@ -57,9 +57,6 @@
     "prettier": "^1.6.1"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.js": ["prettier --write", "git add"]
   }
 }

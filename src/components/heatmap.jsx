@@ -131,7 +131,7 @@ const Heatmap = ({ width, data }) => {
 
 Heatmap.propTypes = {
   width: PropTypes.number.isRequired,
-  data: PropTypes.shape({}).isRequired
+  data: PropTypes.arrayOf(PropTypes.shape({})).isRequired
 };
 
 export default Heatmap;

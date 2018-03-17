@@ -32,10 +32,10 @@ const formatRuns = data => {
   const normalizeDate = date => date.toDateString();
 
   const processRun = run => ({
-      id: run.node.activity.id,
-      date: normalizeDate(new Date(run.node.activity.start_date)),
-      miles: run.node.activity.distance * 0.000621371192237334
-    });
+    id: run.node.activity.id,
+    date: normalizeDate(new Date(run.node.activity.start_date)),
+    miles: run.node.activity.distance * 0.000621371192237334
+  });
 
   const runs = data.map(processRun);
   const runsByDate = keyBy(runs, "date");

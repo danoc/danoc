@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "gatsby develop",
-    "precommit": "lint-staged && yarn test",
+    "precommit": "lint-staged",
     "test": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --fix",
     "build": "TZ=America/Los_Angeles && gatsby build"
   },
@@ -57,6 +57,11 @@
     "prettier": "^1.6.1"
   },
   "lint-staged": {
-    "*.js": ["prettier --write", "git add"]
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix --ignore-path .gitignore",
+      "git add"
+    ],
+    "*.{css,scss,json,md}": ["prettier --write", "git add"]
   }
 }

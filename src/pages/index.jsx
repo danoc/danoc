@@ -130,7 +130,13 @@ const IndexPage = ({ data }) => {
       </Section>
 
       <Section title="Running">
-        <Heatmap width={578} events data={runs} />
+        <Heatmap
+          isExpanded={false}
+          labelWidth={22}
+          labelMargin={10}
+          width={578}
+          data={runs}
+        />
       </Section>
 
       <Section

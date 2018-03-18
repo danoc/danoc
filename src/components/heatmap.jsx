@@ -39,7 +39,7 @@ class Heatmap extends React.Component {
     super();
 
     this.state = {
-      width: 578
+      width: null
     };
   }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import Measure from "react-measure";
 import { Group } from "@vx/group";
 import { scaleLinear } from "@vx/scale";
 import { HeatmapRect } from "@vx/heatmap";
@@ -12,16 +13,8 @@ import * as s from "../styles";
 
 const Container = styled.div`
   position: relative;
-
-  ${props =>
-    props.isExpanded
-      ? css`
-          margin-left: -${props.labelWidth + props.labelMargin}px;
-          margin-right: -${props.labelWidth + props.labelMargin}px;
-        `
-      : css`
-          overflow-x: auto;
-        `};
+  margin-left: -${props => props.labelWidth + props.labelMargin}px;
+  margin-right: -${props => props.labelWidth + props.labelMargin}px;
 `;
 
 const StyledTooltip = styled(Tooltip)`
@@ -41,159 +34,175 @@ const handleTooltip = ({ showTooltip, miles, left, top }) => {
   });
 };
 
-const Heatmap = ({
-  width,
-  data,
-  isExpanded,
-  showTooltip,
-  hideTooltip,
-  tooltipData,
-  tooltipTop,
-  tooltipLeft,
-  tooltipOpen,
-  labelMargin,
-  labelWidth
-}) => {
-  if (width < 10) return null;
+class Heatmap extends React.Component {
+  constructor() {
+    super();
 
-  const labelTopHeight = 8;
-  const heatmapWidth = isExpanded ? width : width - (labelWidth + labelMargin);
-  const heatmapLeft = labelWidth + labelMargin;
-  const heatmapTop = labelTopHeight + labelMargin;
+    this.state = {
+      width: 578
+    };
+  }
 
-  const dMin = min(data, d => min(y(d), x));
-  const dMax = max(data, d => max(y(d), x));
-  const dStep = dMax / data[0].days.length;
-  const bWidth = heatmapWidth / data.length;
-  const bHeight = bWidth;
-  const height = bHeight * data[0].days.length;
-  const colorMax = max(data, d => max(y(d), z));
+  render() {
+    const {
+      data,
+      showTooltip,
+      hideTooltip,
+      tooltipData,
+      tooltipTop,
+      tooltipLeft,
+      tooltipOpen,
+      labelMargin,
+      labelWidth
+    } = this.props;
 
-  const xScale = scaleLinear({
-    range: [0, heatmapWidth - bWidth],
-    domain: extent(data, x)
-  });
+    if (!this.state.width) return null;
 
-  const yScale = scaleLinear({
-    range: [height, 0],
-    domain: [dMin, dMax + 1]
-  });
+    const labelTopHeight = 8;
+    const heatmapWidth = this.state.width;
+    const heatmapLeft = labelWidth + labelMargin;
+    const heatmapTop = labelTopHeight + labelMargin;
 
-  const colorScale = scaleLinear({
-    range: ["#f5f5f5", "#0032a0"],
-    domain: [0, colorMax]
-  });
+    const numberOfWeeks = data.length;
 
-  const opacityScale = scaleLinear({
-    range: [1, 1],
-    domain: [0, colorMax]
-  });
+    const dMin = min(data, d => min(y(d), x));
+    const dMax = max(data, d => max(y(d), x));
+    const dStep = dMax / data[0].days.length;
+    const bWidth = heatmapWidth / data.length;
+    const bHeight = bWidth;
+    const height = bHeight * data[0].days.length;
+    const colorMax = max(data, d => max(y(d), z));
 
-  const toolTipMiles = round(tooltipData, 2);
+    const xScale = scaleLinear({
+      range: [0, heatmapWidth - bWidth],
+      domain: extent(data, x)
+    });
 
-  return (
-    <Container
-      isExpanded={isExpanded}
-      labelWidth={labelWidth}
-      labelMargin={labelMargin}
-    >
-      {tooltipOpen && (
-        <StyledTooltip top={tooltipTop} left={tooltipLeft}>
-          {toolTipMiles} mile{toolTipMiles !== 1 && "s"}
-        </StyledTooltip>
-      )}
+    const yScale = scaleLinear({
+      range: [height, 0],
+      domain: [dMin, dMax + 1]
+    });
 
-      <svg
-        width={isExpanded ? width + (labelWidth + labelMargin) * 2 : width}
-        height={height + heatmapTop}
+    const colorScale = scaleLinear({
+      range: ["#f5f5f5", "#0032a0"],
+      domain: [0, colorMax]
+    });
+
+    const opacityScale = scaleLinear({
+      range: [1, 1],
+      domain: [0, colorMax]
+    });
+
+    const toolTipMiles = round(tooltipData, 2);
+
+    return (
+      <Measure
+        onResize={contentRect => {
+          this.setState({ width: contentRect && contentRect.entry.width });
+        }}
       >
-        <AxisLeft
-          left={8}
-          top={heatmapTop + bHeight / 2}
-          scale={yScale}
-          tickFormat={t => {
-            const days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
-            return days[7 - t];
-          }}
-          numTicks={3}
-          strokeWidth={0}
-          hideAxisLine
-          hideTicks
-          tickLabelProps={() => ({
-            fill: "#8e205f",
-            textAnchor: "start",
-            fontSize: 10,
-            dy: "0.5em"
-          })}
-        />
-        <AxisTop
-          left={heatmapLeft}
-          scale={xScale}
-          numTicks={6}
-          tickLength={0}
-          hideAxisLine
-          tickFormat={d => {
-            const months = [
-              "Jan",
-              "Feb",
-              "Mar",
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec"
-            ];
-            const week = new Date();
-            week.setDate(week.getDate() - (51 - d) * 7);
-            return months[week.getMonth()];
-          }}
-          tickLabelProps={() => ({
-            fill: "#8e205f",
-            textAnchor: "start",
-            fontSize: 10,
-            dy: "1em"
-          })}
-        />
-        <Group top={heatmapTop} left={heatmapLeft}>
-          <HeatmapRect
-            data={data}
-            xScale={xScale}
-            yScale={yScale}
-            colorScale={colorScale}
-            opacityScale={opacityScale}
-            binWidth={bWidth}
-            binHeight={bHeight}
-            step={dStep}
-            gap={1}
-            bin={x}
-            bins={y}
-            count={z}
-            onMouseMove={d => () => {
-              handleTooltip({
-                left: xScale(d.datumIndex),
-                top: yScale(d.index) - bHeight * 2,
-                miles: d.bin.miles,
-                showTooltip
-              });
-            }}
-            onMouseLeave={() => () => {
-              hideTooltip();
-            }}
-          />
-        </Group>
-      </svg>
-    </Container>
-  );
-};
+        {({ measureRef }) => (
+          <div ref={measureRef}>
+            <Container labelWidth={labelWidth} labelMargin={labelMargin}>
+              {tooltipOpen && (
+                <StyledTooltip top={tooltipTop} left={tooltipLeft}>
+                  {toolTipMiles} mile{toolTipMiles !== 1 && "s"}
+                </StyledTooltip>
+              )}
+
+              <svg
+                width={this.state.width + (labelWidth + labelMargin) * 2}
+                height={height + heatmapTop}
+              >
+                <AxisLeft
+                  left={8}
+                  top={heatmapTop + bHeight / 2}
+                  scale={yScale}
+                  tickFormat={t => {
+                    const days = ["", "M", "", "W", "", "F", ""];
+                    return days[7 - t];
+                  }}
+                  numTicks={3}
+                  strokeWidth={0}
+                  hideAxisLine
+                  hideTicks
+                  tickLabelProps={() => ({
+                    fill: s.darkGray,
+                    textAnchor: "start",
+                    fontSize: 10,
+                    dy: "0.5em"
+                  })}
+                />
+                <AxisTop
+                  left={heatmapLeft}
+                  scale={xScale}
+                  numTicks={6}
+                  tickLength={0}
+                  hideAxisLine
+                  tickFormat={d => {
+                    const months = [
+                      "Jan",
+                      "Feb",
+                      "Mar",
+                      "Apr",
+                      "May",
+                      "Jun",
+                      "Jul",
+                      "Aug",
+                      "Sep",
+                      "Oct",
+                      "Nov",
+                      "Dec"
+                    ];
+                    const week = new Date();
+                    week.setDate(week.getDate() - (numberOfWeeks - 1 - d) * 7);
+                    return months[week.getMonth()];
+                  }}
+                  tickLabelProps={() => ({
+                    fill: s.darkGray,
+                    textAnchor: "start",
+                    fontSize: 10,
+                    dy: "1em"
+                  })}
+                />
+                <Group top={heatmapTop} left={heatmapLeft}>
+                  <HeatmapRect
+                    data={data}
+                    xScale={xScale}
+                    yScale={yScale}
+                    colorScale={colorScale}
+                    opacityScale={opacityScale}
+                    binWidth={bWidth}
+                    binHeight={bHeight}
+                    step={dStep}
+                    gap={1}
+                    bin={x}
+                    bins={y}
+                    count={z}
+                    onMouseMove={d => () => {
+                      handleTooltip({
+                        left: xScale(d.datumIndex),
+                        top: yScale(d.index) - bHeight * 1.5,
+                        miles: d.bin.miles,
+                        showTooltip
+                      });
+                    }}
+                    onMouseLeave={() => () => {
+                      hideTooltip();
+                    }}
+                  />
+                </Group>
+              </svg>
+            </Container>
+          </div>
+        )}
+      </Measure>
+    );
+  }
+}
 
 Heatmap.propTypes = {
-  width: PropTypes.number.isRequired,
   data: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  isExpanded: PropTypes.bool,
   labelMargin: PropTypes.number.isRequired,
   labelWidth: PropTypes.number.isRequired,
   showTooltip: PropTypes.func.isRequired,
@@ -207,8 +216,7 @@ Heatmap.propTypes = {
 Heatmap.defaultProps = {
   tooltipData: null,
   tooltipTop: 0,
-  tooltipLeft: 0,
-  isExpanded: false
+  tooltipLeft: 0
 };
 
 export default withTooltip(Heatmap);

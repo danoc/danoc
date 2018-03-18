@@ -28,7 +28,7 @@ const formatDate = dateString => {
   return `${months[date.getMonth()]} ${date.getFullYear()}`;
 };
 
-const formatRuns = data => {
+const formatRuns = (data, numWeeksOfRuns) => {
   const normalizeDate = date => date.toDateString();
 
   const processRun = run => ({
@@ -44,9 +44,11 @@ const formatRuns = data => {
   const dayOfWeek = new Date().getDay();
   const dateOffset = dayOfWeek === 6 ? 0 : 6 - dayOfWeek;
 
-  return times(52, weekIndex => {
+  return times(numWeeksOfRuns, weekIndex => {
     const week = new Date();
-    week.setDate(week.getDate() + dateOffset - (51 - weekIndex) * 7);
+    week.setDate(
+      week.getDate() + dateOffset - (numWeeksOfRuns - 1 - weekIndex) * 7
+    );
 
     return {
       bin: weekIndex,
@@ -71,7 +73,10 @@ const formatRuns = data => {
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const bookmarks = data.allPinboardBookmark.edges;
-  const runs = formatRuns(data.allStravaActivity.edges);
+  const runs = formatRuns(
+    data.allStravaActivity.edges,
+    data.site.siteMetadata.numWeeksOfRuns
+  );
 
   return (
     <div>
@@ -130,13 +135,7 @@ const IndexPage = ({ data }) => {
       </Section>
 
       <Section title="Running">
-        <Heatmap
-          isExpanded={false}
-          labelWidth={22}
-          labelMargin={10}
-          width={578}
-          data={runs}
-        />
+        <Heatmap labelWidth={10} labelMargin={10} data={runs} />
       </Section>
 
       <Section
@@ -161,29 +160,16 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.arrayOf(
-        PropTypes.shape({
-          node: PropTypes.shape({
-            frontmatter: PropTypes.shape({
-              title: PropTypes.string,
-              date: PropTypes.string,
-              path: PropTypes.string
-            })
-          })
-        })
-      )
-    })
-  })
-};
-
-IndexPage.defaultProps = {
-  data: {}
+  data: PropTypes.shape({}).isRequired
 };
 
 export const pageQuery = graphql`
   query Index {
+    site {
+      siteMetadata {
+        numWeeksOfRuns
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 5

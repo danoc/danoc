@@ -39,7 +39,8 @@ class Heatmap extends React.Component {
     super();
 
     this.state = {
-      width: null
+      width: 1,
+      hasCalculatedWidth: false
     };
   }
 
@@ -55,8 +56,6 @@ class Heatmap extends React.Component {
       labelMargin,
       labelWidth
     } = this.props;
-
-    if (!this.state.width) return null;
 
     const labelTopHeight = 8;
     const heatmapWidth = this.state.width;
@@ -98,102 +97,109 @@ class Heatmap extends React.Component {
     return (
       <Measure
         onResize={contentRect => {
-          this.setState({ width: contentRect && contentRect.entry.width });
+          this.setState({
+            width: contentRect && contentRect.entry.width,
+            hasCalculatedWidth: true
+          });
         }}
       >
         {({ measureRef }) => (
           <div ref={measureRef}>
-            <Container labelWidth={labelWidth} labelMargin={labelMargin}>
-              {tooltipOpen && (
-                <StyledTooltip top={tooltipTop} left={tooltipLeft}>
-                  {toolTipMiles} mile{toolTipMiles !== 1 && "s"}
-                </StyledTooltip>
-              )}
+            {this.state.hasCalculatedWidth && (
+              <Container labelWidth={labelWidth} labelMargin={labelMargin}>
+                {tooltipOpen && (
+                  <StyledTooltip top={tooltipTop} left={tooltipLeft}>
+                    {toolTipMiles} mile{toolTipMiles !== 1 && "s"}
+                  </StyledTooltip>
+                )}
 
-              <svg
-                width={this.state.width + (labelWidth + labelMargin) * 2}
-                height={height + heatmapTop}
-              >
-                <AxisLeft
-                  left={8}
-                  top={heatmapTop + bHeight / 2}
-                  scale={yScale}
-                  tickFormat={t => {
-                    const days = ["", "M", "", "W", "", "F", ""];
-                    return days[7 - t];
-                  }}
-                  numTicks={3}
-                  strokeWidth={0}
-                  hideAxisLine
-                  hideTicks
-                  tickLabelProps={() => ({
-                    fill: s.darkGray,
-                    textAnchor: "start",
-                    fontSize: 10,
-                    dy: "0.5em"
-                  })}
-                />
-                <AxisTop
-                  left={heatmapLeft}
-                  scale={xScale}
-                  numTicks={6}
-                  tickLength={0}
-                  hideAxisLine
-                  tickFormat={d => {
-                    const months = [
-                      "Jan",
-                      "Feb",
-                      "Mar",
-                      "Apr",
-                      "May",
-                      "Jun",
-                      "Jul",
-                      "Aug",
-                      "Sep",
-                      "Oct",
-                      "Nov",
-                      "Dec"
-                    ];
-                    const week = new Date();
-                    week.setDate(week.getDate() - (numberOfWeeks - 1 - d) * 7);
-                    return months[week.getMonth()];
-                  }}
-                  tickLabelProps={() => ({
-                    fill: s.darkGray,
-                    textAnchor: "start",
-                    fontSize: 10,
-                    dy: "1em"
-                  })}
-                />
-                <Group top={heatmapTop} left={heatmapLeft}>
-                  <HeatmapRect
-                    data={data}
-                    xScale={xScale}
-                    yScale={yScale}
-                    colorScale={colorScale}
-                    opacityScale={opacityScale}
-                    binWidth={bWidth}
-                    binHeight={bHeight}
-                    step={dStep}
-                    gap={1}
-                    bin={x}
-                    bins={y}
-                    count={z}
-                    onMouseMove={d => () => {
-                      handleTooltip({
-                        left: xScale(d.datumIndex),
-                        top: yScale(d.index) - bHeight * 1.5,
-                        miles: d.bin.miles,
-                        showTooltip
-                      });
+                <svg
+                  width={this.state.width + (labelWidth + labelMargin) * 2}
+                  height={height + heatmapTop}
+                >
+                  <AxisLeft
+                    left={8}
+                    top={heatmapTop + bHeight / 2}
+                    scale={yScale}
+                    tickFormat={t => {
+                      const days = ["", "M", "", "W", "", "F", ""];
+                      return days[7 - t];
                     }}
-                    onMouseLeave={() => () => {
-                      hideTooltip();
-                    }}
+                    numTicks={3}
+                    strokeWidth={0}
+                    hideAxisLine
+                    hideTicks
+                    tickLabelProps={() => ({
+                      fill: s.darkGray,
+                      textAnchor: "start",
+                      fontSize: 10,
+                      dy: "0.5em"
+                    })}
                   />
-                </Group>
-              </svg>
-            </Container>
+                  <AxisTop
+                    left={heatmapLeft}
+                    scale={xScale}
+                    numTicks={6}
+                    tickLength={0}
+                    hideAxisLine
+                    tickFormat={d => {
+                      const months = [
+                        "Jan",
+                        "Feb",
+                        "Mar",
+                        "Apr",
+                        "May",
+                        "Jun",
+                        "Jul",
+                        "Aug",
+                        "Sep",
+                        "Oct",
+                        "Nov",
+                        "Dec"
+                      ];
+                      const week = new Date();
+                      week.setDate(
+                        week.getDate() - (numberOfWeeks - 1 - d) * 7
+                      );
+                      return months[week.getMonth()];
+                    }}
+                    tickLabelProps={() => ({
+                      fill: s.darkGray,
+                      textAnchor: "start",
+                      fontSize: 10,
+                      dy: "1em"
+                    })}
+                  />
+                  <Group top={heatmapTop} left={heatmapLeft}>
+                    <HeatmapRect
+                      data={data}
+                      xScale={xScale}
+                      yScale={yScale}
+                      colorScale={colorScale}
+                      opacityScale={opacityScale}
+                      binWidth={bWidth}
+                      binHeight={bHeight}
+                      step={dStep}
+                      gap={1}
+                      bin={x}
+                      bins={y}
+                      count={z}
+                      onMouseMove={d => () => {
+                        handleTooltip({
+                          left: xScale(d.datumIndex),
+                          top: yScale(d.index) - bHeight * 1.5,
+                          miles: d.bin.miles,
+                          showTooltip
+                        });
+                      }}
+                      onMouseLeave={() => () => {
+                        hideTooltip();
+                      }}
+                    />
+                  </Group>
+                </svg>
+              </Container>
+            )}
           </div>
         )}
       </Measure>

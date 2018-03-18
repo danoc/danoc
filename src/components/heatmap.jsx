@@ -115,7 +115,7 @@ class Heatmap extends React.Component {
 
                 <svg
                   width={this.state.width + (labelWidth + labelMargin) * 2}
-                  height={height + heatmapTop}
+                  height={height + heatmapTop + 3}
                 >
                   <AxisLeft
                     left={8}

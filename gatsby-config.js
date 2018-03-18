@@ -1,9 +1,12 @@
+const numWeeksOfRuns = 37;
+
 module.exports = {
   siteMetadata: {
     title: "Daniel O’Connor",
     description:
       "Daniel O’Connor is a UI Engineer living in San Francisco. He builds Thumbtack’s design system.",
-    siteUrl: "https://danoc.me"
+    siteUrl: "https://danoc.me",
+    numWeeksOfRuns
   },
   plugins: [
     {
@@ -17,8 +20,8 @@ module.exports = {
       resolve: "gatsby-source-strava-activities",
       options: {
         authToken: process.env.STRAVA,
-        // One year ago
-        after: Math.round(new Date().getTime() / 1000) - 31536000
+        // Get data for past `numWeeksOfRuns` weeks
+        after: Math.round(new Date().getTime() / 1000) - 604800 * numWeeksOfRuns
       }
     },
     {

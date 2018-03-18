@@ -93,6 +93,12 @@
     classnames "^2.2.5"
     prop-types "^15.6.0"
 
+"@vx/bounds@0.0.153":
+  version "0.0.153"
+  resolved "https://registry.yarnpkg.com/@vx/bounds/-/bounds-0.0.153.tgz#2fc2118fdd3dbb1a3fb897dceabab3d5eb617617"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@vx/curve@0.0.153":
   version "0.0.153"
   resolved "https://registry.yarnpkg.com/@vx/curve/-/curve-0.0.153.tgz#6829c3454f9ec16b7e6925aecbad5a1e3c8b3169"
@@ -132,6 +138,14 @@
     classnames "^2.2.5"
     d3-path "^1.0.5"
     d3-shape "^1.2.0"
+    prop-types "^15.5.10"
+
+"@vx/tooltip@^0.0.158":
+  version "0.0.158"
+  resolved "https://registry.yarnpkg.com/@vx/tooltip/-/tooltip-0.0.158.tgz#55c4c18762c3a888f53227e33d01ca5d3293943f"
+  dependencies:
+    "@vx/bounds" "0.0.153"
+    classnames "^2.2.5"
     prop-types "^15.5.10"
 
 "@zeit/check-updates@1.1.0":

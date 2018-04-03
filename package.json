@@ -8,7 +8,7 @@
     "build": "TZ=America/Los_Angeles && gatsby build"
   },
   "dependencies": {
-    "@vx/axis": "^0.0.158",
+    "@vx/axis": "^0.0.159",
     "@vx/group": "^0.0.153",
     "@vx/heatmap": "^0.0.153",
     "@vx/scale": "^0.0.153",

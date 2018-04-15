@@ -135,11 +135,13 @@ class Heatmap extends React.Component {
                       fontSize: 10,
                       dy: "0.5em"
                     })}
+                    tickComponent={({ formattedValue, ...tickProps }) => (
+                      <text {...tickProps}>{formattedValue}</text>
+                    )}
                   />
                   <AxisTop
                     left={heatmapLeft}
                     scale={xScale}
-                    numTicks={6}
                     tickLength={0}
                     hideAxisLine
                     tickFormat={d => {
@@ -169,6 +171,9 @@ class Heatmap extends React.Component {
                       fontSize: 10,
                       dy: "1em"
                     })}
+                    tickComponent={({ formattedValue, ...tickProps }) => (
+                      <text {...tickProps}>{formattedValue}</text>
+                    )}
                   />
                   <Group top={heatmapTop} left={heatmapLeft}>
                     <HeatmapRect

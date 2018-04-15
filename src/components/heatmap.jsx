@@ -17,20 +17,51 @@ const Container = styled.div`
   margin-right: -${props => props.labelWidth + props.labelMargin}px;
 `;
 
-const StyledTooltip = styled(Tooltip)`
+const TooltipContainer = styled(Tooltip)`
   background: ${s.white} !important;
   color: ${s.darkGray} !important;
+  min-width: 70px;
+`;
+
+const TooltipDate = styled.span`
+  font-weight: ${700};
+  display: block;
+  margin-bottom: ${s.s1};
 `;
 
 const x = d => d.bin;
 const y = d => d.days;
 const z = d => d.miles;
 
-const handleTooltip = ({ showTooltip, miles, left, top }) => {
-  showTooltip({
-    tooltipData: miles,
-    tooltipLeft: left,
-    tooltipTop: top
+const months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec"
+];
+
+const handleTooltip = props => {
+  const roundedMiles = round(props.miles, 2);
+  const dateObj = new Date(props.date);
+  const formattedDate = `${months[dateObj.getMonth()]} ${dateObj.getDate()}`;
+
+  props.showTooltip({
+    tooltipData: (
+      <span>
+        <TooltipDate>{formattedDate}</TooltipDate>
+        {roundedMiles} mile{roundedMiles !== 1 && "s"}
+      </span>
+    ),
+    tooltipLeft: props.left,
+    tooltipTop: props.top
   });
 };
 
@@ -92,8 +123,6 @@ class Heatmap extends React.Component {
       domain: [0, colorMax]
     });
 
-    const toolTipMiles = round(tooltipData, 2);
-
     return (
       <Measure
         onResize={contentRect => {
@@ -108,9 +137,9 @@ class Heatmap extends React.Component {
             {this.state.hasCalculatedWidth && (
               <Container labelWidth={labelWidth} labelMargin={labelMargin}>
                 {tooltipOpen && (
-                  <StyledTooltip top={tooltipTop} left={tooltipLeft}>
-                    {toolTipMiles} mile{toolTipMiles !== 1 && "s"}
-                  </StyledTooltip>
+                  <TooltipContainer top={tooltipTop} left={tooltipLeft}>
+                    {tooltipData}
+                  </TooltipContainer>
                 )}
 
                 <svg
@@ -145,20 +174,6 @@ class Heatmap extends React.Component {
                     tickLength={0}
                     hideAxisLine
                     tickFormat={d => {
-                      const months = [
-                        "Jan",
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "May",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sep",
-                        "Oct",
-                        "Nov",
-                        "Dec"
-                      ];
                       const week = new Date();
                       week.setDate(
                         week.getDate() - (numberOfWeeks - 1 - d) * 7
@@ -192,8 +207,9 @@ class Heatmap extends React.Component {
                       onMouseMove={d => () => {
                         handleTooltip({
                           left: xScale(d.datumIndex),
-                          top: yScale(d.index) - bHeight * 1.5,
+                          top: yScale(d.index) - bHeight * 2.5,
                           miles: d.bin.miles,
+                          date: d.bin.date,
                           showTooltip
                         });
                       }}
@@ -218,7 +234,7 @@ Heatmap.propTypes = {
   labelWidth: PropTypes.number.isRequired,
   showTooltip: PropTypes.func.isRequired,
   hideTooltip: PropTypes.func.isRequired,
-  tooltipData: PropTypes.number,
+  tooltipData: PropTypes.node,
   tooltipLeft: PropTypes.number,
   tooltipTop: PropTypes.number,
   tooltipOpen: PropTypes.bool.isRequired

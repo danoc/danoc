@@ -63,7 +63,8 @@ const formatRuns = (data, numWeeksOfRuns) => {
             (sum, activity) => sum + activity.miles,
             0
           ),
-          bin: dayIndex
+          bin: dayIndex,
+          date: day
         };
       })
     };

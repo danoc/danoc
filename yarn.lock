@@ -83,13 +83,13 @@
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.32.tgz#0d3cb31022f8427ea58c008af32b80da126ca4e3"
 
-"@vx/axis@^0.0.159":
-  version "0.0.159"
-  resolved "https://registry.yarnpkg.com/@vx/axis/-/axis-0.0.159.tgz#715c54076d10ea51beade0d1b9d830b79166c532"
+"@vx/axis@^0.0.160":
+  version "0.0.160"
+  resolved "https://registry.yarnpkg.com/@vx/axis/-/axis-0.0.160.tgz#b6a59e1ea2984474e8afcf01dfbf6c6ac8d1d763"
   dependencies:
     "@vx/group" "0.0.153"
     "@vx/point" "0.0.153"
-    "@vx/shape" "0.0.158"
+    "@vx/shape" "^0.0.160"
     "@vx/text" "0.0.159"
     classnames "^2.2.5"
     prop-types "^15.6.0"
@@ -129,9 +129,9 @@
   dependencies:
     d3-scale "^1.0.5"
 
-"@vx/shape@0.0.158":
-  version "0.0.158"
-  resolved "https://registry.yarnpkg.com/@vx/shape/-/shape-0.0.158.tgz#700582c7574b523d6ba1d9b9bd784d7bbb2e37fb"
+"@vx/shape@^0.0.160":
+  version "0.0.160"
+  resolved "https://registry.yarnpkg.com/@vx/shape/-/shape-0.0.160.tgz#407e33cec672c343aa451d734f395dda2cc1acb4"
   dependencies:
     "@vx/curve" "0.0.153"
     "@vx/group" "0.0.153"
@@ -149,9 +149,9 @@
     lodash "^4.17.4"
     reduce-css-calc "^1.3.0"
 
-"@vx/tooltip@^0.0.158":
-  version "0.0.158"
-  resolved "https://registry.yarnpkg.com/@vx/tooltip/-/tooltip-0.0.158.tgz#55c4c18762c3a888f53227e33d01ca5d3293943f"
+"@vx/tooltip@^0.0.160":
+  version "0.0.160"
+  resolved "https://registry.yarnpkg.com/@vx/tooltip/-/tooltip-0.0.160.tgz#f5a9176d8aafaeed0123b93fe68d60d4f7291048"
   dependencies:
     "@vx/bounds" "0.0.153"
     classnames "^2.2.5"

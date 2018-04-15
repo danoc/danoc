@@ -8,11 +8,11 @@
     "build": "TZ=America/Los_Angeles && gatsby build"
   },
   "dependencies": {
-    "@vx/axis": "^0.0.159",
-    "@vx/group": "^0.0.153",
-    "@vx/heatmap": "^0.0.153",
-    "@vx/scale": "^0.0.153",
-    "@vx/tooltip": "^0.0.158",
+    "@vx/axis": "0.0.160",
+    "@vx/group": "0.0.153",
+    "@vx/heatmap": "0.0.153",
+    "@vx/scale": "0.0.153",
+    "@vx/tooltip": "0.0.160",
     "d3-array": "^1.2.1",
     "gatsby": "^1.9.192",
     "gatsby-link": "^1.6.36",

@@ -83,7 +83,7 @@
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.32.tgz#0d3cb31022f8427ea58c008af32b80da126ca4e3"
 
-"@vx/axis@^0.0.160":
+"@vx/axis@0.0.160":
   version "0.0.160"
   resolved "https://registry.yarnpkg.com/@vx/axis/-/axis-0.0.160.tgz#b6a59e1ea2984474e8afcf01dfbf6c6ac8d1d763"
   dependencies:
@@ -106,13 +106,13 @@
   dependencies:
     d3-shape "^1.0.6"
 
-"@vx/group@0.0.153", "@vx/group@^0.0.153":
+"@vx/group@0.0.153":
   version "0.0.153"
   resolved "https://registry.yarnpkg.com/@vx/group/-/group-0.0.153.tgz#4ec2ce37cf31b0f0b3d46dd8ee6b0eaf7e763bc6"
   dependencies:
     classnames "^2.2.5"
 
-"@vx/heatmap@^0.0.153":
+"@vx/heatmap@0.0.153":
   version "0.0.153"
   resolved "https://registry.yarnpkg.com/@vx/heatmap/-/heatmap-0.0.153.tgz#c9903ee3738d17ef39808bc3ca0da1d01e9a4a44"
   dependencies:
@@ -123,7 +123,7 @@
   version "0.0.153"
   resolved "https://registry.yarnpkg.com/@vx/point/-/point-0.0.153.tgz#c0623f72804026a5afe7e1602bb27cd7b0847afc"
 
-"@vx/scale@^0.0.153":
+"@vx/scale@0.0.153":
   version "0.0.153"
   resolved "https://registry.yarnpkg.com/@vx/scale/-/scale-0.0.153.tgz#0e515c459b18c34f9b7111c0cb8295208774bba0"
   dependencies:
@@ -149,7 +149,7 @@
     lodash "^4.17.4"
     reduce-css-calc "^1.3.0"
 
-"@vx/tooltip@^0.0.160":
+"@vx/tooltip@0.0.160":
   version "0.0.160"
   resolved "https://registry.yarnpkg.com/@vx/tooltip/-/tooltip-0.0.160.tgz#f5a9176d8aafaeed0123b93fe68d60d4f7291048"
   dependencies:

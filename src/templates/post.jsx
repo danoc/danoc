@@ -90,12 +90,15 @@ const Markdown = styled.div`
   }
 
   img {
-    border: 1px solid ${s.lightGray};
-    padding: 1px;
+    outline: 1px solid ${s.lightGray};
     max-width: 100%;
   }
 
   .gatsby-resp-image-link {
+    &:focus {
+      outline: 2px dotted currentColor;
+    }
+
     + em {
       color: ${s.gray};
       display: block;
@@ -104,7 +107,7 @@ const Markdown = styled.div`
     }
 
     &:hover img {
-      border-color: ${s.moonGray};
+      outline: 1px solid ${s.moonGray};
     }
   }
 `;

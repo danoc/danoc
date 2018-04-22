@@ -40,7 +40,7 @@ const H2 = styled.h2`
 `;
 
 const Section = props => (
-  <Container>
+  <Container id={props.title.replace(/\s+/g, "-").toLowerCase()}>
     <H2>
       {props.to ? (
         <SectionTitleLink to={props.to} title={props.callToAction}>

@@ -24,7 +24,7 @@ const TooltipContainer = styled(Tooltip)`
 `;
 
 const TooltipDate = styled.span`
-  font-weight: ${700};
+  font-weight: ${500};
   display: block;
   margin-bottom: ${s.s1};
 `;

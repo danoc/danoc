@@ -7,6 +7,13 @@ import "normalize.css";
 import Link from "../components/link";
 import * as s from "../styles";
 
+import UntitledSansMediumWoff from "../fonts/UntitledSansWeb-Medium.woff";
+import UntitledSansMediumWoff2 from "../fonts/UntitledSansWeb-Medium.woff2";
+import UntitledSansRegularWoff from "../fonts/UntitledSansWeb-Regular.woff";
+import UntitledSansRegularWoff2 from "../fonts/UntitledSansWeb-Regular.woff2";
+import UntitledSansRegularItalicWoff from "../fonts/UntitledSansWeb-RegularItalic.woff";
+import UntitledSansRegularItalicWoff2 from "../fonts/UntitledSansWeb-RegularItalic.woff2";
+
 injectGlobal`
   html {
     font-size: ${s.fontSizeBody};
@@ -39,11 +46,40 @@ injectGlobal`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  @font-face {
+    font-family: 'Untitled Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('${UntitledSansRegularWoff2}') format('woff2'),
+         url('${UntitledSansRegularWoff}') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Untitled Sans';
+    font-weight: 400;
+    font-style: italic;
+    src: url('${UntitledSansRegularItalicWoff2}') format('woff2'),
+         url('${UntitledSansRegularItalicWoff}') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Untitled Sans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('${UntitledSansMediumWoff2}') format('woff2'),
+         url('${UntitledSansMediumWoff}') format('woff');
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+  }
 `;
 
 const Container = styled.div`
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica,
-    helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial,
+    sans-serif;
   color: ${s.darkGray};
   padding: ${s.s4};
   max-width: ${s.measureWide};

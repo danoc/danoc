@@ -60,7 +60,9 @@ const Markdown = styled.div`
     max-width: ${s.measureWide};
   }
 
-  p {
+  p,
+  ul,
+  ol {
     margin-bottom: ${s.paragraphBottomMargin};
   }
 
@@ -68,6 +70,22 @@ const Markdown = styled.div`
   ol {
     max-width: ${s.measureWide};
     padding-left: ${s.s4};
+  }
+
+  li {
+    padding-left: ${s.s1};
+
+    p:first-child {
+      margin-top: ${s.s0};
+    }
+
+    p:last-of-type {
+      margin-bottom: ${s.s2};
+    }
+  }
+
+  li:not(:last-child) {
+    margin-bottom: ${s.s2};
   }
 
   hr {
@@ -92,6 +110,11 @@ const Markdown = styled.div`
   img {
     outline: 1px solid ${s.lightGray};
     max-width: 100%;
+  }
+
+  strong,
+  b {
+    font-weight: 500;
   }
 
   .gatsby-resp-image-link {

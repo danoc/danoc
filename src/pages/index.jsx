@@ -106,7 +106,7 @@ const IndexPage = ({ data }) => {
             {
               title: "Thumbtack",
               to: "https://www.thumbtack.com/",
-              meta: "2017-Present",
+              meta: "2017–Present",
               children: (
                 <Paragraph>
                   I help build Thumbprint, Thumbtack’s design system, and assist
@@ -117,7 +117,7 @@ const IndexPage = ({ data }) => {
             {
               title: "Optimizely",
               to: "https://www.optimizely.com/",
-              meta: "2014-2017",
+              meta: "2014–2017",
               children: (
                 <Paragraph>
                   As a UI Engineer on the design team, I maintained{" "}

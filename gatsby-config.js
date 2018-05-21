@@ -132,7 +132,6 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-lodash",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

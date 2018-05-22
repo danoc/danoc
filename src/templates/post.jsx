@@ -64,6 +64,11 @@ const Markdown = styled.div`
   ul,
   ol {
     margin-bottom: ${s.paragraphBottomMargin};
+
+    ul,
+    ol {
+      margin-bottom: ${s.s0};
+    }
   }
 
   ul,

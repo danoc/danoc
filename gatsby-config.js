@@ -128,6 +128,7 @@ module.exports = {
         }
       }
     },
+    "gatsby-plugin-remove-serviceworker",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sass",
     "gatsby-plugin-lodash",

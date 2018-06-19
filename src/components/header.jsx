@@ -27,7 +27,7 @@ const Container = styled.header`
 const Header = props => (
   <Container>
     <Title isSinglePost={props.isSinglePost}>
-      <StyledLink className="dark-gray hover-mid-gray link" to="/" rel="author">
+      <StyledLink to="/" rel="author">
         Daniel O&#8217;Connor
       </StyledLink>
     </Title>

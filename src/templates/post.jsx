@@ -236,14 +236,11 @@ const Post = ({ data }) => {
         dateTime={post.frontmatter.date}
         itemProp="datePublished"
         title={new Date(post.frontmatter.date).toString()}
-        className="gray fw4 f6 ttu tracked"
       >
         {formatDate(new Date(post.frontmatter.date))}
       </Time>
 
-      <h1 itemProp="headline" className="f2 measure mt3 mb4 dark-gray lh-title">
-        {post.frontmatter.title}
-      </h1>
+      <h1 itemProp="headline">{post.frontmatter.title}</h1>
 
       {site.siteUrl &&
         post.frontmatter.image_src &&

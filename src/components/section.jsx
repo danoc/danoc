@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { isString } from "lodash";
 import Link from "../components/link";
 import * as s from "../styles";
 
@@ -40,7 +41,13 @@ const H2 = styled.h2`
 `;
 
 const Section = props => (
-  <Container id={props.title.replace(/\s+/g, "-").toLowerCase()}>
+  <Container
+    id={
+      isString(props.title)
+        ? props.title.replace(/\s+/g, "-").toLowerCase()
+        : null
+    }
+  >
     <H2>
       {props.to ? (
         <SectionTitleLink to={props.to} title={props.callToAction}>
@@ -63,7 +70,7 @@ const Section = props => (
 Section.propTypes = {
   to: PropTypes.string,
   callToAction: PropTypes.string,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
   children: PropTypes.node
 };
 

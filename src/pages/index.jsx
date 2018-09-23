@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { times, groupBy, reduce } from "lodash";
+import { graphql } from "gatsby";
 import Section from "../components/section";
 import Link from "../components/link";
+import Layout from "../components/layout";
 import Header from "../components/header";
 import Paragraph from "../components/paragraph";
 import BulletList from "../components/bullet-list";
@@ -80,7 +82,7 @@ const IndexPage = ({ data }) => {
   );
 
   return (
-    <div>
+    <Layout>
       <Header>
         <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
         <Paragraph>
@@ -126,7 +128,8 @@ const IndexPage = ({ data }) => {
                     title="Optimizely User Interface"
                   >
                     OUI
-                  </Link>, UI library, and built design systems that improved UI
+                  </Link>
+                  , UI library, and built design systems that improved UI
                   consistency and developer productivity.
                 </Paragraph>
               )
@@ -154,7 +157,7 @@ const IndexPage = ({ data }) => {
           }))}
         />
       </Section>
-    </div>
+    </Layout>
   );
 };
 

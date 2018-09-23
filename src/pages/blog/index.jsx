@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { groupBy, map, keys, sortBy, reverse } from "lodash";
+import { graphql } from "gatsby";
 import styled from "styled-components";
+import Layout from "../../components/layout";
 import Header from "../../components/header";
 import Section from "../../components/section";
 import BulletList from "../../components/bullet-list";
@@ -40,7 +42,7 @@ const BlogIndex = ({ data }) => {
   const years = reverse(sortBy(keys(postsByYear)));
 
   return (
-    <div>
+    <Layout>
       <Header isSinglePost />
       <Section title="Writing" to="/blog/">
         {map(years, year => (
@@ -56,7 +58,7 @@ const BlogIndex = ({ data }) => {
           </Year>
         ))}
       </Section>
-    </div>
+    </Layout>
   );
 };
 

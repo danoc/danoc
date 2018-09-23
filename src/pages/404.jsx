@@ -1,10 +1,11 @@
 import React from "react";
 import Header from "../components/header";
+import Layout from "../components/layout";
 import BulletList from "../components/bullet-list";
 import Section from "../components/section";
 
 const NotFoundPage = () => (
-  <div>
+  <Layout>
     <Header isSinglePost />
 
     <Section
@@ -27,7 +28,7 @@ const NotFoundPage = () => (
         ]}
       />
     </Section>
-  </div>
+  </Layout>
 );
 
 export default NotFoundPage;

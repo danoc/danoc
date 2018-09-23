@@ -8,7 +8,6 @@ module.exports = {
   },
   extends: ["airbnb", "prettier"],
   globals: {
-    graphql: false,
     URL: false
   },
   rules: {

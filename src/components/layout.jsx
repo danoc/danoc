@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import hexToRgba from "hex-rgba";
 import styled, { injectGlobal } from "styled-components";
+import { StaticQuery, graphql } from "gatsby";
 import "normalize.css";
-import Link from "../components/link";
+import Link from "./link";
 import * as s from "../styles";
 
 import UntitledSansMediumWoff from "../fonts/UntitledSansWeb-Medium.woff";
@@ -102,22 +103,36 @@ const FooterList = styled.ul`
   }
 `;
 
-const IndexLayout = ({ children, data }) => (
+const IndexLayout = ({ children }) => (
   <Container>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { property: "og:title", content: data.site.siteMetadata.title },
-        { property: "og:type", content: "website" },
-        { property: "fb:app_id", content: 1271463799642798 },
-        { property: "twitter:creator", content: "_danoc" },
-        { name: "theme-color", content: s.blue }
-      ]}
-      htmlAttributes={{
-        lang: "en"
-      }}
+    <StaticQuery
+      query={graphql`
+        query Layout {
+          site {
+            siteMetadata {
+              title
+              description
+            }
+          }
+        }
+      `}
+      render={data => (
+        <Helmet
+          title={data.site.siteMetadata.title}
+          meta={[
+            { property: "og:title", content: data.site.siteMetadata.title },
+            { property: "og:type", content: "website" },
+            { property: "fb:app_id", content: 1271463799642798 },
+            { property: "twitter:creator", content: "_danoc" },
+            { name: "theme-color", content: s.blue }
+          ]}
+          htmlAttributes={{
+            lang: "en"
+          }}
+        />
+      )}
     />
-    {children()}
+    {children}
     <Footer>
       <FooterList>
         <li>
@@ -141,14 +156,3 @@ IndexLayout.defaultProps = {
 };
 
 export default IndexLayout;
-
-export const pageQuery = graphql`
-  query Layout {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;

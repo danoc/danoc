@@ -31,41 +31,38 @@ const ViewMoreLink = styled(Link)`
   margin-top: ${s.s3};
 `;
 
-const Container = styled.section`
-  margin-bottom: ${s.s5};
-`;
+const Container = styled.section`margin-bottom: ${s.s5};`;
 
 const H2 = styled.h2`
   margin-top: ${s.s0};
   margin-bottom: ${s.s3};
 `;
 
-const Section = props => (
-  <Container
-    id={
-      isString(props.title)
-        ? props.title.replace(/\s+/g, "-").toLowerCase()
-        : null
-    }
-  >
-    <H2>
-      {props.to ? (
-        <SectionTitleLink to={props.to} title={props.callToAction}>
-          {props.title}
-        </SectionTitleLink>
-      ) : (
-        <SectionTitle>{props.title}</SectionTitle>
-      )}
-    </H2>
+const Section = props => {
+  const { title, to, children, callToAction } = props;
+  return (
+    <Container
+      id={isString(title) ? title.replace(/\s+/g, "-").toLowerCase() : null}
+    >
+      <H2>
+        {to ? (
+          <SectionTitleLink to={to} title={callToAction}>
+            {title}
+          </SectionTitleLink>
+        ) : (
+          <SectionTitle>{title}</SectionTitle>
+        )}
+      </H2>
 
-    {props.children}
+      {children}
 
-    {props.to &&
-      props.callToAction && (
-        <ViewMoreLink to={props.to}>{props.callToAction} →</ViewMoreLink>
+      {to &&
+      callToAction && (
+        <ViewMoreLink to={to}>{`${callToAction} →`}</ViewMoreLink>
       )}
-  </Container>
-);
+    </Container>
+  );
+};
 
 Section.propTypes = {
   to: PropTypes.string,

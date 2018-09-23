@@ -57,7 +57,8 @@ const handleTooltip = props => {
     tooltipData: (
       <span>
         <TooltipDate>{formattedDate}</TooltipDate>
-        {roundedMiles} mile{roundedMiles !== 1 && "s"}
+        {roundedMiles} mile
+        {roundedMiles !== 1 && "s"}
       </span>
     ),
     tooltipLeft: props.left,

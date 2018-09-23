@@ -11,16 +11,10 @@ const UL = styled.ul`
   // Style for the bullets
   font-size: 14px;
 
-  ${props =>
-    props.hasDescriptions &&
-    css`
-      list-style: none;
-    `};
+  ${props => props.hasDescriptions && css`list-style: none;`};
 `;
 
-const ListWrapper = styled.div`
-  font-size: ${s.s3};
-`;
+const ListWrapper = styled.div`font-size: ${s.s3};`;
 
 const H3 = styled.h3`
   font-size: ${s.f5};
@@ -46,27 +40,28 @@ const Row = styled.div`
   margin-bottom: ${s.s2};
 `;
 
-const Description = styled.div`
-  margin-bottom: ${s.s4};
-`;
+const Description = styled.div`margin-bottom: ${s.s4};`;
 
-const BulletList = props => (
-  <UL hasDescriptions={props.hasDescriptions}>
-    {props.items.map(item => (
-      <li key={item.to}>
-        <ListWrapper>
-          <Row>
-            <H3 hasDescriptions={props.hasDescriptions}>
-              <Link to={item.to}>{item.title}</Link>
-            </H3>
-            {item.meta && <Meta>{item.meta}</Meta>}
-          </Row>
-          {item.children && <Description>{item.children}</Description>}
-        </ListWrapper>
-      </li>
-    ))}
-  </UL>
-);
+const BulletList = props => {
+  const { items, hasDescriptions } = props;
+  return (
+    <UL hasDescriptions={hasDescriptions}>
+      {items.map(item => (
+        <li key={item.to}>
+          <ListWrapper>
+            <Row>
+              <H3 hasDescriptions={hasDescriptions}>
+                <Link to={item.to}>{item.title}</Link>
+              </H3>
+              {item.meta && <Meta>{item.meta}</Meta>}
+            </Row>
+            {item.children && <Description>{item.children}</Description>}
+          </ListWrapper>
+        </li>
+      ))}
+    </UL>
+  );
+};
 
 export default BulletList;
 

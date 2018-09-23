@@ -4,13 +4,15 @@ import { Link as GatsbyLink } from "gatsby";
 import isRelativeUrl from "is-relative-url";
 
 const Link = props => {
-  if (props.to && isRelativeUrl(props.to)) {
+  const { to, children, title } = props;
+
+  if (to && isRelativeUrl(to)) {
     return <GatsbyLink {...props}>{props.children}</GatsbyLink>;
   }
 
   return (
-    <a href={props.to} title={props.title} {...props}>
-      {props.children}
+    <a href={to} title={title} {...props}>
+      {children}
     </a>
   );
 };

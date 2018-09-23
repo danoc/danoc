@@ -20,20 +20,22 @@ const Title = styled.h1`
   line-height: ${s.lhTitle};
 `;
 
-const Container = styled.header`
-  margin-bottom: ${s.s5};
-`;
+const Container = styled.header`margin-bottom: ${s.s5};`;
 
-const Header = props => (
-  <Container>
-    <Title isSinglePost={props.isSinglePost}>
-      <StyledLink to="/" rel="author">
-        Daniel O&#8217;Connor
-      </StyledLink>
-    </Title>
-    {props.children}
-  </Container>
-);
+const Header = props => {
+  const { isSinglePost, children } = props;
+
+  return (
+    <Container>
+      <Title isSinglePost={isSinglePost}>
+        <StyledLink to="/" rel="author">
+          Daniel O&#8217;Connor
+        </StyledLink>
+      </Title>
+      {children}
+    </Container>
+  );
+};
 
 Header.propTypes = {
   children: PropTypes.node,

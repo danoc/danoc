@@ -1,5 +1,7 @@
 # [danoc.me](https://danoc.me/)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/danoc/danoc.me.svg)](https://greenkeeper.io/)
+
 Daniel O'Connor's personal website and portfolio.
 
 ## Install

@@ -5,7 +5,7 @@ import Measure from "react-measure";
 import { Group } from "@vx/group";
 import { scaleLinear } from "@vx/scale";
 import { HeatmapRect } from "@vx/heatmap";
-import { extent, min, max } from "d3-array";
+import { extent, max } from "d3-array";
 import { AxisLeft, AxisTop } from "@vx/axis";
 import { withTooltip, Tooltip } from "@vx/tooltip";
 import { round } from "lodash";
@@ -89,16 +89,17 @@ class Heatmap extends React.Component {
       labelWidth
     } = this.props;
 
+    const { width, hasCalculatedWidth } = this.state;
+
     const labelTopHeight = 8;
-    const heatmapWidth = this.state.width;
+    const heatmapWidth = width;
     const heatmapLeft = labelWidth + labelMargin;
     const heatmapTop = labelTopHeight + labelMargin;
 
     const numberOfWeeks = data.length;
 
-    const dMin = min(data, d => min(y(d), x));
     const dMax = max(data, d => max(y(d), x));
-    const dStep = dMax / data[0].days.length;
+
     const bWidth = heatmapWidth / data.length;
     const bHeight = bWidth;
     const height = bHeight * data[0].days.length;
@@ -110,8 +111,8 @@ class Heatmap extends React.Component {
     });
 
     const yScale = scaleLinear({
-      range: [height, 0],
-      domain: [dMin, dMax + 1]
+      range: [height - heatmapTop, 0],
+      domain: [0, dMax]
     });
 
     const colorScale = scaleLinear({
@@ -135,7 +136,7 @@ class Heatmap extends React.Component {
       >
         {({ measureRef }) => (
           <div ref={measureRef}>
-            {this.state.hasCalculatedWidth && (
+            {hasCalculatedWidth && (
               <Container labelWidth={labelWidth} labelMargin={labelMargin}>
                 {tooltipOpen && (
                   <TooltipContainer top={tooltipTop} left={tooltipLeft}>
@@ -144,31 +145,9 @@ class Heatmap extends React.Component {
                 )}
 
                 <svg
-                  width={this.state.width + (labelWidth + labelMargin) * 2}
-                  height={height + heatmapTop + 3}
+                  width={width + (labelWidth + labelMargin) * 2}
+                  height={height + heatmapTop}
                 >
-                  <AxisLeft
-                    left={8}
-                    top={heatmapTop + bHeight / 2}
-                    scale={yScale}
-                    tickFormat={t => {
-                      const days = ["", "M", "", "W", "", "F", ""];
-                      return days[7 - t];
-                    }}
-                    numTicks={3}
-                    strokeWidth={0}
-                    hideAxisLine
-                    hideTicks
-                    tickLabelProps={() => ({
-                      fill: s.darkGray,
-                      textAnchor: "start",
-                      fontSize: 10,
-                      dy: "0.5em"
-                    })}
-                    tickComponent={({ formattedValue, ...tickProps }) => (
-                      <text {...tickProps}>{formattedValue}</text>
-                    )}
-                  />
                   <AxisTop
                     left={heatmapLeft}
                     scale={xScale}
@@ -187,12 +166,29 @@ class Heatmap extends React.Component {
                       fontSize: 10,
                       dy: "1em"
                     })}
-                    tickComponent={({ formattedValue, ...tickProps }) => (
-                      <text {...tickProps}>{formattedValue}</text>
-                    )}
                   />
-                  <Group top={heatmapTop} left={heatmapLeft}>
+                  <Group top={heatmapTop}>
+                    <AxisLeft
+                      left={8}
+                      top={bHeight}
+                      scale={yScale}
+                      tickFormat={t => {
+                        const days = ["", "M", "", "W", "", "F", ""];
+                        return days[7 - t];
+                      }}
+                      numTicks={3}
+                      strokeWidth={0}
+                      hideAxisLine
+                      hideTicks
+                      tickLabelProps={() => ({
+                        fill: s.darkGray,
+                        textAnchor: "start",
+                        fontSize: 10,
+                        dy: "1em"
+                      })}
+                    />
                     <HeatmapRect
+                      x={heatmapLeft}
                       data={data}
                       xScale={xScale}
                       yScale={yScale}
@@ -200,9 +196,7 @@ class Heatmap extends React.Component {
                       opacityScale={opacityScale}
                       binWidth={bWidth}
                       binHeight={bHeight}
-                      step={dStep}
                       gap={1}
-                      bin={x}
                       bins={y}
                       count={z}
                       onMouseMove={d => () => {

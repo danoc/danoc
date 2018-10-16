@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import hexToRgba from "hex-rgba";
-import styled, { injectGlobal } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { StaticQuery, graphql } from "gatsby";
 import "normalize.css";
 import Link from "./link";
@@ -15,7 +15,7 @@ import UntitledSansRegularWoff2 from "../fonts/UntitledSansWeb-Regular.woff2";
 import UntitledSansRegularItalicWoff from "../fonts/UntitledSansWeb-RegularItalic.woff";
 import UntitledSansRegularItalicWoff2 from "../fonts/UntitledSansWeb-RegularItalic.woff2";
 
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   html {
     font-size: ${s.fontSizeBody};
   }
@@ -105,6 +105,7 @@ const FooterList = styled.ul`
 
 const IndexLayout = ({ children }) => (
   <Container>
+    <GlobalStyle />
     <StaticQuery
       query={graphql`
         query Layout {

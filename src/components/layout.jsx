@@ -148,8 +148,7 @@ const IndexLayout = ({ children }) => (
 );
 
 IndexLayout.propTypes = {
-  children: PropTypes.func,
-  data: PropTypes.shape({}).isRequired
+  children: PropTypes.node
 };
 
 IndexLayout.defaultProps = {

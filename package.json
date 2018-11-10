@@ -13,7 +13,7 @@
     "@vx/scale": "0.0.179",
     "@vx/tooltip": "0.0.179",
     "babel-plugin-styled-components": "^1.7.1",
-    "d3-array": "^1.2.1",
+    "d3-array": "^2.0.0",
     "gatsby": "^2.0.7",
     "gatsby-plugin-favicon": "^3.1.4",
     "gatsby-plugin-feed": "^2.0.5",

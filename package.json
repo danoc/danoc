@@ -57,7 +57,7 @@
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.0-rc.15",
     "lint-staged": "^8.0.2",
-    "prettier": "1.15.0"
+    "prettier": "1.15.2"
   },
   "lint-staged": {
     "*.{js,jsx,css,scss,json,md}": ["prettier --write", "git add"]

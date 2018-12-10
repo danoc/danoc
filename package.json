@@ -13,7 +13,7 @@
     "@babel/core": "^7.2.0",
     "@emotion/core": "^10.0.4",
     "@emotion/styled": "^10.0.4",
-    "@vx/axis": "0.0.179",
+    "@vx/axis": "0.0.181",
     "@vx/group": "0.0.170",
     "@vx/heatmap": "0.0.179",
     "@vx/scale": "0.0.179",

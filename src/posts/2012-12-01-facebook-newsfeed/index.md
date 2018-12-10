@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Larger images in Facebook newsfeed
-date: '2012-12-01T11:58:49-05:00'
+date: "2012-12-01T11:58:49-05:00"
 tags:
-- facebook
-- pipe-dream
-- social media
-- photos
+  - facebook
+  - pipe-dream
+  - social media
+  - photos
 tumblr_url: http://blog.danoc.me/post/36959614701/facebook-newsfeed
 path: /blog/facebook-newsfeed/
 ---

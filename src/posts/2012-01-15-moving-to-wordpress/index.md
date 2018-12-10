@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Stage Three
-date: '2012-01-15T20:41:46-05:00'
+date: "2012-01-15T20:41:46-05:00"
 tags:
-- wordpress
-- development
-- bupipedream
-- binghamton
+  - wordpress
+  - development
+  - bupipedream
+  - binghamton
 tumblr_url: http://blog.danoc.me/post/15919857214/moving-to-wordpress
 path: /blog/moving-to-wordpress/
 ---

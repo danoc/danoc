@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Pipe Dream layout for concert announcements
-date: '2012-03-25T16:48:00-04:00'
+date: "2012-03-25T16:48:00-04:00"
 tags:
-- bupipedream
-- passion-pit
-- sapb
-- facebook
+  - bupipedream
+  - passion-pit
+  - sapb
+  - facebook
 tumblr_url: http://blog.danoc.me/post/19913228146/concert-layout
 path: /blog/concert-layout/
 ---

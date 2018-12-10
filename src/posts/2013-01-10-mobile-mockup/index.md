@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Mobile mockup of the new Pipe Dream
-date: '2013-01-10T23:43:00-05:00'
+date: "2013-01-10T23:43:00-05:00"
 tags:
-- pipe-dream
-- responsive
-- css
-- redesign
-- web development
+  - pipe-dream
+  - responsive
+  - css
+  - redesign
+  - web development
 tumblr_url: http://blog.danoc.me/post/40233716965/mobile-mockup
 path: /blog/mobile-mockup/
 ---

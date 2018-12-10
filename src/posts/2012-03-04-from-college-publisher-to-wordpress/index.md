@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Moving Pipe Dream from College Publisher to WordPress
-date: '2012-03-04T02:01:00-05:00'
+date: "2012-03-04T02:01:00-05:00"
 tags:
-- wordpress
-- college publisher
-- pipe-dream
-- binghamton
-- bupipedream
+  - wordpress
+  - college publisher
+  - pipe-dream
+  - binghamton
+  - bupipedream
 tumblr_url: http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress
 path: /blog/from-college-publisher-to-wordpress/
 ---
@@ -140,7 +140,7 @@ I'm no expert at server configuration, but I decided to go with [Linode](http://
 
 Linode provide a Virtual Private Sever (VPS), which gives users complete control over their server. That also means that users are responsible for configuring and installing Linux, Apache, MySQL, and PHP.
 
-A VPS is not necessary by any means, but I figured it would be a good learning experience. Our plan costs $19.95 a month and provides 512MB of RAM, 20GB of storage, and 200GB of data transfer/month.
+A VPS is not necessary by any means, but I figured it would be a good learning experience. Our plan costs \$19.95 a month and provides 512MB of RAM, 20GB of storage, and 200GB of data transfer/month.
 
 ### Launching the new Pipe Dream
 

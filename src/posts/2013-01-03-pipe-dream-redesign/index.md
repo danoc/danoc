@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Preview of the 2013 Pipe Dream redesign
-date: '2013-01-03T20:35:58-05:00'
+date: "2013-01-03T20:35:58-05:00"
 tags:
-- pipe dream
-- redesign
-- plans
-- winter break
-- wordpress
-- college
-- media
-- news
-- newspaper
+  - pipe dream
+  - redesign
+  - plans
+  - winter break
+  - wordpress
+  - college
+  - media
+  - news
+  - newspaper
 tumblr_url: http://blog.danoc.me/post/39614524151/pipe-dream-redesign
 path: /blog/pipe-dream-redesign/
 ---

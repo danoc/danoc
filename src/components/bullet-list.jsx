@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled, { css } from "styled-components";
+import { css } from "@emotion/core";
+import styled from "@emotion/styled";
 import Link from "./link";
 import * as s from "../styles";
 
@@ -11,10 +12,16 @@ const UL = styled.ul`
   // Style for the bullets
   font-size: 14px;
 
-  ${props => props.hasDescriptions && css`list-style: none;`};
+  ${props =>
+    props.hasDescriptions &&
+    css`
+      list-style: none;
+    `};
 `;
 
-const ListWrapper = styled.div`font-size: ${s.s3};`;
+const ListWrapper = styled.div`
+  font-size: ${s.s3};
+`;
 
 const H3 = styled.h3`
   font-size: ${s.f5};
@@ -40,7 +47,9 @@ const Row = styled.div`
   margin-bottom: ${s.s2};
 `;
 
-const Description = styled.div`margin-bottom: ${s.s4};`;
+const Description = styled.div`
+  margin-bottom: ${s.s4};
+`;
 
 const BulletList = props => {
   const { items, hasDescriptions } = props;

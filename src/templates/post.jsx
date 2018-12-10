@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { graphql } from "gatsby";
 import * as s from "../styles";
 import Header from "../components/header";
@@ -209,13 +209,12 @@ const Post = ({ data }) => {
               content={post.frontmatter.date}
             />
           )}
-          {site.siteUrl &&
-            post.frontmatter.path && (
-              <meta
-                property="og:url"
-                content={site.siteUrl + post.frontmatter.path}
-              />
-            )}
+          {site.siteUrl && post.frontmatter.path && (
+            <meta
+              property="og:url"
+              content={site.siteUrl + post.frontmatter.path}
+            />
+          )}
           {post.frontmatter.description && (
             <meta name="description" content={post.frontmatter.description} />
           )}

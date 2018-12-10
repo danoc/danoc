@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import { isString } from "lodash";
 import Link from "./link";
 import * as s from "../styles";
@@ -31,7 +31,9 @@ const ViewMoreLink = styled(Link)`
   margin-top: ${s.s3};
 `;
 
-const Container = styled.section`margin-bottom: ${s.s5};`;
+const Container = styled.section`
+  margin-bottom: ${s.s5};
+`;
 
 const H2 = styled.h2`
   margin-top: ${s.s0};
@@ -56,8 +58,7 @@ const Section = props => {
 
       {children}
 
-      {to &&
-      callToAction && (
+      {to && callToAction && (
         <ViewMoreLink to={to}>{`${callToAction} →`}</ViewMoreLink>
       )}
     </Container>

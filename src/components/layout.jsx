@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import hexToRgba from "hex-rgba";
-import styled, { createGlobalStyle } from "styled-components";
+import { Global, css } from "@emotion/core";
+import styled from "@emotion/styled";
+
 import { StaticQuery, graphql } from "gatsby";
 import "normalize.css";
 import Link from "./link";
@@ -14,68 +16,6 @@ import UntitledSansRegularWoff from "../fonts/UntitledSansWeb-Regular.woff";
 import UntitledSansRegularWoff2 from "../fonts/UntitledSansWeb-Regular.woff2";
 import UntitledSansRegularItalicWoff from "../fonts/UntitledSansWeb-RegularItalic.woff";
 import UntitledSansRegularItalicWoff2 from "../fonts/UntitledSansWeb-RegularItalic.woff2";
-
-const GlobalStyle = createGlobalStyle`
-  html {
-    font-size: ${s.fontSizeBody};
-  }
-
-  a {
-    color: ${s.blue};
-
-    :focus {
-      outline: 1px dotted currentColor;
-    }
-
-    :hover {
-      color: ${s.darkBlue};
-      border-radius: 1px;
-      background: ${hexToRgba(s.blue, 5)};
-      box-shadow: 0 0 0 4px ${hexToRgba(s.blue, 5)};
-    }
-
-    :active {
-      color: ${s.darkGray};
-    }
-  }
-
-  code, pre {
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  }
-
-  * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  @font-face {
-    font-family: 'Untitled Sans';
-    font-weight: 400;
-    font-style: normal;
-    src: url('${UntitledSansRegularWoff2}') format('woff2'),
-         url('${UntitledSansRegularWoff}') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Untitled Sans';
-    font-weight: 400;
-    font-style: italic;
-    src: url('${UntitledSansRegularItalicWoff2}') format('woff2'),
-         url('${UntitledSansRegularItalicWoff}') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Untitled Sans';
-    font-weight: 500;
-    font-style: normal;
-    src: url('${UntitledSansMediumWoff2}') format('woff2'),
-         url('${UntitledSansMediumWoff}') format('woff');
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-  }
-`;
 
 const Container = styled.div`
   font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, avenir next,
@@ -105,7 +45,69 @@ const FooterList = styled.ul`
 
 const IndexLayout = ({ children }) => (
   <Container>
-    <GlobalStyle />
+    <Global
+      styles={css`
+        html {
+          font-size: ${s.fontSizeBody};
+        }
+
+        a {
+          color: ${s.blue};
+
+          :focus {
+            outline: 1px dotted currentColor;
+          }
+
+          :hover {
+            color: ${s.darkBlue};
+            border-radius: 1px;
+            background: ${hexToRgba(s.blue, 5)};
+            box-shadow: 0 0 0 4px ${hexToRgba(s.blue, 5)};
+          }
+
+          :active {
+            color: ${s.darkGray};
+          }
+        }
+
+        code, pre {
+          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+
+        * {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        @font-face {
+          font-family: 'Untitled Sans';
+          font-weight: 400;
+          font-style: normal;
+          src: url('${UntitledSansRegularWoff2}') format('woff2'),
+                url('${UntitledSansRegularWoff}') format('woff');
+        }
+
+        @font-face {
+          font-family: 'Untitled Sans';
+          font-weight: 400;
+          font-style: italic;
+          src: url('${UntitledSansRegularItalicWoff2}') format('woff2'),
+                url('${UntitledSansRegularItalicWoff}') format('woff');
+        }
+
+        @font-face {
+          font-family: 'Untitled Sans';
+          font-weight: 500;
+          font-style: normal;
+          src: url('${UntitledSansMediumWoff2}') format('woff2'),
+                url('${UntitledSansMediumWoff}') format('woff');
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-weight: 500;
+        }
+    `}
+    />
     <StaticQuery
       query={graphql`
         query Layout {

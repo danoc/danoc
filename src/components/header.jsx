@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import * as s from "../styles";
 
 const StyledLink = styled(Link)`
@@ -20,7 +20,9 @@ const Title = styled.h1`
   line-height: ${s.lhTitle};
 `;
 
-const Container = styled.header`margin-bottom: ${s.s5};`;
+const Container = styled.header`
+  margin-bottom: ${s.s5};
+`;
 
 const Header = props => {
   const { isSinglePost, children } = props;

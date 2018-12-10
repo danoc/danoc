@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Image placement in WordPress posts
-date: '2012-01-18T01:06:58-05:00'
+date: "2012-01-18T01:06:58-05:00"
 tags:
-- images
-- wordpress
-- php
-- functions
-- bupipedream
-- journalism
-- photos
+  - images
+  - wordpress
+  - php
+  - functions
+  - bupipedream
+  - journalism
+  - photos
 tumblr_url: http://blog.danoc.me/post/16051985458/image-placement
 path: /blog/image-placement/
 ---

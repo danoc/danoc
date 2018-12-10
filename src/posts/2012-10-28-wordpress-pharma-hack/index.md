@@ -1,12 +1,12 @@
 ---
 layout: post
 title: Battling the infamous WordPress "Pharma" hack
-date: '2012-10-28T01:31:57-04:00'
+date: "2012-10-28T01:31:57-04:00"
 tags:
-- wordpress
-- hack
-- pharma
-- pipe-dream
+  - wordpress
+  - hack
+  - pharma
+  - pipe-dream
 tumblr_url: http://blog.danoc.me/post/34468850592/wordpress-pharma-hack
 path: /blog/wordpress-pharma-hack/
 ---

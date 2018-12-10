@@ -2,12 +2,12 @@
 layout: post
 title: Binghamton University at MHacks
 deck: We got a group of 20 Binghamton students and traveled to the University of Michigan for MHacks, the largest student hackathon.
-date: '2013-09-28T18:11:00-04:00'
+date: "2013-09-28T18:11:00-04:00"
 tags:
-- binghamtonu
-- mhacks
-- michigan
-- hackathon
+  - binghamtonu
+  - mhacks
+  - michigan
+  - hackathon
 tumblr_url: http://blog.danoc.me/post/62548615920/binghamton-university-at-mhacks
 path: /blog/binghamton-university-at-mhacks/
 ---
@@ -42,9 +42,9 @@ Three of our teams made it to the Science Fair Expo, presenting their hacks to p
 
 The following teams from Binghamton presented:
 
-* **[iGUTYOU](http://mhacks.challengepost.com/submissions/17505-igutyou)** \- Davix and Cezar created an iPhone app that allows us to see how we make decisions when "we're presented with simple questions that we have to answer at a really fast pace." The app gives you two seconds to answer a series of questions in an "attempt to remove user bias."
-* **VFD-Alert** \- Yuval and I worked on VFD-Alert, a tool for volunteer fire departments to use SMS instead of pagers. The website uses the Twilio API to send alerts and could eventually be developed to parse responses and send turn-by-turn directions.
-* **[Relevant XKCD](http://relevant-xkcd.appspot.com/)** \- Joseph, Gary, Chaoren, and Ajmal created a website called Relevant XKCD that uses the Google Prediction API to "to accurately find relevant XKCD's given key words and phrases or context from a conversation." The hack did well enough to win Google's "Most Creative Prediction API" contest. Each of them won a Nexus 7 tablet.
+- **[iGUTYOU](http://mhacks.challengepost.com/submissions/17505-igutyou)** \- Davix and Cezar created an iPhone app that allows us to see how we make decisions when "we're presented with simple questions that we have to answer at a really fast pace." The app gives you two seconds to answer a series of questions in an "attempt to remove user bias."
+- **VFD-Alert** \- Yuval and I worked on VFD-Alert, a tool for volunteer fire departments to use SMS instead of pagers. The website uses the Twilio API to send alerts and could eventually be developed to parse responses and send turn-by-turn directions.
+- **[Relevant XKCD](http://relevant-xkcd.appspot.com/)** \- Joseph, Gary, Chaoren, and Ajmal created a website called Relevant XKCD that uses the Google Prediction API to "to accurately find relevant XKCD's given key words and phrases or context from a conversation." The hack did well enough to win Google's "Most Creative Prediction API" contest. Each of them won a Nexus 7 tablet.
 
 ## What's next for Binghamton
 

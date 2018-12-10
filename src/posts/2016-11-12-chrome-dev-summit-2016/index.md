@@ -2,7 +2,7 @@
 layout: post
 title: Themes from the 2016 Chrome Dev Summit
 description: Key themes, random thoughts, and tidbits from the 2016 Chrome Dev Summit.
-date: '2016-11-12T00:00:00Z'
+date: "2016-11-12T00:00:00Z"
 path: /blog/chrome-dev-summit-2016/
 image_src: ./chrome-dev-summit-2016.jpg
 image_alt: Photo from the 2016 Chrome Dev Summit
@@ -59,17 +59,17 @@ Tip: You can debug Android devices using the Chrome Dev Tools and [chrome://insp
 
 Last year [Paul Irish spoke about RAIL](https://www.youtube.com/watch?v=w0O2znkSBXA), a [concept created at Google](https://developers.google.com/web/fundamentals/performance/rail) to promote a "user-centric performance model" for the web. The acronym promotes the following best practices:
 
-* **Response**: The web app should respond to user interactions (touch, click, scrolling, etc...) in under 100ms. Any longer and the user will notice a lag. Provide visual feedback if the response takes longer than 500ms.
-* **Animation**: Each frame should be rendered in 16ms to achieve 60fps.
-* **Idle**: Non-critical work should be deferred to when the device is idle. The work should be broken up into 50ms chunks so that the browser can still respond quickly to user interaction.
-* **Load**: The critical content should load in under 1000ms.
+- **Response**: The web app should respond to user interactions (touch, click, scrolling, etc...) in under 100ms. Any longer and the user will notice a lag. Provide visual feedback if the response takes longer than 500ms.
+- **Animation**: Each frame should be rendered in 16ms to achieve 60fps.
+- **Idle**: Non-critical work should be deferred to when the device is idle. The work should be broken up into 50ms chunks so that the browser can still respond quickly to user interaction.
+- **Load**: The critical content should load in under 1000ms.
 
 This year a few of the talks spoke a new performance acronym: [the PRPL pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/). The pattern takes advantage of new web technologies to help deliver mobile experiences more quickly. In more detail:
 
-* **Push**: Use HTTP/2 and HTTP/2 server push to preemptively send the browser resources before it requests it. (HTTP/2 server push should be used with service workers because it will respond with the resource even if the user already has it cached.)
-* **Render**: The critical content should render as quickly as possible.
-* **Pre-cache**: The server and service worker should pre-cache routes that the user may go to.
-* **Lazy-load**: The server should lazy-load requests either from the cache or network when the user changes routes.
+- **Push**: Use HTTP/2 and HTTP/2 server push to preemptively send the browser resources before it requests it. (HTTP/2 server push should be used with service workers because it will respond with the resource even if the user already has it cached.)
+- **Render**: The critical content should render as quickly as possible.
+- **Pre-cache**: The server and service worker should pre-cache routes that the user may go to.
+- **Lazy-load**: The server should lazy-load requests either from the cache or network when the user changes routes.
 
 ## Constraints in emerging markets drives innovation
 
@@ -109,21 +109,21 @@ It’s unclear which of these efforts will stick, but it’s increasingly clear 
 
 Those are the key themes that I noticed at the Chrome Dev Summit. Here a few more random thoughts and tidbits:
 
-* A commonly referenced number is that consumer mobile app developers can <span class="point">[expect a ](http://blog.gaborcselle.com/2012/10/every-step-costs-you-20-of-users.html)[20% drop in conversions for each step in the funnel](http://blog.gaborcselle.com/2012/10/every-step-costs-you-20-of-users.html)</span>.
-* "Responsive web development" increasingly refers to mobile-first websites adapting to desktop widths. (I’m a fan of Una Kravet’s recent [blog post about “rethinking responsive”](http://una.im/rethinking-responsive/).)
-* I haven’t played with it yet, but [Google’s Lighthouse](https://github.com/GoogleChrome/lighthouse) seems like a neat tool for testing performance. The CLI could be used to integrate with CI environments.
-* Checkout forms would be way less painful if developers used the [autocomplete attribute](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill) on input fields.
-* [MotionMark](http://browserbench.org/MotionMark/) is a neat tool for benchmarking your device.
-* Mobile device CPUs are often throttled because they are limited by how much heat the device can dissipate. Alex Russell proved this point by running [MotionMark](http://browserbench.org/MotionMark/) twice on the same phone and getting different scores. The difference? He [strapped an ice pack to the phone](https://youtu.be/4bZvq3nodf4?t=746) the second time around to help the it stay cool.
-* There was a lot of talk about not shipping more JavaScript than needed. [Addy Osmani highlighted](https://www.youtube.com/watch?v=e8XejNt5SZo) a few tools to that help keep bundle sizes small:
-  * [Preact](https://github.com/developit/preact) is a fast 3kb React alternative.
-  * He’s working with webpack to [add performance metrics and budgets](https://github.com/webpack/webpack/issues/3216).
-  * [source-map-explorer](https://github.com/danvk/source-map-explorer) is a neat tool to visualize JS in a bundle.
-  * [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin) makes it easy to generate service workers with webpack.
-* Google and the W3C are aggressively pushing HTTPS by [limiting the new APIs available to insecure websites](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only), introducing [design changes to Google Chrome](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html), and investing in [Let’s Encrypt](https://letsencrypt.org/).
-* Polymer initially included complex polyfills to support the [features that make up web components](http://webcomponents.org/). The project becomes less important as custom elements, shadow DOM, and templates receive native browser support. (This is a good thing for the web!)
-* The HTML imports API hasn’t gone anywhere since their implementation is blocked by lack of ES6 modules support within browsers. Chrome developers think it’s unlikely that HTML imports will survive in their current form.
-* [Paul Irish showed off](https://www.youtube.com/watch?v=HF1luRD4Qmk) some really neat tips and upcoming features in the Dev Tools.
+- A commonly referenced number is that consumer mobile app developers can <span class="point">[expect a ](http://blog.gaborcselle.com/2012/10/every-step-costs-you-20-of-users.html)[20% drop in conversions for each step in the funnel](http://blog.gaborcselle.com/2012/10/every-step-costs-you-20-of-users.html)</span>.
+- "Responsive web development" increasingly refers to mobile-first websites adapting to desktop widths. (I’m a fan of Una Kravet’s recent [blog post about “rethinking responsive”](http://una.im/rethinking-responsive/).)
+- I haven’t played with it yet, but [Google’s Lighthouse](https://github.com/GoogleChrome/lighthouse) seems like a neat tool for testing performance. The CLI could be used to integrate with CI environments.
+- Checkout forms would be way less painful if developers used the [autocomplete attribute](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill) on input fields.
+- [MotionMark](http://browserbench.org/MotionMark/) is a neat tool for benchmarking your device.
+- Mobile device CPUs are often throttled because they are limited by how much heat the device can dissipate. Alex Russell proved this point by running [MotionMark](http://browserbench.org/MotionMark/) twice on the same phone and getting different scores. The difference? He [strapped an ice pack to the phone](https://youtu.be/4bZvq3nodf4?t=746) the second time around to help the it stay cool.
+- There was a lot of talk about not shipping more JavaScript than needed. [Addy Osmani highlighted](https://www.youtube.com/watch?v=e8XejNt5SZo) a few tools to that help keep bundle sizes small:
+  - [Preact](https://github.com/developit/preact) is a fast 3kb React alternative.
+  - He’s working with webpack to [add performance metrics and budgets](https://github.com/webpack/webpack/issues/3216).
+  - [source-map-explorer](https://github.com/danvk/source-map-explorer) is a neat tool to visualize JS in a bundle.
+  - [sw-precache-webpack-plugin](https://github.com/goldhand/sw-precache-webpack-plugin) makes it easy to generate service workers with webpack.
+- Google and the W3C are aggressively pushing HTTPS by [limiting the new APIs available to insecure websites](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only), introducing [design changes to Google Chrome](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html), and investing in [Let’s Encrypt](https://letsencrypt.org/).
+- Polymer initially included complex polyfills to support the [features that make up web components](http://webcomponents.org/). The project becomes less important as custom elements, shadow DOM, and templates receive native browser support. (This is a good thing for the web!)
+- The HTML imports API hasn’t gone anywhere since their implementation is blocked by lack of ES6 modules support within browsers. Chrome developers think it’s unlikely that HTML imports will survive in their current form.
+- [Paul Irish showed off](https://www.youtube.com/watch?v=HF1luRD4Qmk) some really neat tips and upcoming features in the Dev Tools.
 
 Think I missed something? Leave a comment or [reach out on Twitter](https://twitter.com/_danoc)!
 

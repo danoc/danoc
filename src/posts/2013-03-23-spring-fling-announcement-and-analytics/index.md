@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Spring Fling announcement and analytics
-date: '2013-03-23T10:43:37-04:00'
+date: "2013-03-23T10:43:37-04:00"
 tags:
-- bupipedream
-- stats
-- analytics
+  - bupipedream
+  - stats
+  - analytics
 tumblr_url: http://blog.danoc.me/post/46073307231/spring-fling-announcement-and-analytics
 path: /blog/spring-fling-announcement-and-analytics/
 ---

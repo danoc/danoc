@@ -1,11 +1,11 @@
 ---
 layout: post
 title: CollegePublisher database dump
-date: '2012-01-18T21:11:48-05:00'
+date: "2012-01-18T21:11:48-05:00"
 tags:
-- college publisher
-- bupipedream
-- wordpress
+  - college publisher
+  - bupipedream
+  - wordpress
 tumblr_url: http://blog.danoc.me/post/16093529186/database-dump
 path: /blog/database-dump/
 ---

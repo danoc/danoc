@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Pipe Dream in numbers
-date: '2012-01-21T19:54:00-05:00'
+date: "2012-01-21T19:54:00-05:00"
 tags:
-- statistics
-- pipe-dream
-- binghamton
+  - statistics
+  - pipe-dream
+  - binghamton
 tumblr_url: http://blog.danoc.me/post/16258657840/pipe-dream-stats
 path: /blog/pipe-dream-stats/
 ---

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Obama to visit Binghamton University
-date: '2013-08-17T13:57:33-04:00'
+date: "2013-08-17T13:57:33-04:00"
 tags:
-- obama
-- binghamton
-- beatstrap
-- president
-- pipe-dream
+  - obama
+  - binghamton
+  - beatstrap
+  - president
+  - pipe-dream
 tumblr_url: http://blog.danoc.me/post/58523267332/obama-to-visit-binghamton-university
 path: /blog/obama-to-visit-binghamton-university/
 ---

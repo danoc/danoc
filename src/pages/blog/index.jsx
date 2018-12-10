@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { groupBy, map, keys, sortBy, reverse } from "lodash";
 import { graphql } from "gatsby";
-import styled from "styled-components";
+import styled from "@emotion/styled";
 import Layout from "../../components/layout";
 import Header from "../../components/header";
 import Section from "../../components/section";

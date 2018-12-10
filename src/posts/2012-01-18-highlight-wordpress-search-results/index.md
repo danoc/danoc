@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Highlight terms in WordPress search results
-date: '2012-01-18T21:58:00-05:00'
+date: "2012-01-18T21:58:00-05:00"
 tags:
-- search
-- highlight
-- wordpress
-- code
-- php
-- plugin
+  - search
+  - highlight
+  - wordpress
+  - code
+  - php
+  - plugin
 tumblr_url: http://blog.danoc.me/post/16096405227/highlight-wordpress-search-results
 path: /blog/highlight-wordpress-search-results/
 ---

@@ -1,12 +1,12 @@
 ---
 layout: post
 title: College journalists on multimedia
-date: '2012-03-04T11:06:25-05:00'
+date: "2012-03-04T11:06:25-05:00"
 tags:
-- college
-- media
-- print
-- web
+  - college
+  - media
+  - print
+  - web
 tumblr_url: http://blog.danoc.me/post/18729689786/online-college-media
 path: /blog/online-college-media/
 ---

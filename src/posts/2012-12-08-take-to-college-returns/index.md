@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Take to College is back (kind of...)
-date: '2012-12-08T23:34:58-05:00'
+date: "2012-12-08T23:34:58-05:00"
 tags:
-- take to college
-- website
-- projects
-- development
-- php
+  - take to college
+  - website
+  - projects
+  - development
+  - php
 tumblr_url: http://blog.danoc.me/post/37530763368/take-to-college-returns
 path: /blog/take-to-college-returns/
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'How we built HackBU at Binghamton University'
-date: '2014-09-08T15:53:03.624Z'
+title: "How we built HackBU at Binghamton University"
+date: "2014-09-08T15:53:03.624Z"
 path: /blog/creating-hackbu/
 ---
 

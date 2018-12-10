@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Moved to GitHub
-date: '2012-12-13T21:55:01-05:00'
+date: "2012-12-13T21:55:01-05:00"
 tags:
-- git
-- github
-- capistrano
-- pipe dream
-- binghamton
-- deployment
+  - git
+  - github
+  - capistrano
+  - pipe dream
+  - binghamton
+  - deployment
 tumblr_url: http://blog.danoc.me/post/37881284935/moved-to-github
 path: /blog/moved-to-github/
 ---

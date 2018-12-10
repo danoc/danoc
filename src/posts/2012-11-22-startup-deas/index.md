@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Paul Graham on startup ideas
-date: '2012-11-22T18:25:40-05:00'
+date: "2012-11-22T18:25:40-05:00"
 tags:
-- pg
-- yc
-- ycombinator
-- startup
-- idea
-- development
-- journalism
+  - pg
+  - yc
+  - ycombinator
+  - startup
+  - idea
+  - development
+  - journalism
 tumblr_url: http://blog.danoc.me/post/36315431227/startup-deas
 path: /blog/startup-deas/
 ---

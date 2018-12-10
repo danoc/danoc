@@ -2,7 +2,7 @@
 layout: post
 title: An over-engineered, modern development environment and build system
 description: How to integrate Jekyll with tools like gulp and deploy in a single command using Capistrano.
-date: '2015-03-15T20:50:40Z'
+date: "2015-03-15T20:50:40Z"
 path: /blog/modern-build-system/
 ---
 
@@ -176,9 +176,9 @@ This complex build system creates many files and directories that should be igno
 
 These are some of the types of files and directories I ignore:
 
-* Complied "dist" files &mdash; This includes the `_site/` directory Jekyll generates and any CSS, JavaScript, or image files that gulp produces. This is a good practice because these compiled files clutter the repository, can lead to complicated merge conflicts, and are not necessary since we run gulp on the server.
-* Dependencies &mdash; I install dependencies with NPM, Bower, and Bundler on both the client and server so there is no need to check in these dependencies.
-* System and editor files such as the infamous `.DS_Store`.
+- Complied "dist" files &mdash; This includes the `_site/` directory Jekyll generates and any CSS, JavaScript, or image files that gulp produces. This is a good practice because these compiled files clutter the repository, can lead to complicated merge conflicts, and are not necessary since we run gulp on the server.
+- Dependencies &mdash; I install dependencies with NPM, Bower, and Bundler on both the client and server so there is no need to check in these dependencies.
+- System and editor files such as the infamous `.DS_Store`.
 
 [Most of my `.gitignore`](https://github.com/danoc/danoc.me/blob/master/.gitignore) comes from [gitignore.io](https://www.gitignore.io/), a website that creates customized `.gitignore` files.
 

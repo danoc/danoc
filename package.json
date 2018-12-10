@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "start": "gatsby develop",
-    "test": "eslint . --ext .js --ext .jsx --ignore-path .gitignore --fix",
+    "test": "yarn test:eslint && yarn test:prettier",
+    "test:eslint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore",
+    "test:prettier": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --list-different",
+    "format": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --write",
     "build": "TZ=America/Los_Angeles && gatsby build"
   },
   "dependencies": {
@@ -59,18 +62,12 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.0-rc.15",
-    "lint-staged": "^8.0.2",
-    "prettier": "1.15.3"
-  },
-  "lint-staged": {
-    "*.{js,jsx,css,scss,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "prettier": "1.15.3",
+    "pretty-quick": "^1.8.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }

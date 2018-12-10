@@ -2,7 +2,7 @@
 layout: post
 title: Balancing design consistency and developer productivity
 description: Create a design system that promotes collaboration, discourages one-off solutions, and optimizes for long-term productivity.
-date: '2017-02-22T18:55:58.639Z'
+date: "2017-02-22T18:55:58.639Z"
 path: /blog/design-consistency-developer-productivity/
 image_src: ./react-component-metrics.png
 image_alt: Screenshot of React component adoption metrics at Optimizely
@@ -83,8 +83,8 @@ _Developing our components in an isolated environment encourages us to “stress
 
 **Quality Improvements:** UI components like Token, Button, and Input live in OUI, a separate repository that is maintained by myself and the other UI Engineers. This has two big advantages:
 
-* We are encouraged to consider edge cases since we don’t see where or how a component will be used. (When we miss an edge case, we can fix the bug once, release a new version of OUI, and all instances of the component will benefit.)
-* Changes to components must go through UI Engineers. This short-term productivity hit encourages Frontend Engineers, Product Designers, and UI Engineers to communicate and helps ensure that we are building thoughtful and reusable components.
+- We are encouraged to consider edge cases since we don’t see where or how a component will be used. (When we miss an edge case, we can fix the bug once, release a new version of OUI, and all instances of the component will benefit.)
+- Changes to components must go through UI Engineers. This short-term productivity hit encourages Frontend Engineers, Product Designers, and UI Engineers to communicate and helps ensure that we are building thoughtful and reusable components.
 
 ---
 

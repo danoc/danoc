@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Fit for a smartphone
-date: '2012-01-13T00:01:00-05:00'
+date: "2012-01-13T00:01:00-05:00"
 tags:
-- CSS
-- media-queries
-- pipe-dream
-- binghamton
-- mobile
-- smart-phone
-- redesign
-- responsive-design
-- layout
+  - CSS
+  - media-queries
+  - pipe-dream
+  - binghamton
+  - mobile
+  - smart-phone
+  - redesign
+  - responsive-design
+  - layout
 tumblr_url: http://blog.danoc.me/post/15762559659/fit-for-a-smartphone
 path: /blog/fit-for-a-smartphone/
 ---

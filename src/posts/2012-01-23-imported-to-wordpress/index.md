@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Success!
-date: '2012-01-23T14:07:35-05:00'
+date: "2012-01-23T14:07:35-05:00"
 tags:
-- wordpress
-- college publisher
-- archives
-- mysql
-- bupipedream
+  - wordpress
+  - college publisher
+  - archives
+  - mysql
+  - bupipedream
 tumblr_url: http://blog.danoc.me/post/16358726729/imported-to-wordpress
 path: /blog/imported-to-wordpress/
 ---

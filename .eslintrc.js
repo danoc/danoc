@@ -6,7 +6,7 @@ module.exports = {
       jsx: true
     }
   },
-  extends: ["airbnb", "prettier"],
+  extends: ["airbnb", "prettier", "prettier/react"],
   globals: {
     URL: false
   },

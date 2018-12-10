@@ -2,7 +2,7 @@
 layout: post
 title: Easier HTML refactors through better selectors
 description: Best practices for integration test selectors and JavaScript hooks that we've adopted at Optimizely.
-date: '2015-09-23T00:00:00Z'
+date: "2015-09-23T00:00:00Z"
 path: /blog/better-selectors/
 is_featured: true
 ---

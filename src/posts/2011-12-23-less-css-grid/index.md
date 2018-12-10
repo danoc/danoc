@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Get a fluid layout with the LESS CSS Grid
-date: '2011-12-23T00:28:00-05:00'
+date: "2011-12-23T00:28:00-05:00"
 tags:
-- css
-- less
-- github
-- open-source
-- web-development
+  - css
+  - less
+  - github
+  - open-source
+  - web-development
 tumblr_url: http://blog.danoc.me/post/14656793071/less-css-grid
 path: /blog/less-css-grid/
 ---

@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Display the current temperature with PHP and Google’s (hidden) weather API
-date: '2012-01-16T16:44:00-05:00'
+date: "2012-01-16T16:44:00-05:00"
 tags:
-- weather
-- code
-- php
-- Google
-- bupipedream
-- SimpleXML
+  - weather
+  - code
+  - php
+  - Google
+  - bupipedream
+  - SimpleXML
 tumblr_url: http://blog.danoc.me/post/15968416150/display-current-temperature
 path: /blog/display-current-temperature/
 ---

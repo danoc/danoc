@@ -2,7 +2,7 @@
 layout: post
 title: Visualizing my runs with a heatmap
 description:
-date: '2018-04-22T15:31:00Z'
+date: "2018-04-22T15:31:00Z"
 path: /blog/visualizing-runs-heatmap/
 image_src: ./running-heatmap.png
 image_alt: Screenshot of a heatmap visualizing my runs for the past nine months
@@ -34,11 +34,11 @@ The homepage JSX file [fetches the Strava nodes](https://github.com/danoc/danoc.
 
 This was one of my first "weekend projects" in a while. Here's a brain-dump on how it went:
 
-* Data visualization is hard! I spent over 70% of the time learning how to work with VX. There's a lot of code needed to format the Strava API response so that it works with VX.
-* Even after a month I still find it incredibly satisfying to see the site automatically rebuild when I finish a run.
-* Webhooks, combined with IFTTT, are very powerful.
-* I set up IFTTT to rebuild the site every Sunday. This ensures that the current week always appears in the heatmap.
-* I'd love to build similar projects with other services. [Todoist](https://todoist.com/) next?
-* Building a basic Gatsby source plugin was easier than expected. I'd recommend [reading through the source code](https://github.com/danoc/gatsby-source-strava-activities/blob/master/src/gatsby-node.js) if interested.
+- Data visualization is hard! I spent over 70% of the time learning how to work with VX. There's a lot of code needed to format the Strava API response so that it works with VX.
+- Even after a month I still find it incredibly satisfying to see the site automatically rebuild when I finish a run.
+- Webhooks, combined with IFTTT, are very powerful.
+- I set up IFTTT to rebuild the site every Sunday. This ensures that the current week always appears in the heatmap.
+- I'd love to build similar projects with other services. [Todoist](https://todoist.com/) next?
+- Building a basic Gatsby source plugin was easier than expected. I'd recommend [reading through the source code](https://github.com/danoc/gatsby-source-strava-activities/blob/master/src/gatsby-node.js) if interested.
 
 Working on a similar project? [I'd love to hear about it](https://twitter.com/_danoc).

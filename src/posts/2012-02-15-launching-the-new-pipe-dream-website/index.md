@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Launching the new Pipe Dream website
-date: '2012-02-15T15:50:23-05:00'
+date: "2012-02-15T15:50:23-05:00"
 tags:
-- wordpress
-- pipe-dream
-- binghamton
-- college publisher
-- cms
+  - wordpress
+  - pipe-dream
+  - binghamton
+  - college publisher
+  - cms
 tumblr_url: http://blog.danoc.me/post/17670281132/launching-the-new-pipe-dream-website
 path: /blog/launching-the-new-pipe-dream-website/
 ---

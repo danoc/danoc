@@ -6,7 +6,6 @@ import { Global, css } from "@emotion/core";
 import styled from "@emotion/styled";
 
 import { StaticQuery, graphql } from "gatsby";
-import "normalize.css";
 import Link from "./link";
 import * as s from "../styles";
 

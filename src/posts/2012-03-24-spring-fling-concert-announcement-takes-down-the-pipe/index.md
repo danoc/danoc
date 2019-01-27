@@ -6,7 +6,6 @@ tags:
   - wordpress
   - crash
   - bupipedream
-tumblr_url: http://blog.danoc.me/post/19819620781/spring-fling-concert-announcement-takes-down-the-pipe
 path: /blog/spring-fling-concert-announcement-takes-down-the-pipe/
 ---
 

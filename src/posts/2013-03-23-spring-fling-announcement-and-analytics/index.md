@@ -6,7 +6,6 @@ tags:
   - bupipedream
   - stats
   - analytics
-tumblr_url: http://blog.danoc.me/post/46073307231/spring-fling-announcement-and-analytics
 path: /blog/spring-fling-announcement-and-analytics/
 ---
 

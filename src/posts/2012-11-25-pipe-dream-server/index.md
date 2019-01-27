@@ -12,7 +12,6 @@ tags:
   - apache
   - mysql
   - php
-tumblr_url: http://blog.danoc.me/post/36572312098/pipe-dream-server
 path: /blog/pipe-dream-server/
 ---
 

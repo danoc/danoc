@@ -7,7 +7,6 @@ tags:
   - github
   - bupipedream
   - deploy
-tumblr_url: http://blog.danoc.me/post/20396276847/wordpress-site-sync
 path: /blog/wordpress-site-sync/
 ---
 

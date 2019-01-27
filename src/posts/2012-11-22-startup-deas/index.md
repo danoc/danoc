@@ -10,7 +10,6 @@ tags:
   - idea
   - development
   - journalism
-tumblr_url: http://blog.danoc.me/post/36315431227/startup-deas
 path: /blog/startup-deas/
 ---
 

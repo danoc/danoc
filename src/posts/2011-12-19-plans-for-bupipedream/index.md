@@ -10,7 +10,6 @@ tags:
   - wordpress
   - open-source
   - college publisher
-tumblr_url: http://blog.danoc.me/post/14447289066/plans-for-bupipedream
 path: /blog/plans-for-bupipedream/
 ---
 

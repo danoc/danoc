@@ -7,7 +7,6 @@ tags:
   - work
   - san-francisco
   - startup
-tumblr_url: http://blog.danoc.me/post/71363367609/ill-be-back-at-optimizely-after-graduation
 path: /blog/ill-be-back-at-optimizely-after-graduation/
 ---
 

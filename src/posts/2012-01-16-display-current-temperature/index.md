@@ -9,7 +9,6 @@ tags:
   - Google
   - bupipedream
   - SimpleXML
-tumblr_url: http://blog.danoc.me/post/15968416150/display-current-temperature
 path: /blog/display-current-temperature/
 ---
 

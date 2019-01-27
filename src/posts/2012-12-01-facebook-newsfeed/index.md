@@ -7,7 +7,6 @@ tags:
   - pipe-dream
   - social media
   - photos
-tumblr_url: http://blog.danoc.me/post/36959614701/facebook-newsfeed
 path: /blog/facebook-newsfeed/
 ---
 

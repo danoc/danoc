@@ -7,7 +7,6 @@ tags:
   - development
   - bupipedream
   - binghamton
-tumblr_url: http://blog.danoc.me/post/15919857214/moving-to-wordpress
 path: /blog/moving-to-wordpress/
 ---
 

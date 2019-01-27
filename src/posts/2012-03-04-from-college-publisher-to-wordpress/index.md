@@ -8,7 +8,6 @@ tags:
   - pipe-dream
   - binghamton
   - bupipedream
-tumblr_url: http://blog.danoc.me/post/18714910407/from-college-publisher-to-wordpress
 path: /blog/from-college-publisher-to-wordpress/
 ---
 

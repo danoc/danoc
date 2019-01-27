@@ -7,7 +7,6 @@ tags:
   - media
   - print
   - web
-tumblr_url: http://blog.danoc.me/post/18729689786/online-college-media
 path: /blog/online-college-media/
 ---
 

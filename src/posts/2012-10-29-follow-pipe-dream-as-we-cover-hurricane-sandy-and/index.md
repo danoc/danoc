@@ -9,7 +9,6 @@ tags:
   - blog
   - live
   - news
-tumblr_url: http://blog.danoc.me/post/34605192252/follow-pipe-dream-as-we-cover-hurricane-sandy-and
 path: /blog/follow-pipe-dream-as-we-cover-hurricane-sandy-and/
 ---
 

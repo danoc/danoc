@@ -10,7 +10,6 @@ tags:
   - journalism
   - HTML
   - CSS
-tumblr_url: http://blog.danoc.me/post/15556391633/legible-articles
 path: /blog/legible-articles/
 ---
 

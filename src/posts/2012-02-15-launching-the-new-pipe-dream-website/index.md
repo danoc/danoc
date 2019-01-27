@@ -8,7 +8,6 @@ tags:
   - binghamton
   - college publisher
   - cms
-tumblr_url: http://blog.danoc.me/post/17670281132/launching-the-new-pipe-dream-website
 path: /blog/launching-the-new-pipe-dream-website/
 ---
 

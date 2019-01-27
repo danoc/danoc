@@ -6,7 +6,6 @@ tags:
   - college publisher
   - bupipedream
   - wordpress
-tumblr_url: http://blog.danoc.me/post/16093529186/database-dump
 path: /blog/database-dump/
 ---
 

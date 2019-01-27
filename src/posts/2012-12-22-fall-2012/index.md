@@ -8,7 +8,6 @@ tags:
   - "2012"
   - semester
   - review
-tumblr_url: http://blog.danoc.me/post/38588385454/fall-2012
 path: /blog/fall-2012/
 ---
 

@@ -8,7 +8,6 @@ tags:
   - summer
   - san-francisco
   - startup
-tumblr_url: http://blog.danoc.me/post/61425706269/on-interning-at-optimizely
 path: /blog/on-interning-at-optimizely/
 ---
 

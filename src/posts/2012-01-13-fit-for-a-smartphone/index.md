@@ -12,7 +12,6 @@ tags:
   - redesign
   - responsive-design
   - layout
-tumblr_url: http://blog.danoc.me/post/15762559659/fit-for-a-smartphone
 path: /blog/fit-for-a-smartphone/
 ---
 

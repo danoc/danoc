@@ -9,7 +9,6 @@ tags:
   - binghamton
   - web
   - html
-tumblr_url: http://blog.danoc.me/post/14730989330/early-preview
 path: /blog/early-preview/
 ---
 

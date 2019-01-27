@@ -11,7 +11,6 @@ tags:
   - binghamton
   - chicago
   - acp
-tumblr_url: http://blog.danoc.me/post/36563960560/interview-with-camayak
 path: /blog/interview-with-camayak/
 ---
 

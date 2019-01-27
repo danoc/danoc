@@ -10,7 +10,6 @@ tags:
   - bupipedream
   - journalism
   - photos
-tumblr_url: http://blog.danoc.me/post/16051985458/image-placement
 path: /blog/image-placement/
 ---
 

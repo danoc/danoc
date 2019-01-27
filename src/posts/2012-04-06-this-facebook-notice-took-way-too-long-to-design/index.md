@@ -8,7 +8,6 @@ tags:
   - open graph
   - design
   - web
-tumblr_url: http://blog.danoc.me/post/20572783627/this-facebook-notice-took-way-too-long-to-design
 path: /blog/this-facebook-notice-took-way-too-long-to-design/
 ---
 

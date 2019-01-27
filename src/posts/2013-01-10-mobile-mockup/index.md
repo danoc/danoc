@@ -8,7 +8,6 @@ tags:
   - css
   - redesign
   - web development
-tumblr_url: http://blog.danoc.me/post/40233716965/mobile-mockup
 path: /blog/mobile-mockup/
 ---
 

@@ -7,7 +7,6 @@ tags:
   - computer-science
   - binghamton
   - binghamtonu
-tumblr_url: http://blog.danoc.me/post/61560908567/how-to-get-a-great-computer-science-internship
 path: /blog/how-to-get-a-great-computer-science-internship/
 ---
 

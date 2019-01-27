@@ -6,7 +6,6 @@ tags:
   - statistics
   - pipe-dream
   - binghamton
-tumblr_url: http://blog.danoc.me/post/16258657840/pipe-dream-stats
 path: /blog/pipe-dream-stats/
 ---
 

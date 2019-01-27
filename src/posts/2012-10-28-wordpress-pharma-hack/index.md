@@ -7,7 +7,6 @@ tags:
   - hack
   - pharma
   - pipe-dream
-tumblr_url: http://blog.danoc.me/post/34468850592/wordpress-pharma-hack
 path: /blog/wordpress-pharma-hack/
 ---
 

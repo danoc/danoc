@@ -8,7 +8,6 @@ tags:
   - beatstrap
   - president
   - pipe-dream
-tumblr_url: http://blog.danoc.me/post/58523267332/obama-to-visit-binghamton-university
 path: /blog/obama-to-visit-binghamton-university/
 ---
 

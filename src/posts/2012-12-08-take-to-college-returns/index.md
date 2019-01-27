@@ -8,7 +8,6 @@ tags:
   - projects
   - development
   - php
-tumblr_url: http://blog.danoc.me/post/37530763368/take-to-college-returns
 path: /blog/take-to-college-returns/
 ---
 

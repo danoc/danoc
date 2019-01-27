@@ -8,7 +8,6 @@ tags:
   - talk
   - responsive-design
   - bupipedream
-tumblr_url: http://blog.danoc.me/post/44367862783/responsive-web-design-for-college-newspapers
 path: /blog/responsive-web-design-for-college-newspapers/
 ---
 

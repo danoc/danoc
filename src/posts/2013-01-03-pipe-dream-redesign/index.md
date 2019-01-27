@@ -12,7 +12,6 @@ tags:
   - media
   - news
   - newspaper
-tumblr_url: http://blog.danoc.me/post/39614524151/pipe-dream-redesign
 path: /blog/pipe-dream-redesign/
 ---
 

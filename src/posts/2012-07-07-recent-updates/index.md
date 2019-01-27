@@ -9,7 +9,6 @@ tags:
   - pipe dream
   - internship
   - wepay
-tumblr_url: http://blog.danoc.me/post/26738967370/recent-updates
 path: /blog/recent-updates/
 ---
 

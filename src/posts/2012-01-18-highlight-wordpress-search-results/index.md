@@ -9,7 +9,6 @@ tags:
   - code
   - php
   - plugin
-tumblr_url: http://blog.danoc.me/post/16096405227/highlight-wordpress-search-results
 path: /blog/highlight-wordpress-search-results/
 ---
 

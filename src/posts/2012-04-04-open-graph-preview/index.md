@@ -6,7 +6,6 @@ tags:
   - bupipedream
   - facebook
   - opengraph
-tumblr_url: http://blog.danoc.me/post/20486429658/open-graph-preview
 path: /blog/open-graph-preview/
 ---
 

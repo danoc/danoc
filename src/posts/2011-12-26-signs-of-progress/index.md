@@ -9,7 +9,6 @@ tags:
   - css
   - coding
   - html
-tumblr_url: http://blog.danoc.me/post/14831427279/signs-of-progress
 path: /blog/signs-of-progress/
 ---
 

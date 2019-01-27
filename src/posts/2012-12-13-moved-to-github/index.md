@@ -9,7 +9,6 @@ tags:
   - pipe dream
   - binghamton
   - deployment
-tumblr_url: http://blog.danoc.me/post/37881284935/moved-to-github
 path: /blog/moved-to-github/
 ---
 

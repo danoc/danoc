@@ -7,7 +7,6 @@ tags:
   - wordpress
   - opensource
   - code
-tumblr_url: http://blog.danoc.me/post/20751376228/wordpress-article-deck
 path: /blog/wordpress-article-deck/
 ---
 

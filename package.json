@@ -55,7 +55,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
     "husky": "^1.0.0-rc.15",
-    "prettier": "1.16.1",
+    "prettier": "1.16.4",
     "pretty-quick": "^1.8.0"
   },
   "resolutions": {

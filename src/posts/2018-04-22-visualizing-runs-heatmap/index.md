@@ -13,6 +13,8 @@ is_featured: true
 
 Last month I added a [heatmap to danoc.me](/#running) that shows how ~~much~~ little I've run in the past nine months. The project, which started off as an excuse to play with with new JavaScript libraries, has actually helped motivate me to run more consistently.
 
+> **Update (Feb. 2019):** The implementation [has since been updated](https://github.com/danoc/danoc.me/pull/12) to use CSS grid instead of VX, a charting library for React. I've found that the CSS grid implementation is much smaller and simpler to understand.
+
 ### How it works
 
 My Garmin GPS watch sends data to [Garmin Connect](https://connect.garmin.com/) when I finish a run. This triggers a series of events:

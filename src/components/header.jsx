@@ -41,12 +41,12 @@ const Header = props => {
 
 Header.propTypes = {
   children: PropTypes.node,
-  isSinglePost: PropTypes.bool
+  isSinglePost: PropTypes.bool,
 };
 
 Header.defaultProps = {
   children: undefined,
-  isSinglePost: false
+  isSinglePost: false,
 };
 
 export default Header;

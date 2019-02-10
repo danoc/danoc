@@ -80,12 +80,12 @@ BulletList.propTypes = {
       title: PropTypes.string.isRequired,
       to: PropTypes.string.isRequired,
       meta: PropTypes.string,
-      children: PropTypes.node
-    })
+      children: PropTypes.node,
+    }),
   ).isRequired,
-  hasDescriptions: PropTypes.bool
+  hasDescriptions: PropTypes.bool,
 };
 
 BulletList.defaultProps = {
-  hasDescriptions: false
+  hasDescriptions: false,
 };

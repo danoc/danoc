@@ -6,30 +6,31 @@ module.exports = {
     description:
       "Daniel O’Connor is a UI Engineer living in San Francisco. He builds Thumbtack’s design system.",
     siteUrl: "https://danoc.me",
-    numWeeksOfRuns
+    numWeeksOfRuns,
   },
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/posts`,
-        name: "posts"
-      }
+        name: "posts",
+      },
     },
     {
       resolve: "gatsby-source-strava-activities",
       options: {
         authToken: process.env.STRAVA,
         // Get data for past `numWeeksOfRuns` weeks
-        after: Math.round(new Date().getTime() / 1000) - 604800 * numWeeksOfRuns
-      }
+        after:
+          Math.round(new Date().getTime() / 1000) - 604800 * numWeeksOfRuns,
+      },
     },
     {
       resolve: "gatsby-source-pinboard",
       options: {
         authToken: process.env.PINBOARD,
-        tags: "danoc.me"
-      }
+        tags: "danoc.me",
+      },
     },
     {
       resolve: "gatsby-transformer-remark",
@@ -48,11 +49,11 @@ module.exports = {
               maxWidth: 578,
               // Remove the default behavior of adding a link to each
               // image.
-              linkImagesToOriginal: true
-            }
-          }
-        ]
-      }
+              linkImagesToOriginal: true,
+            },
+          },
+        ],
+      },
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
@@ -81,8 +82,8 @@ module.exports = {
                     edge.node.frontmatter.description || edge.node.excerpt,
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  custom_elements: [{ "content:encoded": edge.node.html }]
-                })
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                }),
               ),
             query: `
               {
@@ -105,10 +106,10 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml"
-          }
-        ]
-      }
+            output: "/rss.xml",
+          },
+        ],
+      },
     },
     {
       resolve: "gatsby-plugin-favicon",
@@ -124,9 +125,9 @@ module.exports = {
           firefox: true,
           twitter: true,
           yandex: false,
-          windows: true
-        }
-      }
+          windows: true,
+        },
+      },
     },
     "gatsby-plugin-emotion",
     "gatsby-plugin-sass",
@@ -135,9 +136,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "UA-5922635-10"
-      }
+        trackingId: "UA-5922635-10",
+      },
     },
-    "gatsby-plugin-netlify" // Must be last in the config.
-  ]
+    "gatsby-plugin-netlify", // Must be last in the config.
+  ],
 };

@@ -20,11 +20,11 @@ const Link = props => {
 Link.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
 };
 
 Link.defaultProps = {
-  title: undefined
+  title: undefined,
 };
 
 export default Link;

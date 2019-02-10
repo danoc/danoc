@@ -24,7 +24,7 @@ const NotFoundPage = () => (
         items={[
           { title: "Go to homepage", to: "/" },
           { title: "View all of my blog posts", to: "/blog" },
-          { title: "Message me on Twitter", to: "https://twitter.com/_danoc" }
+          { title: "Message me on Twitter", to: "https://twitter.com/_danoc" },
         ]}
       />
     </Section>

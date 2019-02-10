@@ -16,7 +16,7 @@ const normalizeDate = date => date.toDateString();
 const processRun = run => ({
   date: normalizeDate(new Date(run.node.activity.start_date)),
   miles:
-    Math.round(run.node.activity.distance * 0.000621371192237334 * 100) / 100
+    Math.round(run.node.activity.distance * 0.000621371192237334 * 100) / 100,
 });
 
 const UnstyledList = styled.ul`
@@ -49,7 +49,7 @@ const formatRunsGrid = (data, numWeeksOfRuns) => {
     const miles = reduce(
       runsByDate[day],
       (sum, activity) => sum + activity.miles,
-      0
+      0,
     );
 
     if (miles > mostMilesInADay) {
@@ -59,7 +59,7 @@ const formatRunsGrid = (data, numWeeksOfRuns) => {
     return {
       // Use `reduce` to add up the miles from an array of runs in one day.
       miles,
-      date: day
+      date: day,
     };
   });
 };
@@ -69,7 +69,7 @@ const gridGap = styles.s2;
 const Heatmap = ({ allStravaActivity, site }) => {
   const runsByDay = formatRunsGrid(
     allStravaActivity.edges,
-    site.siteMetadata.numWeeksOfRuns
+    site.siteMetadata.numWeeksOfRuns,
   );
 
   const monthsAlreadyLabeled = {};
@@ -79,7 +79,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
 
   const colorScale = scaleLinear({
     range: ["#f5f5f5", "#0032a0"],
-    domain: [0, mostMilesInADay]
+    domain: [0, mostMilesInADay],
   });
 
   return (
@@ -93,7 +93,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
         width: `calc(100% + ${gridGap})`,
         left: `-${gridGap}`,
         position: "relative",
-        fontSize: "12px"
+        fontSize: "12px",
       }}
     >
       <UnstyledList
@@ -102,7 +102,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
           gridGap: "1px",
           gridAutoFlow: "column",
           gridArea: "months",
-          gridTemplateColumns: `repeat(${numberOfWeeksOfRuns}, 1fr)`
+          gridTemplateColumns: `repeat(${numberOfWeeksOfRuns}, 1fr)`,
         }}
       >
         {runsByWeek.map((week, i) => {
@@ -129,7 +129,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
                   ? `${numberOfWeeksOfRuns - 1} / span 2`
                   : `${i + 1}`,
                 textAlign: isLastColumn ? "right" : "left",
-                minWidth: 0
+                minWidth: 0,
               }}
               aria-hidden
               key={monthOfLastDayOfWeek}
@@ -148,7 +148,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
           position: "absolute",
           top: 0,
           right: 0,
-          bottom: 0
+          bottom: 0,
         }}
       >
         <li css={{ gridRow: "1/3", alignSelf: "end" }} aria-hidden>
@@ -168,7 +168,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
           gridTemplateRows: `repeat(7, auto)`,
           gridGap: "1px",
           gridAutoFlow: "column",
-          gridArea: "runs"
+          gridArea: "runs",
         }}
         aria-label="Runs I've done in the past few months"
       >
@@ -187,7 +187,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
               css={{
                 backgroundColor: colorScale(day.miles),
                 paddingBottom: "100%",
-                height: 0
+                height: 0,
               }}
               aria-label={tooltipText}
               title={tooltipText}
@@ -202,7 +202,7 @@ const Heatmap = ({ allStravaActivity, site }) => {
 
 Heatmap.propTypes = {
   allStravaActivity: PropTypes.shape({}).isRequired,
-  site: PropTypes.shape({}).isRequired
+  site: PropTypes.shape({}).isRequired,
 };
 
 export default Heatmap;

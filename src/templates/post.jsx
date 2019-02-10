@@ -21,7 +21,7 @@ const formatDate = date => {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
 
   const day = date.getDate();
@@ -275,19 +275,19 @@ Post.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.shape({
-        node: PropTypes.shape({})
-      })
+        node: PropTypes.shape({}),
+      }),
     }),
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
-        siteUrl: PropTypes.string.isRequired
-      })
-    })
-  })
+        siteUrl: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
 };
 
 Post.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export const pageQuery = graphql`

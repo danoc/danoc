@@ -3,25 +3,25 @@ module.exports = {
     ecmaVersion: 8,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   extends: ["airbnb", "prettier", "prettier/react"],
   globals: {
-    URL: false
+    URL: false,
   },
   rules: {
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        specialLink: ["to"]
-      }
+        specialLink: ["to"],
+      },
     ],
     "no-unused-expressions": [
       "error",
       {
-        allowTaggedTemplates: true
-      }
-    ]
-  }
+        allowTaggedTemplates: true,
+      },
+    ],
+  },
 };

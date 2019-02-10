@@ -22,7 +22,7 @@ const formatDate = dateString => {
     "Sep.",
     "Oct.",
     "Nov.",
-    "Dec."
+    "Dec.",
   ];
 
   const date = new Date(dateString);
@@ -37,7 +37,7 @@ const Year = styled.div`
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const postsByYear = groupBy(posts, p =>
-    new Date(p.node.frontmatter.date).getFullYear()
+    new Date(p.node.frontmatter.date).getFullYear(),
   );
   const years = reverse(sortBy(keys(postsByYear)));
 
@@ -52,7 +52,7 @@ const BlogIndex = ({ data }) => {
               items={postsByYear[year].map(p => ({
                 to: p.node.frontmatter.path,
                 title: p.node.frontmatter.title,
-                meta: formatDate(p.node.frontmatter.date)
+                meta: formatDate(p.node.frontmatter.date),
               }))}
             />
           </Year>
@@ -65,11 +65,11 @@ const BlogIndex = ({ data }) => {
 export default BlogIndex;
 
 BlogIndex.propTypes = {
-  data: PropTypes.shape({})
+  data: PropTypes.shape({}),
 };
 
 BlogIndex.defaultProps = {
-  data: {}
+  data: {},
 };
 
 export const pageQuery = graphql`

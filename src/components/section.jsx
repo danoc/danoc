@@ -69,13 +69,13 @@ Section.propTypes = {
   to: PropTypes.string,
   callToAction: PropTypes.string,
   title: PropTypes.node.isRequired,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 Section.defaultProps = {
   to: undefined,
   callToAction: undefined,
-  children: undefined
+  children: undefined,
 };
 
 export default Section;

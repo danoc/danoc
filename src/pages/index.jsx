@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
           items={posts.map(p => ({
             to: p.node.frontmatter.path,
             title: p.node.frontmatter.title,
-            meta: formatDate(p.node.frontmatter.date)
+            meta: formatDate(p.node.frontmatter.date),
           }))}
         />
       </Section>
@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => {
                   I help build Thumbprint, Thumbtack’s design system, and assist
                   our engineering team’s move to React.
                 </Paragraph>
-              )
+              ),
             },
             {
               title: "Optimizely",
@@ -70,8 +70,8 @@ const IndexPage = ({ data }) => {
                   , UI library, and built design systems that improved UI
                   consistency and developer productivity.
                 </Paragraph>
-              )
-            }
+              ),
+            },
           ]}
         />
       </Section>
@@ -91,7 +91,7 @@ const IndexPage = ({ data }) => {
         <BulletList
           items={bookmarks.map(p => ({
             to: p.node.href,
-            title: p.node.description
+            title: p.node.description,
           }))}
         />
       </Section>
@@ -102,7 +102,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({}).isRequired
+  data: PropTypes.shape({}).isRequired,
 };
 
 export const pageQuery = graphql`

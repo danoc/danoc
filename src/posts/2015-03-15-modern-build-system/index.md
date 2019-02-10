@@ -87,8 +87,8 @@ The `default` task depends on `browserSync`, which looks like this:
 gulp.task("browserSync", ["jekyllBuild"], function() {
   browserSync({
     server: {
-      baseDir: "_site"
-    }
+      baseDir: "_site",
+    },
   });
 });
 ```

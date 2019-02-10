@@ -11,5 +11,5 @@ const Paragraph = styled.p`
 export default Paragraph;
 
 Paragraph.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
 };

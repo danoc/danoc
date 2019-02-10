@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { times, groupBy, reduce } from "lodash";
 import { graphql } from "gatsby";
 import Section from "../components/section";
 import Link from "../components/link";
@@ -9,77 +8,16 @@ import Header from "../components/header";
 import Paragraph from "../components/paragraph";
 import BulletList from "../components/bullet-list";
 import Heatmap from "../components/heatmap";
+import months from "../utils/months";
 
 const formatDate = dateString => {
-  const months = [
-    "Jan.",
-    "Feb.",
-    "Mar.",
-    "Apr.",
-    "May",
-    "Jun.",
-    "Jul.",
-    "Aug.",
-    "Sep.",
-    "Oct.",
-    "Nov.",
-    "Dec."
-  ];
-
   const date = new Date(dateString);
-  return `${months[date.getMonth()]} ${date.getFullYear()}`;
-};
-
-const formatRuns = (data, numWeeksOfRuns) => {
-  const normalizeDate = date => date.toDateString();
-
-  const processRun = run => ({
-    id: run.node.activity.id,
-    date: normalizeDate(new Date(run.node.activity.start_date)),
-    miles: run.node.activity.distance * 0.000621371192237334
-  });
-
-  const runs = data.map(processRun);
-  const runsByDate = groupBy(runs, "date");
-
-  // Ensures that Sunday is always in the correct spot.
-  const dayOfWeek = new Date().getDay();
-  const dateOffset = dayOfWeek === 6 ? 0 : 6 - dayOfWeek;
-
-  return times(numWeeksOfRuns, weekIndex => {
-    const week = new Date();
-    week.setDate(
-      week.getDate() + dateOffset - (numWeeksOfRuns - 1 - weekIndex) * 7
-    );
-
-    return {
-      bin: weekIndex,
-      days: times(7, dayIndex => {
-        week.setDate(week.getDate() - (dayIndex === 0 ? 0 : 1));
-        const day = normalizeDate(week);
-
-        return {
-          // Use `reduce` to add up the miles from an array of runs in one day.
-          miles: reduce(
-            runsByDate[day],
-            (sum, activity) => sum + activity.miles,
-            0
-          ),
-          bin: dayIndex,
-          date: day
-        };
-      })
-    };
-  });
+  return `${months[date.getMonth()]}. ${date.getFullYear()}`;
 };
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const bookmarks = data.allPinboardBookmark.edges;
-  const runs = formatRuns(
-    data.allStravaActivity.edges,
-    data.site.siteMetadata.numWeeksOfRuns
-  );
 
   return (
     <Layout>
@@ -139,7 +77,7 @@ const IndexPage = ({ data }) => {
       </Section>
 
       <Section title="Running">
-        <Heatmap labelWidth={10} labelMargin={10} data={runs} />
+        <Heatmap allStravaActivity={data.allStravaActivity} site={data.site} />
       </Section>
 
       <Section
@@ -201,7 +139,6 @@ export const pageQuery = graphql`
       edges {
         node {
           activity {
-            id
             start_date
             distance
           }

@@ -1,6 +1,6 @@
 export const white = "#fff";
 export const darkGray = "#333";
-export const gray = "#777";
+export const gray = "#757575";
 export const moonGray = "#ccc";
 export const lightGray = "#eee";
 export const blue = "#086cb7";

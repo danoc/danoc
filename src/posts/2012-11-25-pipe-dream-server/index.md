@@ -1,5 +1,4 @@
 ---
-layout: post
 title: How we configure Pipe Dream's Ubuntu server
 date: "2012-11-25T23:42:00-05:00"
 tags:

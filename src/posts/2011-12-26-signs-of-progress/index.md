@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Signs of progress
 date: "2011-12-26T18:30:01-05:00"
 tags:

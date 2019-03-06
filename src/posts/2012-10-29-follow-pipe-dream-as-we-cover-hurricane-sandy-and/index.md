@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Pipe Dream's live coverage of hurricane Sandy
 date: "2012-10-29T20:42:43-04:00"
 tags:

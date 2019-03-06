@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Fit for a smartphone
 date: "2012-01-13T00:01:00-05:00"
 tags:

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Obama to visit Binghamton University
 date: "2013-08-17T13:57:33-04:00"
 tags:

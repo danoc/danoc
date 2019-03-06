@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Larger images in Facebook newsfeed
 date: "2012-12-01T11:58:49-05:00"
 tags:

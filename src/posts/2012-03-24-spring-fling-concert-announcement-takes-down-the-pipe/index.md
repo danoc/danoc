@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Spring Fling concert announcement takes down the Pipe Dream website
 date: "2012-03-24T00:24:27-04:00"
 tags:

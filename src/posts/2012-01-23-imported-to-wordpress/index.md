@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Success!
 date: "2012-01-23T14:07:35-05:00"
 tags:

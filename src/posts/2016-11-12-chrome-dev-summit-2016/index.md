@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Themes from the 2016 Chrome Dev Summit
 description: Key themes, random thoughts, and tidbits from the 2016 Chrome Dev Summit.
 date: "2016-11-12T00:00:00Z"

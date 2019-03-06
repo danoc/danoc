@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Moving Pipe Dream from College Publisher to WordPress
 date: "2012-03-04T02:01:00-05:00"
 tags:

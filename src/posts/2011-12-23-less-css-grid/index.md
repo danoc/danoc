@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Get a fluid layout with the LESS CSS Grid
 date: "2011-12-23T00:28:00-05:00"
 tags:

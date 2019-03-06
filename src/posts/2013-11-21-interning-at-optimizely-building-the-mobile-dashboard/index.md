@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Interning at Optimizely: Building the Mobile Dashboard"
 date: "2013-11-21T13:20:50-05:00"
 tags:

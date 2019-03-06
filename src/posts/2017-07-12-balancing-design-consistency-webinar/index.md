@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "UXPin webinar on developer productivity and design consistency"
 description: A webinar, geared towards designers, that describes how to use code as a tool to encourage design consistency.
 date: "2017-07-12T00:00:00Z"

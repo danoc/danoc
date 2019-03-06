@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Launching the new Pipe Dream website
 date: "2012-02-15T15:50:23-05:00"
 tags:

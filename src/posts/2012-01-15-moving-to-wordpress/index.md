@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Stage Three
 date: "2012-01-15T20:41:46-05:00"
 tags:

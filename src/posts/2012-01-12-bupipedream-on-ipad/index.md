@@ -1,5 +1,4 @@
 ---
-layout: post
 title: bupipedream.com on the iPad
 date: "2012-01-12T16:12:00-05:00"
 tags:

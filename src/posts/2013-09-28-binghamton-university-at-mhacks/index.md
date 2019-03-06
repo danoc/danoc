@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Binghamton University at MHacks
 deck: We got a group of 20 Binghamton students and traveled to the University of Michigan for MHacks, the largest student hackathon.
 date: "2013-09-28T18:11:00-04:00"

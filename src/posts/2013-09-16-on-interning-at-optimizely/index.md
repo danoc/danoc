@@ -1,5 +1,4 @@
 ---
-layout: post
 title: On Interning at Optimizely
 date: "2013-09-16T15:12:00-04:00"
 tags:

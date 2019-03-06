@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Mobile mockup of the new Pipe Dream
 date: "2013-01-10T23:43:00-05:00"
 tags:

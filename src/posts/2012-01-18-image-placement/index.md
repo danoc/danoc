@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Image placement in WordPress posts
 date: "2012-01-18T01:06:58-05:00"
 tags:

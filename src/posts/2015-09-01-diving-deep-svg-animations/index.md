@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Diving deep into SVG animations
 description: A story of the trial and error of creating SVG animations.
 date: "2015-09-01T00:00:00Z"

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Add a deck to a WordPress post with WP Article Deck
 date: "2012-04-08T21:30:39-04:00"
 tags:

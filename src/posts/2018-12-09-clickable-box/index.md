@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Easily unstyle buttons with ClickableBox
 description: React component to add onClick to HTML elements without sacrificing accessibility.
 date: "2018-12-09T23:20:00Z"

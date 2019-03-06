@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Pipe Dream in numbers
 date: "2012-01-21T19:54:00-05:00"
 tags:

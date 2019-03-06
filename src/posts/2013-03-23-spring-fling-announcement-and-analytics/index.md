@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Spring Fling announcement and analytics
 date: "2013-03-23T10:43:37-04:00"
 tags:

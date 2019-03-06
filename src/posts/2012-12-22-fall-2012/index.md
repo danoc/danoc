@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Semester in Review: Top 10 Pipe Dream posts"
 date: "2012-12-22T20:33:48-05:00"
 tags:

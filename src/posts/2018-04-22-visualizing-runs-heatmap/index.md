@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Visualizing my runs with a heatmap
 description:
 date: "2018-04-22T15:31:00Z"

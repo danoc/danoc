@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Legible articles on the Pipe Dream site
 date: "2012-01-09T01:12:00-05:00"
 tags:

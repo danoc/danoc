@@ -1,5 +1,4 @@
 ---
-layout: post
 title: What I've been up to...
 date: "2013-02-15T16:50:00-05:00"
 tags:

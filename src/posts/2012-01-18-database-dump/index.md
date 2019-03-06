@@ -1,5 +1,4 @@
 ---
-layout: post
 title: CollegePublisher database dump
 date: "2012-01-18T21:11:48-05:00"
 tags:

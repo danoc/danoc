@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Moved to GitHub
 date: "2012-12-13T21:55:01-05:00"
 tags:

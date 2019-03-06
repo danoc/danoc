@@ -1,5 +1,4 @@
 ---
-layout: post
 title: '"Make Your Own Future"'
 date: "2014-05-06T02:01:00-05:00"
 path: /blog/senior-column/

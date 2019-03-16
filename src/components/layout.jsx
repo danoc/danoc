@@ -82,6 +82,7 @@ const IndexLayout = ({ children }) => (
           font-family: 'Untitled Sans';
           font-weight: 400;
           font-style: normal;
+          font-display: swap;
           src: url('${UntitledSansRegularWoff2}') format('woff2'),
                 url('${UntitledSansRegularWoff}') format('woff');
         }
@@ -90,6 +91,7 @@ const IndexLayout = ({ children }) => (
           font-family: 'Untitled Sans';
           font-weight: 400;
           font-style: italic;
+          font-display: swap;
           src: url('${UntitledSansRegularItalicWoff2}') format('woff2'),
                 url('${UntitledSansRegularItalicWoff}') format('woff');
         }
@@ -98,6 +100,7 @@ const IndexLayout = ({ children }) => (
           font-family: 'Untitled Sans';
           font-weight: 500;
           font-style: normal;
+          font-display: swap;
           src: url('${UntitledSansMediumWoff2}') format('woff2'),
                 url('${UntitledSansMediumWoff}') format('woff');
         }

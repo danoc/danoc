@@ -5586,17 +5586,17 @@ gatsby-source-filesystem@^2.0.1:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-source-pinboard@^0.1.4:
+gatsby-source-pinboard@^0.1.6:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/gatsby-source-pinboard/-/gatsby-source-pinboard-0.1.6.tgz#424a21364905f493f6d4c63dba482c184b57fe35"
   integrity sha512-UrsggI2VQwR+D6zdoroPld6w9P7tlNlI4iAFofyIXFEvAw+g8llCwq3NHHQOHGe7XAakptvqkrs/Z4oT0znBRQ==
   dependencies:
     node-fetch "^2.2.0"
 
-gatsby-source-strava-activities@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-strava-activities/-/gatsby-source-strava-activities-1.0.1.tgz#42a7d381c5d332fe41c4253022e0e6a95c526a77"
-  integrity sha512-35TEepVM1mMCAAR5P9p/MYYpnbDjeOgpaxStttASnnWGCJyaeCu56Fi3ZW5AIYDUhIYS7dbmsomw5JVAFeZwGg==
+gatsby-source-strava-activities@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-source-strava-activities/-/gatsby-source-strava-activities-1.0.5.tgz#bb22c266d89c7fdd4d2bd426b3018ee3119e63ad"
+  integrity sha512-NRj3EbDSSDooXF/6CvbkS+1+d/UGGkNuzP1MSyOa4HN+WVYyZppZfseXyUs3JoVRvnhhkldw32oL/OZu5qmFKg==
   dependencies:
     node-fetch "^2.2.0"
     query-string "^6.1.0"

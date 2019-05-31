@@ -50,6 +50,7 @@ module.exports = {
               // Remove the default behavior of adding a link to each
               // image.
               linkImagesToOriginal: true,
+              withWebp: true,
             },
           },
         ],

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const numWeeksOfRuns = 37;
 
 module.exports = {

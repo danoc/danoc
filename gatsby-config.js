@@ -70,6 +70,7 @@ module.exports = {
         `,
         feeds: [
           {
+            title: "Daniel O’Connor",
             serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(edge => ({
                 ...edge.node.frontmatter,

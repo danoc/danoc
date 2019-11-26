@@ -65,7 +65,9 @@ const BlogIndex = ({ data }) => {
 export default BlogIndex;
 
 BlogIndex.propTypes = {
-  data: PropTypes.shape({}),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({ edges: PropTypes.shape({}) }),
+  }),
 };
 
 BlogIndex.defaultProps = {

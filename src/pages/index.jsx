@@ -97,7 +97,14 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({}).isRequired,
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.shape({})),
+    }),
+    allPinboardBookmark: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.shape({})),
+    }),
+  }).isRequired,
 };
 
 export const pageQuery = graphql`

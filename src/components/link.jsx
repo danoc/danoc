@@ -7,10 +7,12 @@ const Link = props => {
   const { to, children, title } = props;
 
   if (to && isRelativeUrl(to)) {
+    // eslint-disable-next-line react/jsx-props-no-spreading
     return <GatsbyLink {...props}>{props.children}</GatsbyLink>;
   }
 
   return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <a href={to} title={title} {...props}>
       {children}
     </a>

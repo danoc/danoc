@@ -273,11 +273,20 @@ export default Post;
 
 Post.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.shape({
-        node: PropTypes.shape({}),
-      }),
-    }),
+    markdownRemark: PropTypes.shape({
+      html: PropTypes.string.isRequired,
+      frontmatter: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
+        description: PropTypes.string,
+        tags: PropTypes.arrayOf(PropTypes.string),
+        image_src: PropTypes.string,
+        canonical: PropTypes.string,
+        is_featured: PropTypes.bool,
+        image_alt: PropTypes.string,
+      }).isRequired,
+    }).isRequired,
     site: PropTypes.shape({
       siteMetadata: PropTypes.shape({
         siteUrl: PropTypes.string.isRequired,

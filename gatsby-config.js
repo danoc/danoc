@@ -19,15 +19,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-strava-activities",
-      options: {
-        authToken: process.env.STRAVA,
-        // Get data for past `numWeeksOfRuns` weeks
-        after:
-          Math.round(new Date().getTime() / 1000) - 604800 * numWeeksOfRuns,
-      },
-    },
-    {
       resolve: "gatsby-source-pinboard",
       options: {
         authToken: process.env.PINBOARD,

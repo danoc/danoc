@@ -7,7 +7,6 @@ import Layout from "../components/layout";
 import Header from "../components/header";
 import Paragraph from "../components/paragraph";
 import BulletList from "../components/bullet-list";
-import Heatmap from "../components/heatmap";
 import months from "../utils/months";
 
 const formatDate = dateString => {
@@ -76,10 +75,6 @@ const IndexPage = ({ data }) => {
         />
       </Section>
 
-      <Section title="Running">
-        <Heatmap allStravaActivity={data.allStravaActivity} site={data.site} />
-      </Section>
-
       <Section
         title="Bookmarks"
         to="https://pinboard.in/u:danoc"
@@ -132,16 +127,6 @@ export const pageQuery = graphql`
         node {
           href
           description
-        }
-      }
-    }
-    allStravaActivity(filter: { activity: { type: { eq: "Run" } } }) {
-      edges {
-        node {
-          activity {
-            start_date
-            distance
-          }
         }
       }
     }

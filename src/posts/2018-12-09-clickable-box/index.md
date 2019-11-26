@@ -18,7 +18,7 @@ Inspired by my own frustrations, a [tweet by Micah Godbolt](https://twitter.com/
 
 You can install it with NPM:
 
-```
+```bash
 npm install clickable-box
 ```
 

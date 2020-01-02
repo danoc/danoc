@@ -30,6 +30,7 @@ module.exports = {
       options: {
         plugins: [
           "gatsby-remark-smartypants",
+          "gatsby-remark-autolink-headers",
           "gatsby-remark-prismjs",
           "gatsby-remark-responsive-iframe",
           "gatsby-remark-copy-linked-files",

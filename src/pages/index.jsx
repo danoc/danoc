@@ -48,8 +48,11 @@ const IndexPage = ({ data }) => {
               meta: "2017–Present",
               children: (
                 <Paragraph>
-                  I help build Thumbprint, Thumbtack’s design system, and assist
-                  our engineering team’s move to React.
+                  I help build{" "}
+                  <Link to="https://github.com/thumbtack/thumbprint">
+                    Thumbprint
+                  </Link>
+                  , Thumbtack’s design system.
                 </Paragraph>
               ),
             },

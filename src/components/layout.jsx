@@ -117,6 +117,7 @@ const IndexLayout = ({ children }) => (
             siteMetadata {
               title
               description
+              siteUrl
             }
           }
         }
@@ -127,6 +128,10 @@ const IndexLayout = ({ children }) => (
           meta={[
             { property: "og:title", content: data.site.siteMetadata.title },
             { property: "og:type", content: "website" },
+            {
+              property: "og:image",
+              content: `${data.site.siteMetadata.siteUrl}/profile.jpg`,
+            },
             { property: "fb:app_id", content: 1271463799642798 },
             { property: "twitter:creator", content: "_danoc" },
             { name: "theme-color", content: s.blue },

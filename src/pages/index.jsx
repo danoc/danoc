@@ -21,10 +21,17 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Header>
-        <Paragraph>Hello! I’m a UI Engineer living in San Francisco.</Paragraph>
         <Paragraph>
-          I build design systems to efficiently deliver high quality products.
-          I’m a stickler for consistency, accessibility, and performance.
+          Hello! I’m a design systems engineer in San Francisco.
+        </Paragraph>
+        <Paragraph>
+          Right now, I build{" "}
+          <Link to="https://thumbprint.design/">Thumbprint</Link> to improve
+          product quality and developer productivity at{" "}
+          <Link to="https://www.thumbtack.com/">Thumbtack</Link>. I previously
+          worked at <Link to="https://www.optimizely.com/">Optimizely</Link>{" "}
+          where I helped build and maintain{" "}
+          <Link to="https://github.com/optimizely/oui">OUI</Link>.
         </Paragraph>
       </Header>
 
@@ -47,13 +54,25 @@ const IndexPage = ({ data }) => {
               to: "https://www.thumbtack.com/",
               meta: "2017–Present",
               children: (
-                <Paragraph>
-                  I help build{" "}
-                  <Link to="https://github.com/thumbtack/thumbprint">
-                    Thumbprint
-                  </Link>
-                  , Thumbtack’s design system.
-                </Paragraph>
+                <>
+                  <Paragraph>
+                    I work on{" "}
+                    <Link to="https://github.com/thumbtack/thumbprint">
+                      Thumbprint
+                    </Link>
+                    , the cross-platform design system at Thumbtack.
+                  </Paragraph>
+                  <Paragraph>
+                    While I’ve worked on all parts of the system, I tend to
+                    focus on our web and native UI components, design tokens,
+                    documentation site, and infrastructure.
+                  </Paragraph>
+                  <Paragraph>
+                    I also spend a lot of time helping folks contribute,
+                    gathering user feedback, and thinking about our team’s
+                    roadmap.
+                  </Paragraph>
+                </>
               ),
             },
             {
@@ -69,8 +88,8 @@ const IndexPage = ({ data }) => {
                   >
                     OUI
                   </Link>
-                  , UI library, and built design systems that improved UI
-                  consistency and developer productivity.
+                  , Optimizely’s UI library, and built design systems that
+                  improved UI consistency and developer productivity.
                 </Paragraph>
               ),
             },

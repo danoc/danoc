@@ -146,6 +146,9 @@ const IndexLayout = ({ children }) => (
         <li>
           <Link to="https://twitter.com/_danoc">Twitter</Link>
         </li>
+        <li>
+          <Link to="https://linkedin.com/in/itsdanoc">LinkedIn</Link>
+        </li>
       </FooterList>
     </Footer>
   </Container>

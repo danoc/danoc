@@ -10,7 +10,7 @@
     "build": "TZ=America/Los_Angeles && gatsby build"
   },
   "dependencies": {
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.8.0",
     "@emotion/core": "^10.0.4",
     "@emotion/styled": "^10.0.12",
     "dotenv": "^8.2.0",

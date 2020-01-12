@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/danoc/danoc.me.svg?branch=master)](https://travis-ci.com/danoc/danoc.me)
-
 # [danoc.me](https://danoc.me/)
 
 Daniel O'Connor's personal website and portfolio.

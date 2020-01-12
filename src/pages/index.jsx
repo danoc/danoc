@@ -22,15 +22,17 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Header>
         <Paragraph>
-          Hello! I’m a design systems engineer in San Francisco.
+          Hello! I’m a design systems engineer based in San Francisco. I use
+          code and communication to improve product quality and developer
+          productivity.
         </Paragraph>
         <Paragraph>
-          Right now, I build{" "}
-          <Link to="https://thumbprint.design/">Thumbprint</Link> to improve
-          product quality and developer productivity at{" "}
-          <Link to="https://www.thumbtack.com/">Thumbtack</Link>. I previously
-          worked at <Link to="https://www.optimizely.com/">Optimizely</Link>{" "}
-          where I helped build and maintain{" "}
+          Right now I build{" "}
+          <Link to="https://thumbprint.design/">Thumbprint</Link>, the design
+          system at <Link to="https://www.thumbtack.com/">Thumbtack</Link>. I
+          previously worked at{" "}
+          <Link to="https://www.optimizely.com/">Optimizely</Link> where I
+          helped build and maintain{" "}
           <Link to="https://github.com/optimizely/oui">OUI</Link>.
         </Paragraph>
       </Header>

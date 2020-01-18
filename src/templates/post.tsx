@@ -1,146 +1,143 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import styled from "@emotion/styled";
 import { graphql } from "gatsby";
+import Container from "../components/container";
 import * as s from "../styles";
-import Header from "../components/header";
-import Layout from "../components/layout";
 import "../styles/prism-ghcolors.css";
 
-const formatDate = date => {
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+// const formatDate = date => {
+//   const monthNames = [
+//     "January",
+//     "February",
+//     "March",
+//     "April",
+//     "May",
+//     "June",
+//     "July",
+//     "August",
+//     "September",
+//     "October",
+//     "November",
+//     "December",
+//   ];
 
-  const day = date.getDate();
-  const monthIndex = date.getMonth();
-  const year = date.getFullYear();
+//   const day = date.getDate();
+//   const monthIndex = date.getMonth();
+//   const year = date.getFullYear();
 
-  return `${monthNames[monthIndex]} ${day}, ${year}`;
-};
+//   return `${monthNames[monthIndex]} ${day}, ${year}`;
+// };
 
-const Time = styled.time`
-  color: ${s.gray};
-  text-transform: uppercase;
-  font-size: ${s.f6};
-  letter-spacing: ${s.tracked};
-`;
+// const Time = styled.time`
+//   color: ${s.gray};
+//   text-transform: uppercase;
+//   font-size: ${s.f6};
+//   letter-spacing: ${s.tracked};
+// `;
 
-const Markdown = styled.div`
-  line-height: ${s.lhCopy};
+// const Markdown = styled.div`
+//   line-height: ${s.lhCopy};
 
-  h1 {
-    margin-top: ${s.s0};
-  }
+//   h1 {
+//     margin-top: ${s.s0};
+//   }
 
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: ${s.titleMarginTop} 0 ${s.titleMarginBottom};
-  }
+//   h1,
+//   h2,
+//   h3,
+//   h4 {
+//     margin: ${s.titleMarginTop} 0 ${s.titleMarginBottom};
+//   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    max-width: ${s.measureWide};
-  }
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6,
+//   p {
+//     max-width: ${s.measureWide};
+//   }
 
-  p,
-  ul,
-  ol {
-    margin-bottom: ${s.paragraphBottomMargin};
+//   p,
+//   ul,
+//   ol {
+//     margin-bottom: ${s.paragraphBottomMargin};
 
-    ul,
-    ol {
-      margin-bottom: ${s.s0};
-    }
-  }
+//     ul,
+//     ol {
+//       margin-bottom: ${s.s0};
+//     }
+//   }
 
-  ul,
-  ol {
-    max-width: ${s.measureWide};
-    padding-left: ${s.s4};
-  }
+//   ul,
+//   ol {
+//     max-width: ${s.measureWide};
+//     padding-left: ${s.s4};
+//   }
 
-  li {
-    padding-left: ${s.s1};
+//   li {
+//     padding-left: ${s.s1};
 
-    p:first-child {
-      margin-top: ${s.s0};
-    }
+//     p:first-child {
+//       margin-top: ${s.s0};
+//     }
 
-    p:last-of-type {
-      margin-bottom: ${s.s2};
-    }
-  }
+//     p:last-of-type {
+//       margin-bottom: ${s.s2};
+//     }
+//   }
 
-  li:not(:last-child) {
-    margin-bottom: ${s.s2};
-  }
+//   li:not(:last-child) {
+//     margin-bottom: ${s.s2};
+//   }
 
-  hr {
-    border-top: 1px solid ${s.lightGray};
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    margin: ${s.s5} ${s.s0};
-  }
+//   hr {
+//     border-top: 1px solid ${s.lightGray};
+//     border-left: none;
+//     border-right: none;
+//     border-bottom: none;
+//     margin: ${s.s5} ${s.s0};
+//   }
 
-  blockquote {
-    max-width: ${s.measureWide};
-    padding-left: ${s.s3};
-    margin-left: ${s.s0};
-    border-left: 1px solid ${s.lightGray};
-  }
+//   blockquote {
+//     max-width: ${s.measureWide};
+//     padding-left: ${s.s3};
+//     margin-left: ${s.s0};
+//     border-left: 1px solid ${s.lightGray};
+//   }
 
-  code {
-    font-size: ${s.f6};
-  }
+//   code {
+//     font-size: ${s.f6};
+//   }
 
-  img {
-    outline: 1px solid ${s.lightGray};
-    max-width: 100%;
-  }
+//   img {
+//     outline: 1px solid ${s.lightGray};
+//     max-width: 100%;
+//   }
 
-  strong,
-  b {
-    font-weight: 500;
-  }
+//   strong,
+//   b {
+//     font-weight: 500;
+//   }
 
-  .gatsby-resp-image-link {
-    &:focus {
-      outline: 2px dotted currentColor;
-    }
+//   .gatsby-resp-image-link {
+//     &:focus {
+//       outline: 2px dotted currentColor;
+//     }
 
-    + em {
-      color: ${s.gray};
-      display: block;
-      margin: ${s.s3} ${s.s2};
-      font-size: ${s.f6};
-    }
+//     + em {
+//       color: ${s.gray};
+//       display: block;
+//       margin: ${s.s3} ${s.s2};
+//       font-size: ${s.f6};
+//     }
 
-    &:hover img {
-      outline: 1px solid ${s.moonGray};
-    }
-  }
-`;
+//     &:hover img {
+//       outline: 1px solid ${s.moonGray};
+//     }
+//   }
+// `;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
@@ -148,7 +145,7 @@ const Post = ({ data }) => {
 
   /* eslint-disable react/no-danger */
   return (
-    <Layout>
+    <Container>
       <div itemScope itemType="http://schema.org/Article">
         <Helmet>
           <meta property="og:type" content="article" />
@@ -235,16 +232,6 @@ const Post = ({ data }) => {
           )}
         </Helmet>
 
-        <Header isSinglePost />
-
-        <Time
-          dateTime={post.frontmatter.date}
-          itemProp="datePublished"
-          title={new Date(post.frontmatter.date).toString()}
-        >
-          {formatDate(new Date(post.frontmatter.date))}
-        </Time>
-
         <h1 itemProp="headline">{post.frontmatter.title}</h1>
 
         {site.siteUrl &&
@@ -259,45 +246,41 @@ const Post = ({ data }) => {
             />
           )}
 
-        <Markdown
+        <div
           itemProp="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
-    </Layout>
+    </Container>
   );
   /* eslint-enable react/no-danger */
 };
 
 export default Post;
 
-Post.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      html: PropTypes.string.isRequired,
-      frontmatter: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-        path: PropTypes.string.isRequired,
-        description: PropTypes.string,
-        tags: PropTypes.arrayOf(PropTypes.string),
-        image_src: PropTypes.string,
-        canonical: PropTypes.string,
-        is_featured: PropTypes.bool,
-        image_alt: PropTypes.string,
-      }).isRequired,
-    }).isRequired,
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        siteUrl: PropTypes.string.isRequired,
-      }),
-    }),
-  }),
-};
-
-Post.defaultProps = {
-  data: {},
-};
+// Post.propTypes = {
+//   data: PropTypes.shape({
+//     markdownRemark: PropTypes.shape({
+//       html: PropTypes.string.isRequired,
+//       frontmatter: PropTypes.shape({
+//         title: PropTypes.string.isRequired,
+//         date: PropTypes.string.isRequired,
+//         path: PropTypes.string.isRequired,
+//         description: PropTypes.string,
+//         tags: PropTypes.arrayOf(PropTypes.string),
+//         image_src: PropTypes.string,
+//         canonical: PropTypes.string,
+//         is_featured: PropTypes.bool,
+//         image_alt: PropTypes.string,
+//       }).isRequired,
+//     }).isRequired,
+//     site: PropTypes.shape({
+//       siteMetadata: PropTypes.shape({
+//         siteUrl: PropTypes.string.isRequired,
+//       }),
+//     }),
+//   }),
+// };
 
 export const pageQuery = graphql`
   query PostByPath($path: String!) {

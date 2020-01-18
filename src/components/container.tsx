@@ -1,9 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import hexToRgba from "hex-rgba";
 import { Global, css } from "@emotion/core";
-import styled from "@emotion/styled";
 
 import { StaticQuery, graphql } from "gatsby";
 import Link from "./link";
@@ -16,57 +13,31 @@ import UntitledSansRegularWoff2 from "../fonts/UntitledSansWeb-Regular.woff2";
 import UntitledSansRegularItalicWoff from "../fonts/UntitledSansWeb-RegularItalic.woff";
 import UntitledSansRegularItalicWoff2 from "../fonts/UntitledSansWeb-RegularItalic.woff2";
 
-const Container = styled.div`
-  font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, avenir next,
+type IndexLayoutProps = {
+  children: React.ReactNode;
+};
+
+const IndexLayout = ({ children }: IndexLayoutProps) => (
+  <div
+    css={{
+      fontFamily: `"Untitled Sans", -apple-system, BlinkMacSystemFont, avenir next,
     avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial,
-    sans-serif;
-  color: ${s.darkGray};
-  padding: ${s.s4};
-  max-width: ${s.measureWide};
-  margin-left: auto;
-  margin-right: auto;
-`;
-
-const Footer = styled.footer`
-  padding-top: ${s.s3};
-  border-top: 1px solid ${s.lightGray};
-`;
-
-const FooterList = styled.ul`
-  display: flex;
-  list-style-type: none;
-  padding-left: 0;
-
-  > li:not(:last-child) {
-    margin-right: ${s.s3};
-  }
-`;
-
-const IndexLayout = ({ children }) => (
-  <Container>
+    sans-serif`,
+      color: s.darkGray,
+      padding: s.s3,
+      maxWidth: s.measureWide,
+      marginLeft: "auto",
+      marginRight: "auto",
+    }}
+  >
     <Global
       styles={css`
         html {
           font-size: ${s.fontSizeBody};
         }
 
-        a {
-          color: ${s.blue};
-
-          :focus {
-            outline: 1px dotted currentColor;
-          }
-
-          :hover {
-            color: ${s.darkBlue};
-            border-radius: 1px;
-            background: ${hexToRgba(s.blue, 5)};
-            box-shadow: 0 0 0 4px ${hexToRgba(s.blue, 5)};
-          }
-
-          :active {
-            color: ${s.darkGray};
-          }
+        body {
+          margin: ${s.s0};
         }
 
         code, pre {
@@ -116,7 +87,6 @@ const IndexLayout = ({ children }) => (
           site {
             siteMetadata {
               title
-              description
               siteUrl
             }
           }
@@ -132,7 +102,6 @@ const IndexLayout = ({ children }) => (
               property: "og:image",
               content: `${data.site.siteMetadata.siteUrl}/profile.jpg`,
             },
-            { property: "fb:app_id", content: 1271463799642798 },
             { property: "twitter:creator", content: "_danoc" },
             { name: "theme-color", content: s.blue },
           ]}
@@ -143,8 +112,21 @@ const IndexLayout = ({ children }) => (
       )}
     />
     {children}
-    <Footer>
-      <FooterList>
+    <footer
+      css={{
+        paddingTop: s.s3,
+        borderTop: `1px solid ${s.lightGray}`,
+      }}
+    >
+      <ul
+        css={{
+          listStyleType: "none",
+          paddingLeft: s.s0,
+          margin: s.s0,
+          display: "grid",
+          gridGap: s.s2,
+        }}
+      >
         <li>
           <Link to="mailto:daniel@danoc.me">daniel@danoc.me</Link>
         </li>
@@ -157,17 +139,9 @@ const IndexLayout = ({ children }) => (
         <li>
           <Link to="https://linkedin.com/in/itsdanoc">LinkedIn</Link>
         </li>
-      </FooterList>
-    </Footer>
-  </Container>
+      </ul>
+    </footer>
+  </div>
 );
-
-IndexLayout.propTypes = {
-  children: PropTypes.node,
-};
-
-IndexLayout.defaultProps = {
-  children: undefined,
-};
 
 export default IndexLayout;

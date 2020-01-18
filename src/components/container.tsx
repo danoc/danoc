@@ -24,7 +24,7 @@ const IndexLayout = ({ children }: IndexLayoutProps) => (
     avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial,
     sans-serif`,
       color: s.darkGray,
-      padding: s.s3,
+      padding: s.s4,
       maxWidth: s.measureWide,
       marginLeft: "auto",
       marginRight: "auto",

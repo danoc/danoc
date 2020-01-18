@@ -4,6 +4,8 @@ import Container from "../components/container";
 import Link from "../components/link";
 import * as s from "../styles";
 
+const getUrl = (url: string) => new URL(url).hostname;
+
 type PProps = {
   children: React.ReactNode;
 };
@@ -19,15 +21,16 @@ type SectionProps = {
 };
 
 const Section = ({ children }: SectionProps) => (
-  <section css={{ marginBottom: s.s5 }}>{children}</section>
+  <section css={{ marginBottom: s.s6 }}>{children}</section>
 );
 
 type SectionTitleProps = {
   children: string;
-  description?: string;
+  description: string;
+  emoji: string;
 };
 
-const SectionTitle = ({ children, description }: SectionTitleProps) => (
+const SectionTitle = ({ children, description, emoji }: SectionTitleProps) => (
   <div
     css={{
       color: s.darkGray,
@@ -41,21 +44,36 @@ const SectionTitle = ({ children, description }: SectionTitleProps) => (
       css={{ marginTop: s.s0, marginBottom: s.s0, fontSize: s.f4 }}
       id={children}
     >
-      {children}
+      <span css={{ marginRight: s.s1 }}>{emoji}</span> {children}
     </h2>
-    {description && (
-      <p
-        css={{
-          marginBottom: 0,
-          marginTop: s.s2,
-          fontSize: s.f6,
-          color: s.gray,
-        }}
-      >
-        {description}
-      </p>
-    )}
+    <p
+      css={{
+        marginBottom: 0,
+        marginTop: s.s2,
+        fontSize: s.f6,
+        color: s.gray,
+      }}
+    >
+      {description}
+    </p>
   </div>
+);
+
+type SectionListProps = {
+  children: React.ReactNode;
+};
+
+const SectionList = ({ children }: SectionListProps) => (
+  <ul
+    css={{
+      listStyle: "none",
+      paddingLeft: s.s0,
+      marginTop: s.s0,
+      marginBottom: s.s0,
+    }}
+  >
+    {children}
+  </ul>
 );
 
 type SectionListLinkProps = {
@@ -130,8 +148,13 @@ const formatDate = (dateString: string) => {
 
 const IndexPage = ({ data }: IndexPageProps) => (
   <Container>
-    <header css={{ marginBottom: s.s5 }}>
-      <h1 css={{ fontSize: "1.4rem" }}>Daniel O’Connor</h1>
+    <header css={{ marginBottom: s.s6 }}>
+      <span css={{ display: "block", marginBottom: s.s3, fontSize: "40px" }}>
+        👨‍💻
+      </span>
+      <h1 css={{ fontSize: "1.6rem", marginTop: s.s0, marginBottom: s.s3 }}>
+        Daniel O’Connor
+      </h1>
       <Paragraph>
         Hello! I’m a design systems engineer based in San Francisco. I use code
         and communication to improve product quality and developer productivity.
@@ -149,17 +172,13 @@ const IndexPage = ({ data }: IndexPageProps) => (
     </header>
 
     <Section>
-      <SectionTitle description="Thoughts and feelings on code and design">
+      <SectionTitle
+        description="Thoughts and feelings on code and design"
+        emoji="📝"
+      >
         Writing
       </SectionTitle>
-      <ul
-        css={{
-          listStyle: "none",
-          paddingLeft: s.s0,
-          marginTop: s.s0,
-          marginBottom: s.s0,
-        }}
-      >
+      <SectionList>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <SectionListLink
             to={node.frontmatter.path}
@@ -169,7 +188,6 @@ const IndexPage = ({ data }: IndexPageProps) => (
               css={{
                 marginBottom: s.s1,
                 display: "block",
-                fontWeight: 500,
               }}
             >
               {node.frontmatter.title}
@@ -185,28 +203,22 @@ const IndexPage = ({ data }: IndexPageProps) => (
             </span>
           </SectionListLink>
         ))}
-      </ul>
+      </SectionList>
     </Section>
     <Section>
-      <SectionTitle description="Articles and videos that I enjoy sharing">
+      <SectionTitle
+        description="Articles and videos that I enjoy sharing"
+        emoji="📖"
+      >
         Bookmarks
       </SectionTitle>
-      <p></p>
-      <ul
-        css={{
-          listStyle: "none",
-          paddingLeft: s.s0,
-          marginTop: s.s0,
-          marginBottom: s.s0,
-        }}
-      >
+      <SectionList>
         {data.allPinboardBookmark.edges.map(({ node }) => (
           <SectionListLink to={node.href} key={node.href}>
             <span
               css={{
                 marginBottom: s.s1,
                 display: "block",
-                fontWeight: 500,
               }}
             >
               {node.description}
@@ -218,11 +230,11 @@ const IndexPage = ({ data }: IndexPageProps) => (
                 fontSize: s.f6,
               }}
             >
-              {node.href}
+              {getUrl(node.href)}
             </span>
           </SectionListLink>
         ))}
-      </ul>
+      </SectionList>
     </Section>
   </Container>
 );

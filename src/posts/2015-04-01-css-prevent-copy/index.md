@@ -27,11 +27,13 @@ Combining pseudo-elements and the CSS `content` property, we can prevent text fr
 
 We can take this example a bit further and support both `::before` and `::after`.
 
-    [data-pseudo-content]::before,
-    [data-pseudo-content--before]::before,
-    [data-pseudo-content--after]::after {
-      content: attr(data-pseudo-content);
-    }
+```css
+[data-pseudo-content]::before,
+[data-pseudo-content--before]::before,
+[data-pseudo-content--after]::after {
+  content: attr(data-pseudo-content);
+}
+```
 
 ## Why the pseudo-element works
 

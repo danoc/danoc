@@ -10,15 +10,16 @@ export const s0 = "0rem";
 export const s1 = "0.25rem";
 export const s2 = "0.5rem";
 export const s3 = "1rem";
-export const s4 = "2rem";
-export const s5 = "4rem";
-export const s6 = "8rem";
-export const s7 = "16rem";
+export const s4 = "1.5rem";
+export const s5 = "2rem";
+export const s6 = "3rem";
+export const s7 = "4rem";
+export const s8 = "8rem";
 
 export const measure = "29em";
 export const measureWide = "34em";
 
-export const fontSizeBody = "1.063rem";
+export const fontSizeBody = "1rem";
 
 export const f2 = "2.25rem";
 export const f4 = "1.25rem";

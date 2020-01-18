@@ -123,20 +123,41 @@ const IndexLayout = ({ children }: IndexLayoutProps) => (
           listStyleType: "none",
           paddingLeft: s.s0,
           margin: s.s0,
-          display: "grid",
-          gridGap: s.s2,
+          display: "inline-grid",
+          gridRowGap: s.s3,
+          gridColumnGap: s.s2,
         }}
       >
-        <li>
+        <li css={{ gridColumn: "1 / span 3" }}>
           <Link to="mailto:daniel@danoc.me">daniel@danoc.me</Link>
         </li>
-        <li>
+        <li
+          css={{
+            fontSize: s.f6,
+            "::after": {
+              content: "'·'",
+              paddingLeft: s.s2,
+            },
+          }}
+        >
           <Link to="https://twitter.com/_danoc">Twitter</Link>
         </li>
-        <li>
+        <li
+          css={{
+            fontSize: s.f6,
+            "::after": {
+              content: "'·'",
+              paddingLeft: s.s2,
+            },
+          }}
+        >
           <Link to="https://github.com/danoc">GitHub</Link>
         </li>
-        <li>
+        <li
+          css={{
+            fontSize: s.f6,
+          }}
+        >
           <Link to="https://linkedin.com/in/itsdanoc">LinkedIn</Link>
         </li>
       </ul>

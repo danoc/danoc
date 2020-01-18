@@ -69,19 +69,19 @@ const SectionList = ({ children }: SectionListProps) => (
       listStyle: "none",
       paddingLeft: s.s0,
       marginTop: s.s0,
-      marginBottom: s.s0,
+      marginBottom: s.s3,
     }}
   >
     {children}
   </ul>
 );
 
-type SectionListLinkProps = {
+type SectionListItemProps = {
   children: React.ReactNode;
   to: string;
 };
 
-const SectionListLink = ({ children, to }: SectionListLinkProps) => (
+const SectionListItem = ({ children, to }: SectionListItemProps) => (
   <li key={to}>
     <Link
       to={to}
@@ -96,6 +96,61 @@ const SectionListLink = ({ children, to }: SectionListLinkProps) => (
       {children}
     </Link>
   </li>
+);
+
+type SectionListItemTitleProps = {
+  children: string;
+};
+
+const SectionListItemTitle = ({ children }: SectionListItemTitleProps) => (
+  <span
+    css={{
+      marginBottom: s.s1,
+      display: "block",
+    }}
+  >
+    {children}
+  </span>
+);
+
+type SectionListItemDescriptionProps = {
+  children: string;
+};
+
+const SectionListItemDescription = ({
+  children,
+}: SectionListItemDescriptionProps) => (
+  <span
+    css={{
+      color: s.gray,
+      display: "block",
+      fontSize: s.f6,
+    }}
+  >
+    {children}
+  </span>
+);
+
+type SectionListMoreLinkProps = {
+  to: string;
+  children: string;
+};
+
+const SectionListMoreLink = ({ to, children }: SectionListMoreLinkProps) => (
+  <Link
+    to={to}
+    css={{
+      fontWeight: 400,
+      borderBottom: "none",
+      fontSize: s.f6,
+      paddingTop: s.s2,
+      paddingBottom: s.s2,
+      display: "inline-block",
+      paddingRight: s.s1,
+    }}
+  >
+    {children} <span css={{ color: s.gray, marginLeft: s.s1 }}>→</span>
+  </Link>
 );
 
 type IndexPageProps = {
@@ -180,30 +235,22 @@ const IndexPage = ({ data }: IndexPageProps) => (
       </SectionTitle>
       <SectionList>
         {data.allMarkdownRemark.edges.map(({ node }) => (
-          <SectionListLink
+          <SectionListItem
             to={node.frontmatter.path}
             key={node.frontmatter.path}
           >
-            <span
-              css={{
-                marginBottom: s.s1,
-                display: "block",
-              }}
-            >
+            <SectionListItemTitle>
               {node.frontmatter.title}
-            </span>
-            <span
-              css={{
-                color: s.gray,
-                display: "block",
-                fontSize: s.f6,
-              }}
-            >
+            </SectionListItemTitle>
+            <SectionListItemDescription>
               {formatDate(node.frontmatter.date)}
-            </span>
-          </SectionListLink>
+            </SectionListItemDescription>
+          </SectionListItem>
         ))}
       </SectionList>
+      <SectionListMoreLink to="https://pinboard.in/u:danoc">
+        View all posts
+      </SectionListMoreLink>
     </Section>
     <Section>
       <SectionTitle
@@ -214,27 +261,17 @@ const IndexPage = ({ data }: IndexPageProps) => (
       </SectionTitle>
       <SectionList>
         {data.allPinboardBookmark.edges.map(({ node }) => (
-          <SectionListLink to={node.href} key={node.href}>
-            <span
-              css={{
-                marginBottom: s.s1,
-                display: "block",
-              }}
-            >
-              {node.description}
-            </span>
-            <span
-              css={{
-                color: s.gray,
-                display: "block",
-                fontSize: s.f6,
-              }}
-            >
+          <SectionListItem to={node.href} key={node.href}>
+            <SectionListItemTitle>{node.description}</SectionListItemTitle>
+            <SectionListItemDescription>
               {getUrl(node.href)}
-            </span>
-          </SectionListLink>
+            </SectionListItemDescription>
+          </SectionListItem>
         ))}
       </SectionList>
+      <SectionListMoreLink to="https://pinboard.in/u:danoc">
+        View all bookmarks
+      </SectionListMoreLink>
     </Section>
   </Container>
 );

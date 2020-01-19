@@ -10,7 +10,7 @@ path: /blog/spring-fling-announcement-and-analytics/
 
 ![Screenshot of the Pipe Dream Google Analytics](./pipe-dream-spring-fling-google-analytics-2013.png)
 
-It took active [90 visitors to crash the Pipe Dream server](http://blog.danoc.me/2012/03/24/spring-fling-concert-announcement-takes-down-the-pipe.html) a year ago when we announced that [Passion Pit would headline Spring Fling](http://www.bupipedream.com/news/9130/passion-pit-to-headline-spring-fling/). The article received 374 likes.
+It took active [90 visitors to crash the Pipe Dream server](/blog/spring-fling-concert-announcement-takes-down-the-pipe/) a year ago when we announced that [Passion Pit would headline Spring Fling](http://www.bupipedream.com/news/9130/passion-pit-to-headline-spring-fling/). The article received 374 likes.
 
 Last week we broke the news that Yellowcard will headline the 2013 Spring Fling. The website maxed out at 180 active visitors and we reached 6,900 visits in one day (the largest if you exclude [Alyssa Mercante's viral column](http://www.bupipedream.com/opinion/10245/binghamtons-noble-truths-lived/)). Thankfully, the server didn't break a sweat.
 

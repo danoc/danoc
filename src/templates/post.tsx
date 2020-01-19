@@ -1,10 +1,11 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql, Link as GatsbyLink } from "gatsby";
+import { graphql } from "gatsby";
 import Container from "../components/container";
 import { css as linkCSS } from "../components/link";
 import * as s from "../styles";
 import "../styles/prism-ghcolors.css";
+import PageTitle from "../components/page-title";
 
 type PostProps = {
   data: {
@@ -48,7 +49,7 @@ const Post = ({ data }: PostProps) => {
 
   /* eslint-disable react/no-danger */
   return (
-    <Container>
+    <Container header="condensed">
       <div itemScope itemType="http://schema.org/Article">
         <Helmet>
           <meta property="og:type" content="article" />
@@ -129,29 +130,23 @@ const Post = ({ data }: PostProps) => {
           )}
         </Helmet>
 
-        <header css={{ marginBottom: s.s6 }}>
-          <GatsbyLink
-            to="/"
-            css={{ color: "inherit", textDecoration: "inherit" }}
-          >
-            <h1 css={{ fontSize: s.f5, marginTop: s.s0, marginBottom: s.s3 }}>
-              Daniel O’Connor
-            </h1>
-          </GatsbyLink>
-        </header>
-
         <time
           dateTime={post.frontmatter.date}
           itemProp="datePublished"
           title={new Date(post.frontmatter.date).toDateString()}
-          css={{ color: s.gray, fontSize: s.f6 }}
+          css={{
+            color: s.gray,
+            fontSize: s.f6,
+            marginBottom: s.s1,
+            display: "block",
+          }}
         >
           {post.frontmatter.formattedDate}
         </time>
 
-        <h1 itemProp="headline" css={{ fontSize: s.f4 }}>
+        <PageTitle as="h1" itemProp="headline">
           {post.frontmatter.title}
-        </h1>
+        </PageTitle>
 
         {site.siteUrl &&
           post.frontmatter.image_src &&
@@ -164,6 +159,7 @@ const Post = ({ data }: PostProps) => {
               }
             />
           )}
+
         <div
           itemProp="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}

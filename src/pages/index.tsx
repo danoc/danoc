@@ -1,44 +1,39 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link as GatsbyLink } from "gatsby";
 import Container from "../components/container";
 import Link from "../components/link";
 import * as s from "../styles";
-
-const getUrl = (url: string) => new URL(url).hostname.replace("www.", "");
-
-type PProps = {
-  children: React.ReactNode;
-};
-
-const Paragraph = ({ children }: PProps) => (
-  <p css={{ marginTop: s.s0, maxWidth: s.measure, lineHeight: s.lhCopy }}>
-    {children}
-  </p>
-);
-
-type SectionProps = {
-  children: React.ReactNode;
-};
-
-const Section = ({ children }: SectionProps) => (
-  <section css={{ marginBottom: s.s6 }}>{children}</section>
-);
+import Section, {
+  SectionList,
+  SectionListItem,
+  SectionListItemTitle,
+  SectionListItemDescription,
+} from "../components/section";
+import getUrlHostname from "../utils/get-url-hostname";
 
 type SectionTitleProps = {
   children: string;
   description: string;
   emoji: string;
+  to: string;
 };
 
-const SectionTitle = ({ children, description, emoji }: SectionTitleProps) => (
-  <div
+const SectionTitle = ({
+  children,
+  description,
+  emoji,
+  to,
+}: SectionTitleProps) => (
+  <GatsbyLink
     css={{
-      color: s.darkGray,
+      color: "inherit",
       display: "block",
       borderBottom: `1px solid ${s.lightGray}`,
       marginBottom: s.s2,
       paddingBottom: s.s3,
+      textDecoration: "inherit",
     }}
+    to={to}
   >
     <h2
       css={{ marginTop: s.s0, marginBottom: s.s0, fontSize: s.f4 }}
@@ -56,82 +51,7 @@ const SectionTitle = ({ children, description, emoji }: SectionTitleProps) => (
     >
       {description}
     </p>
-  </div>
-);
-
-type SectionListProps = {
-  children: React.ReactNode;
-};
-
-const SectionList = ({ children }: SectionListProps) => (
-  <ul
-    css={{
-      listStyle: "none",
-      paddingLeft: s.s0,
-      marginTop: s.s0,
-      marginBottom: s.s3,
-    }}
-  >
-    {children}
-  </ul>
-);
-
-type SectionListItemProps = {
-  children: React.ReactNode;
-  to: string;
-};
-
-const SectionListItem = ({ children, to }: SectionListItemProps) => (
-  <li key={to}>
-    <Link
-      to={to}
-      css={{
-        paddingTop: s.s2,
-        paddingBottom: s.s2,
-        display: "block",
-        fontWeight: 400,
-        borderBottom: "none",
-      }}
-    >
-      {children}
-    </Link>
-  </li>
-);
-
-type SectionListItemTitleProps = {
-  children: string;
-};
-
-const SectionListItemTitle = ({ children }: SectionListItemTitleProps) => (
-  <span
-    css={{
-      marginBottom: s.s1,
-      display: "block",
-    }}
-  >
-    {children}
-  </span>
-);
-
-type SectionListItemDescriptionProps = {
-  children: string;
-  title?: string;
-};
-
-const SectionListItemDescription = ({
-  children,
-  title,
-}: SectionListItemDescriptionProps) => (
-  <span
-    css={{
-      color: s.gray,
-      display: "block",
-      fontSize: s.f6,
-    }}
-    title={title}
-  >
-    {children}
-  </span>
+  </GatsbyLink>
 );
 
 type SectionListMoreLinkProps = {
@@ -186,34 +106,12 @@ type IndexPageProps = {
 };
 
 const IndexPage = ({ data }: IndexPageProps) => (
-  <Container>
-    <header css={{ marginBottom: s.s6 }}>
-      <span css={{ display: "block", marginBottom: s.s3, fontSize: "40px" }}>
-        👨‍💻
-      </span>
-      <h1 css={{ fontSize: "1.6rem", marginTop: s.s0, marginBottom: s.s3 }}>
-        Daniel O’Connor
-      </h1>
-      <Paragraph>
-        Hello! I’m a design systems engineer based in San Francisco. I use code
-        and communication to improve product quality and developer productivity.
-      </Paragraph>
-      <Paragraph>
-        Right now I build{" "}
-        <Link to="https://thumbprint.design/">Thumbprint</Link>, the design
-        system at <Link to="https://www.thumbtack.com/">Thumbtack</Link>. I
-        previously worked at{" "}
-        <Link to="https://www.optimizely.com/">Optimizely</Link> where I helped
-        build and maintain{" "}
-        <Link to="https://github.com/optimizely/oui">OUI</Link>, a React
-        component library.
-      </Paragraph>
-    </header>
-
+  <Container header="full">
     <Section>
       <SectionTitle
         description="Thoughts and feelings on code and design"
         emoji="📝"
+        to="/blog"
       >
         Writing
       </SectionTitle>
@@ -235,7 +133,11 @@ const IndexPage = ({ data }: IndexPageProps) => (
       <SectionListMoreLink to="/blog">View all posts</SectionListMoreLink>
     </Section>
     <Section>
-      <SectionTitle description="Articles and videos I like sharing" emoji="📖">
+      <SectionTitle
+        description="Articles and videos I like sharing"
+        emoji="📖"
+        to="/bookmarks"
+      >
         Bookmarks
       </SectionTitle>
       <SectionList>
@@ -243,7 +145,7 @@ const IndexPage = ({ data }: IndexPageProps) => (
           <SectionListItem to={node.href} key={node.href}>
             <SectionListItemTitle>{node.description}</SectionListItemTitle>
             <SectionListItemDescription>
-              {getUrl(node.href)}
+              {getUrlHostname(node.href)}
             </SectionListItemDescription>
           </SectionListItem>
         ))}

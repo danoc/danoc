@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { Global, css } from "@emotion/core";
 
-import { StaticQuery, graphql } from "gatsby";
+import { StaticQuery, graphql, Link as GatsbyLink } from "gatsby";
 import Link from "./link";
 import * as s from "../styles";
 
@@ -13,11 +13,22 @@ import UntitledSansRegularWoff2 from "../fonts/UntitledSansWeb-Regular.woff2";
 import UntitledSansRegularItalicWoff from "../fonts/UntitledSansWeb-RegularItalic.woff";
 import UntitledSansRegularItalicWoff2 from "../fonts/UntitledSansWeb-RegularItalic.woff2";
 
-type IndexLayoutProps = {
+type ParagraphProps = {
   children: React.ReactNode;
 };
 
-const IndexLayout = ({ children }: IndexLayoutProps) => (
+const Paragraph = ({ children }: ParagraphProps) => (
+  <p css={{ marginTop: s.s0, maxWidth: s.measure, lineHeight: s.lhCopy }}>
+    {children}
+  </p>
+);
+
+type ContainerProps = {
+  children: React.ReactNode;
+  header: "full" | "condensed";
+};
+
+const Container = ({ children, header }: ContainerProps) => (
   <div
     css={{
       fontFamily: `"Untitled Sans", -apple-system, BlinkMacSystemFont, avenir next,
@@ -111,6 +122,45 @@ const IndexLayout = ({ children }: IndexLayoutProps) => (
         />
       )}
     />
+
+    <header css={{ marginBottom: s.s6 }}>
+      {header === "full" && (
+        <span css={{ display: "block", marginBottom: s.s3, fontSize: "40px" }}>
+          👨‍💻
+        </span>
+      )}
+      <GatsbyLink to="/" css={{ color: "inherit", textDecoration: "inherit" }}>
+        <h1
+          css={{
+            fontSize: header === "full" ? "1.6rem" : s.f5,
+            marginTop: s.s0,
+            marginBottom: s.s3,
+          }}
+        >
+          Daniel O’Connor
+        </h1>
+      </GatsbyLink>
+      {header === "full" && (
+        <>
+          <Paragraph>
+            Hello! I’m a design systems engineer based in San Francisco. I use
+            code and communication to improve product quality and developer
+            productivity.
+          </Paragraph>
+          <Paragraph>
+            Right now I build{" "}
+            <Link to="https://thumbprint.design/">Thumbprint</Link>, the design
+            system at <Link to="https://www.thumbtack.com/">Thumbtack</Link>. I
+            previously worked at{" "}
+            <Link to="https://www.optimizely.com/">Optimizely</Link> where I
+            helped build and maintain{" "}
+            <Link to="https://github.com/optimizely/oui">OUI</Link>, a React
+            component library.
+          </Paragraph>
+        </>
+      )}
+    </header>
+
     {children}
     <footer
       css={{
@@ -165,4 +215,4 @@ const IndexLayout = ({ children }: IndexLayoutProps) => (
   </div>
 );
 
-export default IndexLayout;
+export default Container;

@@ -115,10 +115,12 @@ const SectionListItemTitle = ({ children }: SectionListItemTitleProps) => (
 
 type SectionListItemDescriptionProps = {
   children: string;
+  title?: string;
 };
 
 const SectionListItemDescription = ({
   children,
+  title,
 }: SectionListItemDescriptionProps) => (
   <span
     css={{
@@ -126,6 +128,7 @@ const SectionListItemDescription = ({
       display: "block",
       fontSize: s.f6,
     }}
+    title={title}
   >
     {children}
   </span>
@@ -162,6 +165,7 @@ type IndexPageProps = {
             frontmatter: {
               title: string;
               date: string;
+              formattedDate: string;
               path: string;
             };
           };
@@ -179,26 +183,6 @@ type IndexPageProps = {
       ];
     };
   };
-};
-
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  return `${months[date.getMonth()]} ${date.getFullYear()}`;
 };
 
 const IndexPage = ({ data }: IndexPageProps) => (
@@ -242,8 +226,8 @@ const IndexPage = ({ data }: IndexPageProps) => (
             <SectionListItemTitle>
               {node.frontmatter.title}
             </SectionListItemTitle>
-            <SectionListItemDescription>
-              {formatDate(node.frontmatter.date)}
+            <SectionListItemDescription title={node.frontmatter.date}>
+              {node.frontmatter.formattedDate}
             </SectionListItemDescription>
           </SectionListItem>
         ))}
@@ -285,6 +269,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date
+            formattedDate: date(formatString: "MMMM YYYY")
             path
           }
         }

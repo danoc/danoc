@@ -7,8 +7,6 @@ image_src: ./react-rally-chantastic.jpg
 image_alt: Michael Chan (@chantastic), the host of React Rally
 ---
 
-![Michael Chan (@chantastic), the host of React Rally](./react-rally-chantastic.jpg)
-
 I was recently at [React Rally](https://www.reactrally.com/), a two-day conference about React in Salt Lake City. This post is a collection of the notes I took.
 
 Since [all the talks are on YouTube](https://www.youtube.com/playlist?list=PLUD4kD-wL_zaXhR4KU1CkUSIzh1TrvnzA), I recommend using these notes to help discover which talks you’d like to watch. I’ve also included links to the slides and more notes, when available.

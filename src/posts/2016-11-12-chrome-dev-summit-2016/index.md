@@ -7,8 +7,6 @@ image_src: ./chrome-dev-summit-2016.jpg
 image_alt: Photo from the 2016 Chrome Dev Summit
 ---
 
-![Photo from the Chrome Dev Summit](./chrome-dev-summit-2016.jpg)
-
 I recently attended the [Chrome Dev Summit](https://developer.chrome.com/devsummit/), a free two-day conference organized by Google in San Francisco. The conference, now in its fourth year, highlights emerging web technologies and APIs that can be used to deliver a great user experience on the web.
 
 I’ve posted raw notes from the conference for the past two years ([2014](https://danoc.me/blog/chrome-dev-summit-2014-notes/), [2015](https://danoc.me/blog/chrome-dev-summit-2015-notes/)), but this time I’d like to highlight a few key themes that the speakers drove home throughout the event.

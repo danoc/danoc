@@ -24,6 +24,9 @@ type PostProps = {
               width: string;
               height: string;
             };
+            fluid: {
+              src: string;
+            };
           };
           internal: {
             mediaType: string;
@@ -163,6 +166,22 @@ const Post = ({ data }: PostProps) => {
             />
           )}
 
+        {site.siteUrl &&
+          post.frontmatter.image_src &&
+          post.frontmatter.image_src.childImageSharp.fluid.src && (
+            <a href={post.frontmatter.image_src.childImageSharp.original.src}>
+              <img
+                src={post.frontmatter.image_src.childImageSharp.fluid.src}
+                alt={post.frontmatter.image_alt}
+                css={{
+                  marginTop: s.s3,
+                  border: `1px solid ${s.lightGray}`,
+                  maxWidth: "100%",
+                }}
+              />
+            </a>
+          )}
+
         <div
           itemProp="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -290,6 +309,9 @@ export const pageQuery = graphql`
             original {
               width
               height
+              src
+            }
+            fluid(maxWidth: 544) {
               src
             }
           }

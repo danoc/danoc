@@ -262,15 +262,15 @@ const Post = ({ data }: PostProps) => {
               fontWeight: 500,
             },
 
-            ".gatsby-resp-image-link": {
+            ".gatsby-resp-image-wrapper": {
               "&:focus": {
                 outline: `2px dotted currentColor`,
               },
 
               "+ em": {
-                color: s.gray,
+                color: s.darkGray,
                 display: "block",
-                margin: `${s.s3} ${s.s2}`,
+                margin: `${s.s2} ${s.s1}`,
                 fontSize: s.f6,
               },
 

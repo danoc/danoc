@@ -49,16 +49,13 @@ const Post = ({ data }: PostProps) => {
 
   /* eslint-disable react/no-danger */
   return (
-    <Container header="condensed">
+    <Container title={post.frontmatter.title} header="condensed">
       <div itemScope itemType="http://schema.org/Article">
         <Helmet>
           <meta property="og:type" content="article" />
-          {post.frontmatter.title && <title>{post.frontmatter.title}</title>}
-          {post.frontmatter.title && (
-            <meta property="og:title" content={post.frontmatter.title} />
-          )}
-          {site.siteUrl &&
-            post.frontmatter.image_src &&
+          <meta property="og:title" content={post.frontmatter.title} />
+
+          {post.frontmatter.image_src &&
             post.frontmatter.image_src.childImageSharp.original.src && (
               <meta
                 property="og:image"
@@ -68,11 +65,13 @@ const Post = ({ data }: PostProps) => {
                 }
               />
             )}
+
           {post.frontmatter.is_featured && post.frontmatter.image_src ? (
             <meta name="twitter:card" content="summary_large_image" />
           ) : (
             <meta name="twitter:card" content="summary" />
           )}
+
           {post.frontmatter.image_src &&
             post.frontmatter.image_src.childImageSharp.original.width && (
               <meta
@@ -82,6 +81,7 @@ const Post = ({ data }: PostProps) => {
                 }
               />
             )}
+
           {post.frontmatter.image_src &&
             post.frontmatter.image_src.childImageSharp.original.height && (
               <meta
@@ -91,6 +91,7 @@ const Post = ({ data }: PostProps) => {
                 }
               />
             )}
+
           {post.frontmatter.image_src &&
             post.frontmatter.image_src.internal.mediaType && (
               <meta
@@ -98,33 +99,39 @@ const Post = ({ data }: PostProps) => {
                 content={post.frontmatter.image_src.internal.mediaType}
               />
             )}
+
           {post.frontmatter.image_alt && (
             <meta
               property="og:image:alt"
               content={post.frontmatter.image_alt}
             />
           )}
+
           {post.frontmatter.date && (
             <meta
               property="article:published_time"
               content={post.frontmatter.date}
             />
           )}
+
           {site.siteUrl && post.frontmatter.path && (
             <meta
               property="og:url"
               content={site.siteUrl + post.frontmatter.path}
             />
           )}
+
           {post.frontmatter.description && (
             <meta name="description" content={post.frontmatter.description} />
           )}
+
           {post.frontmatter.description && (
             <meta
               property="og:description"
               content={post.frontmatter.description}
             />
           )}
+
           {post.frontmatter.canonical && (
             <link rel="canonical" href={post.frontmatter.canonical} />
           )}

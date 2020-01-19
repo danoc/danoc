@@ -27,7 +27,7 @@ type BookmarksPageProps = {
 };
 
 const BookmarksPage = ({ data }: BookmarksPageProps) => (
-  <Container header="condensed">
+  <Container title="Bookmarks" header="condensed">
     <Section>
       <PageTitle as="h2">Bookmarks</PageTitle>
       <p

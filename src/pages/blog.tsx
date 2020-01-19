@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql, Link as GatsbyLink } from "gatsby";
-import { groupBy, map, keys, sortBy, reverse } from "lodash";
+import { graphql } from "gatsby";
+import { groupBy, keys, sortBy, reverse } from "lodash";
 import Container from "../components/container";
 import * as s from "../styles";
 import PageTitle from "../components/page-title";
@@ -37,7 +37,7 @@ const BlogPage = ({ data }: BlogPageProps) => {
   const years = reverse(sortBy(keys(postsByYear)));
 
   return (
-    <Container header="condensed">
+    <Container title="Writing" header="condensed">
       <Section>
         <PageTitle as="h2">Writing</PageTitle>
         <p

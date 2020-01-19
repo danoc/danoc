@@ -25,10 +25,11 @@ const Paragraph = ({ children }: ParagraphProps) => (
 
 type ContainerProps = {
   children: React.ReactNode;
+  title?: string;
   header: "full" | "condensed";
 };
 
-const Container = ({ children, header }: ContainerProps) => (
+const Container = ({ children, title, header }: ContainerProps) => (
   <div
     css={{
       fontFamily: `"Untitled Sans", -apple-system, BlinkMacSystemFont, avenir next,
@@ -103,24 +104,30 @@ const Container = ({ children, header }: ContainerProps) => (
           }
         }
       `}
-      render={data => (
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { property: "og:title", content: data.site.siteMetadata.title },
-            { property: "og:type", content: "website" },
-            {
-              property: "og:image",
-              content: `${data.site.siteMetadata.siteUrl}/profile.jpg`,
-            },
-            { property: "twitter:creator", content: "_danoc" },
-            { name: "theme-color", content: s.blue },
-          ]}
-          htmlAttributes={{
-            lang: "en",
-          }}
-        />
-      )}
+      render={data => {
+        const metaTitle = title
+          ? `${title} – ${data.site.siteMetadata.title}`
+          : data.site.siteMetadata.title;
+
+        return (
+          <Helmet
+            title={metaTitle}
+            meta={[
+              { property: "og:title", content: metaTitle },
+              { property: "og:type", content: "website" },
+              {
+                property: "og:image",
+                content: `${data.site.siteMetadata.siteUrl}/profile.jpg`,
+              },
+              { property: "twitter:creator", content: "_danoc" },
+              { name: "theme-color", content: s.darkGray },
+            ]}
+            htmlAttributes={{
+              lang: "en",
+            }}
+          />
+        );
+      }}
     />
 
     <header css={{ marginBottom: s.s6 }}>

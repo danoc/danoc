@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import { graphql, Link as GatsbyLink } from "gatsby";
 import Container from "../components/container";
 import Link from "../components/link";
@@ -102,11 +103,23 @@ type IndexPageProps = {
         },
       ];
     };
+    site: {
+      siteMetadata: {
+        description: string;
+      };
+    };
   };
 };
 
 const IndexPage = ({ data }: IndexPageProps) => (
   <Container header="full">
+    <Helmet>
+      <meta name="description" content={data.site.siteMetadata.description} />
+      <meta
+        property="og:description"
+        content={data.site.siteMetadata.description}
+      />
+    </Helmet>
     <Section>
       <SectionTitle
         description="Thoughts and feelings on code and design"
@@ -182,6 +195,11 @@ export const pageQuery = graphql`
           href
           description
         }
+      }
+    }
+    site {
+      siteMetadata {
+        description
       }
     }
   }

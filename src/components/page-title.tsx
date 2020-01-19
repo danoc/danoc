@@ -13,7 +13,15 @@ const PageTitle = ({ as, id, children }: PageTitleProps) => {
 
   return (
     <Element
-      css={{ fontSize: "1.6rem", marginTop: s.s0, marginBottom: s.s0 }}
+      css={{
+        fontSize: "1.6rem",
+        marginTop: s.s0,
+        marginBottom: s.s0,
+        "@media (min-width: 400px)": {
+          fontSize: "2rem",
+          lineHeight: 1.2,
+        },
+      }}
       id={id}
     >
       {children}

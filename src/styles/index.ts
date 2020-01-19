@@ -20,6 +20,7 @@ export const measure = "29em";
 export const measureWide = "34em";
 
 export const fontSizeBody = "1rem";
+export const fontSizeBodyMedium = "1.063rem";
 
 export const f2 = "2.25rem";
 export const f4 = "1.25rem";

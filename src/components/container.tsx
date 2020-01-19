@@ -40,12 +40,20 @@ const Container = ({ children, title, header }: ContainerProps) => (
       maxWidth: s.measureWide,
       marginLeft: "auto",
       marginRight: "auto",
+
+      "@media (min-width: 400px)": {
+        padding: s.s5,
+      },
     }}
   >
     <Global
       styles={css`
         html {
           font-size: ${s.fontSizeBody};
+
+          @media (min-width: 560px) {
+            font-size: ${s.fontSizeBodyMedium};
+          }
         }
 
         body {
@@ -142,6 +150,10 @@ const Container = ({ children, title, header }: ContainerProps) => (
             fontSize: header === "full" ? "1.6rem" : s.f5,
             marginTop: s.s0,
             marginBottom: s.s3,
+
+            "@media (min-width: 400px)": {
+              fontSize: header === "full" ? "1.6rem" : s.f4,
+            },
           }}
         >
           Daniel O’Connor

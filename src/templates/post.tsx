@@ -316,7 +316,7 @@ export const pageQuery = graphql`
               height
               src
             }
-            fluid(maxWidth: 544) {
+            fluid(maxWidth: 578) {
               src
             }
           }

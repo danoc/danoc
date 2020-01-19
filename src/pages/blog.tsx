@@ -2,7 +2,6 @@ import React from "react";
 import { graphql, Link as GatsbyLink } from "gatsby";
 import { groupBy, map, keys, sortBy, reverse } from "lodash";
 import Container from "../components/container";
-import Link from "../components/link";
 import * as s from "../styles";
 import PageTitle from "../components/page-title";
 import Section, {

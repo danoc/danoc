@@ -137,7 +137,7 @@ const Post = ({ data }: PostProps) => {
           css={{
             color: s.gray,
             fontSize: s.f6,
-            marginBottom: s.s1,
+            marginBottom: s.s2,
             display: "block",
           }}
         >

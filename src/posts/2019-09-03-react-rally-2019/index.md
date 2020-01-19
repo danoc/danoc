@@ -5,7 +5,6 @@ date: "2019-09-03T00:00:00Z"
 path: /blog/react-rally-2019/
 image_src: ./react-rally-chantastic.jpg
 image_alt: Michael Chan (@chantastic), the host of React Rally
-is_featured: true
 ---
 
 ![Michael Chan (@chantastic), the host of React Rally](./react-rally-chantastic.jpg)

@@ -30,7 +30,6 @@ type PostProps = {
           };
         };
         canonical?: string;
-        is_featured?: boolean;
         image_alt?: string;
       };
     };
@@ -65,10 +64,8 @@ const Post = ({ data }: PostProps) => {
               />
             )}
 
-          {post.frontmatter.is_featured && post.frontmatter.image_src ? (
+          {post.frontmatter.image_src && (
             <meta name="twitter:card" content="summary_large_image" />
-          ) : (
-            <meta name="twitter:card" content="summary" />
           )}
 
           {post.frontmatter.image_src &&
@@ -284,7 +281,6 @@ export const pageQuery = graphql`
         title
         description
         canonical
-        is_featured
         image_alt
         image_src {
           internal {

@@ -164,7 +164,6 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 5
-      filter: { frontmatter: { is_featured: { eq: true } } }
     ) {
       edges {
         node {

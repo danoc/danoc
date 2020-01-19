@@ -5,7 +5,6 @@ date: "2016-11-12T00:00:00Z"
 path: /blog/chrome-dev-summit-2016/
 image_src: ./chrome-dev-summit-2016.jpg
 image_alt: Photo from the 2016 Chrome Dev Summit
-is_featured: true
 ---
 
 ![Photo from the Chrome Dev Summit](./chrome-dev-summit-2016.jpg)

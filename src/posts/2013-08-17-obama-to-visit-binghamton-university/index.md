@@ -1,12 +1,6 @@
 ---
 title: Obama to visit Binghamton University
 date: "2013-08-17T13:57:33-04:00"
-tags:
-  - obama
-  - binghamton
-  - beatstrap
-  - president
-  - pipe-dream
 path: /blog/obama-to-visit-binghamton-university/
 ---
 

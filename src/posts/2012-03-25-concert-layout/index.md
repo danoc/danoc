@@ -1,11 +1,6 @@
 ---
 title: Pipe Dream layout for concert announcements
 date: "2012-03-25T16:48:00-04:00"
-tags:
-  - bupipedream
-  - passion-pit
-  - sapb
-  - facebook
 path: /blog/concert-layout/
 ---
 

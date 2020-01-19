@@ -1,13 +1,6 @@
 ---
 title: Moved to GitHub
 date: "2012-12-13T21:55:01-05:00"
-tags:
-  - git
-  - github
-  - capistrano
-  - pipe dream
-  - binghamton
-  - deployment
 path: /blog/moved-to-github/
 ---
 

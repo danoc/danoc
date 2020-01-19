@@ -1,11 +1,6 @@
 ---
 title: Introducing WordPress Site Sync, Pipe Dream's first GitHub repository
 date: "2012-04-03T01:31:00-04:00"
-tags:
-  - git
-  - github
-  - bupipedream
-  - deploy
 path: /blog/wordpress-site-sync/
 ---
 

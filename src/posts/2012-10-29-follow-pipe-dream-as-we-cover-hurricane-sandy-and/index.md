@@ -1,13 +1,6 @@
 ---
 title: Pipe Dream's live coverage of hurricane Sandy
 date: "2012-10-29T20:42:43-04:00"
-tags:
-  - sandy
-  - hurricane
-  - pipe dream
-  - blog
-  - live
-  - news
 path: /blog/follow-pipe-dream-as-we-cover-hurricane-sandy-and/
 ---
 

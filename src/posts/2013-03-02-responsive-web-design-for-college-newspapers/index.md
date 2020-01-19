@@ -1,12 +1,6 @@
 ---
 title: Responsive web design for college newspapers
 date: "2013-03-02T08:43:00-05:00"
-tags:
-  - acpsf
-  - convention
-  - talk
-  - responsive-design
-  - bupipedream
 path: /blog/responsive-web-design-for-college-newspapers/
 ---
 

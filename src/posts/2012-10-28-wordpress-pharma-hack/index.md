@@ -1,11 +1,6 @@
 ---
 title: Battling the infamous WordPress "Pharma" hack
 date: "2012-10-28T01:31:57-04:00"
-tags:
-  - wordpress
-  - hack
-  - pharma
-  - pipe-dream
 path: /blog/wordpress-pharma-hack/
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: How we configure Pipe Dream's Ubuntu server
 date: "2012-11-25T23:42:00-05:00"
-tags:
-  - pipe dream
-  - ubuntu
-  - server
-  - linode
-  - vps
-  - linux
-  - apache
-  - mysql
-  - php
 path: /blog/pipe-dream-server/
 ---
 

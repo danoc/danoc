@@ -1,11 +1,6 @@
 ---
 title: Pipe Dream April Fools' Day ideas
 date: "2012-04-05T12:27:20-04:00"
-tags:
-  - Pipe Bomb
-  - April Fools
-  - Pipe Dream
-  - NYTimes
 path: /blog/pipe-bomb-idea/
 ---
 

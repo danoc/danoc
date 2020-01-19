@@ -1,11 +1,6 @@
 ---
 title: Pipe Dream supports Twitter cards
 date: "2013-02-26T00:15:38-05:00"
-tags:
-  - twitter
-  - cards
-  - bupipedream
-  - social
 path: /blog/pipe-dream-now-supports-twitter-cards-all-it/
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: Pipe Dream to-do list...
 date: "2012-03-31T17:36:00-04:00"
-tags:
-  - pipe-dream
-  - bupipedream
 path: /blog/pipe-dream-todo-list/
 ---
 

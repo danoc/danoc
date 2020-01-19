@@ -1,11 +1,6 @@
 ---
 title: Stage Three
 date: "2012-01-15T20:41:46-05:00"
-tags:
-  - wordpress
-  - development
-  - bupipedream
-  - binghamton
 path: /blog/moving-to-wordpress/
 ---
 

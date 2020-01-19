@@ -1,14 +1,6 @@
 ---
 title: Plans for the new bupipedream.com
 date: "2011-12-19T02:02:00-05:00"
-tags:
-  - web
-  - newspaper
-  - college
-  - media
-  - wordpress
-  - open-source
-  - college publisher
 path: /blog/plans-for-bupipedream/
 ---
 

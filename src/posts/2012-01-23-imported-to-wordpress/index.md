@@ -1,12 +1,6 @@
 ---
 title: Success!
 date: "2012-01-23T14:07:35-05:00"
-tags:
-  - wordpress
-  - college publisher
-  - archives
-  - mysql
-  - bupipedream
 path: /blog/imported-to-wordpress/
 ---
 

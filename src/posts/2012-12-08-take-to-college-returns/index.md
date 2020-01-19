@@ -1,12 +1,6 @@
 ---
 title: Take to College is back (kind of...)
 date: "2012-12-08T23:34:58-05:00"
-tags:
-  - take to college
-  - website
-  - projects
-  - development
-  - php
 path: /blog/take-to-college-returns/
 ---
 

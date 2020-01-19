@@ -1,13 +1,6 @@
 ---
 title: Facebook Open Graph, Binghamton's Four Noble Truths, and WePay
 date: "2012-07-07T23:22:03-04:00"
-tags:
-  - open graph
-  - facebook
-  - binghamton
-  - pipe dream
-  - internship
-  - wepay
 path: /blog/recent-updates/
 ---
 

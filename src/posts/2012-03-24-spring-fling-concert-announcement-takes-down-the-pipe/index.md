@@ -1,10 +1,6 @@
 ---
 title: Spring Fling concert announcement takes down the Pipe Dream website
 date: "2012-03-24T00:24:27-04:00"
-tags:
-  - wordpress
-  - crash
-  - bupipedream
 path: /blog/spring-fling-concert-announcement-takes-down-the-pipe/
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: ACP Journalism Convention in Chicago
 date: "2012-11-05T22:59:00-05:00"
-tags:
-  - chicago
-  - acp
-  - convention
-  - pipe-dream
-  - newspaper
-  - news
-  - travel
 path: /blog/pipe-dream-visits-chicago/
 ---
 

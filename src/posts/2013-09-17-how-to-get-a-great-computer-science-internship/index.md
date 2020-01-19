@@ -1,11 +1,6 @@
 ---
 title: How to get a great computer science internship
 date: "2013-09-17T23:39:19-04:00"
-tags:
-  - internship
-  - computer-science
-  - binghamton
-  - binghamtonu
 path: /blog/how-to-get-a-great-computer-science-internship/
 ---
 

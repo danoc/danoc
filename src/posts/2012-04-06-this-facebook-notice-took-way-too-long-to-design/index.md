@@ -1,12 +1,6 @@
 ---
 title: Connect with Facebook notice
 date: "2012-04-06T00:38:00-04:00"
-tags:
-  - facebook
-  - pipe dream
-  - open graph
-  - design
-  - web
 path: /blog/this-facebook-notice-took-way-too-long-to-design/
 ---
 

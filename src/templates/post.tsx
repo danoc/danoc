@@ -17,7 +17,6 @@ type PostProps = {
         formattedDate: string;
         path: string;
         description?: string;
-        tags?: string[];
         image_src?: {
           childImageSharp: {
             original: {
@@ -283,7 +282,6 @@ export const pageQuery = graphql`
         formattedDate: date(formatString: "MMMM D, YYYY")
         path
         title
-        tags
         description
         canonical
         is_featured

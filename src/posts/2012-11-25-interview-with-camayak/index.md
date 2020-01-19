@@ -1,15 +1,6 @@
 ---
 title: Interview with Camayak about Pipe Dream
 date: "2012-11-25T21:43:57-05:00"
-tags:
-  - pipe dream
-  - interview
-  - college media
-  - newspaper
-  - redesign
-  - binghamton
-  - chicago
-  - acp
 path: /blog/interview-with-camayak/
 ---
 

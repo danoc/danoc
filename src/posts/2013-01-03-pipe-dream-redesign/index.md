@@ -1,16 +1,6 @@
 ---
 title: Preview of the 2013 Pipe Dream redesign
 date: "2013-01-03T20:35:58-05:00"
-tags:
-  - pipe dream
-  - redesign
-  - plans
-  - winter break
-  - wordpress
-  - college
-  - media
-  - news
-  - newspaper
 path: /blog/pipe-dream-redesign/
 ---
 

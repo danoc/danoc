@@ -2,9 +2,9 @@
 title: Obama to visit Binghamton University
 date: "2013-08-17T13:57:33-04:00"
 path: /blog/obama-to-visit-binghamton-university/
+image_src: ./pipe-dream-obama-announcement.png
+image_alt: Spike in Google Analytics during the announcement
 ---
-
-![Spike in Google Analytics during the announcement](./pipe-dream-obama-announcement.png)
 
 Thursday's news of Obama's visit to Binghamton brought tons of traffic to the Pipe Dream site, but only a fraction of the traffic that the "[Four Noble Truths of Binghamton](http://www.bupipedream.com/opinion/10245/binghamtons-noble-truths-lived/)" got.
 

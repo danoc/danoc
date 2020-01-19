@@ -2,9 +2,9 @@
 title: Launching the new Pipe Dream website
 date: "2012-02-15T15:50:23-05:00"
 path: /blog/launching-the-new-pipe-dream-website/
+image_src: ./pipe-dream-responsive.png
+image_alt: Pipe Dream displayed on multiple devices
 ---
-
-![Pipe Dream displayed on multiple devices](./pipe-dream-responsive.png)
 
 After 100+ hours of work and my first all-nighter in college, the [new Pipe Dream website](http://bupd.me/) launched on Friday, February 10. The new site is powered by WordPress and uses neat tools and services such as the [HTML5 Boilerplate](http://html5boilerplate.com/), [jQuery](http://jquery.com/), [LESS](http://lesscss.org/), and [Get Satisfaction](http://getsatisfaction.com/). This would not have been possible without the contributions of [Daniel Bachhuber](http://danielbachhuber.com/) and [William P. Davis](http://wpdavis.com) (of the [Bangor Daily News](http://dev.bangordailynews.com/)) to the WordPress community.
 

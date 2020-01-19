@@ -57,6 +57,7 @@ const Post = ({ data }: PostProps) => {
           <meta property="og:title" content={post.frontmatter.title} />
 
           {post.frontmatter.image_src &&
+            post.frontmatter.image_src.childImageSharp &&
             post.frontmatter.image_src.childImageSharp.original.src && (
               <meta
                 property="og:image"
@@ -72,6 +73,7 @@ const Post = ({ data }: PostProps) => {
           )}
 
           {post.frontmatter.image_src &&
+            post.frontmatter.image_src.childImageSharp &&
             post.frontmatter.image_src.childImageSharp.original.width && (
               <meta
                 property="og:image:width"
@@ -82,6 +84,7 @@ const Post = ({ data }: PostProps) => {
             )}
 
           {post.frontmatter.image_src &&
+            post.frontmatter.image_src.childImageSharp &&
             post.frontmatter.image_src.childImageSharp.original.height && (
               <meta
                 property="og:image:height"
@@ -156,6 +159,7 @@ const Post = ({ data }: PostProps) => {
 
         {site.siteUrl &&
           post.frontmatter.image_src &&
+          post.frontmatter.image_src.childImageSharp &&
           post.frontmatter.image_src.childImageSharp.original.src && (
             <meta
               itemProp="image"
@@ -168,6 +172,7 @@ const Post = ({ data }: PostProps) => {
 
         {site.siteUrl &&
           post.frontmatter.image_src &&
+          post.frontmatter.image_src.childImageSharp &&
           post.frontmatter.image_src.childImageSharp.fluid.src && (
             <a href={post.frontmatter.image_src.childImageSharp.original.src}>
               <img

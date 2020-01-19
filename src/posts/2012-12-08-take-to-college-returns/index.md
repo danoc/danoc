@@ -2,9 +2,9 @@
 title: Take to College is back (kind of...)
 date: "2012-12-08T23:34:58-05:00"
 path: /blog/take-to-college-returns/
+image_src: ./take-to-college.png
+image_alt: Screenshot of Take to College
 ---
-
-![Screenshot of Take to College](./take-to-college.png)
 
 I created [Take to College](http://taketocollege.com/) in Nov. 2009 as a senior in high school. What started as a static one-page website got 150,000 visits and 2,500 likes on Facebook in its first three months of summer. It was quickly profitable thanks to Google AdSense and Amazon affiliate links.
 

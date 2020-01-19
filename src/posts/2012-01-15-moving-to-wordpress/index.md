@@ -2,9 +2,9 @@
 title: Stage Three
 date: "2012-01-15T20:41:46-05:00"
 path: /blog/moving-to-wordpress/
+image_src: ./wordpress-swag.jpg
+image_alt: Photo of WordPress stickers and pins
 ---
-
-![Photo of WordPress stickers and pins](./wordpress-swag.jpg)
 
 I've designed the new Pipe Dream website in Photoshop and coded (most of it, at least) into a HTML/CSS layout that is [responsive](/blog/bupipedream-on-ipad/), uses a [flexible grid](/blog/less-css-grid/), and takes advantage of the latest frameworks and tools and such as the [HTML5 Boilerplate](http://html5boilerplate.com/) and [LESS](http://lesscss.org/).
 

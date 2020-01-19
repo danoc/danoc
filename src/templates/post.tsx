@@ -6,7 +6,43 @@ import { css as linkCSS } from "../components/link";
 import * as s from "../styles";
 import "../styles/prism-ghcolors.css";
 
-const Post = ({ data }) => {
+type PostProps = {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        title: string;
+        date: string;
+        formattedDate: string;
+        path: string;
+        description?: string;
+        tags?: string[];
+        image_src?: {
+          childImageSharp: {
+            original: {
+              src: string;
+              width: string;
+              height: string;
+            };
+          };
+          internal: {
+            mediaType: string;
+          };
+        };
+        canonical?: string;
+        is_featured?: boolean;
+        image_alt?: string;
+      };
+    };
+    site: {
+      siteMetadata: {
+        siteUrl: string;
+      };
+    };
+  };
+};
+
+const Post = ({ data }: PostProps) => {
   const post = data.markdownRemark;
   const site = data.site.siteMetadata;
 
@@ -87,12 +123,6 @@ const Post = ({ data }) => {
               property="og:description"
               content={post.frontmatter.description}
             />
-          )}
-          {post.frontmatter.tags && (
-            <meta name="keywords" content={post.frontmatter.tags} />
-          )}
-          {post.frontmatter.tags && (
-            <meta property="article:tag" content={post.frontmatter.tags} />
           )}
           {post.frontmatter.canonical && (
             <link rel="canonical" href={post.frontmatter.canonical} />
@@ -240,30 +270,6 @@ const Post = ({ data }) => {
 };
 
 export default Post;
-
-// Post.propTypes = {
-//   data: PropTypes.shape({
-//     markdownRemark: PropTypes.shape({
-//       html: PropTypes.string.isRequired,
-//       frontmatter: PropTypes.shape({
-//         title: PropTypes.string.isRequired,
-//         date: PropTypes.string.isRequired,
-//         path: PropTypes.string.isRequired,
-//         description: PropTypes.string,
-//         tags: PropTypes.arrayOf(PropTypes.string),
-//         image_src: PropTypes.string,
-//         canonical: PropTypes.string,
-//         is_featured: PropTypes.bool,
-//         image_alt: PropTypes.string,
-//       }).isRequired,
-//     }).isRequired,
-//     site: PropTypes.shape({
-//       siteMetadata: PropTypes.shape({
-//         siteUrl: PropTypes.string.isRequired,
-//       }),
-//     }),
-//   }),
-// };
 
 export const pageQuery = graphql`
   query PostByPath($path: String!) {

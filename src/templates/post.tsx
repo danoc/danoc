@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Container from "../components/container";
 import { css as linkCSS } from "../components/link";
+import GatsbyImage from "gatsby-image";
 import * as s from "../styles";
 import "../styles/prism-ghcolors.css";
 import PageTitle from "../components/page-title";
@@ -25,7 +26,13 @@ type PostProps = {
               height: string;
             };
             fluid: {
+              aspectRatio: number;
+              base64: string;
+              sizes: string;
               src: string;
+              srcSet: string;
+              srcSetWebp: string;
+              srcWebp: string;
             };
           };
           internal: {
@@ -173,10 +180,10 @@ const Post = ({ data }: PostProps) => {
         {site.siteUrl &&
           post.frontmatter.image_src &&
           post.frontmatter.image_src.childImageSharp &&
-          post.frontmatter.image_src.childImageSharp.fluid.src && (
+          post.frontmatter.image_src.childImageSharp.fluid && (
             <a href={post.frontmatter.image_src.childImageSharp.original.src}>
-              <img
-                src={post.frontmatter.image_src.childImageSharp.fluid.src}
+              <GatsbyImage
+                fluid={post.frontmatter.image_src.childImageSharp.fluid}
                 alt={post.frontmatter.image_alt}
                 css={{
                   marginTop: s.s3,
@@ -317,7 +324,7 @@ export const pageQuery = graphql`
               src
             }
             fluid(maxWidth: 578) {
-              src
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

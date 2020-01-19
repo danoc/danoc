@@ -8,26 +8,15 @@ type LinkProps = {
   children: React.ReactNode;
 };
 
-const css = {
+export const css = {
   color: s.darkGray,
   fontWeight: 500,
   textDecoration: "none",
-  borderBottom: `1px dotted red`,
+  borderBottom: `1px dotted ${s.darkGray}`,
 
   ":focus": {
     outline: `1px dotted currentColor`,
   },
-
-  // :hover {
-  //   color: ${s.darkBlue};
-  //   border-radius: 1px;
-  //   background: rgba(0, 91, 159, 0.05) none repeat scroll 0% 0%;
-  //   box-shadow: rgba(0, 91, 159, 0.05) 0px 0px 0px 4px;
-  // }
-
-  // :active {
-  //   color: ${s.darkGray};
-  // }
 };
 
 const Link = (props: LinkProps) => {

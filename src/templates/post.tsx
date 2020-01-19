@@ -1,143 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { graphql } from "gatsby";
+import { graphql, Link as GatsbyLink } from "gatsby";
 import Container from "../components/container";
+import { css as linkCSS } from "../components/link";
 import * as s from "../styles";
 import "../styles/prism-ghcolors.css";
-
-// const formatDate = date => {
-//   const monthNames = [
-//     "January",
-//     "February",
-//     "March",
-//     "April",
-//     "May",
-//     "June",
-//     "July",
-//     "August",
-//     "September",
-//     "October",
-//     "November",
-//     "December",
-//   ];
-
-//   const day = date.getDate();
-//   const monthIndex = date.getMonth();
-//   const year = date.getFullYear();
-
-//   return `${monthNames[monthIndex]} ${day}, ${year}`;
-// };
-
-// const Time = styled.time`
-//   color: ${s.gray};
-//   text-transform: uppercase;
-//   font-size: ${s.f6};
-//   letter-spacing: ${s.tracked};
-// `;
-
-// const Markdown = styled.div`
-//   line-height: ${s.lhCopy};
-
-//   h1 {
-//     margin-top: ${s.s0};
-//   }
-
-//   h1,
-//   h2,
-//   h3,
-//   h4 {
-//     margin: ${s.titleMarginTop} 0 ${s.titleMarginBottom};
-//   }
-
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6,
-//   p {
-//     max-width: ${s.measureWide};
-//   }
-
-//   p,
-//   ul,
-//   ol {
-//     margin-bottom: ${s.paragraphBottomMargin};
-
-//     ul,
-//     ol {
-//       margin-bottom: ${s.s0};
-//     }
-//   }
-
-//   ul,
-//   ol {
-//     max-width: ${s.measureWide};
-//     padding-left: ${s.s4};
-//   }
-
-//   li {
-//     padding-left: ${s.s1};
-
-//     p:first-child {
-//       margin-top: ${s.s0};
-//     }
-
-//     p:last-of-type {
-//       margin-bottom: ${s.s2};
-//     }
-//   }
-
-//   li:not(:last-child) {
-//     margin-bottom: ${s.s2};
-//   }
-
-//   hr {
-//     border-top: 1px solid ${s.lightGray};
-//     border-left: none;
-//     border-right: none;
-//     border-bottom: none;
-//     margin: ${s.s5} ${s.s0};
-//   }
-
-//   blockquote {
-//     max-width: ${s.measureWide};
-//     padding-left: ${s.s3};
-//     margin-left: ${s.s0};
-//     border-left: 1px solid ${s.lightGray};
-//   }
-
-//   code {
-//     font-size: ${s.f6};
-//   }
-
-//   img {
-//     outline: 1px solid ${s.lightGray};
-//     max-width: 100%;
-//   }
-
-//   strong,
-//   b {
-//     font-weight: 500;
-//   }
-
-//   .gatsby-resp-image-link {
-//     &:focus {
-//       outline: 2px dotted currentColor;
-//     }
-
-//     + em {
-//       color: ${s.gray};
-//       display: block;
-//       margin: ${s.s3} ${s.s2};
-//       font-size: ${s.f6};
-//     }
-
-//     &:hover img {
-//       outline: 1px solid ${s.moonGray};
-//     }
-//   }
-// `;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
@@ -232,7 +99,29 @@ const Post = ({ data }) => {
           )}
         </Helmet>
 
-        <h1 itemProp="headline">{post.frontmatter.title}</h1>
+        <header css={{ marginBottom: s.s6 }}>
+          <GatsbyLink
+            to="/"
+            css={{ color: "inherit", textDecoration: "inherit" }}
+          >
+            <h1 css={{ fontSize: s.f5, marginTop: s.s0, marginBottom: s.s3 }}>
+              Daniel O’Connor
+            </h1>
+          </GatsbyLink>
+        </header>
+
+        <time
+          dateTime={post.frontmatter.date}
+          itemProp="datePublished"
+          title={new Date(post.frontmatter.date).toDateString()}
+          css={{ color: s.gray, fontSize: s.f6 }}
+        >
+          {post.frontmatter.formattedDate}
+        </time>
+
+        <h1 itemProp="headline" css={{ fontSize: s.f4 }}>
+          {post.frontmatter.title}
+        </h1>
 
         {site.siteUrl &&
           post.frontmatter.image_src &&
@@ -245,10 +134,104 @@ const Post = ({ data }) => {
               }
             />
           )}
-
         <div
           itemProp="articleBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
+          css={{
+            lineHeight: s.lhCopy,
+
+            h1: {
+              marginTop: s.s0,
+            },
+
+            "h1, h2, h3, h4": {
+              margin: "1.414em 0 0.5em",
+            },
+
+            "h1, h2, h3, h4, h5, h6, p": {
+              maxWidth: s.measureWide,
+            },
+
+            "p, ul, ol": {
+              marginBottom: "1.3em",
+
+              "ul, ol": {
+                marginBottom: s.s0,
+              },
+            },
+
+            "ul, ol": {
+              maxWidth: s.measureWide,
+              paddingLeft: s.s4,
+            },
+
+            li: {
+              paddingLeft: s.s1,
+
+              "p:first-child": {
+                marginTop: s.s0,
+              },
+
+              "p:last-of-type": {
+                marginBottom: s.s2,
+              },
+            },
+
+            "li:not(:last-child)": {
+              marginBottom: s.s2,
+            },
+
+            hr: {
+              borderTop: `1px solid ${s.lightGray}`,
+              borderLeft: "none",
+              borderRight: "none",
+              borderBottom: "none",
+              margin: `${s.s5} ${s.s0}`,
+            },
+
+            blockquote: {
+              maxWidth: s.measureWide,
+              paddingLeft: s.s3,
+              marginLeft: s.s0,
+              borderLeft: `1px solid ${s.lightGray}`,
+            },
+
+            code: {
+              fontSize: s.f6,
+            },
+
+            img: {
+              outline: `1px solid ${s.lightGray}`,
+              maxWidth: "100%",
+            },
+
+            "strong, b": {
+              fontWeight: 500,
+            },
+
+            ".gatsby-resp-image-link": {
+              "&:focus": {
+                outline: `2px dotted currentColor`,
+              },
+
+              "+ em": {
+                color: s.gray,
+                display: "block",
+                margin: `${s.s3} ${s.s2}`,
+                fontSize: s.f6,
+              },
+
+              "&:hover img": {
+                outline: `1px solid ${s.moonGray}`,
+              },
+            },
+
+            a: { ...linkCSS },
+
+            ".anchor": {
+              borderBottom: "none",
+            },
+          }}
         />
       </div>
     </Container>
@@ -288,6 +271,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date
+        formattedDate: date(formatString: "MMMM D, YYYY")
         path
         title
         tags

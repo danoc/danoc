@@ -1,5 +1,6 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link as GatsbyLink } from "gatsby";
+import { groupBy, map, keys, sortBy, reverse } from "lodash";
 import Container from "../components/container";
 import Link from "../components/link";
 import * as s from "../styles";
@@ -131,43 +132,8 @@ const SectionListItemDescription = ({
   </span>
 );
 
-type SectionListMoreLinkProps = {
-  to: string;
-  children: string;
-};
-
-const SectionListMoreLink = ({ to, children }: SectionListMoreLinkProps) => (
-  <Link
-    to={to}
-    css={{
-      fontWeight: 400,
-      borderBottom: "none",
-      fontSize: s.f6,
-      paddingTop: s.s2,
-      paddingBottom: s.s2,
-      display: "inline-block",
-      paddingRight: s.s1,
-    }}
-  >
-    {children} <span css={{ color: s.gray, marginLeft: s.s1 }}>→</span>
-  </Link>
-);
-
 type IndexPageProps = {
   data: {
-    allMarkdownRemark: {
-      edges: [
-        {
-          node: {
-            frontmatter: {
-              title: string;
-              date: string;
-              path: string;
-            };
-          };
-        },
-      ];
-    };
     allPinboardBookmark: {
       edges: [
         {
@@ -181,75 +147,16 @@ type IndexPageProps = {
   };
 };
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
-  return `${months[date.getMonth()]} ${date.getFullYear()}`;
-};
-
 const IndexPage = ({ data }: IndexPageProps) => (
   <Container>
     <header css={{ marginBottom: s.s6 }}>
-      <span css={{ display: "block", marginBottom: s.s3, fontSize: "40px" }}>
-        👨‍💻
-      </span>
-      <h1 css={{ fontSize: "1.6rem", marginTop: s.s0, marginBottom: s.s3 }}>
-        Daniel O’Connor
-      </h1>
-      <Paragraph>
-        Hello! I’m a design systems engineer based in San Francisco. I use code
-        and communication to improve product quality and developer productivity.
-      </Paragraph>
-      <Paragraph>
-        Right now I build{" "}
-        <Link to="https://thumbprint.design/">Thumbprint</Link>, the design
-        system at <Link to="https://www.thumbtack.com/">Thumbtack</Link>. I
-        previously worked at{" "}
-        <Link to="https://www.optimizely.com/">Optimizely</Link> where I helped
-        build and maintain{" "}
-        <Link to="https://github.com/optimizely/oui">OUI</Link>, a React
-        component library.
-      </Paragraph>
+      <GatsbyLink to="/" css={{ color: "inherit", textDecoration: "inherit" }}>
+        <h1 css={{ fontSize: "1.6rem", marginTop: s.s0, marginBottom: s.s3 }}>
+          Daniel O’Connor
+        </h1>
+      </GatsbyLink>
     </header>
 
-    <Section>
-      <SectionTitle
-        description="Thoughts and feelings on code and design"
-        emoji="📝"
-      >
-        Writing
-      </SectionTitle>
-      <SectionList>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <SectionListItem
-            to={node.frontmatter.path}
-            key={node.frontmatter.path}
-          >
-            <SectionListItemTitle>
-              {node.frontmatter.title}
-            </SectionListItemTitle>
-            <SectionListItemDescription>
-              {formatDate(node.frontmatter.date)}
-            </SectionListItemDescription>
-          </SectionListItem>
-        ))}
-      </SectionList>
-      <SectionListMoreLink to="/blog">View all posts</SectionListMoreLink>
-    </Section>
     <Section>
       <SectionTitle description="Articles and videos I like sharing" emoji="📖">
         Bookmarks
@@ -264,9 +171,6 @@ const IndexPage = ({ data }: IndexPageProps) => (
           </SectionListItem>
         ))}
       </SectionList>
-      <SectionListMoreLink to="/bookmarks">
-        View all bookmarks
-      </SectionListMoreLink>
     </Section>
   </Container>
 );
@@ -274,23 +178,8 @@ const IndexPage = ({ data }: IndexPageProps) => (
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query Index {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 5
-      filter: { frontmatter: { is_featured: { eq: true } } }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-            path
-          }
-        }
-      }
-    }
-    allPinboardBookmark(limit: 3, filter: { shared: { eq: "yes" } }) {
+  query Bookmarks {
+    allPinboardBookmark {
       edges {
         node {
           href

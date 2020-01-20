@@ -1,17 +1,10 @@
 ---
 title: Pipe Dream's live coverage of hurricane Sandy
 date: "2012-10-29T20:42:43-04:00"
-tags:
-  - sandy
-  - hurricane
-  - pipe dream
-  - blog
-  - live
-  - news
 path: /blog/follow-pipe-dream-as-we-cover-hurricane-sandy-and/
+image_src: ./pipe-dream-hurricane-sandy-coverage.png
+image_alt: Pipe Dream hurricane Sandy coverage teaser
 ---
-
-![Pipe Dream hurricane Sandy coverage teaser](./pipe-dream-hurricane-sandy-coverage.png)
 
 Follow Pipe Dream as we cover hurricane Sandy and its effects on Binghamton University. Any thoughts on the [live blogging platform](http://www.bupipedream.com/live/storm/)?
 

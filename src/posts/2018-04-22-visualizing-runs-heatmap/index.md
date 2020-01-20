@@ -5,10 +5,7 @@ date: "2018-04-22T15:31:00Z"
 path: /blog/visualizing-runs-heatmap/
 image_src: ./running-heatmap.png
 image_alt: Screenshot of a heatmap visualizing my runs for the past nine months
-is_featured: true
 ---
-
-![Screenshot of a heatmap visualizing my runs for the past nine months](./running-heatmap.png)
 
 Last month I added a [heatmap to danoc.me](https://5adcab15dd6a541f4bb0d0cf--danoc.netlify.com/#running) that shows how ~~much~~ little I've run in the past nine months. The project, which started off as an excuse to play with with new JavaScript libraries, has actually helped motivate me to run more consistently.
 

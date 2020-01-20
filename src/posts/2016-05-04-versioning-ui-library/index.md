@@ -5,7 +5,6 @@ date: "2016-05-04T00:00:00Z"
 path: /blog/versioning-ui-library/
 image_src: ./oui-changelog.png
 image_alt: Screenshot of Optimizely's UI library changelog
-is_featured: true
 ---
 
 I wrote a guide to how we use Semantic Versioning at Optimizely to manage [our UI library](https://github.com/optimizely/oui).

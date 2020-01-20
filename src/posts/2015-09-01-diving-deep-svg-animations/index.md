@@ -3,9 +3,9 @@ title: Diving deep into SVG animations
 description: A story of the trial and error of creating SVG animations.
 date: "2015-09-01T00:00:00Z"
 path: /blog/diving-deep-svg-animations/
+image_src: ./animated-svg.gif
+image_alt: Screenshot of a Pipe Dream Twitter card
 ---
-
-![Screenshot of a Pipe Dream Twitter card](./animated-svg.gif)
 
 I wrote a post for the Design @ Optimizely blog about the trial and error of creating SVG animations.
 

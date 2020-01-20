@@ -1,13 +1,6 @@
 ---
 title: Highlight terms in WordPress search results
 date: "2012-01-18T21:58:00-05:00"
-tags:
-  - search
-  - highlight
-  - wordpress
-  - code
-  - php
-  - plugin
 path: /blog/highlight-wordpress-search-results/
 ---
 

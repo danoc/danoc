@@ -1,15 +1,10 @@
 ---
 title: How to get a great computer science internship
 date: "2013-09-17T23:39:19-04:00"
-tags:
-  - internship
-  - computer-science
-  - binghamton
-  - binghamtonu
 path: /blog/how-to-get-a-great-computer-science-internship/
+image_src: ./tech-internship-event.jpg
+image_alt: Photo of the Computer Science internship event
 ---
-
-![Photo of the Computer Science internship event](./tech-internship-event.jpg)
 
 My friend Eitan and I were expecting 20 people to attend last night's CS Internship Q&A. We got 130.
 

@@ -11,6 +11,7 @@ module.exports = {
     numWeeksOfRuns,
   },
   plugins: [
+    "gatsby-plugin-typescript",
     {
       resolve: "gatsby-source-filesystem",
       options: {

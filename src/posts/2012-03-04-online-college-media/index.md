@@ -1,11 +1,6 @@
 ---
 title: College journalists on multimedia
 date: "2012-03-04T11:06:25-05:00"
-tags:
-  - college
-  - media
-  - print
-  - web
 path: /blog/online-college-media/
 ---
 

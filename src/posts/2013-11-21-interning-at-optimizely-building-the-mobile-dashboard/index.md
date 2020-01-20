@@ -1,12 +1,6 @@
 ---
 title: "Interning at Optimizely: Building the Mobile Dashboard"
 date: "2013-11-21T13:20:50-05:00"
-tags:
-  - Optimizely
-  - internship
-  - work
-  - development
-  - mobile
 path: /blog/interning-at-optimizely-building-the-mobile-dashboard/
 canonical: https://blog.optimizely.com/2013/11/15/interns-at-optimizely-building-the-mobile-dashboard/
 ---

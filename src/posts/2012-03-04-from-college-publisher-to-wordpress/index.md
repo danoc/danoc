@@ -1,12 +1,6 @@
 ---
 title: Moving Pipe Dream from College Publisher to WordPress
 date: "2012-03-04T02:01:00-05:00"
-tags:
-  - wordpress
-  - college publisher
-  - pipe-dream
-  - binghamton
-  - bupipedream
 path: /blog/from-college-publisher-to-wordpress/
 ---
 
@@ -150,8 +144,10 @@ Pushing the website online was fairly easy. I installed WordPress on the server,
 
 It's terrible practice to develop on the production website, so I use FileZilla to download all of latest files before developing locally. I also use phpMyAdmin to export the WordPress table from bupipedream.com and import it to my local database. I then run a quick SQL query to fix the URL change:
 
-    UPDATE `wordpress`.`wp_options` SET `option_value` = 'http://localhost:8888/bupipedream/' WHERE `wp_options`.`option_id` = 3;
-    UPDATE `wordpress`.`wp_options` SET `option_value` = 'http://localhost:8888/bupipedream/' WHERE `wp_options`.`option_id` = 39;
+```sql
+UPDATE `wordpress`.`wp_options` SET `option_value` = 'http://localhost:8888/bupipedream/' WHERE `wp_options`.`option_id` = 3;
+UPDATE `wordpress`.`wp_options` SET `option_value` = 'http://localhost:8888/bupipedream/' WHERE `wp_options`.`option_id` = 39;
+```
 
 Of course, you may need to change the `option_id` value to fit your needs.
 

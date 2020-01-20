@@ -5,10 +5,7 @@ date: "2016-11-12T00:00:00Z"
 path: /blog/chrome-dev-summit-2016/
 image_src: ./chrome-dev-summit-2016.jpg
 image_alt: Photo from the 2016 Chrome Dev Summit
-is_featured: true
 ---
-
-![Photo from the Chrome Dev Summit](./chrome-dev-summit-2016.jpg)
 
 I recently attended the [Chrome Dev Summit](https://developer.chrome.com/devsummit/), a free two-day conference organized by Google in San Francisco. The conference, now in its fourth year, highlights emerging web technologies and APIs that can be used to deliver a great user experience on the web.
 

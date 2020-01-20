@@ -1,26 +1,16 @@
 ---
 title: How we configure Pipe Dream's Ubuntu server
 date: "2012-11-25T23:42:00-05:00"
-tags:
-  - pipe dream
-  - ubuntu
-  - server
-  - linode
-  - vps
-  - linux
-  - apache
-  - mysql
-  - php
 path: /blog/pipe-dream-server/
+image_src: ./linode-manager-login.png
+image_alt: Screenshot of the Linode login page
 ---
 
-![Screenshot of the Linode login page](./linode-manager-login.png)
+I decided to move the Pipe Dream website to a Linode VPS when we made [the switch from College Publisher to WordPress](/blog/from-college-publisher-to-wordpress/). A VPS offered the flexibility to play around with tools such as Git and would force me to learn a bit about server management. It was a welcome change from the College Publisher days when they hosted the server and required a three month notice to export our data (to a terribly formatted text file).
 
-I decided to move the Pipe Dream website to a Linode VPS when we made [the switch from College Publisher to WordPress](http://blog.danoc.me/2012/03/04/from-college-publisher-to-wordpress.html). A VPS offered the flexibility to play around with tools such as Git and would force me to learn a bit about server management. It was a welcome change from the College Publisher days when they hosted the server and required a three month notice to export our data (to a terribly formatted text file).
+The move to a VPS caused problems as I [struggled to keep the server online](/blog/spring-fling-concert-announcement-takes-down-the-pipe/). Poor Apache, MySQL, and PHP configurations were the main culprits. I made some changes and, to my surprise, the server barely broke a sweat when [a controversial column went viral](/blog/recent-updates/) and brought record traffic (maxed at 360+ active visitors).
 
-The move to a VPS caused problems as I [struggled to keep the server online](http://blog.danoc.me/2012/03/24/spring-fling-concert-announcement-takes-down-the-pipe.html). Poor Apache, MySQL, and PHP configurations were the main culprits. I made some changes and, to my surprise, the server barely broke a sweat when [a controversial column went viral](http://blog.danoc.me/2012/07/07/recent-updates.html) and brought record traffic (maxed at 360+ active visitors).
-
-Traffic problems aside, I knew little about user permissions and some mistakes [led to a nasty "Pharma hack"](http://blog.danoc.me/2012/10/28/wordpress-pharma-hack.html) that was only visible to search bots. Some debugging led me to the infected .php files (which I promptly deleted). The hole, however, remained open, so the attacker always returned. I even found a fancy control panel that gave the attacker easy access to the server.
+Traffic problems aside, I knew little about user permissions and some mistakes [led to a nasty "Pharma hack"](/blog/wordpress-pharma-hack/) that was only visible to search bots. Some debugging led me to the infected .php files (which I promptly deleted). The hole, however, remained open, so the attacker always returned. I even found a fancy control panel that gave the attacker easy access to the server.
 
 ![Screenshot of the Pharma Hack control panel on the Pipe Dream server](./pipe-dream-pharma-hack-server.png)
 

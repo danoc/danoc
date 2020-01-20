@@ -1,11 +1,6 @@
 ---
 title: Battling the infamous WordPress "Pharma" hack
 date: "2012-10-28T01:31:57-04:00"
-tags:
-  - wordpress
-  - hack
-  - pharma
-  - pipe-dream
 path: /blog/wordpress-pharma-hack/
 ---
 
@@ -19,7 +14,9 @@ Some more searching led me to a great article explaining the [infamous WordPress
 
 I followed the advice online and ran the following command:
 
-    grep -r "base64_decode" .
+```bash
+grep -r "base64_decode" .
+```
 
 The results returned a suspicious file named `uploas.php` in the `wp-includes` directory. A [quick glance at the file](http://p.linode.com/7148) raised many red flags. I deleted the infected file and grep'd for the file name. The search returned a reference to `uploas.php` in `wp-blog-header.php`, so I deleted the infected line.
 

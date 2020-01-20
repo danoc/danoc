@@ -5,10 +5,7 @@ date: "2018-12-09T23:20:00Z"
 path: /blog/clickable-box/
 image_src: ./github-readme.png
 image_alt: Screenshot from the ClickableBox GitHub repo README
-is_featured: true
 ---
-
-[![Screenshot from the ClickableBox GitHub repo README](./github-readme.png)](https://github.com/danoc/clickable-box)
 
 It bothers me that there's no easy way to remove styles from a button element or properly add `onClick` to a `div`. This encourages developers to take shortcuts and hurts users navigating the web with keyboard and screen readers.
 

@@ -1,12 +1,6 @@
 ---
 title: Responsive web design for college newspapers
 date: "2013-03-02T08:43:00-05:00"
-tags:
-  - acpsf
-  - convention
-  - talk
-  - responsive-design
-  - bupipedream
 path: /blog/responsive-web-design-for-college-newspapers/
 ---
 
@@ -79,14 +73,16 @@ Maximize your browser then slowly decrease the width. When the content becomes h
 
 Once you have found a breakpoint, you need to determine the width of the browser. I personally use the [Chrome Web Developer extension](https://chrome.google.com/webstore/detail/web- developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?hl=en) (install the plugin and click on Resize > Display Window Size to view the width). We will target that breakpoint with a media query.
 
-    @media only screen and (max-width : 980px) {
-        #search-form .search-bar {
-            width: 180px;
-        }
-        header .logo {
-            padding-bottom: 15px;
-        }
-    }
+```css
+@media only screen and (max-width: 980px) {
+  #search-form .search-bar {
+    width: 180px;
+  }
+  header .logo {
+    padding-bottom: 15px;
+  }
+}
+```
 
 The media query above will set the width and bottom padding of a search bar to 180px 15px when the browser width is less than or equal to 980px.
 

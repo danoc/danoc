@@ -1,17 +1,10 @@
 ---
 title: Display the current temperature with PHP and Google’s (hidden) weather API
 date: "2012-01-16T16:44:00-05:00"
-tags:
-  - weather
-  - code
-  - php
-  - Google
-  - bupipedream
-  - SimpleXML
 path: /blog/display-current-temperature/
+image_src: pipe-dream-weather.png
+image_alt: Screenshot of the weather indicator on Pipe Dream's website
 ---
-
-![Screenshot of the weather indicator on Pipe Dream's website](./pipe-dream-weather.png)
 
 All it takes is a few line of code to display the current temperature in any city using PHP and [Google’s (hidden) weather API](http://blog.programmableweb.com/2010/02/08/googles-secret-weather-api/).
 

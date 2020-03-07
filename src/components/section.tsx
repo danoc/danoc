@@ -20,7 +20,7 @@ const SectionList = ({ children }: SectionListProps) => (
       listStyle: "none",
       paddingLeft: s.s0,
       marginTop: s.s0,
-      marginBottom: s.s3,
+      marginBottom: s.s2,
     }}
   >
     {children}
@@ -37,11 +37,11 @@ const SectionListItem = ({ children, to }: SectionListItemProps) => (
     <Link
       to={to}
       css={{
-        paddingTop: s.s2,
-        paddingBottom: s.s2,
+        paddingTop: s.s3,
+        paddingBottom: s.s3,
         display: "block",
         fontWeight: 400,
-        borderBottom: "none",
+        borderBottom: `1px solid ${s.lightGray}`,
       }}
     >
       {children}
@@ -54,14 +54,7 @@ type SectionListItemTitleProps = {
 };
 
 const SectionListItemTitle = ({ children }: SectionListItemTitleProps) => (
-  <span
-    css={{
-      marginBottom: s.s1,
-      display: "block",
-    }}
-  >
-    {children}
-  </span>
+  <span css={{ marginBottom: s.s1, display: "block" }}>{children}</span>
 );
 
 type SectionListItemDescriptionProps = {

@@ -30,7 +30,6 @@ const SectionTitle = ({
       color: "inherit",
       display: "block",
       borderBottom: `1px solid ${s.lightGray}`,
-      marginBottom: s.s2,
       paddingBottom: s.s3,
       textDecoration: "inherit",
     }}

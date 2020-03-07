@@ -10,7 +10,6 @@ type LinkProps = {
 
 export const css = {
   color: s.darkGray,
-  fontWeight: 500,
   textDecoration: "none",
   borderBottom: `1px dotted ${s.darkGray}`,
 

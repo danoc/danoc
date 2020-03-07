@@ -59,7 +59,7 @@ const BlogPage = ({ data }: BlogPageProps) => {
               css={{
                 fontSize: s.f5,
                 marginTop: s.s4,
-                marginBottom: s.s2,
+                marginBottom: s.s0,
                 paddingBottom: s.s2,
                 borderBottom: `1px solid ${s.lightGray}`,
               }}

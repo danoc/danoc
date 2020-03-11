@@ -41,7 +41,7 @@ const SectionListItem = ({ children, to }: SectionListItemProps) => (
         paddingBottom: s.s3,
         display: "block",
         fontWeight: 400,
-        borderBottom: `1px solid ${s.lightGray}`,
+        borderBottom: "none",
       }}
     >
       {children}

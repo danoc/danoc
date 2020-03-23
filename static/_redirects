@@ -1,17 +1,17 @@
 http://blog.danoc.me/* https://danoc.me/:splat 301!
 https://blog.danoc.me/* https://danoc.me/:splat 301!
 
-/acpsf https://danoc.github.io/responsive-talk/ 301
-/talks/responsive https://danoc.me/blog/responsive-web-design-for-college-newspapers/ 301
-/bu https://docs.google.com/presentation/d/1hJ8IrsRhDvQEcFhCYgGrrHSWjcYdEm7MdxrWG3K7uWk/edit?usp=sharing 301
+/acpsf https://danoc.github.io/responsive-talk/ 301!
+/talks/responsive https://danoc.me/blog/responsive-web-design-for-college-newspapers/ 301!
+/bu https://docs.google.com/presentation/d/1hJ8IrsRhDvQEcFhCYgGrrHSWjcYdEm7MdxrWG3K7uWk/edit?usp=sharing 301!
 
-/blog/2014-12-26-modern-build-system http://danoc.me/blog/modern-build-system/ 301
-/blog/2015-03-05-modern-build-system http://danoc.me/blog/modern-build-system/ 301
+/blog/2014-12-26-modern-build-system http://danoc.me/blog/modern-build-system/ 301!
+/blog/2015-03-05-modern-build-system http://danoc.me/blog/modern-build-system/ 301!
 
-/2012/07/07/recent-updates.html https://danoc.me/blog/recent-updates/ 301
-/2012/10/28/wordpress-pharma-hack.html https://danoc.me/blog/wordpress-pharma-hack/ 301
+/2012/07/07/recent-updates.html https://danoc.me/blog/recent-updates/ 301!
+/2012/10/28/wordpress-pharma-hack.html https://danoc.me/blog/wordpress-pharma-hack/ 301!
 
-/blog/unbutton /blog/clickable-box 301
+/blog/unbutton /blog/clickable-box 301!
 
 /page/* https://danoc.me/blog 301
 

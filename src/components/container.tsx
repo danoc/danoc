@@ -103,7 +103,7 @@ const Container = ({ children, title, header }: ContainerProps) => (
           }
         }
       `}
-      render={data => {
+      render={(data) => {
         const metaTitle = title
           ? `${title} – ${data.site.siteMetadata.title}`
           : data.site.siteMetadata.title;
@@ -153,9 +153,9 @@ const Container = ({ children, title, header }: ContainerProps) => (
       {header === "full" && (
         <>
           <Paragraph>
-            Hello! I’m a design systems engineer based in San Francisco. I use
-            code and communication to improve product quality and developer
-            productivity.
+            Hello! I’m a design systems and front-end infrastructure engineer in
+            San Francisco. I use code and communication to improve product
+            quality and developer productivity.
           </Paragraph>
           <Paragraph>
             Right now I build{" "}

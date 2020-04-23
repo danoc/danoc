@@ -1,5 +1,5 @@
 import React from "react";
-import Helmet from "react-helmet";
+import { Helmet } from "react-helmet";
 import { Global, css } from "@emotion/core";
 
 import { StaticQuery, graphql, Link as GatsbyLink } from "gatsby";

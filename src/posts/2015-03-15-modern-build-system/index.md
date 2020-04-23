@@ -69,7 +69,7 @@ var jekyllPaths = ["index.html", "_layouts/*.html", "_posts/*", "_drafts/*"];
 They are watched using `gulp.watch()` in the `default` task. `default` is normally the first task that runs when you execute `gulp` in the command line, but gulp runs the `browserSync`, `less`, `css`, and `img` tasks first since they are defined as dependencies.
 
 ```js
-gulp.task("default", ["browserSync", "less", "css", "img"], function() {
+gulp.task("default", ["browserSync", "less", "css", "img"], function () {
   gulp.watch(assets["src"]["css"], ["css"]);
   gulp.watch(assets["src"]["img"], ["img"]);
   gulp.watch(assets["src"]["less"], ["less"]);
@@ -83,7 +83,7 @@ The `default` task depends on `browserSync`, which looks like this:
 
 ```js
 // Start BrowserSync to view the website
-gulp.task("browserSync", ["jekyllBuild"], function() {
+gulp.task("browserSync", ["jekyllBuild"], function () {
   browserSync({
     server: {
       baseDir: "_site",
@@ -102,7 +102,7 @@ You'll notice that the `browserSync` task depends on `jekyllBuild`. We use [Node
 
 ```js
 // Build the Jekyll website
-gulp.task("jekyllBuild", ["img", "css", "less"], function(done) {
+gulp.task("jekyllBuild", ["img", "css", "less"], function (done) {
   var args = ["build"];
 
   if (!isProduction) {

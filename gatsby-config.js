@@ -74,7 +74,7 @@ module.exports = {
           {
             title: "Daniel O’Connor",
             serialize: ({ query: { site, allMarkdownRemark } }) =>
-              allMarkdownRemark.edges.map(edge => ({
+              allMarkdownRemark.edges.map((edge) => ({
                 ...edge.node.frontmatter,
                 ...{
                   description:

@@ -32,197 +32,197 @@
       "source": "/blog/unbutton",
       "destination": "https://danoc.me/blog/clickable-box"
     },
-    { "source": "/page/*", "destination": "https://danoc.me/blog" },
+    { "source": "/page/(.*)", "destination": "https://danoc.me/blog" },
     {
-      "source": "/post/14447289066/*",
+      "source": "/post/14447289066/(.*)",
       "destination": "https://danoc.me/blog/plans-for-bupipedream"
     },
     {
-      "source": "/post/14656793071/*",
+      "source": "/post/14656793071/(.*)",
       "destination": "https://danoc.me/blog/less-css-grid"
     },
     {
-      "source": "/post/14730989330/*",
+      "source": "/post/14730989330/(.*)",
       "destination": "https://danoc.me/blog/early-preview"
     },
     {
-      "source": "/post/14831427279/*",
+      "source": "/post/14831427279/(.*)",
       "destination": "https://danoc.me/blog/signs-of-progress"
     },
     {
-      "source": "/post/15556391633/*",
+      "source": "/post/15556391633/(.*)",
       "destination": "https://danoc.me/blog/legible-articles"
     },
     {
-      "source": "/post/15736692113/*",
+      "source": "/post/15736692113/(.*)",
       "destination": "https://danoc.me/blog/bupipedream-on-ipad"
     },
     {
-      "source": "/post/15762559659/*",
+      "source": "/post/15762559659/(.*)",
       "destination": "https://danoc.me/blog/fit-for-a-smartphone"
     },
     {
-      "source": "/post/15919857214/*",
+      "source": "/post/15919857214/(.*)",
       "destination": "https://danoc.me/blog/moving-to-wordpress"
     },
     {
-      "source": "/post/15968416150/*",
+      "source": "/post/15968416150/(.*)",
       "destination": "https://danoc.me/blog/display-current-temperature"
     },
     {
-      "source": "/post/16093529186/*",
+      "source": "/post/16093529186/(.*)",
       "destination": "https://danoc.me/blog/database-dump"
     },
     {
-      "source": "/post/16096405227/*",
+      "source": "/post/16096405227/(.*)",
       "destination": "https://danoc.me/blog/highlight-wordpress-search-results"
     },
     {
-      "source": "/post/16051985458/*",
+      "source": "/post/16051985458/(.*)",
       "destination": "https://danoc.me/blog/image-placement"
     },
     {
-      "source": "/post/16258657840/*",
+      "source": "/post/16258657840/(.*)",
       "destination": "https://danoc.me/blog/pipe-dream-stats"
     },
     {
-      "source": "/post/16358726729/*",
+      "source": "/post/16358726729/(.*)",
       "destination": "https://danoc.me/blog/imported-to-wordpress"
     },
     {
-      "source": "/post/17670281132/*",
+      "source": "/post/17670281132/(.*)",
       "destination": "https://danoc.me/blog/launching-the-new-pipe-dream-website"
     },
     {
-      "source": "/post/18714910407/*",
+      "source": "/post/18714910407/(.*)",
       "destination": "https://danoc.me/blog/from-college-publisher-to-wordpress"
     },
     {
-      "source": "/post/18729689786/*",
+      "source": "/post/18729689786/(.*)",
       "destination": "https://danoc.me/blog/online-college-media"
     },
     {
-      "source": "/post/19819620781/*",
+      "source": "/post/19819620781/(.*)",
       "destination": "https://danoc.me/blog/spring-fling-concert-announcement-takes-down-the-pipe"
     },
     {
-      "source": "/post/19913228146/*",
+      "source": "/post/19913228146/(.*)",
       "destination": "https://danoc.me/blog/concert-layout"
     },
     {
-      "source": "/post/20247289897/*",
+      "source": "/post/20247289897/(.*)",
       "destination": "https://danoc.me/blog/pipe-dream-todo-list"
     },
     {
-      "source": "/post/20396276847/*",
+      "source": "/post/20396276847/(.*)",
       "destination": "https://danoc.me/blog/wordpress-site-sync"
     },
     {
-      "source": "/post/20486429658/*",
+      "source": "/post/20486429658/(.*)",
       "destination": "https://danoc.me/blog/open-graph-preview"
     },
     {
-      "source": "/post/20531600981/*",
+      "source": "/post/20531600981/(.*)",
       "destination": "https://danoc.me/blog/pipe-bomb-idea"
     },
     {
-      "source": "/post/20572783627/*",
+      "source": "/post/20572783627/(.*)",
       "destination": "https://danoc.me/blog/this-facebook-notice-took-way-too-long-to-design"
     },
     {
-      "source": "/post/20751376228/*",
+      "source": "/post/20751376228/(.*)",
       "destination": "https://danoc.me/blog/wordpress-article-deck"
     },
     {
-      "source": "/post/26738967370/*",
+      "source": "/post/26738967370/(.*)",
       "destination": "https://danoc.me/blog/recent-updates"
     },
     {
-      "source": "/post/34468850592/*",
+      "source": "/post/34468850592/(.*)",
       "destination": "https://danoc.me/blog/wordpress-pharma-hack"
     },
     {
-      "source": "/post/34605192252/*",
+      "source": "/post/34605192252/(.*)",
       "destination": "https://danoc.me/blog/follow-pipe-dream-as-we-cover-hurricane-sandy-and"
     },
     {
-      "source": "/post/35106617712/*",
+      "source": "/post/35106617712/(.*)",
       "destination": "https://danoc.me/blog/pipe-dream-visits-chicago"
     },
     {
-      "source": "/post/36315431227/*",
+      "source": "/post/36315431227/(.*)",
       "destination": "https://danoc.me/blog/startup-deas"
     },
     {
-      "source": "/post/36563960560/*",
+      "source": "/post/36563960560/(.*)",
       "destination": "https://danoc.me/blog/interview-with-camayak"
     },
     {
-      "source": "/post/36572312098/*",
+      "source": "/post/36572312098/(.*)",
       "destination": "https://danoc.me/blog/pipe-dream-server"
     },
     {
-      "source": "/post/36959614701/*",
+      "source": "/post/36959614701/(.*)",
       "destination": "https://danoc.me/blog/facebook-newsfeed"
     },
     {
-      "source": "/post/37530763368/*",
+      "source": "/post/37530763368/(.*)",
       "destination": "https://danoc.me/blog/take-to-college-returns"
     },
     {
-      "source": "/post/37881284935/*",
+      "source": "/post/37881284935/(.*)",
       "destination": "https://danoc.me/blog/moved-to-github"
     },
     {
-      "source": "/post/38588385454/*",
+      "source": "/post/38588385454/(.*)",
       "destination": "https://danoc.me/blog/fall-2012"
     },
     {
-      "source": "/post/39614524151/*",
+      "source": "/post/39614524151/(.*)",
       "destination": "https://danoc.me/blog/pipe-dream-redesign"
     },
     {
-      "source": "/post/40233716965/*",
+      "source": "/post/40233716965/(.*)",
       "destination": "https://danoc.me/blog/mobile-mockup"
     },
     {
-      "source": "/post/43173313539/*",
+      "source": "/post/43173313539/(.*)",
       "destination": "https://danoc.me/blog/what-ive-been-up-to"
     },
     {
-      "source": "/post/44044442923/*",
+      "source": "/post/44044442923/(.*)",
       "destination": "https://danoc.me/blog/pipe-dream-now-supports-twitter-cards-all-it"
     },
     {
-      "source": "/post/44367862783/*",
+      "source": "/post/44367862783/(.*)",
       "destination": "https://danoc.me/blog/responsive-web-design-for-college-newspapers"
     },
     {
-      "source": "/post/46073307231/*",
+      "source": "/post/46073307231/(.*)",
       "destination": "https://danoc.me/blog/spring-fling-announcement-and-analytics"
     },
     {
-      "source": "/post/58523267332/*",
+      "source": "/post/58523267332/(.*)",
       "destination": "https://danoc.me/blog/obama-to-visit-binghamton-university"
     },
     {
-      "source": "/post/61425706269/*",
+      "source": "/post/61425706269/(.*)",
       "destination": "https://danoc.me/blog/on-interning-at-optimizely"
     },
     {
-      "source": "/post/61560908567/*",
+      "source": "/post/61560908567/(.*)",
       "destination": "https://danoc.me/blog/how-to-get-a-great-computer-science-internship"
     },
     {
-      "source": "/post/62548615920/*",
+      "source": "/post/62548615920/(.*)",
       "destination": "https://danoc.me/blog/binghamton-university-at-mhacks"
     },
     {
-      "source": "/post/67673299074/*",
+      "source": "/post/67673299074/(.*)",
       "destination": "https://danoc.me/blog/interning-at-optimizely-building-the-mobile-dashboard"
     },
     {
-      "source": "/post/71363367609/*",
+      "source": "/post/71363367609/(.*)",
       "destination": "https://danoc.me/blog/ill-be-back-at-optimizely-after-graduation"
     }
   ]

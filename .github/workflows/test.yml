@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   eslint:
-    name: Lint (ESLint)
+    name: ESLint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -19,7 +19,7 @@ jobs:
         run: |
           npm run test:eslint
   prettier:
-    name: Format (Prettier)
+    name: Prettier
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

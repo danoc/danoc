@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/UntitledSansWeb-Regular.woff2") format("woff2"),
+    url("/fonts/UntitledSansWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/fonts/UntitledSansWeb-RegularItalic.woff2") format("woff2"),
+    url("/fonts/UntitledSansWeb-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/UntitledSansWeb-Medium.woff2") format("woff2"),
+    url("/fonts/UntitledSansWeb-Medium.woff") format("woff");
+}

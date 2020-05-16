@@ -2,16 +2,17 @@
   "name": "danoc.me",
   "private": true,
   "scripts": {
-    "start": "next",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "test": "yarn test:eslint && yarn test:prettier",
     "test:eslint": "eslint . --ext .js --ext .jsx --ignore-path .gitignore",
     "test:prettier": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --list-different",
-    "format": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --write",
-    "build": "next build",
-    "serve": "next serve"
+    "format": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --write"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.7.6",
     "dotenv": "^8.2.0",
     "next": "^9.4.0",
     "prop-types": "^15.6.0",

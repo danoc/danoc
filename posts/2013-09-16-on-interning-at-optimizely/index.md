@@ -1,7 +1,7 @@
 ---
 title: On Interning at Optimizely
 date: "2013-09-16T15:12:00-04:00"
-path: /blog/on-interning-at-optimizely/
+slug: on-interning-at-optimizely
 ---
 
 I was fortunate to be one of two interns at [Optimizely](https://www.optimizely.com/) this summer, working as a front-end developer in their San Francisco office.

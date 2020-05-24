@@ -2,7 +2,7 @@
 title: Chrome Dev Summit 2014 Notes
 description: Notes and highlights from the talks at the 2014 Chrome Dev Summit.
 date: "2015-02-28T00:00:00Z"
-path: /blog/chrome-dev-summit-2014-notes/
+slug: chrome-dev-summit-2014-notes
 ---
 
 - Playlist: [https://www.youtube.com/playlist?list=PLOU2XLYxmsILE0KnGTKKj2SsOtxsK_y_d](https://www.youtube.com/playlist?list=PLOU2XLYxmsILE0KnGTKKj2SsOtxsK_y_d)

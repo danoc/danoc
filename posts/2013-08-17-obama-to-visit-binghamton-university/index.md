@@ -1,7 +1,7 @@
 ---
 title: Obama to visit Binghamton University
 date: "2013-08-17T13:57:33-04:00"
-path: /blog/obama-to-visit-binghamton-university/
+slug: obama-to-visit-binghamton-university
 image_src: ./pipe-dream-obama-announcement.png
 image_alt: Spike in Google Analytics during the announcement
 ---

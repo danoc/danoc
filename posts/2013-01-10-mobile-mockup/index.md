@@ -1,7 +1,7 @@
 ---
 title: Mobile mockup of the new Pipe Dream
 date: "2013-01-10T23:43:00-05:00"
-path: /blog/mobile-mockup/
+slug: mobile-mockup
 image_src: ./pipe-dream-mobile-first.png
 image_alt: Screenshot of Pipe Dream redesign on mobile
 ---

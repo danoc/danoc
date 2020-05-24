@@ -1,7 +1,7 @@
 ---
 title: Display the current temperature with PHP and Google’s (hidden) weather API
 date: "2012-01-16T16:44:00-05:00"
-path: /blog/display-current-temperature/
+slug: display-current-temperature
 image_src: pipe-dream-weather.png
 image_alt: Screenshot of the weather indicator on Pipe Dream's website
 ---

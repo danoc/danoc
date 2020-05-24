@@ -1,7 +1,7 @@
 ---
 title: Spring Fling announcement and analytics
 date: "2013-03-23T10:43:37-04:00"
-path: /blog/spring-fling-announcement-and-analytics/
+slug: spring-fling-announcement-and-analytics
 image_src: ./pipe-dream-spring-fling-google-analytics-2013.png
 image_alt: Screenshot of the Pipe Dream Google Analytics
 ---

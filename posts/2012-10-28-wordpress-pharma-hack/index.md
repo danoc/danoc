@@ -1,7 +1,7 @@
 ---
 title: Battling the infamous WordPress "Pharma" hack
 date: "2012-10-28T01:31:57-04:00"
-path: /blog/wordpress-pharma-hack/
+slug: wordpress-pharma-hack
 ---
 
 I got a Facebook message a few days ago from the Editor in Chief asking if the Pipe Dream was hacked. The attached screenshot showed ads for _cialis_ and _viagra_ instead of a popular Greek Life article. Neither of us were able to reproduce the issue, so I ignored it and went to bed.

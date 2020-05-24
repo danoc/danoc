@@ -1,7 +1,7 @@
 ---
 title: ACP Journalism Convention in Chicago
 date: "2012-11-05T22:59:00-05:00"
-path: /blog/pipe-dream-visits-chicago/
+slug: pipe-dream-visits-chicago
 image_src: ./pipe-dream-chicago.jpg
 image_alt: Pipe Dream editors in Chicago
 ---

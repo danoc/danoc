@@ -1,7 +1,7 @@
 ---
 title: How to get a great computer science internship
 date: "2013-09-17T23:39:19-04:00"
-path: /blog/how-to-get-a-great-computer-science-internship/
+slug: how-to-get-a-great-computer-science-internship
 image_src: ./tech-internship-event.jpg
 image_alt: Photo of the Computer Science internship event
 ---

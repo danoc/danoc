@@ -1,7 +1,7 @@
 ---
 title: Take to College is back (kind of...)
 date: "2012-12-08T23:34:58-05:00"
-path: /blog/take-to-college-returns/
+slug: take-to-college-returns
 image_src: ./take-to-college.png
 image_alt: Screenshot of Take to College
 ---

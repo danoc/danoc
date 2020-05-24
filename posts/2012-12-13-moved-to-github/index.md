@@ -1,7 +1,7 @@
 ---
 title: Moved to GitHub
 date: "2012-12-13T21:55:01-05:00"
-path: /blog/moved-to-github/
+slug: moved-to-github
 image_src: ./pipe-dream-repository.png
 image_alt: Screenshot of Pipe Dream repository
 ---

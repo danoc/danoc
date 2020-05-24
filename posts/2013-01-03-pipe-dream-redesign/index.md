@@ -1,7 +1,7 @@
 ---
 title: Preview of the 2013 Pipe Dream redesign
 date: "2013-01-03T20:35:58-05:00"
-path: /blog/pipe-dream-redesign/
+slug: pipe-dream-redesign
 image_src: ./pipe-dream-redesign.png
 image_alt: Screenshot of Pipe Dream redesign
 ---

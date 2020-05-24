@@ -2,7 +2,7 @@
 title: Notes from React Rally 2019
 description: A collection of my notes from React Rally, a two-day single track conference about React.
 date: "2019-09-03T00:00:00Z"
-path: /blog/react-rally-2019/
+slug: react-rally-2019
 image_src: ./react-rally-chantastic.jpg
 image_alt: Michael Chan (@chantastic), the host of React Rally
 ---

@@ -1,7 +1,7 @@
 ---
 title: Fit for a smartphone
 date: "2012-01-13T00:01:00-05:00"
-path: /blog/fit-for-a-smartphone/
+slug: fit-for-a-smartphone
 image_src: ./pd-android.png
 image_alt: Pipe Dream on an Android device
 ---

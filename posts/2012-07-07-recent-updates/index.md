@@ -1,7 +1,7 @@
 ---
 title: Facebook Open Graph, Binghamton's Four Noble Truths, and WePay
 date: "2012-07-07T23:22:03-04:00"
-path: /blog/recent-updates/
+slug: recent-updates
 ---
 
 It's been a while since I've posted here, so I'll run through everything I've neglected to write about for the past three months.

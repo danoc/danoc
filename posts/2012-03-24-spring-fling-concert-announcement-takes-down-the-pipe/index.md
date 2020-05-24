@@ -1,7 +1,7 @@
 ---
 title: Spring Fling concert announcement takes down the Pipe Dream website
 date: "2012-03-24T00:24:27-04:00"
-path: /blog/spring-fling-concert-announcement-takes-down-the-pipe/
+slug: spring-fling-concert-announcement-takes-down-the-pipe
 image_src: ./pipe-dream-spring-fling-google-analytics.png
 image_alt: Screenshot of Pipe Dream's Google Analytics
 ---

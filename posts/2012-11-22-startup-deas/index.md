@@ -1,7 +1,7 @@
 ---
 title: Paul Graham on startup ideas
 date: "2012-11-22T18:25:40-05:00"
-path: /blog/startup-deas/
+slug: startup-deas
 ---
 
 > If you know a lot about programming and you start learning about some other

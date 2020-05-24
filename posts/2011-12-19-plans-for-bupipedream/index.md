@@ -1,7 +1,7 @@
 ---
 title: Plans for the new bupipedream.com
 date: "2011-12-19T02:02:00-05:00"
-path: /blog/plans-for-bupipedream/
+slug: plans-for-bupipedream
 ---
 
 I recently stepped down as Photo Editor and became Lead Web Developer at Pipe Dream to work on a much-needed redesign of [bupipedream.com](http://bupipedream.com/). The current website is powered by [College Publisher](http://collegepublisher.com/), an outdated CMS geared towards college newspapers. College Publisher doesn't offer much flexibility and controls our data, so it's time to abandon ship.

@@ -1,7 +1,7 @@
 ---
 title: Success!
 date: "2012-01-23T14:07:35-05:00"
-path: /blog/imported-to-wordpress/
+slug: imported-to-wordpress
 image_src: ./pipe-dream-posts-imported.png
 image_alt: Screenshot of the Pipe Dream posts in WordPress
 ---

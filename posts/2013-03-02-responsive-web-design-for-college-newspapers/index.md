@@ -1,7 +1,7 @@
 ---
 title: Responsive web design for college newspapers
 date: "2013-03-02T08:43:00-05:00"
-path: /blog/responsive-web-design-for-college-newspapers/
+slug: responsive-web-design-for-college-newspapers
 ---
 
 Saturday morning I spoke about responsive web development for college newspapers at the ACP Midwinter National College Journalism Convention in San Francisco. As promised, here are the slides and notes.

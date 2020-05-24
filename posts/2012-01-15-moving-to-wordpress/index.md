@@ -1,7 +1,7 @@
 ---
 title: Stage Three
 date: "2012-01-15T20:41:46-05:00"
-path: /blog/moving-to-wordpress/
+slug: moving-to-wordpress
 image_src: ./wordpress-swag.jpg
 image_alt: Photo of WordPress stickers and pins
 ---

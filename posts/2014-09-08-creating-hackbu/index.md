@@ -1,7 +1,7 @@
 ---
 title: "How we built HackBU at Binghamton University"
 date: "2014-09-08T15:53:03.624Z"
-path: /blog/creating-hackbu/
+slug: creating-hackbu
 image_src: ./hackbu-stickers.jpg
 image_alt: HackBU stickers
 ---

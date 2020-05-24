@@ -2,7 +2,7 @@
 title: "UXPin webinar on developer productivity and design consistency"
 description: A webinar, geared towards designers, that describes how to use code as a tool to encourage design consistency.
 date: "2017-07-12T00:00:00Z"
-path: /blog/balancing-design-consistency/
+slug: balancing-design-consistency
 ---
 
 I recently presented a webinar based on a previous blog post, "[Balancing design consistency and developer productivity](/blog/design-consistency-developer-productivity/)."

@@ -2,7 +2,7 @@
 title: Themes from the 2016 Chrome Dev Summit
 description: Key themes, random thoughts, and tidbits from the 2016 Chrome Dev Summit.
 date: "2016-11-12T00:00:00Z"
-path: /blog/chrome-dev-summit-2016/
+slug: chrome-dev-summit-2016
 image_src: ./chrome-dev-summit-2016.jpg
 image_alt: Photo from the 2016 Chrome Dev Summit
 ---

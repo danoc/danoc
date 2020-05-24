@@ -1,7 +1,7 @@
 ---
 title: Highlight terms in WordPress search results
 date: "2012-01-18T21:58:00-05:00"
-path: /blog/highlight-wordpress-search-results/
+slug: highlight-wordpress-search-results
 ---
 
 I was looking ways to highlight search results in `search.php` and [found this easy solution](http://www.wpbeginner.com/wp-tutorials/how-to-highlight-the-search-terms-in-results-in-wordpress/). I've modified it a bit to highlight the post's excerpt as well.

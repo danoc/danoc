@@ -1,7 +1,7 @@
 ---
 title: How we configure Pipe Dream's Ubuntu server
 date: "2012-11-25T23:42:00-05:00"
-path: /blog/pipe-dream-server/
+slug: pipe-dream-server
 image_src: ./linode-manager-login.png
 image_alt: Screenshot of the Linode login page
 ---

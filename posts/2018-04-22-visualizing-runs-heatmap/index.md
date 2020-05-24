@@ -2,7 +2,7 @@
 title: Visualizing my runs with a heatmap
 description:
 date: "2018-04-22T15:31:00Z"
-path: /blog/visualizing-runs-heatmap/
+slug: visualizing-runs-heatmap
 image_src: ./running-heatmap.png
 image_alt: Screenshot of a heatmap visualizing my runs for the past nine months
 ---

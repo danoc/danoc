@@ -1,7 +1,7 @@
 ---
 title: Moving Pipe Dream from College Publisher to WordPress
 date: "2012-03-04T02:01:00-05:00"
-path: /blog/from-college-publisher-to-wordpress/
+slug: from-college-publisher-to-wordpress
 ---
 
 It's been three weeks since I launched the [new Pipe Dream website](http://bupipedream.com/). The former website, powered by College Publisher, has given way to a new website built on WordPress. This is how I did it.

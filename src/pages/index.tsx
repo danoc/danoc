@@ -40,6 +40,9 @@ const SectionTitle = ({
           marginTop: s.s2,
           fontSize: s.f6,
           color: s.gray,
+          display: "block",
+          paddingBottom: s.s3,
+          borderBottom: `1px solid ${s.lightGray}`,
         }}
       >
         {description}
@@ -55,9 +58,6 @@ const SectionTitle = ({
     <GatsbyLink
       css={{
         color: "inherit",
-        display: "block",
-        borderBottom: `1px solid ${s.lightGray}`,
-        paddingBottom: s.s3,
         textDecoration: "inherit",
       }}
       to={to}

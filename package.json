@@ -12,7 +12,9 @@
   "dependencies": {
     "@babel/core": "^7.9.6",
     "@emotion/core": "^10.0.28",
+    "@vx/scale": "^0.0.196",
     "dotenv": "^8.2.0",
+    "firebase-admin": "^8.12.1",
     "gatsby": "^2.22.9",
     "gatsby-image": "^2.4.5",
     "gatsby-plugin-emotion": "^4.3.2",
@@ -34,6 +36,7 @@
     "gatsby-remark-smartypants": "^2.3.2",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-source-pinboard": "^0.1.6",
+    "gatsby-source-strava-activities": "2.0.0-0",
     "gatsby-transformer-remark": "^2.8.13",
     "gatsby-transformer-sharp": "^2.5.3",
     "is-relative-url": "^3.0.0",
@@ -59,9 +62,9 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.20.0",
     "husky": "^4.2.5",
-    "now": "^19.0.1",
     "prettier": "2.0.5",
-    "pretty-quick": "^2.0.1"
+    "pretty-quick": "^2.0.1",
+    "vercel": "^19.0.1"
   },
   "husky": {
     "hooks": {

@@ -1,6 +1,15 @@
 require("dotenv").config();
+const firebaseAdmin = require("firebase-admin");
 
 const numWeeksOfRuns = 37;
+
+const firebaseClient = firebaseAdmin.initializeApp({
+  credential: firebaseAdmin.credential.cert(
+    JSON.parse(
+      Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT, "base64").toString(),
+    ),
+  ),
+});
 
 module.exports = {
   siteMetadata: {
@@ -24,6 +33,35 @@ module.exports = {
       options: {
         authToken: process.env.PINBOARD,
         tags: "danoc.me",
+      },
+    },
+    {
+      resolve: "gatsby-source-strava-activities",
+      options: {
+        clientId: process.env.STRAVA_CLIENT_ID,
+        clientSecret: process.env.STRAVA_CLIENT_SECRET,
+        getRefreshToken: async () => {
+          const doc = await firebaseClient
+            .firestore()
+            .collection("config")
+            .doc("strava-refresh-token")
+            .get();
+
+          if (doc.exists) {
+            return doc.get("value");
+          }
+
+          throw Error("Could not get `strava-refresh-token` from Fireabse.");
+        },
+        onRefreshTokenChanged: async (newRefreshToken) => {
+          await firebaseClient
+            .firestore()
+            .doc("config/strava-refresh-token")
+            .update({ value: newRefreshToken });
+        },
+        // Get data for past `numWeeksOfRuns` weeks
+        after:
+          Math.round(new Date().getTime() / 1000) - 604800 * numWeeksOfRuns,
       },
     },
     {

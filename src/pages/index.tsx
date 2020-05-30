@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link as GatsbyLink } from "gatsby";
 import Container from "../components/container";
 import Link from "../components/link";
+import Heatmap from "../components/heatmap";
 import * as s from "../styles";
 import Section, {
   SectionList,
@@ -16,7 +17,7 @@ type SectionTitleProps = {
   children: string;
   description: string;
   emoji: string;
-  to: string;
+  to?: string;
 };
 
 const SectionTitle = ({
@@ -24,35 +25,47 @@ const SectionTitle = ({
   description,
   emoji,
   to,
-}: SectionTitleProps) => (
-  <GatsbyLink
-    css={{
-      color: "inherit",
-      display: "block",
-      borderBottom: `1px solid ${s.lightGray}`,
-      paddingBottom: s.s3,
-      textDecoration: "inherit",
-    }}
-    to={to}
-  >
-    <h2
-      css={{ marginTop: s.s0, marginBottom: s.s0, fontSize: s.f4 }}
-      id={children}
-    >
-      <span css={{ marginRight: s.s1 }}>{emoji}</span> {children}
-    </h2>
-    <p
+}: SectionTitleProps) => {
+  const content = (
+    <>
+      <h2
+        css={{ marginTop: s.s0, marginBottom: s.s0, fontSize: s.f4 }}
+        id={children}
+      >
+        <span css={{ marginRight: s.s1 }}>{emoji}</span> {children}
+      </h2>
+      <p
+        css={{
+          marginBottom: 0,
+          marginTop: s.s2,
+          fontSize: s.f6,
+          color: s.gray,
+        }}
+      >
+        {description}
+      </p>
+    </>
+  );
+
+  if (!to) {
+    return content;
+  }
+
+  return (
+    <GatsbyLink
       css={{
-        marginBottom: 0,
-        marginTop: s.s2,
-        fontSize: s.f6,
-        color: s.gray,
+        color: "inherit",
+        display: "block",
+        borderBottom: `1px solid ${s.lightGray}`,
+        paddingBottom: s.s3,
+        textDecoration: "inherit",
       }}
+      to={to}
     >
-      {description}
-    </p>
-  </GatsbyLink>
-);
+      {content}
+    </GatsbyLink>
+  );
+};
 
 type SectionListMoreLinkProps = {
   to: string;
@@ -102,9 +115,22 @@ type IndexPageProps = {
         },
       ];
     };
+    allStravaActivity: {
+      edges: [
+        {
+          node: {
+            activity: {
+              start_date: string;
+              distance: number;
+            };
+          };
+        },
+      ];
+    };
     site: {
       siteMetadata: {
         description: string;
+        numWeeksOfRuns: number;
       };
     };
   };
@@ -119,6 +145,7 @@ const IndexPage = ({ data }: IndexPageProps) => (
         content={data.site.siteMetadata.description}
       />
     </Helmet>
+
     <Section>
       <SectionTitle
         description="Thoughts and feelings on code and design"
@@ -144,6 +171,23 @@ const IndexPage = ({ data }: IndexPageProps) => (
       </SectionList>
       <SectionListMoreLink to="/blog">View all posts</SectionListMoreLink>
     </Section>
+
+    <Section>
+      <SectionTitle
+        description="Runs I’ve done in the past few months"
+        emoji="🏃‍♂️"
+      >
+        Running
+      </SectionTitle>
+
+      <div css={{ paddingTop: s.s3 }}>
+        <Heatmap
+          allStravaActivity={data.allStravaActivity}
+          numWeeksOfRuns={data.site.siteMetadata.numWeeksOfRuns}
+        />
+      </div>
+    </Section>
+
     <Section>
       <SectionTitle
         description="Articles and videos I like sharing"
@@ -196,9 +240,20 @@ export const pageQuery = graphql`
         }
       }
     }
+    allStravaActivity(filter: { activity: { type: { eq: "Run" } } }) {
+      edges {
+        node {
+          activity {
+            start_date
+            distance
+          }
+        }
+      }
+    }
     site {
       siteMetadata {
         description
+        numWeeksOfRuns
       }
     }
   }

@@ -8320,10 +8320,10 @@ gatsby-source-pinboard@^0.1.6:
   dependencies:
     node-fetch "^2.2.0"
 
-gatsby-source-strava-activities@2.0.0-0:
-  version "2.0.0-0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-strava-activities/-/gatsby-source-strava-activities-2.0.0-0.tgz#5c2b751185d164f9ce80ad516e5dbe2fea132514"
-  integrity sha512-huyGqyQ5DXuldPwWxWz+/CodxfCzmA8owA7z3gZyZguqaGSEA+8Gv+79OePaWFsJQgIXIEpkOTLbqKWlzkhPaA==
+gatsby-source-strava-activities@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-strava-activities/-/gatsby-source-strava-activities-2.0.0.tgz#bc97c7d837d9bc2bab6448e8f1230679e7b39cf9"
+  integrity sha512-RECKT/bIlEyI6hldyQAH3t5g1iW+xJp7kuAoa5j1+AdU/iOCniP4wjtXSJCUmJR56Nhj4XVtmMkuu/g/svqw9g==
   dependencies:
     node-fetch "^2.6.0"
     query-string "^6.12.1"

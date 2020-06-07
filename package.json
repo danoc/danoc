@@ -36,7 +36,7 @@
     "gatsby-remark-smartypants": "^2.3.3",
     "gatsby-source-filesystem": "^2.3.10",
     "gatsby-source-pinboard": "^0.1.6",
-    "gatsby-source-strava-activities": "2.0.0-0",
+    "gatsby-source-strava-activities": "2.0.0",
     "gatsby-transformer-remark": "^2.8.14",
     "gatsby-transformer-sharp": "^2.5.4",
     "is-relative-url": "^3.0.0",

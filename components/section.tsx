@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "../components/link";
-import * as s from "../../styles";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
+import * as s from "../styles";
 
 type SectionProps = {
   children: React.ReactNode;
@@ -34,8 +34,8 @@ type SectionListItemProps = {
 
 const SectionListItem = ({ children, to }: SectionListItemProps) => (
   <li key={to}>
-    <Link
-      to={to}
+    <a
+      href={to}
       css={{
         paddingTop: s.s3,
         paddingBottom: s.s3,
@@ -45,7 +45,7 @@ const SectionListItem = ({ children, to }: SectionListItemProps) => (
       }}
     >
       {children}
-    </Link>
+    </a>
   </li>
 );
 

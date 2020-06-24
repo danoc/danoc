@@ -1,5 +1,6 @@
-import React from "react";
-import * as s from "../../styles";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
+import * as s from "../styles";
 
 type PageTitleProps = {
   as: "h1" | "h2";

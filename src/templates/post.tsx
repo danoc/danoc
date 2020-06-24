@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import Container from "../components/container";
 import { css as linkCSS } from "../components/link";
 import GatsbyImage from "gatsby-image";
-import * as s from "../styles";
+import * as s from "../../styles";
 import "../styles/prism-ghcolors.css";
 import PageTitle from "../components/page-title";
 

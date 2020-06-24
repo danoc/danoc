@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql, Link as GatsbyLink } from "gatsby";
 import Container from "../components/container";
 import Link from "../components/link";
-import * as s from "../styles";
+import * as s from "../../styles";
 import Section from "../components/section";
 import PageTitle from "../components/page-title";
 import Paragraph from "../components/paragraph";

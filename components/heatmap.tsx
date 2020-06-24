@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import { times, groupBy, reduce, chunk } from "lodash";
 import { scaleLinear } from "@vx/scale";
-import * as styles from "../../styles";
+import * as styles from "../styles";
 
 type StravaActivityEdge = {
   node: {

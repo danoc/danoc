@@ -1,7 +1,7 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import isRelativeUrl from "is-relative-url";
-import * as s from "../styles";
+import * as s from "../../styles";
 
 type LinkProps = {
   to: string;

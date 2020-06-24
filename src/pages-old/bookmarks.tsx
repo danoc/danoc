@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Container from "../components/container";
-import * as s from "../styles";
+import * as s from "../../styles";
 import PageTitle from "../components/page-title";
 import Section, {
   SectionList,

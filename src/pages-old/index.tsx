@@ -4,7 +4,7 @@ import { graphql, Link as GatsbyLink } from "gatsby";
 import Container from "../components/container";
 import Link from "../components/link";
 import Heatmap from "../components/heatmap";
-import * as s from "../styles";
+import * as s from "../../styles";
 import Section, {
   SectionList,
   SectionListItem,

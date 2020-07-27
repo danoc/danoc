@@ -170,11 +170,5 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-lodash",
     "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-5922635-10",
-      },
-    },
   ],
 };

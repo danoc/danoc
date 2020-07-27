@@ -20,7 +20,6 @@
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-feed": "^2.5.11",
-    "gatsby-plugin-google-analytics": "^2.3.11",
     "gatsby-plugin-lodash": "^3.3.10",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",

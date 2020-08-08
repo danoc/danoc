@@ -41,7 +41,7 @@
     "is-relative-url": "^3.0.0",
     "lodash": "^4.17.19",
     "node-sass": "^4.14.1",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "prop-types": "^15.6.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

@@ -5,7 +5,6 @@ import path from "path";
 import matter from "gray-matter";
 import Container from "../../components/container";
 import ReactDOMServer from "react-dom/server";
-import dynamic from "next/dynamic";
 
 interface BlogSlugProps {
   post: string;
@@ -37,13 +36,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!postDirectoryName) {
     throw Error("Post does not exist.");
   }
-
-  const pathToPost = path.join(
-    process.cwd(),
-    "posts",
-    postDirectoryName,
-    "index.mdx",
-  );
 
   const { default: MDXContent } = await import(
     `../../posts/${postDirectoryName}/index.mdx`

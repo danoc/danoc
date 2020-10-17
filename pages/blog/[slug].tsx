@@ -2,14 +2,31 @@ import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 import Container from "../../components/container";
+import ReactDOMServer from "react-dom/server";
+import dynamic from "next/dynamic";
 
-function BlogSlug() {
-  return <Container header="condensed">hi</Container>;
+interface BlogSlugProps {
+  post: string;
+  postDirectoryName: string;
+}
+
+function BlogSlug({ post, postDirectoryName }: BlogSlugProps) {
+  const DynamicComponent = dynamic(
+    () => import(`../../posts/${postDirectoryName}/index.mdx`),
+    { loading: () => <div dangerouslySetInnerHTML={{ __html: post }} /> },
+  );
+
+  return (
+    <Container header="condensed">
+      <DynamicComponent />
+    </Container>
+  );
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.post;
+  const slug = params?.slug;
 
   if (!slug) {
     throw Error("Post slug not provided.");
@@ -30,15 +47,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     process.cwd(),
     "posts",
     postDirectoryName,
-    "index.md",
+    "index.mdx",
   );
 
-  const markdown = fs.readFileSync(pathToPost, "utf-8");
-  const post = await remark().use(html).process(markdown);
+  const { default: MDXContent } = await import(
+    `../../posts/${postDirectoryName}/index.mdx`
+  );
+
+  const post = ReactDOMServer.renderToStaticMarkup(<MDXContent />);
 
   return {
     props: {
-      post: post.contents,
+      post,
+      postDirectoryName,
     },
   };
 };
@@ -49,14 +70,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const posts = fs.readdirSync(pathToPosts).sort().reverse();
 
   const paths = posts.map((post) => {
-    const postPath = path.join(pathToPosts, post, "index.md");
+    const postPath = path.join(pathToPosts, post, "index.mdx");
     const postContents = fs.readFileSync(postPath);
-    const frontmatter = grayMatter(postContents);
+    const frontmatter = matter(postContents);
 
-    return { params: { post: frontmatter.data.slug } };
+    const postDirSplit = postPath.split("/");
+    const slug = postDirSplit[postDirSplit.length - 2].slice(11);
+
+    return {
+      params: {
+        slug,
+      },
+    };
   });
-
-  console.log(paths);
 
   return {
     paths,

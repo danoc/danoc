@@ -22,7 +22,6 @@ type BlogPageProps = {
               date: string;
               year: string;
               formattedDate: string;
-              path: string;
             };
           };
         },

@@ -16,7 +16,6 @@ type PostProps = {
         title: string;
         date: string;
         formattedDate: string;
-        path: string;
         description?: string;
         image_src?: {
           childImageSharp: {
@@ -302,9 +301,7 @@ const Post = ({ data }: PostProps) => {
 export default Post;
 
 export const pageQuery = graphql`
-  query PostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+  query PostByPath($    markdownRemark(frontmatter: {       html
       frontmatter {
         date
         formattedDate: date(formatString: "MMMM D, YYYY")

@@ -99,7 +99,6 @@ type IndexPageProps = {
               title: string;
               date: string;
               formattedDate: string;
-              path: string;
             };
           };
         },

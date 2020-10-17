@@ -1,5 +1,4 @@
 import React from "react";
-import { Link as GatsbyLink } from "gatsby";
 import isRelativeUrl from "is-relative-url";
 import * as s from "../../styles";
 
@@ -24,9 +23,9 @@ const Link = (props: LinkProps) => {
   if (to && isRelativeUrl(to)) {
     // eslint-disable-next-line react/jsx-props-no-spreading
     return (
-      <GatsbyLink {...props} css={css}>
+      <a {...props} css={css}>
         {props.children}
-      </GatsbyLink>
+      </a>
     );
   }
 

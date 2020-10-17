@@ -12,15 +12,10 @@ interface BlogSlugProps {
   postDirectoryName: string;
 }
 
-function BlogSlug({ post, postDirectoryName }: BlogSlugProps) {
-  const DynamicComponent = dynamic(
-    () => import(`../../posts/${postDirectoryName}/index.mdx`),
-    { loading: () => <div dangerouslySetInnerHTML={{ __html: post }} /> },
-  );
-
+function BlogSlug({ post }: BlogSlugProps) {
   return (
     <Container header="condensed">
-      <DynamicComponent />
+      <div dangerouslySetInnerHTML={{ __html: post }} />
     </Container>
   );
 }

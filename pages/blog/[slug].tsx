@@ -112,7 +112,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = ReactDOMServer.renderToStaticMarkup(
     <MDXProvider
       components={{
-        a: (p: MDXElement) => <a className="underline" {...p} />,
+        a: (p: MDXElement) => <a className="underline break-all" {...p} />,
         blockquote: (p: MDXElement) => (
           <blockquote className="pl-3 my-4" {...p} />
         ),
@@ -203,8 +203,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         inlineCode: (p: MDXElement) => <code className="font-mono" {...p} />,
         p: (p: MDXElement) => <p className="mb-4" {...p} />,
         strong: (p: MDXElement) => <strong className="font-medium" {...p} />,
-        ol: (p: MDXElement) => <ol className="list-decimal pl-6 mb-5" {...p} />,
-        ul: (p: MDXElement) => <ol className="list-disc pl-6 mb-5" {...p} />,
+        ol: (p: MDXElement) => (
+          <ol className="list-decimal pl-6 mb-5 mt-4" {...p} />
+        ),
+        ul: (p: MDXElement) => (
+          <ol className="list-disc pl-6 mb-5 mt-4" {...p} />
+        ),
       }}
     >
       <MDXContent />

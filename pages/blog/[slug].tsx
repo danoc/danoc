@@ -28,6 +28,11 @@ interface MDXElement {
   children: string;
 }
 
+interface MDXElementImage extends MDXElement {
+  alt?: string;
+  src: string;
+}
+
 function BlogSlug({ post, metadata }: BlogSlugProps) {
   return (
     <div className="p-5">
@@ -190,6 +195,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         },
         h3: (p: MDXElement) => (
           <h3 className="mt-4 mb-1 font-medium text-xl" {...p} />
+        ),
+        img: ({ src, alt }: MDXElementImage) => (
+          <img src={src} alt={alt} loading="lazy" className="border" />
         ),
         li: (p: MDXElement) => <li className="mb-2 pl-1" {...p} />,
         inlineCode: (p: MDXElement) => <code className="font-mono" {...p} />,

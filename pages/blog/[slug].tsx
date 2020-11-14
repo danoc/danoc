@@ -8,6 +8,7 @@ import Highlight, {
 } from "prism-react-renderer";
 import prismTheme from "prism-react-renderer/themes/github";
 import ReactDOMServer from "react-dom/server";
+import { merge } from "lodash";
 import * as s from "../../styles";
 import Link from "next/link";
 
@@ -110,35 +111,83 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         blockquote: (p: MDXElement) => (
           <blockquote className="pl-3 my-4" {...p} />
         ),
-        code: ({ className, ...p }: MDXElement) => (
-          <Highlight
-            {...prismDefaultProps}
-            code={p.children.trim()}
-            language="jsx"
-            theme={prismTheme}
-          >
-            {({
-              className: prismClassName,
-              style,
-              tokens,
-              getLineProps,
-              getTokenProps,
-            }) => (
-              <pre
-                className={`mb-4 w-full block overflow-x-auto font-mono ${prismClassName} ${className}`}
-                style={style}
-              >
-                {tokens.map((line, i) => (
-                  <div {...getLineProps({ line, key: i })}>
-                    {line.map((token, key) => (
-                      <span {...getTokenProps({ token, key })} />
-                    ))}
-                  </div>
-                ))}
-              </pre>
-            )}
-          </Highlight>
-        ),
+        code: ({ className, children, ...p }: MDXElement) => {
+          const language = className?.replace("language-", "");
+          const codeClasses =
+            "mb-4 w-full block overflow-x-auto font-mono text-sm border border-gray-400 p-3";
+
+          if (
+            language !== "markup" &&
+            language !== "bash" &&
+            language !== "clike" &&
+            language !== "c" &&
+            language !== "cpp" &&
+            language !== "css" &&
+            language !== "javascript" &&
+            language !== "jsx" &&
+            language !== "coffeescript" &&
+            language !== "actionscript" &&
+            language !== "css-extr" &&
+            language !== "diff" &&
+            language !== "git" &&
+            language !== "go" &&
+            language !== "graphql" &&
+            language !== "handlebars" &&
+            language !== "json" &&
+            language !== "less" &&
+            language !== "makefile" &&
+            language !== "markdown" &&
+            language !== "objectivec" &&
+            language !== "ocaml" &&
+            language !== "python" &&
+            language !== "reason" &&
+            language !== "sass" &&
+            language !== "scss" &&
+            language !== "sql" &&
+            language !== "stylus" &&
+            language !== "tsx" &&
+            language !== "typescript" &&
+            language !== "wasm" &&
+            language !== "yaml"
+          ) {
+            return <code className={codeClasses}>{children}</code>;
+          }
+
+          return (
+            <Highlight
+              {...prismDefaultProps}
+              code={children.trim()}
+              language={language}
+              theme={merge(prismTheme, {
+                plain: {
+                  color: "red",
+                  backgroundColor: "white",
+                },
+              })}
+            >
+              {({
+                className: prismClassName,
+                style,
+                tokens,
+                getLineProps,
+                getTokenProps,
+              }) => (
+                <pre
+                  className={`${codeClasses} ${prismClassName}`}
+                  style={style}
+                >
+                  {tokens.map((line, i) => (
+                    <div {...getLineProps({ line, key: i })}>
+                      {line.map((token, key) => (
+                        <span {...getTokenProps({ token, key })} />
+                      ))}
+                    </div>
+                  ))}
+                </pre>
+              )}
+            </Highlight>
+          );
+        },
         h3: (p: MDXElement) => (
           <h3 className="mt-4 mb-1 font-medium text-xl" {...p} />
         ),

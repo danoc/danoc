@@ -3,6 +3,10 @@ import { MDXProvider } from "@mdx-js/react";
 import Head from "next/head";
 import fs from "fs";
 import path from "path";
+import Highlight, {
+  defaultProps as prismDefaultProps,
+} from "prism-react-renderer";
+import prismTheme from "prism-react-renderer/themes/github";
 import ReactDOMServer from "react-dom/server";
 import * as s from "../../styles";
 import Link from "next/link";
@@ -107,10 +111,33 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           <blockquote className="pl-3 my-4" {...p} />
         ),
         code: ({ className, ...p }: MDXElement) => (
-          <code
-            className={`mb-4 w-full block overflow-x-auto font-mono ${className}`}
-            {...p}
-          />
+          <Highlight
+            {...prismDefaultProps}
+            code={p.children.trim()}
+            language="jsx"
+            theme={prismTheme}
+          >
+            {({
+              className: prismClassName,
+              style,
+              tokens,
+              getLineProps,
+              getTokenProps,
+            }) => (
+              <pre
+                className={`mb-4 w-full block overflow-x-auto font-mono ${prismClassName} ${className}`}
+                style={style}
+              >
+                {tokens.map((line, i) => (
+                  <div {...getLineProps({ line, key: i })}>
+                    {line.map((token, key) => (
+                      <span {...getTokenProps({ token, key })} />
+                    ))}
+                  </div>
+                ))}
+              </pre>
+            )}
+          </Highlight>
         ),
         h3: (p: MDXElement) => (
           <h3 className="mt-4 mb-1 font-medium text-xl" {...p} />

@@ -1,24 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
 import { times, groupBy, reduce, chunk } from "lodash";
 import { scaleLinear } from "@vx/scale";
 import * as styles from "../../styles";
+import s from "./index.module.css";
 
-type StravaActivityEdge = {
-  node: {
-    activity: {
-      start_date: string;
-      distance: number;
-    };
-  };
-};
+export interface Run {
+  startDate: string;
+  distance: number;
+}
 
-type HeatmapProps = {
-  allStravaActivity: {
-    edges: StravaActivityEdge[];
-  };
+interface HeatmapProps {
+  runs: Run[];
   numWeeksOfRuns: number;
-};
+}
 
 const months = [
   "Jan.",
@@ -42,21 +35,20 @@ let mostMilesInADay = 0;
 
 const normalizeDate = (date: Date) => date.toDateString();
 
-const processRun = (run: StravaActivityEdge) => ({
-  date: normalizeDate(new Date(run.node.activity.start_date)),
-  miles:
-    Math.round(run.node.activity.distance * 0.000621371192237334 * 100) / 100,
+const processRun = (run: Run) => ({
+  date: normalizeDate(new Date(run.startDate)),
+  miles: Math.round(run.distance * 0.000621371192237334 * 100) / 100,
 });
 
 /**
  * Returns a nicely formatted array of days and how many miles run in that day.
  */
 const formatRunsGrid = (
-  data: HeatmapProps["allStravaActivity"]["edges"],
+  runs: Run[],
   numWeeksOfRuns: HeatmapProps["numWeeksOfRuns"],
 ) => {
-  const runs = data.map(processRun);
-  const runsByDate = groupBy(runs, "date");
+  const processedRuns = runs.map(processRun);
+  const runsByDate = groupBy(processedRuns, "date");
 
   const d = new Date();
 
@@ -92,8 +84,8 @@ const formatRunsGrid = (
 
 const gridGap = styles.s2;
 
-const Heatmap = ({ allStravaActivity, numWeeksOfRuns }: HeatmapProps) => {
-  const runsByDay = formatRunsGrid(allStravaActivity.edges, numWeeksOfRuns);
+const Heatmap = ({ runs, numWeeksOfRuns }: HeatmapProps) => {
+  const runsByDay = formatRunsGrid(runs, numWeeksOfRuns);
 
   const monthsAlreadyLabeled: Record<string, boolean> = {};
 
@@ -107,28 +99,16 @@ const Heatmap = ({ allStravaActivity, numWeeksOfRuns }: HeatmapProps) => {
 
   return (
     <div
-      css={{
-        display: "grid",
-        gridTemplateColumns: "auto 1fr",
-        gridTemplateRows: "auto 1fr",
-        gridTemplateAreas: `'empty months' 'days runs'`,
-        gridGap,
+      className={`grid relative text-xs ${s.root}`}
+      style={{
         width: `calc(100% + ${gridGap})`,
         left: `-${gridGap}`,
-        position: "relative",
-        fontSize: "12px",
       }}
     >
       <ul
-        css={{
-          display: "grid",
-          gridGap: "1px",
-          gridAutoFlow: "column",
-          gridArea: "months",
+        className={`grid gap-px grid-flow-col ${s.months}`}
+        style={{
           gridTemplateColumns: `repeat(${numberOfWeeksOfRuns}, 1fr)`,
-          listStyle: "none",
-          padding: styles.s0,
-          margin: styles.s0,
         }}
       >
         {runsByWeek.map((week, i) => {
@@ -150,13 +130,12 @@ const Heatmap = ({ allStravaActivity, numWeeksOfRuns }: HeatmapProps) => {
 
           return (
             <li
-              css={{
+              style={{
                 gridColumn: isLastColumn
                   ? `${numberOfWeeksOfRuns - 1} / span 2`
                   : `${i + 1}`,
-                textAlign: isLastColumn ? "right" : "left",
-                minWidth: 0,
               }}
+              className={isLastColumn ? "text-right" : "text-left"}
               aria-hidden
               key={monthOfLastDayOfWeek}
             >
@@ -165,42 +144,21 @@ const Heatmap = ({ allStravaActivity, numWeeksOfRuns }: HeatmapProps) => {
           );
         })}
       </ul>
-      <ul
-        css={{
-          display: "grid",
-          gridTemplateRows: `repeat(7, 1fr)`,
-          gridGap: "1px",
-          gridArea: "days",
-          position: "absolute",
-          top: 0,
-          right: 0,
-          bottom: 0,
-          listStyle: "none",
-          padding: styles.s0,
-          margin: styles.s0,
-        }}
-      >
-        <li css={{ gridRow: "1/3", alignSelf: "end" }} aria-hidden>
+      <ul className={`grid gap-px absolute top-0 right-0 bottom-0 ${s.days}`}>
+        <li className="self-end" style={{ gridRow: "1/3" }} aria-hidden>
           M
         </li>
-        <li css={{ gridRow: "3/5", alignSelf: "end" }} aria-hidden>
+        <li className="self-end" style={{ gridRow: "3/5" }} aria-hidden>
           W
         </li>
-        <li css={{ gridRow: "6/8", alignSelf: "start" }} aria-hidden>
+        <li className="self-start" style={{ gridRow: "6/8" }} aria-hidden>
           F
         </li>
       </ul>
       <ul
-        css={{
-          display: "grid",
+        className={`grid gap-px grid-flow-col ${s.heatmap}`}
+        style={{
           gridTemplateColumns: `repeat(${numberOfWeeksOfRuns}, 1fr)`,
-          gridTemplateRows: `repeat(7, auto)`,
-          gridGap: "1px",
-          gridAutoFlow: "column",
-          gridArea: "runs",
-          listStyle: "none",
-          padding: styles.s0,
-          margin: styles.s0,
         }}
         aria-label="Runs I've done in the past few months"
       >
@@ -214,10 +172,9 @@ const Heatmap = ({ allStravaActivity, numWeeksOfRuns }: HeatmapProps) => {
 
           return (
             <li
-              css={{
+              className={`h-0 ${s.day}`}
+              style={{
                 backgroundColor: colorScale(day.miles),
-                paddingBottom: "100%",
-                height: 0,
               }}
               aria-label={tooltipText}
               title={tooltipText}

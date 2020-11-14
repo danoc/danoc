@@ -1,0 +1,23 @@
+.root {
+  grid-template-columns: "auto 1fr";
+  grid-template-rows: "auto 1fr";
+  grid-template-areas: "empty months" "days runs";
+}
+
+.months {
+  grid-area: months;
+}
+
+.heatmap {
+  grid-template-rows: repeat(7, auto);
+  grid-area: runs;
+}
+
+.days {
+  grid-template-rows: repeat(7, 1fr);
+  grid-area: days;
+}
+
+.day {
+  padding-bottom: 100%;
+}

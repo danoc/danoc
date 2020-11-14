@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Untitled Sans", -apple-system, BlinkMacSystemFont, avenir next,
+    avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial,
+    sans-serif;
+  color: #333;
+}
+
+code,
+pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/UntitledSansWeb-Regular.woff2") format("woff2"),
+    url("/fonts/UntitledSansWeb-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("/fonts/UntitledSansWeb-Italic.woff2") format("woff2"),
+    url("/fonts/UntitledSansWeb-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Untitled Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/UntitledSansWeb-Medium.woff2") format("woff2"),
+    url("/fonts/UntitledSansWeb-Medium.woff") format("woff");
+}

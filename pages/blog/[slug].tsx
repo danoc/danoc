@@ -33,6 +33,12 @@ interface MDXElementImage extends MDXElement {
   src: string;
 }
 
+interface MDXElementIframe extends MDXElement {
+  src: string;
+  height?: string | number;
+  width?: string | number;
+}
+
 function BlogSlug({ post, metadata }: BlogSlugProps) {
   return (
     <div className="p-5">
@@ -196,6 +202,34 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         h3: (p: MDXElement) => (
           <h3 className="mt-4 mb-1 font-medium text-xl" {...p} />
         ),
+        iframe: ({ src, height, width, ...p }: MDXElementIframe) => {
+          if (src.startsWith("https://www.youtube.com/")) {
+            return (
+              <div
+                style={{
+                  paddingBottom: "56.25%",
+                  position: "relative",
+                  height: 0,
+                  overflow: "hidden",
+                }}
+              >
+                <iframe
+                  src={src}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  {...p}
+                />
+              </div>
+            );
+          }
+
+          return <iframe src={src} {...p} />;
+        },
         img: ({ src, alt }: MDXElementImage) => (
           <img src={src} alt={alt} loading="lazy" className="border" />
         ),

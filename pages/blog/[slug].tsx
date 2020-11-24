@@ -134,7 +134,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         code: ({ className, children, ...p }: MDXElement) => {
           const language = className?.replace("language-", "");
           const codeClasses =
-            "mb-4 w-full block overflow-x-auto font-mono text-sm border border-gray-400 p-3";
+            "mb-4 w-full block overflow-x-auto font-mono text-sm border border-gray-300 p-3";
 
           if (
             language !== "markup" &&
@@ -180,7 +180,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               language={language}
               theme={merge(prismTheme, {
                 plain: {
-                  color: "red",
+                  color: "inherit",
                   backgroundColor: "white",
                 },
               })}
@@ -192,7 +192,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 getLineProps,
                 getTokenProps,
               }) => (
-                <pre
+                <code
                   className={`${codeClasses} ${prismClassName}`}
                   style={style}
                 >
@@ -203,7 +203,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                       ))}
                     </div>
                   ))}
-                </pre>
+                </code>
               )}
             </Highlight>
           );

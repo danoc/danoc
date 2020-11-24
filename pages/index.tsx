@@ -19,13 +19,13 @@ interface SectionProps {
 function Section({ title, description, emoji, children }: SectionProps) {
   return (
     <section className="mb-12">
-      <header className="pb-3 border-gray-300 border-solid border-b">
+      <header className="pb-3 border-gray-200 border-solid border-b">
         <h2 id={title} className="text-xl font-medium mb-1">
           <span>{emoji} </span>
           {title}
         </h2>
 
-        <p className="text-sm">{description}</p>
+        <p className="text-sm text-gray-500">{description}</p>
       </header>
 
       {children}
@@ -41,12 +41,12 @@ interface HomePageProps {
 
 export default function HomePage({ posts, runs, bookmarks }: HomePageProps) {
   return (
-    <div className="p-5">
+    <div className="p-5 max-w-xl mx-auto">
       <header className="mb-8">
-        <span className="text-4xl mb-2 block">👨‍💻</span>
+        <span className="text-4xl mb-4 block">👨‍💻</span>
 
         <Link href="/">
-          <a className="text-2xl font-medium mb-2 block">
+          <a className="text-2xl font-medium mb-3 block">
             <h1>Daniel O’Connor</h1>
           </a>
         </Link>

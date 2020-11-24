@@ -10,7 +10,7 @@ import prismTheme from "prism-react-renderer/themes/github";
 import ReactDOMServer from "react-dom/server";
 import { merge } from "lodash";
 import * as s from "../../styles";
-import Link from "next/link";
+import Link, { DottedLink } from "../../components/link";
 
 interface BlogSlugProps {
   post: string;
@@ -39,6 +39,10 @@ interface MDXElementIframe extends MDXElement {
   width?: string | number;
 }
 
+interface MDXElementA extends MDXElement {
+  href: string;
+}
+
 function BlogSlug({ post, metadata }: BlogSlugProps) {
   const postDate = new Date(metadata.date);
 
@@ -63,10 +67,8 @@ function BlogSlug({ post, metadata }: BlogSlugProps) {
       </Head>
 
       <header className="mb-8">
-        <Link href="/">
-          <a className="text-xl font-medium mb-2 block">
-            <h1>Daniel O’Connor</h1>
-          </a>
+        <Link href="/" className="text-xl font-medium mb-2 block">
+          <h1>Daniel O’Connor</h1>
         </Link>
       </header>
 
@@ -123,7 +125,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const post = ReactDOMServer.renderToStaticMarkup(
     <MDXProvider
       components={{
-        a: (p: MDXElement) => <a className="underline break-words" {...p} />,
+        a: (p: MDXElementA) => (
+          <DottedLink className="underline break-words" {...p} />
+        ),
         blockquote: (p: MDXElement) => (
           <blockquote className="pl-3 my-4" {...p} />
         ),

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "../link";
 
 interface PostItemProps {
   title: string;
@@ -8,11 +8,9 @@ interface PostItemProps {
 
 export default function PostItem({ title, description, href }: PostItemProps) {
   return (
-    <Link href={href}>
-      <a className="py-4 block">
-        <span className="block">{title}</span>
-        <span className="text-sm text-gray-500">{description}</span>
-      </a>
+    <Link href={href} className="py-4 block">
+      <span className="block">{title}</span>
+      <span className="text-sm text-gray-500">{description}</span>
     </Link>
   );
 }

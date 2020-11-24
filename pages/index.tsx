@@ -1,9 +1,9 @@
 import fs from "fs";
-import Link from "next/link";
 import path from "path";
 import { GetStaticProps } from "next";
 import firebaseAdmin from "firebase-admin";
 import queryString from "query-string";
+import Link, { DottedLink } from "../components/link";
 import PostItem from "../components/post-item";
 import Heatmap, { Run } from "../components/heatmap";
 
@@ -45,10 +45,8 @@ export default function HomePage({ posts, runs, bookmarks }: HomePageProps) {
       <header className="mb-8">
         <span className="text-4xl mb-4 block">👨‍💻</span>
 
-        <Link href="/">
-          <a className="text-2xl font-medium mb-3 block">
-            <h1>Daniel O’Connor</h1>
-          </a>
+        <Link href="/" className="text-2xl font-medium mb-3 block">
+          <h1>Daniel O’Connor</h1>
         </Link>
 
         <p className="mb-3">
@@ -58,13 +56,15 @@ export default function HomePage({ posts, runs, bookmarks }: HomePageProps) {
         </p>
 
         <p>
-          Right now I build <a href="https://thumbprint.design/">Thumbprint</a>,
+          Right now I build{" "}
+          <DottedLink href="https://thumbprint.design/">Thumbprint</DottedLink>,
           the design system at{" "}
-          <a href="https://www.thumbtack.com/">Thumbtack</a>. I previously
-          worked at <a href="https://www.optimizely.com/">Optimizely</a> where I
-          helped build and maintain{" "}
-          <a href="https://github.com/optimizely/oui">OUI</a>, a React component
-          library.
+          <DottedLink href="https://www.thumbtack.com/">Thumbtack</DottedLink>.
+          I previously worked at{" "}
+          <DottedLink href="https://www.optimizely.com/">Optimizely</DottedLink>{" "}
+          where I helped build and maintain{" "}
+          <DottedLink href="https://github.com/optimizely/oui">OUI</DottedLink>,
+          a React component library.
         </p>
       </header>
 

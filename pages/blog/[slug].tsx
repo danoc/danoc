@@ -40,6 +40,8 @@ interface MDXElementIframe extends MDXElement {
 }
 
 function BlogSlug({ post, metadata }: BlogSlugProps) {
+  const postDate = new Date(metadata.date);
+
   return (
     <div className="p-5">
       <Head>
@@ -72,15 +74,18 @@ function BlogSlug({ post, metadata }: BlogSlugProps) {
         <time
           dateTime={metadata.date}
           itemProp="datePublished"
-          title={new Date(metadata.date).toDateString()}
+          title={postDate.toDateString()}
+          className="text-sm mb-1"
           style={{
             color: s.gray,
-            fontSize: s.f6,
-            marginBottom: s.s2,
             display: "block",
           }}
         >
-          {metadata.date}
+          {postDate.toLocaleDateString("en-US", {
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          })}
         </time>
 
         <h2 id={metadata.title} className="text-xl font-medium mb-1">

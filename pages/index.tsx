@@ -227,7 +227,10 @@ async function getLastFivePosts(): Promise<HomepagePostItem[]> {
 
   const metadata = lastFivePostsMdx.map((p, i) => ({
     title: p.metadata.title,
-    description: p.metadata.date,
+    description: new Date(p.metadata.date).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    }),
     href: `/blog/${lastFivePostsFolders[i].substring(11)}`,
   }));
 

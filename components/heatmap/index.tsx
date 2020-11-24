@@ -1,6 +1,5 @@
 import { times, groupBy, reduce, chunk } from "lodash";
 import { scaleLinear } from "@vx/scale";
-import * as styles from "../../styles";
 import s from "./index.module.css";
 
 export interface Run {
@@ -82,7 +81,7 @@ const formatRunsGrid = (
   });
 };
 
-const gridGap = styles.s2;
+const gridGap = "0.5rem";
 
 const Heatmap = ({ runs, numWeeksOfRuns }: HeatmapProps) => {
   const runsByDay = formatRunsGrid(runs, numWeeksOfRuns);
@@ -103,6 +102,7 @@ const Heatmap = ({ runs, numWeeksOfRuns }: HeatmapProps) => {
       style={{
         width: `calc(100% + ${gridGap})`,
         left: `-${gridGap}`,
+        gap: gridGap,
       }}
     >
       <ul

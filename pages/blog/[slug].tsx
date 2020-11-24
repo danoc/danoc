@@ -9,7 +9,6 @@ import Highlight, {
 import prismTheme from "prism-react-renderer/themes/github";
 import ReactDOMServer from "react-dom/server";
 import { merge } from "lodash";
-import * as s from "../../styles";
 import Link, { DottedLink } from "../../components/link";
 
 interface BlogSlugProps {
@@ -79,7 +78,6 @@ function BlogSlug({ post, metadata }: BlogSlugProps) {
           title={postDate.toDateString()}
           className="text-sm mb-1"
           style={{
-            color: s.gray,
             display: "block",
           }}
         >

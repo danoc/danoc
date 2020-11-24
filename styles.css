@@ -25,8 +25,8 @@ html {
   font-weight: 400;
   font-style: italic;
   font-display: swap;
-  src: url("/fonts/UntitledSansWeb-Italic.woff2") format("woff2"),
-    url("/fonts/UntitledSansWeb-Italic.woff") format("woff");
+  src: url("/fonts/UntitledSansWeb-RegularItalic.woff2") format("woff2"),
+    url("/fonts/UntitledSansWeb-RegularItalic.woff") format("woff");
 }
 
 @font-face {

@@ -8,7 +8,7 @@ interface PostItemProps {
 
 export default function PostItem({ title, description, href }: PostItemProps) {
   return (
-    <Link href={href} className="py-4 block">
+    <Link href={href} className="py-3 block">
       <span className="block">{title}</span>
       <span className="text-sm text-gray-500">{description}</span>
     </Link>

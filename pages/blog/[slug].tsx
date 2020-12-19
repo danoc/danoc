@@ -46,7 +46,7 @@ function BlogSlug({ post, metadata }: BlogSlugProps) {
   const postDate = new Date(metadata.date);
 
   return (
-    <div className="p-5">
+    <>
       <Head>
         <meta property="og:type" content="article" />
         <meta property="og:title" content={metadata.title} />
@@ -94,7 +94,7 @@ function BlogSlug({ post, metadata }: BlogSlugProps) {
 
         <div dangerouslySetInnerHTML={{ __html: post }} />
       </main>
-    </div>
+    </>
   );
 }
 

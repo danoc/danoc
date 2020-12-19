@@ -21,7 +21,7 @@ function Section({ title, description, emoji, children }: SectionProps) {
     <section className="mb-12">
       <header className="pb-3 border-gray-200 border-solid border-b">
         <h2 id={title} className="text-xl font-medium mb-1">
-          <span>{emoji} </span>
+          <span className="mr-1">{emoji} </span>
           {title}
         </h2>
 
@@ -41,7 +41,7 @@ interface HomePageProps {
 
 export default function HomePage({ posts, runs, bookmarks }: HomePageProps) {
   return (
-    <div className="p-5 max-w-xl mx-auto">
+    <>
       <header className="mb-8">
         <span className="text-4xl mb-4 block">👨‍💻</span>
 
@@ -115,7 +115,7 @@ export default function HomePage({ posts, runs, bookmarks }: HomePageProps) {
           </ul>
         </Section>
       </main>
-    </div>
+    </>
   );
 }
 

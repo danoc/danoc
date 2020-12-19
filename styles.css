@@ -4,6 +4,13 @@
 
 html {
   color: #333;
+  font-size: 16px;
+}
+
+@media (min-width: theme("screens.sm")) {
+  html {
+    font-size: 17px;
+  }
 }
 
 * {

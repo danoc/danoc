@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Global, css } from "@emotion/core";
+import { Global, css } from "@emotion/react";
 
 import { StaticQuery, graphql, Link as GatsbyLink } from "gatsby";
 import Link from "./link";
@@ -51,8 +51,10 @@ const Container = ({ children, title, header }: ContainerProps) => (
           margin: ${s.s0};
         }
 
-        code, pre {
-          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        code,
+        pre {
+          font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+            Courier, monospace;
         }
 
         * {
@@ -61,36 +63,41 @@ const Container = ({ children, title, header }: ContainerProps) => (
         }
 
         @font-face {
-          font-family: 'Untitled Sans';
+          font-family: "Untitled Sans";
           font-weight: 400;
           font-style: normal;
           font-display: swap;
-          src: url('${UntitledSansRegularWoff2}') format('woff2'),
-                url('${UntitledSansRegularWoff}') format('woff');
+          src: url("${UntitledSansRegularWoff2}") format("woff2"),
+            url("${UntitledSansRegularWoff}") format("woff");
         }
 
         @font-face {
-          font-family: 'Untitled Sans';
+          font-family: "Untitled Sans";
           font-weight: 400;
           font-style: italic;
           font-display: swap;
-          src: url('${UntitledSansRegularItalicWoff2}') format('woff2'),
-                url('${UntitledSansRegularItalicWoff}') format('woff');
+          src: url("${UntitledSansRegularItalicWoff2}") format("woff2"),
+            url("${UntitledSansRegularItalicWoff}") format("woff");
         }
 
         @font-face {
-          font-family: 'Untitled Sans';
+          font-family: "Untitled Sans";
           font-weight: 500;
           font-style: normal;
           font-display: swap;
-          src: url('${UntitledSansMediumWoff2}') format('woff2'),
-                url('${UntitledSansMediumWoff}') format('woff');
+          src: url("${UntitledSansMediumWoff2}") format("woff2"),
+            url("${UntitledSansMediumWoff}") format("woff");
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
           font-weight: 500;
         }
-    `}
+      `}
     />
     <StaticQuery
       query={graphql`

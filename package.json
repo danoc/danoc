@@ -12,7 +12,7 @@
   "dependencies": {
     "@babel/core": "^7.12.16",
     "@emotion/react": "^11.1.5",
-    "@vx/scale": "^0.0.198",
+    "@vx/scale": "^0.0.199",
     "dotenv": "^8.2.0",
     "firebase-admin": "^9.5.0",
     "gatsby": "^2.32.3",
@@ -23,7 +23,7 @@
     "gatsby-plugin-lodash": "^3.10.0",
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
-    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-sass": "^3.2.0",
     "gatsby-plugin-sharp": "^2.14.1",
     "gatsby-plugin-sitemap": "^2.12.0",
     "gatsby-plugin-typescript": "^2.12.0",
@@ -40,35 +40,28 @@
     "gatsby-transformer-sharp": "^2.12.0",
     "is-relative-url": "^3.0.0",
     "lodash": "^4.17.20",
-    "node-sass": "^4.14.1",
+    "node-sass": "^5.0.0",
     "prismjs": "^1.23.0",
     "prop-types": "^15.6.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "typescript": "^4.1.5"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.168",
     "@types/node": "^13.13.4",
-    "@types/react": "^16.9.49",
-    "@types/react-dom": "^16.9.8",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
     "@types/react-helmet": "^6.1.0",
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
-    "husky": "^4.2.5",
     "prettier": "2.2.1",
-    "pretty-quick": "^3.1.0",
-    "vercel": "^20.1.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
+    "vercel": "^21.2.3"
   },
   "engines": {
     "node": "12.x"

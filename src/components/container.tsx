@@ -161,8 +161,8 @@ const Container = ({ children, title, header }: ContainerProps) => (
         <>
           <Paragraph>
             Hello! I’m a design systems and front-end infrastructure engineer in
-            San Francisco. I use code and communication to improve product
-            quality and developer productivity.
+            New York. I use code and communication to improve product quality
+            and developer productivity.
           </Paragraph>
           <Paragraph>
             Right now I build{" "}

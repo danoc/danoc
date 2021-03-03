@@ -15,7 +15,7 @@ module.exports = {
   siteMetadata: {
     title: "Daniel O’Connor",
     description:
-      "Daniel O’Connor is a UI Engineer living in New York. He does design systems and front-end infrastructure at Thumbtack.",
+      "Daniel O’Connor is a front-end engineer living in New York. He does front-end infrastructure and design systems at Thumbtack.",
     siteUrl: "https://danoc.me",
     numWeeksOfRuns,
   },

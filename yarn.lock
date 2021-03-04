@@ -1271,10 +1271,10 @@
   dependencies:
     tslib "^1.11.1"
 
-"@gatsbyjs/reach-router@^1.3.5":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.5.tgz#e5d86b341957611153279da353d0a39a82f34a8e"
-  integrity sha512-O7sTZajwCtbjuuUYwjEZdSw7CmAxA6ugDaXtw4hfKoTfj4RZUAB8nYRlecUVuNAQbgHiXJSx2jKfu1hmE9mggA==
+"@gatsbyjs/reach-router@^1.3.6":
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"
+  integrity sha512-RW9ZBir9kqtw4IWm+Z+DLWGOeoJxoaTvNVrnR5fV9zD8EmfAhbBN/hS6i6VnTMFZ7rdd6mnpx2/XtnMvYfsaVQ==
   dependencies:
     invariant "^2.2.3"
     prop-types "^15.6.1"
@@ -6677,17 +6677,17 @@ gatsby-source-filesystem@^3.0.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-source-pinboard@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-pinboard/-/gatsby-source-pinboard-1.0.1.tgz#016a7c83aa8cf4f6d334128f4ddb5e7a3d0ffee1"
-  integrity sha512-pnI/6YCrjYKkoeImXhHoQtsqevuOtNpU+fVhmULGJOToyGruauoW8FN90x6798a0J/P9kwJXWj0sVnyxQe+H+g==
+gatsby-source-pinboard@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-pinboard/-/gatsby-source-pinboard-2.0.0.tgz#eefda792543e173771c3b19261189851db179baf"
+  integrity sha512-gWt1EKPlb9g2EliBS2CZIgTExRltqT3ZMnPz1kXLifzGk/8JlJva2Q3SJAbSC2s4YTIPLUZPLJpS4ZwodH+mgQ==
   dependencies:
     node-fetch "^2.6.0"
 
-gatsby-source-strava-activities@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-source-strava-activities/-/gatsby-source-strava-activities-2.0.2.tgz#ea8e93fb5563290c0148cf047ff329ad4f3db81c"
-  integrity sha512-Hfl8SmnroB2pVRP+Hdv2HxR4xCkzhciAQGP1FraLxGDSNp5oJCurmEh9lTfgcMnePTY9gruCBzWKYwyEm9rNyw==
+gatsby-source-strava-activities@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-strava-activities/-/gatsby-source-strava-activities-3.0.0.tgz#630be94b5d8d3d5aaa36287827c76f9fd86ca982"
+  integrity sha512-ibolJovvpoYPlFx4HFkS4b9NL6sHTetlNp2Gwxfk0bK0b5z2yT3oUEGQkeJhlc54JCZR+HUGFfNphkZLzIfjXw==
   dependencies:
     node-fetch "^2.6.0"
     query-string "^6.13.7"
@@ -6753,10 +6753,10 @@ gatsby-transformer-sharp@^3.0.0:
     semver "^7.3.4"
     sharp "^0.27.0"
 
-gatsby@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.0.0.tgz#b133289353bf803155d6ea680a5cf1289edc16b6"
-  integrity sha512-UVVtg2VBwfa2XW3VZFHAN2htJujg5bIU7wOVk+eZYISQrF0ljLYUqZxaq1pWSvFdUvfPbPhh7QyvFfNkWYB8ZQ==
+gatsby@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.0.1.tgz#5dd4cf2bcfd07b965b8605a99d54e7a834bfb598"
+  integrity sha512-ap9gbjPrk9ft1SY+fsAKfOpHWfUS+wb5kkeRxOunsQvvizoCUqCcxlRbuNpw1EKmPoHGbHN5D1vVEh1RXAwM6g==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
@@ -6765,7 +6765,7 @@ gatsby@^3.0.0:
     "@babel/runtime" "^7.12.5"
     "@babel/traverse" "^7.12.5"
     "@babel/types" "^7.12.6"
-    "@gatsbyjs/reach-router" "^1.3.5"
+    "@gatsbyjs/reach-router" "^1.3.6"
     "@gatsbyjs/webpack-hot-middleware" "^2.25.2"
     "@hapi/joi" "^15.1.1"
     "@mikaelkristiansson/domready" "^1.0.10"

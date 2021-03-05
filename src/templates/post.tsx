@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Container from "../components/container";
 import { css as linkCSS } from "../components/link";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as s from "../styles";
 import "../styles/prism-ghcolors.css";
 import PageTitle from "../components/page-title";
@@ -25,15 +25,7 @@ type PostProps = {
               width: string;
               height: string;
             };
-            fluid: {
-              aspectRatio: number;
-              base64: string;
-              sizes: string;
-              src: string;
-              srcSet: string;
-              srcSetWebp: string;
-              srcWebp: string;
-            };
+            gatsbyImageData: IGatsbyImageData;
           };
           internal: {
             mediaType: string;
@@ -63,51 +55,44 @@ const Post = ({ data }: PostProps) => {
           <meta property="og:type" content="article" />
           <meta property="og:title" content={post.frontmatter.title} />
 
-          {post.frontmatter.image_src &&
-            post.frontmatter.image_src.childImageSharp &&
-            post.frontmatter.image_src.childImageSharp.original.src && (
-              <meta
-                property="og:image"
-                content={
-                  site.siteUrl +
-                  post.frontmatter.image_src.childImageSharp.original.src
-                }
-              />
-            )}
+          {post.frontmatter.image_src?.childImageSharp?.original?.src && (
+            <meta
+              property="og:image"
+              content={
+                site.siteUrl +
+                post.frontmatter.image_src.childImageSharp.original.src
+              }
+            />
+          )}
 
           {post.frontmatter.image_src && (
             <meta name="twitter:card" content="summary_large_image" />
           )}
 
-          {post.frontmatter.image_src &&
-            post.frontmatter.image_src.childImageSharp &&
-            post.frontmatter.image_src.childImageSharp.original.width && (
-              <meta
-                property="og:image:width"
-                content={
-                  post.frontmatter.image_src.childImageSharp.original.width
-                }
-              />
-            )}
+          {post.frontmatter.image_src?.childImageSharp?.original?.width && (
+            <meta
+              property="og:image:width"
+              content={
+                post.frontmatter.image_src.childImageSharp.original.width
+              }
+            />
+          )}
 
-          {post.frontmatter.image_src &&
-            post.frontmatter.image_src.childImageSharp &&
-            post.frontmatter.image_src.childImageSharp.original.height && (
-              <meta
-                property="og:image:height"
-                content={
-                  post.frontmatter.image_src.childImageSharp.original.height
-                }
-              />
-            )}
+          {post.frontmatter.image_src?.childImageSharp?.original?.height && (
+            <meta
+              property="og:image:height"
+              content={
+                post.frontmatter.image_src.childImageSharp.original.height
+              }
+            />
+          )}
 
-          {post.frontmatter.image_src &&
-            post.frontmatter.image_src.internal.mediaType && (
-              <meta
-                property="og:image:type"
-                content={post.frontmatter.image_src.internal.mediaType}
-              />
-            )}
+          {post.frontmatter.image_src?.internal.mediaType && (
+            <meta
+              property="og:image:type"
+              content={post.frontmatter.image_src.internal.mediaType}
+            />
+          )}
 
           {post.frontmatter.image_alt && (
             <meta
@@ -164,35 +149,29 @@ const Post = ({ data }: PostProps) => {
           {post.frontmatter.title}
         </PageTitle>
 
-        {site.siteUrl &&
-          post.frontmatter.image_src &&
-          post.frontmatter.image_src.childImageSharp &&
-          post.frontmatter.image_src.childImageSharp.original.src && (
-            <meta
-              itemProp="image"
-              content={
-                site.siteUrl +
-                post.frontmatter.image_src.childImageSharp.original.src
-              }
-            />
-          )}
+        {post.frontmatter.image_src?.childImageSharp?.original?.src && (
+          <meta
+            itemProp="image"
+            content={
+              site.siteUrl +
+              post.frontmatter.image_src.childImageSharp.original.src
+            }
+          />
+        )}
 
-        {site.siteUrl &&
-          post.frontmatter.image_src &&
-          post.frontmatter.image_src.childImageSharp &&
-          post.frontmatter.image_src.childImageSharp.fluid && (
-            <a href={post.frontmatter.image_src.childImageSharp.original.src}>
-              <GatsbyImage
-                fluid={post.frontmatter.image_src.childImageSharp.fluid}
-                alt={post.frontmatter.image_alt}
-                css={{
-                  marginTop: s.s3,
-                  border: `1px solid ${s.lightGray}`,
-                  maxWidth: "100%",
-                }}
-              />
-            </a>
-          )}
+        {post.frontmatter.image_src?.childImageSharp?.gatsbyImageData && (
+          <a href={post.frontmatter.image_src?.childImageSharp?.original?.src}>
+            <GatsbyImage
+              image={post.frontmatter.image_src.childImageSharp.gatsbyImageData}
+              alt={post.frontmatter.image_alt || ""}
+              css={{
+                marginTop: s.s3,
+                border: `1px solid ${s.lightGray}`,
+                maxWidth: "100%",
+              }}
+            />
+          </a>
+        )}
 
         <div
           itemProp="articleBody"
@@ -323,9 +302,7 @@ export const pageQuery = graphql`
               height
               src
             }
-            fluid(maxWidth: 578) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }

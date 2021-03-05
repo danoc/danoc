@@ -147,6 +147,7 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-image",
     "gatsby-plugin-emotion",
     "gatsby-plugin-lodash",
     "gatsby-plugin-react-helmet",

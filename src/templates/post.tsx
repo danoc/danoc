@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Container from "../components/container";
 import { css as linkCSS } from "../components/link";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as s from "../styles";
 import "../styles/prism-ghcolors.css";
 import PageTitle from "../components/page-title";
@@ -19,7 +19,14 @@ type PostProps = {
         path: string;
         description?: string;
         image_src?: {
-          childImageSharp: unknown;
+          childImageSharp: {
+            original: {
+              src: string;
+              width: string;
+              height: string;
+            };
+            gatsbyImageData: IGatsbyImageData;
+          };
           internal: {
             mediaType: string;
           };
@@ -39,8 +46,6 @@ type PostProps = {
 const Post = ({ data }: PostProps) => {
   const post = data.markdownRemark;
   const site = data.site.siteMetadata;
-
-  console.log(post.frontmatter.image_src?.childImageSharp);
 
   /* eslint-disable react/no-danger */
   return (
@@ -158,7 +163,7 @@ const Post = ({ data }: PostProps) => {
           <a href={post.frontmatter.image_src?.childImageSharp?.original?.src}>
             <GatsbyImage
               image={post.frontmatter.image_src.childImageSharp.gatsbyImageData}
-              alt={post.frontmatter.image_alt}
+              alt={post.frontmatter.image_alt || ""}
               css={{
                 marginTop: s.s3,
                 border: `1px solid ${s.lightGray}`,
@@ -292,6 +297,11 @@ export const pageQuery = graphql`
             mediaType
           }
           childImageSharp {
+            original {
+              width
+              height
+              src
+            }
             gatsbyImageData(layout: FULL_WIDTH)
           }
         }

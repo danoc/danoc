@@ -16,7 +16,7 @@ module.exports = {
     title: "Daniel O’Connor",
     description:
       "Daniel O’Connor is a front-end engineer living in New York. He does front-end infrastructure and design systems at Thumbtack.",
-    siteUrl: "https://danoc.me",
+    siteUrl: process.env.VERCEL_URL || "https://danoc.me",
     numWeeksOfRuns,
   },
   plugins: [

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { times, groupBy, reduce, chunk } from "lodash";
 import { scaleLinear } from "@vx/scale";
 import * as styles from "../styles";

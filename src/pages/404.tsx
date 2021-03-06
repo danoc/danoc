@@ -1,6 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
-import { graphql, Link as GatsbyLink } from "gatsby";
 import Container from "../components/container";
 import Link from "../components/link";
 import * as s from "../styles";

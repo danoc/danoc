@@ -33,7 +33,7 @@ type BlogPageProps = {
 
 const BlogPage = ({ data }: BlogPageProps) => {
   const posts = data.allMarkdownRemark.edges;
-  const postsByYear = groupBy(posts, p => p.node.frontmatter.year);
+  const postsByYear = groupBy(posts, (p) => p.node.frontmatter.year);
   const years = reverse(sortBy(keys(postsByYear)));
 
   return (
@@ -51,7 +51,7 @@ const BlogPage = ({ data }: BlogPageProps) => {
           Thoughts and feelings on code and design
         </p>
 
-        {years.map(year => (
+        {years.map((year) => (
           <div css={{ marginBottom: s.s5 }}>
             <h3
               id={year}
@@ -67,7 +67,7 @@ const BlogPage = ({ data }: BlogPageProps) => {
               {year}
             </h3>
             <SectionList>
-              {postsByYear[year].map(post => (
+              {postsByYear[year].map((post) => (
                 <SectionListItem
                   to={post.node.frontmatter.path}
                   key={post.node.frontmatter.path}

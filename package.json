@@ -5,8 +5,8 @@
     "start": "gatsby develop",
     "test": "yarn test:eslint && yarn test:prettier",
     "test:eslint": "eslint . --ext .js --ext .jsx",
-    "test:prettier": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --list-different",
-    "format": "prettier \"**/*.{js,jsx,css,scss,json,md,mdx,html}\" --write",
+    "test:prettier": "prettier . --list-different",
+    "format": "prettier . --write",
     "build": "TZ=America/New_York && gatsby build"
   },
   "dependencies": {

@@ -1,11 +1,5 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module",
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
+  parser: "@typescript-eslint/parser",
   extends: ["airbnb", "prettier"],
   globals: {
     URL: false,

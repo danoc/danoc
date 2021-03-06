@@ -4,7 +4,7 @@
   "scripts": {
     "start": "gatsby develop",
     "test": "yarn test:eslint && yarn test:prettier",
-    "test:eslint": "eslint . --ext .js --ext .jsx",
+    "test:eslint": "eslint . --ext .js,.ts,.jsx,.tsx",
     "test:prettier": "prettier . --list-different",
     "format": "prettier . --write",
     "build": "TZ=America/New_York && gatsby build"

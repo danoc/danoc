@@ -1,9 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import Container from "../components/container";
 import { css as linkCSS } from "../components/link";
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image";
 import * as s from "../styles";
 import "../styles/prism-ghcolors.css";
 import PageTitle from "../components/page-title";

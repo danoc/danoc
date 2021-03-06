@@ -52,7 +52,7 @@ const BlogPage = ({ data }: BlogPageProps) => {
         </p>
 
         {years.map((year) => (
-          <div css={{ marginBottom: s.s5 }}>
+          <div css={{ marginBottom: s.s5 }} key={year}>
             <h3
               id={year}
               key={year}

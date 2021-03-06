@@ -14,7 +14,7 @@ const FourOhFourPage = () => (
       <div css={{ marginBottom: s.s4 }}>
         <PageTitle as="h2">🙈 Whoops!</PageTitle>
       </div>
-      <Paragraph>You found a page that doesn't exist.</Paragraph>
+      <Paragraph>You found a page that doesn’t exist.</Paragraph>
       <Paragraph>Here are a few options:</Paragraph>
       <ul>
         <li css={{ marginTop: s.s2, marginBottom: s.s2 }}>

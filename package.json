@@ -3,9 +3,10 @@
   "private": true,
   "scripts": {
     "start": "gatsby develop",
-    "test": "yarn test:eslint && yarn test:prettier",
+    "test": "yarn test:eslint && yarn test:prettier && yarn test:typescript",
     "test:eslint": "eslint . --ext .js,.ts,.jsx,.tsx",
     "test:prettier": "prettier . --list-different",
+    "test:typescript": "tsc",
     "format": "prettier . --write",
     "build": "TZ=America/New_York && gatsby build"
   },

@@ -1,27 +1,32 @@
 module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier",
+  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 12,
+    sourceType: "module",
   },
-  extends: ["airbnb", "prettier"],
-  globals: {
-    URL: false,
-  },
+  plugins: ["react", "@typescript-eslint"],
   rules: {
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        specialLink: ["to"],
-      },
-    ],
-    "no-unused-expressions": [
-      "error",
-      {
-        allowTaggedTemplates: true,
-      },
-    ],
+    // Not needed in React 17
+    // https://github.com/yannickcr/eslint-plugin-react/issues/2928
+    "react/react-in-jsx-scope": "off",
+  },
+  settings: {
+    react: {
+      version: "detect",
+    },
   },
 };

@@ -4,7 +4,7 @@
   "scripts": {
     "start": "gatsby develop",
     "test": "yarn test:eslint && yarn test:prettier",
-    "test:eslint": "eslint . --ext .js --ext .jsx",
+    "test:eslint": "eslint . --ext .js,.ts,.jsx,.tsx",
     "test:prettier": "prettier . --list-different",
     "format": "prettier . --write",
     "build": "TZ=America/New_York && gatsby build"
@@ -39,7 +39,6 @@
     "is-relative-url": "^3.0.0",
     "lodash": "^4.17.21",
     "prismjs": "^1.23.0",
-    "prop-types": "^15.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
@@ -51,6 +50,8 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "@types/react-helmet": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",

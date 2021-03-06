@@ -8,6 +8,7 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "types": ["@emotion/react/types/css-prop"]
   }
 }

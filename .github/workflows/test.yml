@@ -20,7 +20,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         run: |
-          yarn install --frozen-lockfile
+          yarn install --immutable
       - name: Run ESLint
         run: |
           npm run test:eslint
@@ -41,7 +41,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - name: Install dependencies
         run: |
-          yarn install --frozen-lockfile
+          yarn install --immutable
       - name: Run Prettier
         run: |
           npm run test:prettier
